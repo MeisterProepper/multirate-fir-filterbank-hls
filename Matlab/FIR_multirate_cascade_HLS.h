@@ -1,6 +1,6 @@
 //------------------------------------------- 
 // designed with -- FIR_multirate_HLS.m -- 
-// 15-Nov-2025
+// 16-Nov-2025
 // Fs = 50000.00
 // fstop = 3350.00
 // fpass = 3100.00
@@ -25,14 +25,14 @@ typedef ap_fixed<16,1> delay_data_t;
 #define N_DELAYS_FIR_dec_int_2_21 5
 
 static delay_data_t H_filter_FIR_kernel[N_DELAYS_FIR_kernel_MM]; 
-static delay_data_t H_filter_FIR_dec_20[N_DELAYS_FIR_dec_int_1_20]; 
-static delay_data_t H_filter_FIR_dec_21[N_DELAYS_FIR_dec_int_1_21]; 
-static delay_data_t H_filter_FIR_int_20[N_DELAYS_FIR_dec_int_1_20]; 
-static delay_data_t H_filter_FIR_int_21[N_DELAYS_FIR_dec_int_1_21]; 
-static delay_data_t H_filter_FIR_dec_20[N_DELAYS_FIR_dec_int_2_20]; 
-static delay_data_t H_filter_FIR_dec_21[N_DELAYS_FIR_dec_int_2_21]; 
-static delay_data_t H_filter_FIR_int_20[N_DELAYS_FIR_dec_int_2_20]; 
-static delay_data_t H_filter_FIR_int_21[N_DELAYS_FIR_dec_int_2_21]; 
+static delay_data_t H_filter_FIR_dec_1_20[N_DELAYS_FIR_dec_int_1_20]; 
+static delay_data_t H_filter_FIR_dec_1_21[N_DELAYS_FIR_dec_int_1_21]; 
+static delay_data_t H_filter_FIR_int_1_20[N_DELAYS_FIR_dec_int_1_20]; 
+static delay_data_t H_filter_FIR_int_1_21[N_DELAYS_FIR_dec_int_1_21]; 
+static delay_data_t H_filter_FIR_dec_2_20[N_DELAYS_FIR_dec_int_2_20]; 
+static delay_data_t H_filter_FIR_dec_2_21[N_DELAYS_FIR_dec_int_2_21]; 
+static delay_data_t H_filter_FIR_int_2_20[N_DELAYS_FIR_dec_int_2_20]; 
+static delay_data_t H_filter_FIR_int_2_21[N_DELAYS_FIR_dec_int_2_21]; 
 
 const coef_data_t b_FIR_kernel[124]={
  0.001530, -0.002912, 0.000811, 0.000938, -0.000937, -0.001138,

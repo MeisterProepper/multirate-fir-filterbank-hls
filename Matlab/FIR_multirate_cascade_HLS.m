@@ -253,19 +253,19 @@ fprintf(file_ID, '\n');
 fprintf(file_ID, 'static delay_data_t H_filter_FIR_kernel[N_DELAYS_FIR_kernel_MM]; \n');
 
 for i=1:MM1
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n', MM1, i-1,MM1,i-1);
+    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_1_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n', MM1, i-1,MM1,i-1);
 end
 
 for i=1:MM1
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n',MM1,i-1,MM1,i-1);
+    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_1_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n',MM1,i-1,MM1,i-1);
 end
 
 for i=1:MM2
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n', MM2, i-1,MM2,i-1);
+    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_2_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n', MM2, i-1,MM2,i-1);
 end
 
 for i=1:MM2
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n',MM2,i-1,MM2,i-1);
+    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_2_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n',MM2,i-1,MM2,i-1);
 end
 
 
