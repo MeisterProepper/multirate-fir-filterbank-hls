@@ -352,15 +352,11 @@ The overall structure is illustrated below:
 ### Multirate Filter — Variant Combinations
 
 | Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
-|-----------|---------------|---------------|-----------------|--------------|-----|------|------|-----|
-| 1         | Direct        | Direct        | Direct          |   450 - 110  |   935  |  1051    |  0    |  10   |
-| 2         | Direct        | Direct        | Transposed      |              |     |      |      |     |
-| 3         | Direct        | Transposed    | Direct          |              |     |      |      |     |
-| 4         | Direct        | Transposed    | Transposed      |              |     |      |      |     |
-| 5         | Transposed    | Direct        | Direct          |              |     |      |      |     |
-| 6         | Transposed    | Direct        | Transposed      |              |     |      |      |     |
-| 7         | Transposed    | Transposed    | Direct          |              |     |      |      |     |
-| 8         | Transposed    | Transposed    | Transposed      |   310 - 70   |  1353  |  657  |  0  |  11  |
+|-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
+| 1         | Direct        | Direct        | Direct          |   250  |   935  |  1051    |  0  | 10  |
+| 2         | Direct        | Transposed    | Direct          |   80   |  1284  |  1885    |  0  | 115 |
+| 3         | Transposed    | Direct        | Transposed      |   300  |  5238  |  9340    |  0  | 16  |
+| 4         | Transposed    | Transposed    | Transposed      |   120  |  2056  |  1425    |  0  | 111 |
 
 
 
