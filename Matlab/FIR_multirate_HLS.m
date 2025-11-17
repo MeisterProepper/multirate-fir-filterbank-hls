@@ -79,7 +79,7 @@ figure(3);
 plot(   freq*Fs, db(hz_Dec_Int), ...
         freq*Fs, db(hz_kernel), ...
         freq*Fs, db( hz_Dec_Int  .* hz_kernel) );
-grid,title('Dec., kernel and (Dec + kernel) filters in dB'),
+grid,title('Amplitude response of desired FIR filter in dB'),
 xlabel('Frequency in Hz, Nyquist range');
 ylabel('|H| in dB');
 axis([0,Fs/2,-80,10]);
