@@ -1,15 +1,16 @@
-# Multi-rate filters in high-level synthesis (HLS)
-This project investigates various implementation strategies for a multi-rate filter within high-level synthesis (HLS).
-The aim is to analyse the effects of different optimisation approaches and architectural decisions on the synthesis results, latency and resource utilisation.
+# Multi-Rate Filters in High-Level Synthesis (HLS)
+This project explores different implementation strategies for both classical (single-rate) FIR filters and multi-rate FIR systems using High-Level Synthesis (HLS).
+The goal is to analyse how optimisation techniques and architectural decisions influence synthesis results, in particular latency, resource utilisation, and overall implementation efficiency.
 
 
 ![Filter](images/DEC_KERNEL_INT.png)
 
 ## Objective
 
-- Implementation of a multi-rate filter entirely in HLS
-- Comparison of different implementation strategies (standard code, optimisation, IP blocks)
-- Investigation of the influence of pipelining, loop optimisation and filter partitioning on the synthesis results
+The objectives of this project are:
+- To implement classical FIR filters and a complete multi-rate filter chain entirely in HLS.
+- To compare different implementation strategies, including baseline DSP code, HLS-optimised versions, and variants using HLS-specific constructs (e.g., SRLs, pipelining pragmas, loop transformations).
+- To analyse how optimisation techniques and architectural choices (pipelining, loop restructuring, filter partitioning) affect synthesis results, latency, and resource utilisation.
 
 ## Technical parameters
 
@@ -17,7 +18,6 @@ The aim is to analyse the effects of different optimisation approaches and archi
 | Parameter | Value |
 |-----|-----------|
 | Samplerate | 50 kHz |
-| Sampling factor | 4 |
 | Filtertype | FIR |
 | fpass | 3,1 kHz |
 | fstop | 3,35 kHz |
@@ -69,9 +69,49 @@ void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output){
 
 
 ## Implementation Variants of FIR Filters
-To ensure an efficient implementation of multirate filters, the design first focuses on different FIR filter architectures.
-These filters serve as the foundation for the later multirate structures, such as decimators and interpolators.
-By analyzing and implementing several FIR variants, the goal is to identify architectural trade-offs between performance, resource utilization, and synthesis efficiency in HLS.
+To enable an efficient multirate filter design, the project first investigates several FIR filter architectures.
+These single-rate FIR variants form the foundation for the later multirate components (decimator, kernel filter and interpolator).
+By implementing and analysing multiple FIR structures in HLS, the goal is to identify architectural trade-offs in terms of performance, latency, resource utilisation, and synthesis behaviour.
+
+
+
+### MATLAB FIR Reference Design
+
+Before implementing the FIR filters in HLS, a reference low-pass FIR filter is designed in MATLAB.
+This reference design defines the required frequency characteristics and provides the coefficient set used across all HLS implementations (direct form, transposed form, folded, SRL-based, and the later multirate stages).
+
+The filter is created using MATLAB, based on the specified parameters:
+- Sample rate: 50 kHz
+- Passband frequency: 3.1 kHz
+- Stopband frequency: 3.35 kHz
+- Filter type: FIR low-pass
+- Passband ripple: 0.01
+- Stopband ripple: 0.01
+
+**Group delay calculation:**
+```math
+\text{group\_delay\_samples} = \text{round}\left(\frac{N-1}{2}\right)
+```
+```math
+\text{group\_delay\_time} = \frac{\text{group\_delay\_samples}}{f_s}
+```
+
+Where:
+
+- N = 392 (filter length)  
+- f_s = 50 kHz (sample rate)
+
+**Calculated values:**
+
+- Group delay: 196 samples  
+- Group delay time: 3.92 ms
+
+**Frequency response (magnitude):**  
+The resulting magnitude frequency response is shown below and serves as the ground truth for verifying the correctness of all HLS models.
+
+![Filter](images/Amp_res_normal.png)
+
+
 
 
 ### Direct form FIR filter
@@ -81,8 +121,8 @@ The direct form FIR filter implements the convolution sum directly:
 ```math
 y[n]= \sum_{k=0}^{N−1​}b[k] \cdot x[n−k]
 ```
-Each tap multiplies a delayed version of the input signal by a corresponding coefficient.
-The results are then summed to produce the output sample.
+Each tap multiplies a delayed version of the input signal by its corresponding coefficient.
+The results are summed to produce the output sample. This is the most straightforward FIR implementation and serves as a baseline for performance and resource comparisons in HLS.
 
 #### DSP code of the direct form FIR filter 
 A classical DSP implementation of this filter typically uses fixed-point arithmetic with standard C types such as short and int.
@@ -106,39 +146,55 @@ short FIR_filter(short FIR_delays[], const short FIR_coe[], short int N_delays, 
 }
 ```
 
-The implementation was straightforward, as the DSP code was already available.
-However, this version is not optimized for HLS. It contains two separate loops: one for the filter calculation and another for updating the shift register.
-Even with appropriate HLS directives, it is not possible to efficiently merge these loops into a single pipeline in hardware.
-See the table below for a comparison of resource usage and performance.
+**Notes on DSP Reference Implementation**  
+
+The DSP reference implementation is functional but **not optimized for HLS**.
+
+- **Without HLS pragmas:**  
+  - Execution is very slow (latency ~7940 ns)  
+  - Resource usage is low (minimal FF, LUT, DSP, BRAM)
+
+- **With HLS pragmas:**  
+  - Execution is extremely fast (latency ~80 ns)  
+  - Resource usage increases significantly (FF, LUT, and DSP are much higher)
 
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
 |---|---|---|---|---|---|
 |  normal DSP code 			|  7940  |  167  |  134  |  2  |  1  |
 |  DSP code with #pragmas   |  80  |  9259 |  4937 | 0  |  81 |
 
+**Takeaway:** HLS pragmas can dramatically improve performance, but at the cost of significantly higher resource utilisation.
 
 
-#### DSP code of the direct form FIR filter 
+
+#### HLS-DSP code of the direct form FIR filter 
+This version of the direct form FIR filter is **identical in algorithm** to the DSP reference code, but uses **HLS-specific data types** (`ap_fixed`) instead of standard C types.  
+This allows HLS to synthesise the design with fixed-point precision, while maintaining bit-accurate behaviour.
 
 ```
 code
 ```
+- **Without pragmas:**  
+  - Functionally equivalent to DSP code  
+  - Slow execution due to lack of pipelining  
+  - Minimal resource usage  
 
+- **With HLS pragmas:**  
+  - Pragmas enable pipelining and loop unrolling  
+  - Execution becomes extremely fast  
+  - Resource usage increases significantly  
 
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
 |---|---|---|---|---|---|
 |  normal HLS-DSP code 			|   7910  |  145  |  238  |  1  |  1  |
 |  HLS-DSP code with #pragmas   |  60  |  8042  |  4853  |  0  |  81  |
 
-
+**Takeaway:** The effect of HLS pragmas on performance and resource usage is similar to the DSP reference code: latency is drastically reduced, at the cost of significantly higher hardware utilisation.
 
 
 #### HLS optimized code of the direct form FIR filter 
-For the HLS-optimized version, the two loops from the DSP reference are merged into a single loop, enabling fully pipelined execution.
-Additionally, fixed-point data types (ap_int or ap_fixed) are used instead of standard C integers.
-This removes the need for manual shifting and casting, simplifies arithmetic operations, and ensures bit-accurate hardware synthesis.
-
-
+In the HLS-optimized version, the two loops from the DSP reference are **merged into a single loop**, enabling **fully pipelined execution**.  
+Additionally, HLS-specific **fixed-point types** (`ap_fixed`) are used, eliminating manual shifting and casting.  
 
 ```
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
@@ -157,8 +213,10 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 	return y;
 }
 ```
-
-
+**Key Points:**  
+- Normal HLS code (without pragmas) already achieves low latency because the merged loops reduce the critical path.
+- The normal version is less flexible, as adding pragmas significantly increases resource usage without noticeable performance improvement.
+- Using HLS-specific fixed-point types avoids manual shifting and casting and ensures bit-accurate hardware synthesis.
 
 
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
@@ -167,17 +225,13 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 |  HLS code with #pragmas   |  3260 | 5663  |  9408  |  1 |  81  |
 
 
+**Takeaway:** While pragmas slightly reduce latency, they consume significantly more resources and offer limited practical benefit for this specific HLS-optimized direct form FIR filter.
+
 
 #### HLS optimized alternative code with SRL of the direct form FIR filter 
 
-In the HLS-optimized variant using Shift Register Logic (SRL), the filter uses a hardware SRL primitive to automatically implement the shift register.
-Note: This version cannot be implemented as a separate function, because SRLs cannot be passed as function arguments in HLS.
-Instead, the SRL-based implementation must reside directly in the main top-level function.
-
-- The shift register loop is eliminated, as the HLS SRL primitive handles all data shifting automatically.
-- Only the accumulation loop remains for computing the FIR output.
-- Fixed-point types (ap_int or ap_fixed) are used to avoid manual shifting and casting.
-- The design allows fully pipelined execution, reducing latency and improving resource usage.
+In the SRL-based version, the filter uses HLS **Shift Register Logic (SRL) primitives** to implement the shift register efficiently in hardware.  
+This eliminates the explicit loop for shifting, leaving only the accumulation loop for computing the FIR output.
 
 ```
 
@@ -190,18 +244,29 @@ output.write(FIR_accu32);
 
 ```
 
+**Key Points:**
+
+- SRL handles all data shifting automatically in hardware  
+- Only the convolution (accumulation) loop remains  
+- Fully pipelined execution  
+- Fixed-point types (`ap_fixed` / `ap_int`) are used to ensure bit-accurate synthesis  
+- Cannot be implemented as a separate function that takes SRLs as arguments; the SRL-based code must reside directly in the top-level function  
+
+
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
 |---|---|---|---|---|---|
 |  normal HLS-SRL code 			|  3970  |  150  |  469 |  0  |  1  |
 |  HLS-SRL code with #pragmas   |  3910  |  5574  |  5660 |  0 |  81 |
 
+**Takeaway:** The SRL-based implementation reduces resource usage for shift registers and keeps latency low. Pragmas further improve pipelining slightly, but the main benefit of this variant is efficient hardware utilization for the shift register.
 
 
 ### Transposed form FIR filter
 ![Filter](images/Transposed_FIR.png)
 
-The transposed FIR structure is obtained by reversing the signal flow of the direct form.
-Instead of delaying the input samples, the partial sums are delayed and accumulated as new input samples arrive.
+The transposed FIR structure is obtained by **reversing the signal flow** of the direct form.  
+Instead of delaying the input samples, the **partial sums** are delayed and accumulated as new input samples arrive.  
+This structure is often more suitable for HLS pipelining, as it allows shorter critical paths and better resource utilisation.
 
 
 ```
@@ -219,7 +284,11 @@ fir_data_t FIR_filter(accu_data_t FIR_delays[], const coef_data_t FIR_coe[], int
 ```
 
 
-
+Key Points:
+- Partial sums are delayed instead of input samples
+- Fully pipelined execution
+- Reduced latency compared to direct form
+- Better suited for high-throughput HLS implementations
 
 
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
@@ -227,12 +296,14 @@ fir_data_t FIR_filter(accu_data_t FIR_delays[], const coef_data_t FIR_coe[], int
 |  normal HLS code 			|  3960 |  85  |  229 |  2  |  2  |
 |  HLS code with #pragmas   |  10 |   3675  |  6760  |  0 |  208  |
 
+**Takeaway:** The transposed form allows extremely low latency when pipelined in HLS. Pragmas have a dramatic effect on speed and also increase resource usage significantly.
+
 
 ### Folded form FIR filter
 ![Filter](images/Folded_FIR.png)
 
-The folded FIR filter reduces hardware resources by reusing functional units (e.g., multipliers and adders) over multiple clock cycles.
-Instead of computing all taps in parallel, a smaller number of multipliers is time-multiplexed across the filter taps.
+The folded FIR filter is essentially a **Direct Form FIR filter**, but hardware resources are reduced by **exploiting the symmetry of the FIR coefficients**.  
+Instead of computing all taps independently, symmetric taps are combined, reducing the number of multiplications required.
 
 
 ```
@@ -256,10 +327,20 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 }
 ```
 
+
+**Key Points:**  
+- Reduces hardware resources by **combining symmetric taps**, thus **fewer multiplications are needed**  
+- Functionally equivalent to Direct Form FIR  
+- HLS pragmas applied to DSP-style Direct Form FIR **exploit symmetry automatically**, but the overall resource usage remains **similar to the folded version**
+
+
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
 |---|---|---|---|---|---|
 |  normal HLS code 			|  5980  | 148  |  154 |  2 |  1 |
 |  HLS code with #pragmas   |  60 |  8527  |  5220  |  0  |  81  |
+
+
+**Takeaway:** Folding exploits coefficient symmetry to save multiplications, reducing resource usage without affecting functional correctness. HLS pragmas on DSP-style Direct Form FIR detect the same opportunities automatically.
 
 
 ### Transposed Folded form FIR filter
@@ -273,12 +354,21 @@ Instead of computing all taps in parallel, a smaller number of multipliers is ti
 transposed folded code
 ```
 
+
+**Key Points:**  
+- Reduces hardware resources by **combining symmetric taps**, thus **fewer multiplications are needed**  
+- Functionally equivalent to Transposed Form FIR  
+- HLS pragmas applied to Transposed Form FIR **exploit symmetry automatically**, but the overall resource usage remains **similar to the folded version**
+  
+
 | variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
 |---|---|---|---|---|---|
 |  normal HLS code 			|   |   |   |   |   |
 |  HLS code with #pragmas   |   |   |   |   |   |
 
 
+
+**Takeaway:** Folding exploits coefficient symmetry to save multiplications, reducing resource usage without affecting functional correctness. HLS pragmas on Transposed Form FIR detect the same opportunities automatically.
 
 
 ### Summary of FIR Variants
@@ -305,43 +395,37 @@ transposed folded code
 
 ## Multirate FIR Filter
 
+After analyzing and optimizing the single-rate FIR architectures, the next step is to implement a **multirate filter system**.  
+This system consists of three main components forming a **sample-rate conversion chain**:
 
-
-After the single-rate FIR architectures have been analyzed and optimized, the next step is to extend these implementations to a multirate filter system.
-This system is composed of three main components — a decimator, a kernel filter, and an interpolator — forming a complete sample-rate conversion chain.
-The objective is to evaluate the efficiency of these multirate structures in High-Level Synthesis (HLS) and to assess how architectural decisions (e.g., FIR structure, use of SRL, and polyphase decomposition) affect synthesis performance, latency, and resource utilization.
-
-
-### Concept and System Overview
-
-A multirate system modifies the sampling rate of a signal by integer or fractional factors.
-It typically includes:
-
-- Decimator — reduces the sampling rate by a factor M after low-pass filtering to prevent aliasing.
-- Kernel Filter — performs core filtering or spectral shaping at the reduced rate, enabling computational savings.
-- Interpolator — increases the sampling rate by a factor L through zero-insertion and low-pass filtering to reconstruct the continuous-time equivalent.
-
-The overall structure is illustrated below:
-
-
-
-
-
-
-
-
-
+- **Decimator** — reduces the sampling rate by factor M after low-pass filtering to prevent aliasing  
+- **Kernel Filter** — performs core filtering at the reduced rate for computational savings  
+- **Interpolator** — increases the sampling rate by factor L through zero-insertion and low-pass filtering
 
 
 ![Filter](images/DEC_KERNEL_INT.png)
 
 
+### Concept and System Overview
+
+By splitting the filtering into multiple stages, it is possible to **reduce the size of each individual filter**, which can improve synthesis results and reduce resource usage, while maintaining the same overall filtering effect.
+
+```math
+
+```
 
 
 
 
 
 
+
+
+
+
+
+
+The overall structure is illustrated below:
 
 
 
