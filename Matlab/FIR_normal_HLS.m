@@ -37,7 +37,7 @@ hz = freqz(b_FIR, 1, 2*pi*freq);
 fprintf('\n Order of filter, N_FIR=%d\n\n', N_FIR);
 
 plot(freq*Fs,db(hz)),grid
-title('Amplitude response of desired TUTORIAL FIR filter in dB'),
+title('Amplitude response of desired FIR filter in dB'),
 xlabel('Frequency in Hz, Nyquist range');
 ylabel('|H| in dB');
 
