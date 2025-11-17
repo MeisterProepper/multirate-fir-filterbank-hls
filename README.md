@@ -3,7 +3,7 @@ This project investigates various implementation strategies for a multi-rate fil
 The aim is to analyse the effects of different optimisation approaches and architectural decisions on the synthesis results, latency and resource utilisation.
 
 
-![Filter](DEC_KERNEL_INT.png)
+![Filter](images/DEC_KERNEL_INT.png)
 
 ## Objective
 
@@ -26,7 +26,7 @@ The aim is to analyse the effects of different optimisation approaches and archi
 
 
 ## HLS Wrapper
-![Filter](Filter.png)
+![Filter](images/Filter.png)
 
 
 In High-Level Synthesis (HLS), the wrapper serves as the top-level interface between the algorithmic description of the filter and the hardware synthesis environment.
@@ -75,7 +75,7 @@ By analyzing and implementing several FIR variants, the goal is to identify arch
 
 
 ### Direct form FIR filter
-![Filter](Direct_FIR.png)
+![Filter](images/Direct_FIR.png)
 
 The direct form FIR filter implements the convolution sum directly:
 ```math
@@ -198,7 +198,7 @@ output.write(FIR_accu32);
 
 
 ### Transposed form FIR filter
-![Filter](Transposed_FIR.png)
+![Filter](images/Transposed_FIR.png)
 
 The transposed FIR structure is obtained by reversing the signal flow of the direct form.
 Instead of delaying the input samples, the partial sums are delayed and accumulated as new input samples arrive.
@@ -229,7 +229,7 @@ fir_data_t FIR_filter(accu_data_t FIR_delays[], const coef_data_t FIR_coe[], int
 
 
 ### Folded form FIR filter
-![Filter](Folded_FIR.png)
+![Filter](images/Folded_FIR.png)
 
 The folded FIR filter reduces hardware resources by reusing functional units (e.g., multipliers and adders) over multiple clock cycles.
 Instead of computing all taps in parallel, a smaller number of multipliers is time-multiplexed across the filter taps.
@@ -263,7 +263,7 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 
 
 ### Transposed Folded form FIR filter
-![Filter](Transposed_Folded_FIR.png)
+![Filter](images/Transposed_Folded_FIR.png)
 
 The transposed folded FIR filter reduces hardware resources by reusing functional units (e.g., multipliers and adders) over multiple clock cycles.
 Instead of computing all taps in parallel, a smaller number of multipliers is time-multiplexed across the filter taps.
@@ -333,7 +333,7 @@ The overall structure is illustrated below:
 
 
 
-![Filter](DEC_KERNEL_INT.png)
+![Filter](images/DEC_KERNEL_INT.png)
 
 
 
@@ -345,7 +345,7 @@ The overall structure is illustrated below:
 
 
 
-![Filter](Filter_multirate.png)
+![Filter](images/Filter_multirate.png)
 
 
 
