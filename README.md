@@ -5,6 +5,8 @@ The goal is to analyse how optimisation techniques and architectural decisions i
 
 ![Filter](images/DEC_KERNEL_INT.png)
 
+---
+
 ## Objective
 
 The objectives of this project are:
@@ -12,8 +14,10 @@ The objectives of this project are:
 - To compare different implementation strategies, including baseline DSP code, HLS-optimised versions, and variants using HLS-specific constructs (e.g., SRLs, pipelining pragmas, loop transformations).
 - To analyse how optimisation techniques and architectural choices (pipelining, loop restructuring, filter partitioning) affect synthesis results, latency, and resource utilisation.
 
-## Technical parameters
 
+---
+
+## Technical parameters
 
 | Parameter | Value |
 |-----|-----------|
@@ -24,6 +28,7 @@ The objectives of this project are:
 | Target platform | Xilinx Kria KV260 |
 | Toolchain | Xilinx Vivado / Vitis 2024.2 |
 
+---
 
 ## HLS Wrapper
 ![Filter](images/Filter.png)
@@ -67,6 +72,7 @@ void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output){
 - Allows unified testing with the same interface in simulation and synthesis
 - Keeps algorithm and interface design cleanly separated
 
+---
 
 ## Implementation Variants of FIR Filters
 To enable an efficient multirate filter design, the project first investigates several FIR filter architectures.
@@ -391,7 +397,7 @@ transposed folded code
 
 
 
-
+---
 
 ## Multirate FIR Filter
 
@@ -555,6 +561,7 @@ The complete system response of the cascaded Halfband architecture is shown in t
 <img src="images/Halfband_FIR.png" width="800">
 
 
+---
 
 ## Testbench
 Each HLS variant includes a dedicated **C++ testbench** that verifies the functional correctness of the filter design against MATLAB-generated reference data.
@@ -585,6 +592,7 @@ Status: PASS ✅
 During synthesis, this testbench is used for both C-simulation and C/RTL co-simulation in Vitis HLS.
 It allows functional validation before synthesis and direct comparison between the C++ model and the generated HDL implementation.
 
+---
 
 ## Hardware Architecture
 The hardware implementation was deployed on a **Xilinx Kria KV260 Vision AI Starter Kit**, which provides a Zynq UltraScale+ MPSoC.
@@ -608,6 +616,7 @@ The Pmod I2S2 streams audio samples directly into the filter IP via an AXI-Strea
 
 <img src="images/Hardware.png" width="800">
 
+---
 
 ## Hardware Verification and On-Board Evaluation
 
@@ -631,6 +640,118 @@ The complete hardware chain consists of:
 Because every filter implementation exposes an identical AXI4-Stream input/output interface, the IP cores could be swapped inside the pipeline **without any structural changes**.
 This allowed each architecture — direct form, transposed, folded, multirate, cascaded, and Halfband — to be tested under identical runtime conditions.
 
+### Hardware Measurement and Runtime Analysis
 
+To verify the real-time behavior and frequency response of the implemented filters, two measurement approaches were used:
+
+#### 1. Frequency Response Measurement  
+The analog input and output of the Pmod I2S2 were connected to a **network analyzer**.  
+This allowed the complete audio processing chain to be stimulated with swept sine signals (chirp) and the resulting magnitude response to be measured directly on the hardware.
+
+The measured frequency responses matched the MATLAB reference designs with high accuracy.  
+Differences between filter architectures (e.g., multirate, cascaded, Halfband) were clearly observable in the measured curves.
+
+#### 2. AXI4-Stream Monitoring via Integrated Logic Analyzer (ILA)  
+To ensure correct streaming behavior inside the FPGA fabric, the AXI4-Stream interfaces were observed using a **Vivado ILA core**.
+
+The ILA capture confirmed:
+- continuous, gap-free sample flow,
+- correct VALID/READY handshake,
+- no backpressure or stalled cycles,
+- stable sample timing during all filter variants.
+
+The ILA was specifically used to compare latency and internal timing differences between the filter architectures.
+Because every filter shared the same interface, the AXI stream behavior could be evaluated consistently across all implementations.
+
+
+
+---
+
+
+### Detailed Hardware Observations for Selected Filter Architectures
+
+During the on-board evaluation, five representative filter architectures were examined in more detail.  
+Although all variants shared the same AXI4-Stream interface and integrated seamlessly into the audio pipeline, their behavior during live operation revealed clear architectural differences.
+
+#### 1. Direct Form FIR
+The direct-form FIR displayed the highest overall resource usage for a fully parallel implementation.  
+In real-time playback, it showed:
+- stable and predictable latency,
+- very low group delay variation,
+- a frequency response that matched the MATLAB reference almost exactly.
+
+However, the long adder chain in the direct structure resulted in the highest critical path among all single-rate implementations.
+
+#### 2. Transposed Form FIR
+The transposed architecture achieved:
+- significantly improved pipelining,
+- reduced critical path length,
+- more efficient mapping onto DSP slices.
+
+On hardware, this resulted in noticeably lower latency and better timing margins.  
+Its measured frequency response matched the direct-form implementation, but with a cleaner AXI-stream timing profile captured in the ILA.
+
+#### 3. Multirate FIR (Decimator – Kernel – Interpolator)
+The multirate structure reduced the internal processing rate and therefore:
+- achieved the largest computational savings,
+- showed the lowest DSP usage relative to its frequency selectivity,
+- produced a very smooth and stable output signal.
+
+Hardware measurements showed a frequency response nearly identical to the single-rate versions, but with significantly reduced filter order and power consumption.  
+The AXI stream exhibited short bursts of activity corresponding to the decimation/interpolation behavior, which were correctly handled by the pipeline.
+
+#### 4. Cascaded Multistage Filter
+The cascaded version split the filtering task across multiple smaller stages.  
+This provided:
+- a substantial reduction in required filter order per stage,
+- improved numerical stability,
+- shorter combinational paths.
+
+On hardware, the cascaded filter showed excellent timing behavior.  
+The frequency response captured with the network analyzer clearly reflected the combined effect of all stages and closely matched the MATLAB design.  
+The modular structure also made this variant the easiest to debug and analyze using the ILA.
+
+#### 5. Halfband Cascaded Filter
+The Halfband-based implementation was the most efficient structure tested.  
+Thanks to its inherent coefficient symmetry and the high number of zero coefficients, it required:
+- the fewest multiplications,
+- very low DSP usage,
+- the shortest latency among the multistage variants.
+
+The hardware measurements confirmed the expected wide transition bands and the characteristic ±0.5 dB ripple at midband.  
+AXI streaming remained perfectly continuous even with the aggressive coefficient sparsity, demonstrating the robustness of the HLS-generated IP.
+
+### Summary
+The five selected filter variants demonstrated how architectural choices directly impact hardware behavior.  
+While all designs performed correctly, the Halfband and multirate/cascaded structures offered the best trade-off between resource usage, latency, and spectral performance during real-time testing.
+
+
+---
+
+## Conclusion
+
+This project demonstrated how different FIR architectures behave when implemented, synthesized, and executed on real hardware using High-Level Synthesis (HLS).  
+By evaluating classical single-rate filters, optimized HLS variants, multirate structures, cascaded designs, and Halfband filters, several key insights were obtained:
+
+1. **Architecture choice directly influences hardware efficiency.**  
+   While direct-form FIR filters provide a clean and intuitive structure, their long adder chains result in high critical path delays.  
+   Transposed variants, in contrast, map more efficiently to DSP slices and offer significantly better timing performance.
+
+2. **HLS optimizations can dramatically reduce latency, but often at the cost of higher resource usage.**  
+   Pipelining and loop unrolling improve throughput but must be applied carefully to balance DSP utilization and area constraints.
+
+3. **Multirate and cascaded filter designs offer the best scalability.**  
+   Reducing the internal processing rate or splitting the filter into smaller stages drastically decreases computational cost while maintaining the desired frequency response.  
+   These approaches achieved the most favorable ratio of resource usage to performance.
+
+4. **Halfband-based cascades provide exceptional efficiency.**  
+   Due to their inherent coefficient symmetry and sparsity, Halfband filters achieve the lowest multiplier count and demonstrate excellent suitability for hardware implementation.
+
+5. **Hardware verification confirmed the theoretical expectations.**  
+   Network analyzer measurements aligned precisely with MATLAB reference responses, and AXI4-Stream monitoring using the ILA validated continuous, gap-free real-time operation for all architectures.
+
+Overall, the project highlights the importance of selecting the right filter architecture when targeting FPGA platforms.  
+HLS proved to be a powerful tool for rapidly exploring and comparing design alternatives, while the modular IP-core approach enabled seamless on-hardware testing.  
+The results show that substantial performance gains and resource savings can be achieved by moving beyond classical FIR structures and leveraging multirate, cascaded, or Halfband implementations.
 
 
