@@ -406,7 +406,7 @@ This system consists of three main components forming a **sample-rate conversion
 ![Filter](images/DEC_KERNEL_INT.png)
 
 
-### Concept and System Overview
+### Single-Stage Multirate FIR Filter
 
 By splitting the filtering into multiple stages, it is possible to **reduce the size of each individual filter**, which can improve synthesis results and reduce resource usage, while maintaining the same overall filtering effect.
 To design the multirate FIR filter efficiently, the optimal decimation/interpolation factor **M** must be determined.
@@ -464,7 +464,7 @@ The overall structure is illustrated below:
 
 
 
-### Multirate Filter — Variant Combinations
+#### Multirate Filter — Variant Combinations
 
 | Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
 |-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
@@ -481,7 +481,9 @@ The multirate filter can be further optimised by cascading multiple decimation /
 Instead of applying a single-stage M-fold operation, the cascade splits the overall factor into smaller per-stage factors (e.g., M = M1 · M2 · ...). Each stage therefore requires a much shorter FIR, which reduces coefficient count and implementation complexity.
 The following illustration shows the cascaded structure (stage-wise decimation/interpolation with intermediate kernel filters).
 
-[Filter](images/Cascade_FIR.png)
+
+<img src="images/Cascade_FIR.png" width="800">
+
 
 To evaluate the benefit of the cascaded multirate structure, the overall computational effort was estimated using the same metric as in the single-stage analysis.
 By splitting the total conversion factor into two stages (e.g., \( M = 4 \rightarrow M_1 = 2, M_2 = 2 \)), each individual filter operates with a wider normalized transition band and therefore requires significantly fewer coefficients.
@@ -512,7 +514,46 @@ The resulting amplitude response of the complete cascaded system is shown in the
 
 
 ### Halfband Multirate Filter
+A further improvement of the multirate cascade can be achieved by replacing individual stages with Halfband filters.
+Halfband filters are highly attractive in multirate systems because:
+- every second coefficient is exactly zero
+- the transition band is centered around one quarter of the sampling frequency,
+- they naturally support upsampling or downsampling by a factor of two.
+
+Because of these properties, a Halfband filter requires only about **50% of the multiplications** of an equivalent full-band FIR filter.  
+When used inside a multistage decimation or interpolation chain, this leads to a substantial further reduction of computational effort.
+
+
+To evaluate the benefit of the cascaded halfband multirate structure, the overall computational effort was estimated using the same metric as in the single-stage analysis.
+
+```math
+\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
+```
+
+Using the project parameters:
+- $F_s$ ​= 50 kHz
+- $f_{pass}$ = 3,1 kHz
+- $f_{stop}$ = 3,35 kHz
+- $\delta_{pass}$ = 0,01
+- $\delta_{stop}$ = 0,01
+- M1 = 2
+- M2 = 2
+
+
+
+
+
+
+Each Halfband stage was designed in MATLAB using the required passband and stopband ripple constraints.
+The complete system response of the cascaded Halfband architecture is shown in the following figure:
 ![Filter](images/Amp_res_halfband.png)
+
+
+
+
+
+<img src="images/Halfband_FIR.png" width="800">
+
 
 
 ## Testbench
@@ -545,6 +586,8 @@ During synthesis, this testbench is used for both C-simulation and C/RTL co-simu
 It allows functional validation before synthesis and direct comparison between the C++ model and the generated HDL implementation.
 
 
+## Hardware
+<img src="images/Hardware.png" width="800">
 
 
 
