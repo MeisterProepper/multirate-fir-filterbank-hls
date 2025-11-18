@@ -582,14 +582,54 @@ Status: PASS ✅
 ```
 
 ### Integration with HLS
-During synthesis, this testbench is used for both C-simulation and C/RTL co-simulation in Vivado or Vitis HLS.
+During synthesis, this testbench is used for both C-simulation and C/RTL co-simulation in Vitis HLS.
 It allows functional validation before synthesis and direct comparison between the C++ model and the generated HDL implementation.
 
 
-## Hardware
+## Hardware Architecture
+The hardware implementation was deployed on a **Xilinx Kria KV260 Vision AI Starter Kit**, which provides a Zynq UltraScale+ MPSoC.
+The FIR and multirate filters were synthesized as HLS IP cores and integrated into the programmable logic region of the KV260.
+
+### Physical Hardware Setup
+
+The system consists of:
+
+- **Kria KV260 FPGA Module**  
+  - Zynq UltraScale+ MPSoC  
+  - Programmable logic used for all FIR / multirate filter implementations    
+
+- **Digilent Pmod I2S2**  
+  - Used as the audio interface for real input/output testing  
+  - Provides I2S line input and line output  
+  - Connected to the KV260 through the PMOD expansion header  
+
+The Pmod I2S2 streams audio samples directly into the filter IP via an AXI-Stream data path.
+
+
 <img src="images/Hardware.png" width="800">
 
 
+## Hardware Verification and On-Board Evaluation
+
+All FIR and multirate filters were synthesized as HLS IP cores and inserted into a fixed audio-processing pipeline on the Kria KV260.
+The pipeline is fed by the **Pmod I2S2** interface, which provides streaming audio samples from the line input and transmits the processed samples back to the line output.
+
+### Hardware Pipeline Structure
+
+The complete hardware chain consists of:
+
+1. **Pmod I2S2 interface block**  
+   Converts the I2S stream into AXI4-Stream data for the FPGA fabric.
+
+2. **Filter IP Core (HLS-generated)**  
+   Processes each audio sample in real time.  
+   All filter variants share the same streaming interface, making them fully interchangeable.
+
+3. **Output I2S block**  
+   Converts the filtered AXI stream back into I2S for playback on the Pmod output.
+
+Because every filter implementation exposes an identical AXI4-Stream input/output interface, the IP cores could be swapped inside the pipeline **without any structural changes**.
+This allowed each architecture — direct form, transposed, folded, multirate, cascaded, and Halfband — to be tested under identical runtime conditions.
 
 
 
