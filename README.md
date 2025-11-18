@@ -409,13 +409,44 @@ This system consists of three main components forming a **sample-rate conversion
 ### Concept and System Overview
 
 By splitting the filtering into multiple stages, it is possible to **reduce the size of each individual filter**, which can improve synthesis results and reduce resource usage, while maintaining the same overall filtering effect.
+To design the multirate FIR filter efficiently, the optimal decimation/interpolation factor **M** must be determined.
+This value minimizes the overall filter order of the three-stage multirate structure.
+The optimal factor **M_min** is obtained by solving the following equation:
 
 ```math
-
+M^3_{min} \cdot (f^2_{stop}-f^2_{pass}) - M^2_{min} \cdot (f_{stop} + f_{pass})^2 + M_{min} \cdot 2 \cdot F_s \cdot (f_{stop} + f_{pass}) - F_s^2 = 0
 ```
 
+Using the given parameters:
+- f_pass = 3.1 kHz
+- f_stop = 3.35 kHz
+- F_s = 50 kHz
 
+Solving this equation yields:  
+$M_{min} \approx5$
 
+Based on the previous analysis and the design constraints for later cascading, the multirate system uses a decimation/interpolation factor of M=4.
+With the optimal multirate factor \(M_{\min}\) determined, the total implementation effort of the multirate filter can be estimated using the following formula:
+```math
+\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
+```
+
+Using the project parameters:
+- $F_s$ ​= 50 kHz
+- $f_{pass}$ = 3,1 kHz
+- $f_{stop}$ = 3,35 kHz
+- $\delta_{pass}$ = 0,01
+- $\delta_{stop}$ = 0,01
+- M = 4
+
+Substituting these values yields:
+
+$E_{ges} \approx 2,75 \cdot 10^6$
+
+Overall, the multirate architecture reduces the computational effort by a factor of more than 7, corresponding to an effort reduction of roughly 86 % compared to the single-rate implementation.
+Following this effort estimate, the multirate filter was implemented in MATLAB to obtain the prototype coefficients and to verify the amplitude response. The resulting amplitude response is shown below:
+
+![Filter](images/Amp_res_multirate.png)
 
 
 
@@ -445,8 +476,43 @@ The overall structure is illustrated below:
 
 
 
+### Cascaded Multirate Filter
+The multirate filter can be further optimised by cascading multiple decimation / interpolation stages.  
+Instead of applying a single-stage M-fold operation, the cascade splits the overall factor into smaller per-stage factors (e.g., M = M1 · M2 · ...). Each stage therefore requires a much shorter FIR, which reduces coefficient count and implementation complexity.
+The following illustration shows the cascaded structure (stage-wise decimation/interpolation with intermediate kernel filters).
+
+[Filter](images/Cascade_FIR.png)
+
+To evaluate the benefit of the cascaded multirate structure, the overall computational effort was estimated using the same metric as in the single-stage analysis.
+By splitting the total conversion factor into two stages (e.g., \( M = 4 \rightarrow M_1 = 2, M_2 = 2 \)), each individual filter operates with a wider normalized transition band and therefore requires significantly fewer coefficients.
+
+```math
+\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
+```
+
+Using the project parameters:
+- $F_s$ ​= 50 kHz
+- $f_{pass}$ = 3,1 kHz
+- $f_{stop}$ = 3,35 kHz
+- $\delta_{pass}$ = 0,01
+- $\delta_{stop}$ = 0,01
+- M1 = 2
+- M2 = 2
 
 
+As expected, the cascaded design leads to an even lower total effort than the single-stage multirate implementation.
+The main reason is that both stages operate on progressively reduced sampling rates, which drastically reduces the number of operations needed per output sample.
+
+
+Each filter stage of the cascade was designed in MATLAB according to the required passband and stopband specifications.
+The resulting amplitude response of the complete cascaded system is shown in the figure below:
+
+
+![Filter](images/Amp_res_cascade.png)
+
+
+### Halfband Multirate Filter
+![Filter](images/Amp_res_halfband.png)
 
 
 ## Testbench
