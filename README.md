@@ -601,7 +601,7 @@ The system consists of:
 
 The Pmod I2S2 streams audio samples directly into the filter IP via an AXI-Stream data path.
 
-<img src="images/Hardware.jpg" width="800">
+<img src="images/Hardware.png" width="800">
 
 ---
 
