@@ -3,7 +3,9 @@
 This project explores different implementation strategies for both classical (single-rate) FIR filters and multi-rate FIR systems using High-Level Synthesis (HLS).
 The goal is to analyse how optimisation techniques and architectural decisions influence synthesis results, in particular latency, resource utilisation, and overall implementation efficiency.
 
-![Filter](images/DEC_KERNEL_INT.png)
+<p align="center" width="100%">
+   <img src="images/DEC_KERNEL_INT.png" width="80%">
+</p>
 
 ---
 
