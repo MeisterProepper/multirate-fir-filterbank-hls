@@ -513,6 +513,15 @@ The resulting amplitude response of the complete cascaded system is shown in the
 
 ![Filter](images/Amp_res_cascade.png)
 
+#### Cascade Multirate Filter — Variant Combinations
+
+| Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
+|-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
+| 1         | Direct        | Direct        | Direct          |   290  |   4094  |  1970  |  0  |  57 |
+| 2         | Direct        | Transposed    | Direct          |     |     |      |    |   |
+| 3         | Transposed    | Direct        | Transposed      |     |     |      |    |   |
+| 4         | Transposed    | Transposed    | Transposed      |     |     |      |    |   |
+
 ### Halfband Multirate Filter
 
 A further improvement of the multirate cascade can be achieved by replacing individual stages with Halfband filters.
@@ -546,6 +555,15 @@ The complete system response of the cascaded Halfband architecture is shown in t
 ![Filter](images/Amp_res_halfband.png)
 
 <img src="images/Halfband_FIR.png" width="800">
+
+#### Halfband Multirate Filter — Variant Combinations
+
+| Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
+|-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
+| 1         | Direct        | Direct        | Direct          |     |     |      |    |   |
+| 2         | Direct        | Transposed    | Direct          |     |     |      |    |   |
+| 3         | Transposed    | Direct        | Transposed      |     |     |      |    |   |
+| 4         | Transposed    | Transposed    | Transposed      |     |     |      |    |   |
 
 ---
 
