@@ -117,7 +117,7 @@ end
 % Testsignal generation
 testLength = 460;
 t = (0:testLength-1)/Fs;
-test_signal = sin(2 * pi * 1000 * t);
+test_signal = sin(2 * pi * 1000 * t)*0.8;
 
 my_signal2=zeros(length(test_signal));
 
@@ -150,6 +150,7 @@ for i = 1:testLength
         case 0
             y1_phase0 = filtersdec1{1}(test_signal(i));
             y1=y1_phase0+y1_phase1;
+            my_signal2(i) = y1_phase0;
             
                 % switch mod_value2
                 %     case 0
