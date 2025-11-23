@@ -150,17 +150,17 @@ for i = 1:testLength
             y1_phase0 = filtersdec1{1}(test_signal(i));
             y1=y1_phase0+y1_phase1;
             
-                switch mod_value1
+                switch mod_value2
                     case 0
                         y2_phase0 = filtersdec2{1}(y1);
                         y2=y2_phase0+y2_phase1;
                         y3=filterkernel(y2);
-                        y4 = filtersint2{1}(y3)*4;
+                        y4 = filtersint2{1}(y3)*2;
                         mod_value2=1;
             
                     case 1
                         y2_phase1 = filtersdec2{2}(y1);
-                        y4 = filtersint{2}(y3)*4;
+                        y4 = filtersint2{2}(y3)*2;
                         mod_value2=0;
 
                 end

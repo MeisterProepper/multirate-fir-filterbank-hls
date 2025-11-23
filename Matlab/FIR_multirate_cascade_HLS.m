@@ -119,7 +119,7 @@ testLength = 460;
 t = (0:testLength-1)/Fs;
 test_signal = sin(2 * pi * 1000 * t);
 
-
+my_signal2=zeros(length(test_signal));
 
 %TODO Testsignal Multirate
 y1_phase0=0;
@@ -150,18 +150,21 @@ for i = 1:testLength
         case 0
             y1_phase0 = filtersdec1{1}(test_signal(i));
             y1=y1_phase0+y1_phase1;
+            %my_signal2(i) = y1;
             
-                switch mod_value1
+                switch mod_value2
                     case 0
                         y2_phase0 = filtersdec2{1}(y1);
                         y2=y2_phase0+y2_phase1;
                         y3=filterkernel(y2);
-                        y4 = filtersint2{1}(y3)*4;
+                        y4 = filtersint2{1}(y3)*2;
                         mod_value2=1;
+
+                        my_signal2(i) = y4;
             
                     case 1
                         y2_phase1 = filtersdec2{2}(y1);
-                        y4 = filtersint{2}(y3)*4;
+                        y4 = filtersint2{2}(y3)*2;
                         mod_value2=0;
 
                 end
@@ -186,7 +189,7 @@ end
 % Plots
 figure;
 
-subplot(2, 1, 1);
+subplot(3, 1, 1);
 plot(t, test_signal, 'DisplayName', 'Original Signal 1 kHz', 'Marker', 'O');
 title('Original Signal (1 kHz Sine)');
 xlabel('Time [s]');
@@ -194,7 +197,7 @@ ylabel('Amplitude');
 ylim([-1 1]); 
 grid on;
 
-subplot(2, 1, 2);
+subplot(3, 1, 2);
 plot(t, my_signal, 'DisplayName', 'Filtered Signal', 'Marker', 'O');
 title('Filtered Signal');
 xlabel('Time [s]');
@@ -202,6 +205,13 @@ ylabel('Amplitude');
 ylim([-1 1]); 
 grid on;
 
+subplot(3, 1, 3);
+plot(t, my_signal2, 'DisplayName', 'Filtered Signal2', 'Marker', 'O');
+title('Filtered Signal2');
+xlabel('Time [s]');
+ylabel('Amplitude');
+ylim([-1 1]); 
+grid on;
 
 %---------------------------------------------------------------------------
 % write to file !
