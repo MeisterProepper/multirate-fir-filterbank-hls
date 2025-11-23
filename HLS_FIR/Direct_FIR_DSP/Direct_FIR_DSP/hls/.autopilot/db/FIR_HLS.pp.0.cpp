@@ -358,7 +358,7 @@ const short b_FIR[392]={
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output);
+__attribute__((sdx_kernel("Direct_FIR_DSP", 0))) void Direct_FIR_DSP(hls::stream<short> &input, hls::stream<short> &output);
 
 short FIR_filter(short FIR_delays[], const short FIR_coe[], short int N_delays, short x_n, int shift);
 # 2 "FIR_HLS.cpp" 2
@@ -366,9 +366,9 @@ short FIR_filter(short FIR_delays[], const short FIR_coe[], short int N_delays, 
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output){
+__attribute__((sdx_kernel("Direct_FIR_DSP", 0))) void Direct_FIR_DSP(hls::stream<short> &input, hls::stream<short> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
+#pragma HLSDIRECTIVE TOP name=Direct_FIR_DSP
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input

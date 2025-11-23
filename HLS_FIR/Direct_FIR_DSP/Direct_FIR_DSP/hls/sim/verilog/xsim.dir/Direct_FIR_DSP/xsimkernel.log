@@ -1,0 +1,7 @@
+Running: xsim.dir/Direct_FIR_DSP/xsimk.exe -simmode gui -wdb Direct_FIR_DSP.wdb -simrunnum 0 -socket 56227
+Design successfully loaded
+Design Loading Memory Usage: 29904 KB (Peak: 29904 KB)
+Design Loading CPU Usage: 984 ms
+Simulation completed
+Simulation Memory Usage: 44176 KB (Peak: 44176 KB)
+Simulation CPU Usage: 3812 ms

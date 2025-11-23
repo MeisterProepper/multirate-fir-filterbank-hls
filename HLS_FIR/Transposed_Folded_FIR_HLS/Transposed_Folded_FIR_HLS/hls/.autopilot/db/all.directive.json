@@ -1,7 +1,7 @@
 [
   {
     "functionLabel": "",
-    "functionName": "FIR_HLS",
+    "functionName": "Transposed_Folded_FIR_HLS",
     "id": 0,
     "ifcond": "",
     "insert_position": "",
@@ -11,7 +11,7 @@
       "option": [
         {
           "name": "name",
-          "value": "FIR_HLS"
+          "value": "Transposed_Folded_FIR_HLS"
         }
       ]
     },

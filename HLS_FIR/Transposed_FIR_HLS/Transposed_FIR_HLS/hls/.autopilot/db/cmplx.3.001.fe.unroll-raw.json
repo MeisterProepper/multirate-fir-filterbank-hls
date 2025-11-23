@@ -8,7 +8,7 @@
     "loads": {
       "L": 1
     },
-    "name": "FIR_HLS",
+    "name": "Transposed_FIR_HLS",
     "total_instructions": 13319
   },
   "1": {

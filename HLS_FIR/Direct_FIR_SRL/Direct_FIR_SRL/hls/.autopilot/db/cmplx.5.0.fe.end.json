@@ -1,6 +1,6 @@
 {
     "0": {
-        "name": "FIR_HLS",
+        "name": "Direct_FIR_SRL",
         "file": "FIR_HLS.cpp",
         "fileloc": "6",
         "instructions": "1753",

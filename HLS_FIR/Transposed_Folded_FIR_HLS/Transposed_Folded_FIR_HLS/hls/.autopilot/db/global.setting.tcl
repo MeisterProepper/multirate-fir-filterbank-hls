@@ -1,5 +1,5 @@
 
-set TopModule "FIR_HLS"
+set TopModule "Transposed_Folded_FIR_HLS"
 set ClockPeriod 10
 set ClockList ap_clk
 set AxiliteClockList {}
@@ -24,7 +24,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix FIR_HLS_
+set RtlSubPrefix Transposed_Folded_FIR_HLS_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}

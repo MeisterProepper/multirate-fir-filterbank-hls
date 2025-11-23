@@ -5,7 +5,7 @@
     "file": "FIR_HLS.cpp",
     "fileloc": 6,
     "instructions": 7,
-    "name": "FIR_HLS",
+    "name": "Direct_FIR_DSP",
     "total_instructions": 42
   },
   "1": {

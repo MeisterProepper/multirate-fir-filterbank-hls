@@ -5,7 +5,7 @@
 
 typedef ap_fixed<16,1> fir_data_t; 
 
-void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+void Multirate_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 

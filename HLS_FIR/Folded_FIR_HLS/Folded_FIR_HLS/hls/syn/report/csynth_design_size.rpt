@@ -6,10 +6,10 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                        | Instructions | Description                                                                            |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                             |    791       | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                             |    736       | After all functions are compiled and linked into a single design                       |
 |               |                             |              |                                                                                        |
 | Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                  | 12,161       | user unroll pragmas are applied                                                        |
+|               | (1) unroll                  | 12,158       | user unroll pragmas are applied                                                        |
 |               | (2) simplification          |  3,417       | simplification of applied user unroll pragmas                                          |
 |               | (3) inline                  |  3,011       | user inline pragmas are applied                                                        |
 |               | (4) simplification          |  3,011       | simplification of applied user inline pragmas                                          |
@@ -33,12 +33,12 @@
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
-+---------------+----------------+--------------+---------------+--------------+-------------+---------------+
-| Function      | Location       | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
-+---------------+----------------+--------------+---------------+--------------+-------------+---------------+
-| + FIR_HLS     | FIR_HLS.cpp:6  | 791          | 3,011         | 2,736        | 2,736       | 2,744         |
-|    FIR_filter | FIR_HLS.cpp:18 | 766          | 3,002         | 2,727        | 2,727       | 2,728         |
-+---------------+----------------+--------------+---------------+--------------+-------------+---------------+
++------------------+----------------+--------------+---------------+--------------+-------------+---------------+
+| Function         | Location       | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++------------------+----------------+--------------+---------------+--------------+-------------+---------------+
+| + Folded_FIR_HLS | FIR_HLS.cpp:6  | 736          | 3,011         | 2,736        | 2,736       | 2,744         |
+|    FIR_filter    | FIR_HLS.cpp:18 | 711          | 3,002         | 2,727        | 2,727       | 2,728         |
++------------------+----------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings
 +---------------------------------------------+--------+------------------------------------------------------------------+

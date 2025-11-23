@@ -1,0 +1,304 @@
+
+
+================================================================
+== Synthesis Summary Report of 'Multirate_v4'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 16 16:33:21 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Multirate_v4
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |           Modules          | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
+    |           & Loops          | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +----------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ Multirate_v4              |     -|  1.37|       12|  120.000|         -|       13|     -|        no|     -|  60 (4%)|  7468 (3%)|  6395 (5%)|    -|
+    | + FIR_filter_transposed_1  |     -|  3.90|        0|    0.000|         -|        1|     -|       yes|     -|  5 (~0%)|          -|  181 (~0%)|    -|
+    | + FIR_filter_transposed_1  |     -|  3.90|        0|    0.000|         -|        1|     -|       yes|     -|  5 (~0%)|          -|  181 (~0%)|    -|
+    | + FIR_filter_transposed_2  |     -|  3.90|        3|   30.000|         -|        1|     -|       yes|     -|  4 (~0%)|  881 (~0%)|  415 (~0%)|    -|
+    | + FIR_filter_transposed    |     -|  3.90|        3|   30.000|         -|        1|     -|       yes|     -|  46 (3%)|  5413 (2%)|  4987 (4%)|    -|
+    +----------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| input_r   | in        | both          | 16    | 1      | 1      |
+| output_r  | out       | both          | 16    | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| input    | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| output   | out       | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
++----------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------+-----+--------+--------------+------+-----------+---------+
+| Name                                                            | DSP | Pragma | Variable     | Op   | Impl      | Latency |
++-----------------------------------------------------------------+-----+--------+--------------+------+-----------+---------+
+| + Multirate_v4                                                  | 60  |        |              |      |           |         |
+|   add_ln32_1_fu_1160_p2                                         |     |        | add_ln32_1   | add  | fabric    | 0       |
+|  + FIR_filter_transposed_1 (grp_FIR_filter_transposed_1_fu_405) | 5   |        |              |      |           |         |
+|    mul_10s_16s_25_1_1_U1                                        | 1   |        | mul_ln84     | mul  | auto      | 0       |
+|    add_ln84_fu_142_p2                                           |     |        | add_ln84     | add  | fabric    | 0       |
+|    mul_16s_13s_29_1_1_U2                                        | 1   |        | mul_ln87_3   | mul  | auto      | 0       |
+|    add_ln87_fu_192_p2                                           |     |        | add_ln87     | add  | fabric    | 0       |
+|    mul_16s_14ns_30_1_1_U3                                       | 1   |        | mul_ln87     | mul  | auto      | 0       |
+|    mul_16s_13s_29_1_1_U4                                        | 1   |        | mul_ln87_4   | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U5                                        | 1   |        | mul_ln87_5   | mul  | auto      | 0       |
+|    add_ln87_4_fu_264_p2                                         |     |        | add_ln87_4   | add  | fabric    | 0       |
+|    add_ln87_5_fu_270_p2                                         |     |        | add_ln87_5   | add  | fabric    | 0       |
+|  + FIR_filter_transposed_1 (grp_FIR_filter_transposed_1_fu_425) | 5   |        |              |      |           |         |
+|    mul_10s_16s_25_1_1_U1                                        | 1   |        | mul_ln84     | mul  | auto      | 0       |
+|    add_ln84_fu_142_p2                                           |     |        | add_ln84     | add  | fabric    | 0       |
+|    mul_16s_13s_29_1_1_U2                                        | 1   |        | mul_ln87_3   | mul  | auto      | 0       |
+|    add_ln87_fu_192_p2                                           |     |        | add_ln87     | add  | fabric    | 0       |
+|    mul_16s_14ns_30_1_1_U3                                       | 1   |        | mul_ln87     | mul  | auto      | 0       |
+|    mul_16s_13s_29_1_1_U4                                        | 1   |        | mul_ln87_4   | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U5                                        | 1   |        | mul_ln87_5   | mul  | auto      | 0       |
+|    add_ln87_4_fu_264_p2                                         |     |        | add_ln87_4   | add  | fabric    | 0       |
+|    add_ln87_5_fu_270_p2                                         |     |        | add_ln87_5   | add  | fabric    | 0       |
+|  + FIR_filter_transposed_2                                      | 4   |        |              |      |           |         |
+|    mac_muladd_16s_9ns_32s_32_4_0_U23                            | 1   |        | mul_ln84     | mul  | dsp_slice | 3       |
+|    mac_muladd_16s_9ns_32s_32_4_0_U23                            | 1   |        | sext_ln84_4  | sext | dsp_slice | 3       |
+|    mac_muladd_16s_9ns_32s_32_4_0_U23                            | 1   |        | add_ln84     | add  | dsp_slice | 3       |
+|    mul_16s_13s_29_1_1_U20                                       | 1   |        | mul_ln87     | mul  | auto      | 0       |
+|    add_ln87_fu_108_p2                                           |     |        | add_ln87     | add  | fabric    | 0       |
+|    mul_16s_15ns_31_1_0_U21                                      | 1   |        | mul_ln87_1   | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_0_U22                                      | 1   |        | mul_ln87_2   | mul  | auto      | 0       |
+|    add_ln87_1_fu_133_p2                                         |     |        | add_ln87_1   | add  | fabric    | 0       |
+|    add_ln87_2_fu_138_p2                                         |     |        | add_ln87_2   | add  | fabric    | 0       |
+|    add_ln87_3_fu_143_p2                                         |     |        | add_ln87_3   | add  | fabric    | 0       |
+|  + FIR_filter_transposed                                        | 46  |        |              |      |           |         |
+|    sub_ln84_fu_433_p2                                           |     |        | sub_ln84     | sub  | fabric    | 0       |
+|    add_ln84_fu_2031_p2                                          |     |        | add_ln84     | add  | fabric    | 0       |
+|    mul_16s_9s_25_1_1_U33                                        | 1   |        | mul_ln87     | mul  | auto      | 0       |
+|    add_ln87_fu_2054_p2                                          |     |        | add_ln87     | add  | fabric    | 0       |
+|    sub_ln87_fu_448_p2                                           |     |        | sub_ln87     | sub  | fabric    | 0       |
+|    mul_16s_8ns_24_1_1_U34                                       | 1   |        | mul_ln87_6   | mul  | auto      | 0       |
+|    sub_ln87_1_fu_487_p2                                         |     |        | sub_ln87_1   | sub  | fabric    | 0       |
+|    mul_16s_8s_24_1_1_U35                                        | 1   |        | mul_ln87_7   | mul  | auto      | 0       |
+|    mul_16s_6ns_22_1_1_U36                                       | 1   |        | mul_ln87_8   | mul  | auto      | 0       |
+|    mul_16s_8ns_24_1_1_U37                                       | 1   |        | mul_ln87_9   | mul  | auto      | 0       |
+|    mul_16s_7s_23_1_1_U38                                        | 1   |        | mul_ln87_10  | mul  | auto      | 0       |
+|    sub_ln87_2_fu_545_p2                                         |     |        | sub_ln87_2   | sub  | fabric    | 0       |
+|    sub_ln87_3_fu_562_p2                                         |     |        | sub_ln87_3   | sub  | fabric    | 0       |
+|    mul_16s_9ns_25_1_1_U39                                       | 1   |        | mul_ln87_11  | mul  | auto      | 0       |
+|    mul_16s_8s_24_1_1_U40                                        | 1   |        | mul_ln87_12  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U41                                        | 1   |        | mul_ln87_13  | mul  | auto      | 0       |
+|    sub_ln87_4_fu_621_p2                                         |     |        | sub_ln87_4   | sub  | fabric    | 0       |
+|    mul_16s_9ns_25_1_1_U42                                       | 1   |        | mul_ln87_14  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U43                                        | 1   |        | mul_ln87_15  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U44                                        | 1   |        | mul_ln87_16  | mul  | auto      | 0       |
+|    mul_16s_9ns_25_1_1_U45                                       | 1   |        | mul_ln87_17  | mul  | auto      | 0       |
+|    mul_16s_9ns_25_1_1_U46                                       | 1   |        | mul_ln87_18  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U47                                        | 1   |        | mul_ln87_19  | mul  | auto      | 0       |
+|    sub_ln87_5_fu_706_p2                                         |     |        | sub_ln87_5   | sub  | fabric    | 0       |
+|    mul_16s_10ns_26_1_0_U48                                      | 1   |        | mul_ln87_20  | mul  | auto      | 0       |
+|    sub_ln87_6_fu_730_p2                                         |     |        | sub_ln87_6   | sub  | fabric    | 0       |
+|    mul_16s_10s_26_1_1_U49                                       | 1   |        | mul_ln87_21  | mul  | auto      | 0       |
+|    mul_16s_8s_24_1_1_U50                                        | 1   |        | mul_ln87_22  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_0_U51                                      | 1   |        | mul_ln87_23  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U52                                       | 1   |        | mul_ln87_24  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U53                                      | 1   |        | mul_ln87_25  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U54                                       | 1   |        | mul_ln87_26  | mul  | auto      | 0       |
+|    sub_ln87_9_fu_835_p2                                         |     |        | sub_ln87_9   | sub  | fabric    | 0       |
+|    mul_16s_11ns_27_1_1_U55                                      | 1   |        | mul_ln87_27  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U56                                        | 1   |        | mul_ln87_28  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U57                                       | 1   |        | mul_ln87_29  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_0_U58                                      | 1   |        | mul_ln87_30  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U59                                      | 1   |        | mul_ln87_31  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U60                                       | 1   |        | mul_ln87_32  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U61                                       | 1   |        | mul_ln87_33  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U62                                      | 1   |        | mul_ln87_34  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U63                                      | 1   |        | mul_ln87_35  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U64                                       | 1   |        | mul_ln87_36  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U65                                       | 1   |        | mul_ln87_37  | mul  | auto      | 0       |
+|    mul_16s_12ns_28_1_1_U66                                      | 1   |        | mul_ln87_38  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U67                                      | 1   |        | mul_ln87_39  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U68                                       | 1   |        | mul_ln87_40  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U69                                       | 1   |        | mul_ln87_41  | mul  | auto      | 0       |
+|    mul_16s_12ns_28_1_1_U70                                      | 1   |        | mul_ln87_42  | mul  | auto      | 0       |
+|    mul_16s_12ns_28_1_1_U71                                      | 1   |        | mul_ln87_43  | mul  | auto      | 0       |
+|    mul_16s_13s_29_1_1_U72                                       | 1   |        | mul_ln87_44  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U73                                       | 1   |        | mul_ln87_45  | mul  | auto      | 0       |
+|    mul_16s_13ns_29_1_1_U74                                      | 1   |        | mul_ln87_46  | mul  | auto      | 0       |
+|    mul_16s_14s_30_1_1_U75                                       | 1   |        | mul_ln87_47  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U76                                       | 1   |        | mul_ln87_48  | mul  | auto      | 0       |
+|    mul_16s_16ns_32_1_1_U77                                      | 1   |        | mul_ln87_49  | mul  | auto      | 0       |
+|    mac_muladd_16s_16ns_32ns_32_4_1_U78                          | 1   |        | mul_ln87_50  | mul  | dsp_slice | 3       |
+|    add_ln87_6_fu_2085_p2                                        |     |        | add_ln87_6   | add  | fabric    | 0       |
+|    add_ln87_7_fu_2095_p2                                        |     |        | add_ln87_7   | add  | fabric    | 0       |
+|    add_ln87_8_fu_2105_p2                                        |     |        | add_ln87_8   | add  | fabric    | 0       |
+|    add_ln87_9_fu_2115_p2                                        |     |        | add_ln87_9   | add  | fabric    | 0       |
+|    add_ln87_10_fu_2125_p2                                       |     |        | add_ln87_10  | add  | fabric    | 0       |
+|    add_ln87_11_fu_2135_p2                                       |     |        | add_ln87_11  | add  | fabric    | 0       |
+|    add_ln87_12_fu_2145_p2                                       |     |        | add_ln87_12  | add  | fabric    | 0       |
+|    add_ln87_13_fu_2154_p2                                       |     |        | add_ln87_13  | add  | fabric    | 0       |
+|    add_ln87_14_fu_2164_p2                                       |     |        | add_ln87_14  | add  | fabric    | 0       |
+|    add_ln87_15_fu_2173_p2                                       |     |        | add_ln87_15  | add  | fabric    | 0       |
+|    add_ln87_16_fu_2182_p2                                       |     |        | add_ln87_16  | add  | fabric    | 0       |
+|    add_ln87_17_fu_2191_p2                                       |     |        | add_ln87_17  | add  | fabric    | 0       |
+|    add_ln87_18_fu_2200_p2                                       |     |        | add_ln87_18  | add  | fabric    | 0       |
+|    add_ln87_19_fu_2209_p2                                       |     |        | add_ln87_19  | add  | fabric    | 0       |
+|    add_ln87_20_fu_2218_p2                                       |     |        | add_ln87_20  | add  | fabric    | 0       |
+|    add_ln87_21_fu_2227_p2                                       |     |        | add_ln87_21  | add  | fabric    | 0       |
+|    add_ln87_22_fu_2236_p2                                       |     |        | add_ln87_22  | add  | fabric    | 0       |
+|    add_ln87_23_fu_2245_p2                                       |     |        | add_ln87_23  | add  | fabric    | 0       |
+|    add_ln87_24_fu_2254_p2                                       |     |        | add_ln87_24  | add  | fabric    | 0       |
+|    add_ln87_25_fu_2263_p2                                       |     |        | add_ln87_25  | add  | fabric    | 0       |
+|    add_ln87_26_fu_2272_p2                                       |     |        | add_ln87_26  | add  | fabric    | 0       |
+|    add_ln87_27_fu_2281_p2                                       |     |        | add_ln87_27  | add  | fabric    | 0       |
+|    add_ln87_28_fu_2290_p2                                       |     |        | add_ln87_28  | add  | fabric    | 0       |
+|    add_ln87_29_fu_2299_p2                                       |     |        | add_ln87_29  | add  | fabric    | 0       |
+|    add_ln87_30_fu_2308_p2                                       |     |        | add_ln87_30  | add  | fabric    | 0       |
+|    add_ln87_31_fu_2317_p2                                       |     |        | add_ln87_31  | add  | fabric    | 0       |
+|    add_ln87_32_fu_2326_p2                                       |     |        | add_ln87_32  | add  | fabric    | 0       |
+|    add_ln87_33_fu_2335_p2                                       |     |        | add_ln87_33  | add  | fabric    | 0       |
+|    add_ln87_34_fu_2344_p2                                       |     |        | add_ln87_34  | add  | fabric    | 0       |
+|    add_ln87_35_fu_2353_p2                                       |     |        | add_ln87_35  | add  | fabric    | 0       |
+|    add_ln87_36_fu_2362_p2                                       |     |        | add_ln87_36  | add  | fabric    | 0       |
+|    add_ln87_37_fu_2371_p2                                       |     |        | add_ln87_37  | add  | fabric    | 0       |
+|    add_ln87_38_fu_2380_p2                                       |     |        | add_ln87_38  | add  | fabric    | 0       |
+|    add_ln87_39_fu_2389_p2                                       |     |        | add_ln87_39  | add  | fabric    | 0       |
+|    add_ln87_40_fu_2398_p2                                       |     |        | add_ln87_40  | add  | fabric    | 0       |
+|    add_ln87_41_fu_2407_p2                                       |     |        | add_ln87_41  | add  | fabric    | 0       |
+|    add_ln87_42_fu_2416_p2                                       |     |        | add_ln87_42  | add  | fabric    | 0       |
+|    add_ln87_43_fu_2425_p2                                       |     |        | add_ln87_43  | add  | fabric    | 0       |
+|    add_ln87_44_fu_2434_p2                                       |     |        | add_ln87_44  | add  | fabric    | 0       |
+|    add_ln87_45_fu_2443_p2                                       |     |        | add_ln87_45  | add  | fabric    | 0       |
+|    add_ln87_46_fu_2452_p2                                       |     |        | add_ln87_46  | add  | fabric    | 0       |
+|    add_ln87_47_fu_2461_p2                                       |     |        | add_ln87_47  | add  | fabric    | 0       |
+|    add_ln87_48_fu_2470_p2                                       |     |        | add_ln87_48  | add  | fabric    | 0       |
+|    add_ln87_49_fu_2479_p2                                       |     |        | add_ln87_49  | add  | fabric    | 0       |
+|    add_ln87_50_fu_2488_p2                                       |     |        | add_ln87_50  | add  | fabric    | 0       |
+|    add_ln87_51_fu_2497_p2                                       |     |        | add_ln87_51  | add  | fabric    | 0       |
+|    add_ln87_52_fu_2506_p2                                       |     |        | add_ln87_52  | add  | fabric    | 0       |
+|    add_ln87_53_fu_2515_p2                                       |     |        | add_ln87_53  | add  | fabric    | 0       |
+|    add_ln87_54_fu_2524_p2                                       |     |        | add_ln87_54  | add  | fabric    | 0       |
+|    add_ln87_55_fu_2533_p2                                       |     |        | add_ln87_55  | add  | fabric    | 0       |
+|    add_ln87_56_fu_2542_p2                                       |     |        | add_ln87_56  | add  | fabric    | 0       |
+|    add_ln87_57_fu_2551_p2                                       |     |        | add_ln87_57  | add  | fabric    | 0       |
+|    add_ln87_58_fu_2560_p2                                       |     |        | add_ln87_58  | add  | fabric    | 0       |
+|    add_ln87_59_fu_2569_p2                                       |     |        | add_ln87_59  | add  | fabric    | 0       |
+|    add_ln87_60_fu_2578_p2                                       |     |        | add_ln87_60  | add  | fabric    | 0       |
+|    add_ln87_61_fu_2587_p2                                       |     |        | add_ln87_61  | add  | fabric    | 0       |
+|    mac_muladd_16s_16ns_32ns_32_4_1_U78                          | 1   |        | add_ln87_62  | add  | dsp_slice | 3       |
+|    add_ln87_63_fu_1078_p2                                       |     |        | add_ln87_63  | add  | fabric    | 0       |
+|    add_ln87_64_fu_1088_p2                                       |     |        | add_ln87_64  | add  | fabric    | 0       |
+|    add_ln87_65_fu_1098_p2                                       |     |        | add_ln87_65  | add  | fabric    | 0       |
+|    add_ln87_66_fu_1108_p2                                       |     |        | add_ln87_66  | add  | fabric    | 0       |
+|    add_ln87_67_fu_1118_p2                                       |     |        | add_ln87_67  | add  | fabric    | 0       |
+|    add_ln87_68_fu_1128_p2                                       |     |        | add_ln87_68  | add  | fabric    | 0       |
+|    add_ln87_69_fu_1138_p2                                       |     |        | add_ln87_69  | add  | fabric    | 0       |
+|    add_ln87_70_fu_1148_p2                                       |     |        | add_ln87_70  | add  | fabric    | 0       |
+|    add_ln87_71_fu_1158_p2                                       |     |        | add_ln87_71  | add  | fabric    | 0       |
+|    add_ln87_72_fu_1168_p2                                       |     |        | add_ln87_72  | add  | fabric    | 0       |
+|    add_ln87_73_fu_1178_p2                                       |     |        | add_ln87_73  | add  | fabric    | 0       |
+|    add_ln87_74_fu_1188_p2                                       |     |        | add_ln87_74  | add  | fabric    | 0       |
+|    add_ln87_75_fu_1198_p2                                       |     |        | add_ln87_75  | add  | fabric    | 0       |
+|    add_ln87_76_fu_1208_p2                                       |     |        | add_ln87_76  | add  | fabric    | 0       |
+|    add_ln87_77_fu_1218_p2                                       |     |        | add_ln87_77  | add  | fabric    | 0       |
+|    add_ln87_78_fu_1228_p2                                       |     |        | add_ln87_78  | add  | fabric    | 0       |
+|    add_ln87_79_fu_1238_p2                                       |     |        | add_ln87_79  | add  | fabric    | 0       |
+|    add_ln87_80_fu_1248_p2                                       |     |        | add_ln87_80  | add  | fabric    | 0       |
+|    add_ln87_81_fu_1258_p2                                       |     |        | add_ln87_81  | add  | fabric    | 0       |
+|    add_ln87_82_fu_1268_p2                                       |     |        | add_ln87_82  | add  | fabric    | 0       |
+|    add_ln87_83_fu_1278_p2                                       |     |        | add_ln87_83  | add  | fabric    | 0       |
+|    add_ln87_84_fu_1288_p2                                       |     |        | add_ln87_84  | add  | fabric    | 0       |
+|    add_ln87_85_fu_1298_p2                                       |     |        | add_ln87_85  | add  | fabric    | 0       |
+|    add_ln87_86_fu_1308_p2                                       |     |        | add_ln87_86  | add  | fabric    | 0       |
+|    add_ln87_87_fu_1318_p2                                       |     |        | add_ln87_87  | add  | fabric    | 0       |
+|    add_ln87_88_fu_1328_p2                                       |     |        | add_ln87_88  | add  | fabric    | 0       |
+|    add_ln87_89_fu_1338_p2                                       |     |        | add_ln87_89  | add  | fabric    | 0       |
+|    add_ln87_90_fu_1348_p2                                       |     |        | add_ln87_90  | add  | fabric    | 0       |
+|    add_ln87_91_fu_1358_p2                                       |     |        | add_ln87_91  | add  | fabric    | 0       |
+|    add_ln87_92_fu_1368_p2                                       |     |        | add_ln87_92  | add  | fabric    | 0       |
+|    add_ln87_93_fu_1378_p2                                       |     |        | add_ln87_93  | add  | fabric    | 0       |
+|    add_ln87_94_fu_1388_p2                                       |     |        | add_ln87_94  | add  | fabric    | 0       |
+|    add_ln87_95_fu_1398_p2                                       |     |        | add_ln87_95  | add  | fabric    | 0       |
+|    add_ln87_96_fu_1408_p2                                       |     |        | add_ln87_96  | add  | fabric    | 0       |
+|    add_ln87_97_fu_1418_p2                                       |     |        | add_ln87_97  | add  | fabric    | 0       |
+|    add_ln87_98_fu_1428_p2                                       |     |        | add_ln87_98  | add  | fabric    | 0       |
+|    add_ln87_99_fu_1438_p2                                       |     |        | add_ln87_99  | add  | fabric    | 0       |
+|    add_ln87_100_fu_1448_p2                                      |     |        | add_ln87_100 | add  | fabric    | 0       |
+|    add_ln87_101_fu_1458_p2                                      |     |        | add_ln87_101 | add  | fabric    | 0       |
+|    add_ln87_102_fu_1468_p2                                      |     |        | add_ln87_102 | add  | fabric    | 0       |
+|    add_ln87_103_fu_1478_p2                                      |     |        | add_ln87_103 | add  | fabric    | 0       |
+|    add_ln87_104_fu_1488_p2                                      |     |        | add_ln87_104 | add  | fabric    | 0       |
+|    add_ln87_105_fu_1498_p2                                      |     |        | add_ln87_105 | add  | fabric    | 0       |
+|    add_ln87_106_fu_1508_p2                                      |     |        | add_ln87_106 | add  | fabric    | 0       |
+|    add_ln87_107_fu_1518_p2                                      |     |        | add_ln87_107 | add  | fabric    | 0       |
+|    add_ln87_108_fu_1528_p2                                      |     |        | add_ln87_108 | add  | fabric    | 0       |
+|    add_ln87_109_fu_1538_p2                                      |     |        | add_ln87_109 | add  | fabric    | 0       |
+|    add_ln87_110_fu_1552_p2                                      |     |        | add_ln87_110 | add  | fabric    | 0       |
+|    add_ln87_111_fu_1566_p2                                      |     |        | add_ln87_111 | add  | fabric    | 0       |
+|    add_ln87_112_fu_1580_p2                                      |     |        | add_ln87_112 | add  | fabric    | 0       |
+|    add_ln87_113_fu_1594_p2                                      |     |        | add_ln87_113 | add  | fabric    | 0       |
+|    add_ln87_114_fu_1608_p2                                      |     |        | add_ln87_114 | add  | fabric    | 0       |
+|    add_ln87_115_fu_1622_p2                                      |     |        | add_ln87_115 | add  | fabric    | 0       |
+|    add_ln87_116_fu_1632_p2                                      |     |        | add_ln87_116 | add  | fabric    | 0       |
+|    add_ln87_117_fu_1646_p2                                      |     |        | add_ln87_117 | add  | fabric    | 0       |
+|    add_ln87_118_fu_1656_p2                                      |     |        | add_ln87_118 | add  | fabric    | 0       |
+|    add_ln87_119_fu_1670_p2                                      |     |        | add_ln87_119 | add  | fabric    | 0       |
++-----------------------------------------------------------------+-----+--------+--------------+------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------+-----------------------------------------+
+| Type      | Options                       | Location                                |
++-----------+-------------------------------+-----------------------------------------+
+| interface | mode=axis port=input          | FIR_HLS.cpp:15 in multirate_v4, input   |
+| interface | mode=axis port=output         | FIR_HLS.cpp:16 in multirate_v4, output  |
+| interface | mode=ap_ctrl_none port=return | FIR_HLS.cpp:17 in multirate_v4, return  |
+| pipeline  |                               | FIR_HLS.cpp:61 in fir_filter            |
+| pipeline  |                               | FIR_HLS.cpp:81 in fir_filter_transposed |
++-----------+-------------------------------+-----------------------------------------+
+
+

@@ -12,16 +12,16 @@
         <args ARG_PragmaFunction="ap_shift_reg&lt;__SHIFT_T__, __SHIFT_DEPTH__&gt;" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = Array bit" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=FIR_HLS" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Direct_FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Direct_FIR_HLS" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:7:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="Direct_FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:8:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="Direct_FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:9:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="Direct_FIR_HLS" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:16:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="FIR_filter" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>

@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 77,
+    "calls": "1 1 2 1 1 1 1 1 1",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 20,
+    "instructions": 229,
+    "loads": {
+      "G": 21,
+      "L": 9
+    },
+    "name": "FIR_Cascade_v2",
+    "stores": {
+      "G": 11
+    },
+    "total_instructions": 5191
+  },
+  "1": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 58,
+    "instructions": 92,
+    "loads": {
+      "L": 3
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 92
+  },
+  "2": {
+    "basicblocks": 2239,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 79,
+    "instructions": 4226,
+    "loads": {
+      "G": 372
+    },
+    "name": "FIR_filter_transposed",
+    "stores": {
+      "G": 123,
+      "L": 1
+    },
+    "total_instructions": 4226
+  }
+}

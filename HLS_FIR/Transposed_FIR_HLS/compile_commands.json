@@ -6,7 +6,7 @@
       "--sysroot=C:\\AMD\\Vitis\\2024.2\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls",
       "-hls-syn-headers-dir=C:\\AMD\\Vitis\\2024.2\\common\\technology\\autopilot",
-      "-fhlstoplevel=FIR_HLS",
+      "-fhlstoplevel=Transposed_FIR_HLS",
       "-c",
       "C:\\HLS-multirate-DSP\\HLS_FIR\\Transposed_FIR_HLS\\FIR_HLS.cpp"
     ],

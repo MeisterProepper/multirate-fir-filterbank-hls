@@ -18,45 +18,45 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 12, Column: 15 }
-Function:        _Z7FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
+Function:        _Z25Transposed_Folded_FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
 Args:            
   - Callee:          'FIR_filter(ap_fixed<32, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: FIR_HLS.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: FIR_HLS.cpp, Line: 16, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'Transposed_Folded_FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: FIR_HLS.cpp, Line: 32, Column: 19 }
+DebugLoc:        { File: FIR_HLS.cpp, Line: 28, Column: 19 }
 Function:        _Z10FIR_filterP8ap_fixedILi32ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPKS_ILi16ELi1ELS0_5ELS1_3ELi0EEiS4_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_32_2
+  - LoopName:        VITIS_LOOP_28_2
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: FIR_HLS.cpp, Line: 25, Column: 22 }
+DebugLoc:        { File: FIR_HLS.cpp, Line: 22, Column: 22 }
 Function:        _Z10FIR_filterP8ap_fixedILi32ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPKS_ILi16ELi1ELS0_5ELS1_3ELi0EEiS4_
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_25_1
+  - LoopName:        VITIS_LOOP_22_1
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: FIR_HLS.cpp, Line: 19, Column: 0 }
+DebugLoc:        { File: FIR_HLS.cpp, Line: 16, Column: 0 }
 Function:        _Z10FIR_filterP8ap_fixedILi32ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPKS_ILi16ELi1ELS0_5ELS1_3ELi0EEiS4_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_32_2
+  - LoopName:        VITIS_LOOP_28_2
   - String:          ''' ('
-  - LoopLoc:         'FIR_HLS.cpp:32:19'
+  - LoopLoc:         'FIR_HLS.cpp:28:19'
   - String:          ') '
   - String:          'in function '''
   - String:          FIR_filter
@@ -66,13 +66,13 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: FIR_HLS.cpp, Line: 19, Column: 0 }
+DebugLoc:        { File: FIR_HLS.cpp, Line: 16, Column: 0 }
 Function:        _Z10FIR_filterP8ap_fixedILi32ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEPKS_ILi16ELi1ELS0_5ELS1_3ELi0EEiS4_
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_25_1
+  - LoopName:        VITIS_LOOP_22_1
   - String:          ''' ('
-  - LoopLoc:         'FIR_HLS.cpp:25:22'
+  - LoopLoc:         'FIR_HLS.cpp:22:22'
   - String:          ') '
   - String:          'in function '''
   - String:          FIR_filter
@@ -83,31 +83,31 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 12, Column: 15 }
-Function:        _Z7FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
+Function:        _Z25Transposed_Folded_FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
 Args:            
   - Callee:          'FIR_filter(ap_fixed<32, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: FIR_HLS.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: FIR_HLS.cpp, Line: 16, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'Transposed_Folded_FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-Function:        apatb_FIR_HLS_ir
+Function:        apatb_Transposed_Folded_FIR_HLS_ir
 Args:            
-  - Callee:          'FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Callee:          'Transposed_Folded_FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          apatb_FIR_HLS_ir
+  - Caller:          apatb_Transposed_Folded_FIR_HLS_ir
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
 DebugLoc:        { File: ./FIR_HLS.h, Line: 9, Column: 0 }
-Function:        _Z7FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
+Function:        _Z25Transposed_Folded_FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
@@ -115,7 +115,7 @@ Args:
   - String:          ' '
   - PragmaIsAuto:    '1'
   - String:          ' '
-  - PragmaFunction:  FIR_HLS
+  - PragmaFunction:  Transposed_Folded_FIR_HLS
   - String:          ' '
   - varLoc:          './FIR_HLS.h:9:0'
   - String:          ' '
@@ -126,7 +126,7 @@ Args:
 Pass:            reflow-auto-array-partition
 Name:            AutoArrayXform
 DebugLoc:        { File: ./FIR_HLS.h, Line: 9, Column: 0 }
-Function:        _Z7FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
+Function:        _Z25Transposed_Folded_FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
 Args:            
   - String:          'Inferring pragma '''
   - PragmaType:      array_partition
@@ -163,12 +163,12 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 12, Column: 15 }
-Function:        _Z7FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
+Function:        _Z25Transposed_Folded_FIR_HLSRN3hls6streamI8ap_fixedILi16ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EELi0EEES6_
 Args:            
   - Callee:          'FIR_filter(ap_fixed<32, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*, int, ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)'
-    DebugLoc:        { File: FIR_HLS.cpp, Line: 19, Column: 0 }
+    DebugLoc:        { File: FIR_HLS.cpp, Line: 16, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
+  - Caller:          'Transposed_Folded_FIR_HLS(hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&, hls::stream<ap_fixed<16, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...

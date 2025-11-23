@@ -1,58 +1,26 @@
 {
   "0": {
-    "basicblocks": 4,
-    "calls": "1 3 2",
+    "basicblocks": 6,
+    "calls": "1 1 1 1 1 1 1 1 1",
     "file": "FIR_HLS.cpp",
-    "fileloc": 8,
-    "instructions": 24,
+    "fileloc": 14,
+    "instructions": 91,
     "loads": {
-      "G": 1,
-      "L": 1
+      "G": 7,
+      "L": 9
     },
-    "name": "FIR_HLS",
+    "name": "Multirate_v1",
     "stores": {
-      "G": 1
+      "G": 5
     },
-    "total_instructions": 558
+    "total_instructions": 478
   },
   "1": {
-    "basicblocks": 6,
-    "calls": "3 3 3 3",
-    "file": "FIR_HLS.cpp",
-    "fileloc": 56,
-    "instructions": 47,
-    "loads": {
-      "G": 4,
-      "L": 4
-    },
-    "name": "DECIMATOR",
-    "stores": {
-      "G": 4
-    },
-    "total_instructions": 243
-  },
-  "2": {
-    "basicblocks": 6,
-    "calls": "3 3 3 3",
-    "file": "FIR_HLS.cpp",
-    "fileloc": 89,
-    "instructions": 46,
-    "loads": {
-      "G": 4,
-      "L": 4
-    },
-    "name": "INTERPOLATOR",
-    "stores": {
-      "G": 2
-    },
-    "total_instructions": 242
-  },
-  "3": {
     "basicblocks": 9,
     "calls": "",
     "file": "FIR_HLS.cpp",
-    "fileloc": 37,
-    "instructions": 49,
+    "fileloc": 60,
+    "instructions": 43,
     "loads": {
       "L": 3
     },
@@ -60,6 +28,6 @@
     "stores": {
       "L": 3
     },
-    "total_instructions": 49
+    "total_instructions": 43
   }
 }

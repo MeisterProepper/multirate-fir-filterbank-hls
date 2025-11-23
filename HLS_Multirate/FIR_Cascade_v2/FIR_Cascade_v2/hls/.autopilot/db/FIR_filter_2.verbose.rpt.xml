@@ -1,0 +1,148 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FIR_filter_2'" level="0">
+<item name = "Date">Sun Nov 23 22:53:35 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">FIR_Cascade_v2</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.392 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">5, 5, 50.000 ns, 50.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, 3, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 84, -</column>
+<column name="Register">-, -, 609, 160, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="am_addmul_16s_16s_15ns_32_4_0_U12">am_addmul_16s_16s_15ns_32_4_0, (i0 + i1) * i2</column>
+<column name="ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13">ama_addmuladd_16s_16s_10ns_32s_32_4_0, i0 + (i1 + i2) * i3</column>
+<column name="ama_addmuladd_16s_16s_14s_32s_32_4_0_U14">ama_addmuladd_16s_16s_14s_32s_32_4_0, i0 + (i1 + i2) * i3</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_return_0">14, 3, 16, 48</column>
+<column name="ap_return_1">14, 3, 16, 48</column>
+<column name="ap_return_2">14, 3, 16, 48</column>
+<column name="ap_return_3">14, 3, 16, 48</column>
+<column name="ap_return_4">14, 3, 16, 48</column>
+<column name="ap_return_5">14, 3, 16, 48</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="FIR_delays_read11_reg_189">16, 0, 16, 0</column>
+<column name="FIR_delays_read_10_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_read_11_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_read_12_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_read_1_reg_167">16, 0, 16, 0</column>
+<column name="FIR_delays_read_2_reg_173">16, 0, 16, 0</column>
+<column name="FIR_delays_read_3_reg_178">16, 0, 16, 0</column>
+<column name="FIR_delays_read_4_reg_183">16, 0, 16, 0</column>
+<column name="FIR_delays_read_9_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_read_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_write_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_write_read_reg_161">16, 0, 16, 0</column>
+<column name="ap_ce_reg">1, 0, 1, 0</column>
+<column name="ap_return_0_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_1_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_2_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_3_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_4_int_reg">16, 0, 16, 0</column>
+<column name="ap_return_5_int_reg">16, 0, 16, 0</column>
+<column name="FIR_delays_read_1_reg_167">64, 32, 16, 0</column>
+<column name="FIR_delays_read_2_reg_173">64, 32, 16, 0</column>
+<column name="FIR_delays_read_3_reg_178">64, 32, 16, 0</column>
+<column name="FIR_delays_read_4_reg_183">64, 32, 16, 0</column>
+<column name="FIR_delays_write_read_reg_161">64, 32, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_0">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_1">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_2">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_3">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_4">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_return_5">out, 16, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="ap_ce">in, 1, ap_ctrl_hs, FIR_filter.2, return value</column>
+<column name="FIR_delays_read">in, 16, ap_none, FIR_delays_read, scalar</column>
+<column name="FIR_delays_read_9">in, 16, ap_none, FIR_delays_read_9, scalar</column>
+<column name="FIR_delays_read_10">in, 16, ap_none, FIR_delays_read_10, scalar</column>
+<column name="FIR_delays_read_11">in, 16, ap_none, FIR_delays_read_11, scalar</column>
+<column name="FIR_delays_read_12">in, 16, ap_none, FIR_delays_read_12, scalar</column>
+<column name="FIR_delays_write">in, 16, ap_none, FIR_delays_write, scalar</column>
+</table>
+</item>
+</section>
+</profile>

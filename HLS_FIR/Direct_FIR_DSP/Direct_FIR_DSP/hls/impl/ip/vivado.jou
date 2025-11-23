@@ -3,8 +3,8 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Mon Nov 10 23:59:19 2025
-# Process ID         : 784
+# Start of session at: Sun Nov 16 15:38:29 2025
+# Process ID         : 2092
 # Current directory  : C:/HLS-multirate-DSP/HLS_FIR/Direct_FIR_DSP/Direct_FIR_DSP/hls/impl/ip
 # Command line       : vivado.exe -notrace -mode batch -source run_ippack.tcl
 # Log file           : C:/HLS-multirate-DSP/HLS_FIR/Direct_FIR_DSP/Direct_FIR_DSP/hls/impl/ip/vivado.log
@@ -17,8 +17,8 @@
 # CPU Physical cores : 6
 # CPU Logical cores  : 12
 # Host memory        : 16901 MB
-# Swap memory        : 2550 MB
-# Total Virtual      : 19451 MB
-# Available Virtual  : 3934 MB
+# Swap memory        : 7366 MB
+# Total Virtual      : 24267 MB
+# Available Virtual  : 3506 MB
 #-----------------------------------------------------------
 source run_ippack.tcl -notrace

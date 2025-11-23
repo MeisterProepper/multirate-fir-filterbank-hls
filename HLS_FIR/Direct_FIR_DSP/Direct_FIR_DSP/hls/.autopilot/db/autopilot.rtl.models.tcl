@@ -1,16 +1,16 @@
 set SynModuleInfo {
-  {SRCNAME FIR_HLS_Pipeline_VITIS_LOOP_29_1 MODELNAME FIR_HLS_Pipeline_VITIS_LOOP_29_1 RTLNAME FIR_HLS_FIR_HLS_Pipeline_VITIS_LOOP_29_1
+  {SRCNAME Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1 MODELNAME Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1 RTLNAME Direct_FIR_DSP_Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1
     SUBMODULES {
-      {MODELNAME FIR_HLS_mac_muladd_16s_14s_32s_32_4_1 RTLNAME FIR_HLS_mac_muladd_16s_14s_32s_32_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
-      {MODELNAME FIR_HLS_FIR_HLS_Pipeline_VITIS_LOOP_29_1_b_FIR_ROM_AUTO_1R RTLNAME FIR_HLS_FIR_HLS_Pipeline_VITIS_LOOP_29_1_b_FIR_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_flow_control_loop_pipe_sequential_init RTLNAME FIR_HLS_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME FIR_HLS_flow_control_loop_pipe_sequential_init_U}
+      {MODELNAME Direct_FIR_DSP_mac_muladd_16s_14s_32s_32_4_1 RTLNAME Direct_FIR_DSP_mac_muladd_16s_14s_32s_32_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Direct_FIR_DSP_Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1_b_FIR_ROM_AUTO_1R RTLNAME Direct_FIR_DSP_Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1_b_FIR_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME Direct_FIR_DSP_flow_control_loop_pipe_sequential_init RTLNAME Direct_FIR_DSP_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME Direct_FIR_DSP_flow_control_loop_pipe_sequential_init_U}
     }
   }
-  {SRCNAME FIR_HLS_Pipeline_VITIS_LOOP_33_2 MODELNAME FIR_HLS_Pipeline_VITIS_LOOP_33_2 RTLNAME FIR_HLS_FIR_HLS_Pipeline_VITIS_LOOP_33_2}
-  {SRCNAME FIR_HLS MODELNAME FIR_HLS RTLNAME FIR_HLS IS_TOP 1
+  {SRCNAME Direct_FIR_DSP_Pipeline_VITIS_LOOP_33_2 MODELNAME Direct_FIR_DSP_Pipeline_VITIS_LOOP_33_2 RTLNAME Direct_FIR_DSP_Direct_FIR_DSP_Pipeline_VITIS_LOOP_33_2}
+  {SRCNAME Direct_FIR_DSP MODELNAME Direct_FIR_DSP RTLNAME Direct_FIR_DSP IS_TOP 1
     SUBMODULES {
-      {MODELNAME FIR_HLS_H_filter_FIR_RAM_AUTO_1R1W RTLNAME FIR_HLS_H_filter_FIR_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_regslice_both RTLNAME FIR_HLS_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
+      {MODELNAME Direct_FIR_DSP_H_filter_FIR_RAM_AUTO_1R1W RTLNAME Direct_FIR_DSP_H_filter_FIR_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME Direct_FIR_DSP_regslice_both RTLNAME Direct_FIR_DSP_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
     }
   }
 }

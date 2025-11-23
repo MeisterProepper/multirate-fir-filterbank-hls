@@ -8,7 +8,7 @@
     "loads": {
       "L": 2
     },
-    "name": "FIR_HLS",
+    "name": "Direct_FIR_HLS",
     "stores": {
       "L": 1
     },

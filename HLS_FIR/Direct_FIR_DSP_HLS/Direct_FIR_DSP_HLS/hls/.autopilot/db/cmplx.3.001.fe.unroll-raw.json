@@ -8,23 +8,23 @@
     "loads": {
       "L": 1
     },
-    "name": "FIR_HLS",
-    "total_instructions": 86
+    "name": "Direct_FIR_DSP_HLS",
+    "total_instructions": 13710
   },
   "1": {
-    "basicblocks": 34,
+    "basicblocks": 7070,
     "calls": "",
     "file": "FIR_HLS.cpp",
     "fileloc": 18,
-    "instructions": 77,
+    "instructions": 13701,
     "loads": {
-      "G": 3
+      "G": 783
     },
     "name": "FIR_filter",
     "stores": {
-      "G": 2,
+      "G": 392,
       "L": 1
     },
-    "total_instructions": 77
+    "total_instructions": 13701
   }
 }

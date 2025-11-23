@@ -5,7 +5,7 @@
     "file": "FIR_HLS.cpp",
     "fileloc": 6,
     "instructions": 15,
-    "name": "FIR_HLS",
+    "name": "Transposed_FIR_HLS",
     "total_instructions": 824
   },
   "1": {

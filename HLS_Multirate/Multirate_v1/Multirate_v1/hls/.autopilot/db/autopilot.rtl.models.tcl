@@ -1,33 +1,65 @@
 set SynModuleInfo {
-  {SRCNAME FIR_filter.1 MODELNAME FIR_filter_1 RTLNAME FIR_HLS_FIR_filter_1
+  {SRCNAME FIR_filter.1 MODELNAME FIR_filter_1 RTLNAME Multirate_v1_FIR_filter_1
     SUBMODULES {
-      {MODELNAME FIR_HLS_mul_32s_10s_42_1_1 RTLNAME FIR_HLS_mul_32s_10s_42_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_13s_44_1_1 RTLNAME FIR_HLS_mul_32s_13s_44_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_13s_45_1_1 RTLNAME FIR_HLS_mul_32s_13s_45_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_14ns_46_1_1 RTLNAME FIR_HLS_mul_32s_14ns_46_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME Multirate_v1_mul_16s_13s_28_1_0 RTLNAME Multirate_v1_mul_16s_13s_28_1_0 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME Multirate_v1_mac_muladd_16s_10s_28s_28_4_0 RTLNAME Multirate_v1_mac_muladd_16s_10s_28s_28_4_0 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_mac_muladd_16s_14ns_28s_30_4_0 RTLNAME Multirate_v1_mac_muladd_16s_14ns_28s_30_4_0 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
     }
   }
-  {SRCNAME FIR_filter.2 MODELNAME FIR_filter_2 RTLNAME FIR_HLS_FIR_filter_2
+  {SRCNAME FIR_filter.2 MODELNAME FIR_filter_2 RTLNAME Multirate_v1_FIR_filter_2
     SUBMODULES {
-      {MODELNAME FIR_HLS_mul_32s_12s_43_1_1 RTLNAME FIR_HLS_mul_32s_12s_43_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_12s_44_1_1 RTLNAME FIR_HLS_mul_32s_12s_44_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_14ns_31_4_0 RTLNAME Multirate_v1_am_addmul_16s_16s_14ns_31_4_0 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_31s_31_4_0 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_31s_31_4_0 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_13s_31s_31_4_0 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_13s_31s_31_4_0 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
     }
   }
-  {SRCNAME DECIMATOR MODELNAME DECIMATOR RTLNAME FIR_HLS_DECIMATOR}
-  {SRCNAME FIR_filter MODELNAME FIR_filter RTLNAME FIR_HLS_FIR_filter
+  {SRCNAME FIR_filter MODELNAME FIR_filter RTLNAME Multirate_v1_FIR_filter
     SUBMODULES {
-      {MODELNAME FIR_HLS_mul_32s_6s_38_1_1 RTLNAME FIR_HLS_mul_32s_6s_38_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_7s_39_1_1 RTLNAME FIR_HLS_mul_32s_7s_39_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_8s_40_1_1 RTLNAME FIR_HLS_mul_32s_8s_40_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_9s_41_1_1 RTLNAME FIR_HLS_mul_32s_9s_41_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_HLS_mul_32s_11s_43_1_1 RTLNAME FIR_HLS_mul_32s_11s_43_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME Multirate_v1_mul_16s_17ns_32_1_1 RTLNAME Multirate_v1_mul_16s_17ns_32_1_1 BINDTYPE op TYPE mul IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME Multirate_v1_am_addmul_17s_17s_11ns_29_4_1 RTLNAME Multirate_v1_am_addmul_17s_17s_11ns_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_17s_17s_7s_25s_25_4_1 RTLNAME Multirate_v1_ama_addmuladd_17s_17s_7s_25s_25_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_submuladd_18s_16s_7ns_23s_25_4_1 RTLNAME Multirate_v1_ama_submuladd_18s_16s_7ns_23s_25_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_12s_32s_32_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_12s_32s_32_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_12ns_30_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_12ns_30_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_11ns_29_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_11ns_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_12s_29_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_12s_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_11s_28_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_11s_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_10ns_28_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_10ns_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_11s_27_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_11s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_25s_27_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_25s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_10s_27_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_10s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_10s_25s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_10s_25s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9s_26s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9s_26s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_8ns_26_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_8ns_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_9s_26_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_9s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_am_addmul_16s_16s_9s_25_4_1 RTLNAME Multirate_v1_am_addmul_16s_16s_9s_25_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_24s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_24s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_7ns_19s_24_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_7ns_19s_24_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_15ns_32s_32_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_15ns_32s_32_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_12s_30s_30_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_12s_30s_30_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_11ns_29s_29_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_11ns_29s_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_12s_29s_29_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_12s_29s_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_29s_29_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_29s_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_28s_28_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_10ns_28s_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_11s_28s_28_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_11s_28s_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_10s_28s_28_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_10s_28s_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9s_27s_27_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9s_27s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_27s_27_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_27s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_8s_26s_27_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_8s_26s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_26s_27_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_26s_27_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_26s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_26s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_8s_25s_25_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_8s_25s_25_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_5ns_25s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_5ns_25s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_14s_30s_31_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_14s_30s_31_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_13s_29s_30_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_13s_29s_30_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_11s_28s_29_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_11s_28s_29_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_27s_28_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_9ns_27s_28_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
+      {MODELNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_25s_26_4_1 RTLNAME Multirate_v1_ama_addmuladd_16s_16s_8ns_25s_26_4_1 BINDTYPE op TYPE all IMPL dsp_slice LATENCY 3}
     }
   }
-  {SRCNAME INTERPOLATOR MODELNAME INTERPOLATOR RTLNAME FIR_HLS_INTERPOLATOR}
-  {SRCNAME Block_entry__ZL16b_FIR_dec_int_43_0_rd_mod_value_fb_proc MODELNAME Block_entry_ZL16b_FIR_dec_int_43_0_rd_mod_value_fb_proc RTLNAME FIR_HLS_Block_entry_ZL16b_FIR_dec_int_43_0_rd_mod_value_fb_proc
+  {SRCNAME Multirate_v1 MODELNAME Multirate_v1 RTLNAME Multirate_v1 IS_TOP 1
     SUBMODULES {
-      {MODELNAME FIR_HLS_regslice_both RTLNAME FIR_HLS_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
+      {MODELNAME Multirate_v1_regslice_both RTLNAME Multirate_v1_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
     }
   }
-  {SRCNAME FIR_HLS MODELNAME FIR_HLS RTLNAME FIR_HLS IS_TOP 1}
 }

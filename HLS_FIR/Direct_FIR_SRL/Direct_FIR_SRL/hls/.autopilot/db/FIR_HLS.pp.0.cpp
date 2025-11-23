@@ -8478,15 +8478,15 @@ typedef ap_fixed<16,1> fir_data_t;
 
 static ap_shift_reg<delay_data_t,392> fir_shiftreg;
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+__attribute__((sdx_kernel("Direct_FIR_SRL", 0))) void Direct_FIR_SRL(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 # 2 "FIR_HLS.cpp" 2
 
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("Direct_FIR_SRL", 0))) void Direct_FIR_SRL(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
+#pragma HLSDIRECTIVE TOP name=Direct_FIR_SRL
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input

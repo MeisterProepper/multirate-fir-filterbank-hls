@@ -1,11 +1,11 @@
 
-set TopModule "FIR_HLS"
+set TopModule "Multirate_v1"
 set ClockPeriod 10
 set ClockList ap_clk
 set AxiliteClockList {}
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
-set PipelineFlag 1
+set PipelineFlag 0
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
@@ -14,7 +14,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 0
+set HasDSPModule 1
 set ResetLevelFlag 0
 set ResetStyle control
 set ResetSyncFlag 1
@@ -24,7 +24,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix FIR_HLS_
+set RtlSubPrefix Multirate_v1_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}

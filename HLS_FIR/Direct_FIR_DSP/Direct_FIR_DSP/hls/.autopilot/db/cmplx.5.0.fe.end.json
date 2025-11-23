@@ -1,6 +1,21 @@
 {
+    "0": {
+        "name": "Direct_FIR_DSP",
+        "file": "FIR_HLS.cpp",
+        "fileloc": "6",
+        "instructions": "15",
+        "total_instructions": "66",
+        "calls": "1 2",
+        "basicblocks": "1",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "G": "1"
+        }
+    },
     "1": {
-        "name": "FIR_HLS_Pipeline_VITIS_LOOP_29_1",
+        "name": "Direct_FIR_DSP_Pipeline_VITIS_LOOP_29_1",
         "file": "FIR_HLS.cpp",
         "fileloc": "13",
         "instructions": "31",
@@ -18,23 +33,8 @@
             "L": "1"
         }
     },
-    "0": {
-        "name": "FIR_HLS",
-        "file": "FIR_HLS.cpp",
-        "fileloc": "6",
-        "instructions": "15",
-        "total_instructions": "66",
-        "calls": "1 2",
-        "basicblocks": "1",
-        "loads": {
-            "L": "1"
-        },
-        "stores": {
-            "G": "1"
-        }
-    },
     "2": {
-        "name": "FIR_HLS_Pipeline_VITIS_LOOP_33_2",
+        "name": "Direct_FIR_DSP_Pipeline_VITIS_LOOP_33_2",
         "file": "FIR_HLS.cpp",
         "fileloc": "13",
         "instructions": "20",

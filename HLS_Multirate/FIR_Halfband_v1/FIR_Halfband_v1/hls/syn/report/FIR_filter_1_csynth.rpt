@@ -1,0 +1,140 @@
+
+
+================================================================
+== Vitis HLS Report for 'FIR_filter_1'
+================================================================
+* Date:           Sun Nov 23 21:46:04 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FIR_Halfband_v1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.392 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     3|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|       -|    -|
+|Register         |        -|     -|     512|     160|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     3|     512|     160|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|    ~0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    +-------------------------------------------+---------------------------------------+---------------------+
+    |                  Instance                 |                 Module                |      Expression     |
+    +-------------------------------------------+---------------------------------------+---------------------+
+    |am_addmul_16s_16s_15ns_32_4_1_U90          |am_addmul_16s_16s_15ns_32_4_1          |       (i0 + i1) * i2|
+    |ama_addmuladd_16s_16s_10ns_32s_32_4_1_U91  |ama_addmuladd_16s_16s_10ns_32s_32_4_1  |  i0 + (i1 + i2) * i3|
+    |ama_addmuladd_16s_16s_14s_32s_32_4_1_U92   |ama_addmuladd_16s_16s_14s_32s_32_4_1   |  i0 + (i1 + i2) * i3|
+    +-------------------------------------------+---------------------------------------+---------------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |FIR_delays_read11_reg_189      |  16|   0|   16|          0|
+    |FIR_delays_read_13_reg_167     |  16|   0|   16|          0|
+    |FIR_delays_read_14_reg_173     |  16|   0|   16|          0|
+    |FIR_delays_read_15_reg_178     |  16|   0|   16|          0|
+    |FIR_delays_read_16_reg_183     |  16|   0|   16|          0|
+    |FIR_delays_read_21_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_22_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_23_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_24_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_int_reg        |  16|   0|   16|          0|
+    |FIR_delays_write_int_reg       |  16|   0|   16|          0|
+    |FIR_delays_write_read_reg_161  |  16|   0|   16|          0|
+    |FIR_delays_read_13_reg_167     |  64|  32|   16|          0|
+    |FIR_delays_read_14_reg_173     |  64|  32|   16|          0|
+    |FIR_delays_read_15_reg_178     |  64|  32|   16|          0|
+    |FIR_delays_read_16_reg_183     |  64|  32|   16|          0|
+    |FIR_delays_write_read_reg_161  |  64|  32|   16|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          | 512| 160|  272|          0|
+    +-------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++--------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_0         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_1         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_2         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_3         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_4         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|ap_return_5         |  out|   16|  ap_ctrl_hs|        FIR_filter.1|  return value|
+|FIR_delays_read     |   in|   16|     ap_none|     FIR_delays_read|        scalar|
+|FIR_delays_read_21  |   in|   16|     ap_none|  FIR_delays_read_21|        scalar|
+|FIR_delays_read_22  |   in|   16|     ap_none|  FIR_delays_read_22|        scalar|
+|FIR_delays_read_23  |   in|   16|     ap_none|  FIR_delays_read_23|        scalar|
+|FIR_delays_read_24  |   in|   16|     ap_none|  FIR_delays_read_24|        scalar|
+|FIR_delays_write    |   in|   16|     ap_none|    FIR_delays_write|        scalar|
++--------------------+-----+-----+------------+--------------------+--------------+
+

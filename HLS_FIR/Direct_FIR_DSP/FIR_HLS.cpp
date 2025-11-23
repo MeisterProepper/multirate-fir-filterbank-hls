@@ -3,7 +3,7 @@
 
 
 
-void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output){
+void Direct_FIR_DSP(hls::stream<short> &input, hls::stream<short> &output){
     #pragma HLS INTERFACE mode=axis port=input
     #pragma HLS INTERFACE mode=axis port=output
     #pragma HLS INTERFACE mode=ap_ctrl_none port=return

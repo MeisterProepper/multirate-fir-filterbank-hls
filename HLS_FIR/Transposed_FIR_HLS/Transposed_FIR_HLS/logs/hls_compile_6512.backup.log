@@ -1,0 +1,125 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=FIR_HLS.cpp' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/FIR_HLS.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=FIR_HLS.h' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/FIR_HLS.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../../Matlab/FIR_normal_HLS.h' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/Matlab/FIR_normal_HLS.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=FIR_HLS_TB.cpp' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/FIR_HLS_TB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.dat' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.dat' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.res' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.res' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7s25csga225-1' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7s25-csga225-1'
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=Transposed_FIR' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(14)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 3.959 seconds; current allocated memory: 273.461 MB.
+INFO: [HLS 200-10] Analyzing design file 'FIR_HLS.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.695 seconds; current allocated memory: 276.094 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 824 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 13,319 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,395 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,766 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,478 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,492 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,492 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,494 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,500 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_20_1' is marked as complete unroll implied by the pipeline pragma (FIR_HLS.cpp:20:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_20_1' (FIR_HLS.cpp:20:19) in function 'FIR_filter' completely with a factor of 391 (FIR_HLS.cpp:14:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=7 dim=1' for array 'H_accu_FIR' due to pipeline pragma (./FIR_HLS.h:9:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL10H_accu_FIR': Cyclic partitioning with factor 7 on dimension 1. (./FIR_HLS.h:9:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.494 seconds; current allocated memory: 277.938 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 277.938 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.22 seconds; current allocated memory: 283.453 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.139 seconds; current allocated memory: 286.707 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.79 seconds; current allocated memory: 307.582 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.018 seconds; current allocated memory: 329.285 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'FIR_HLS' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FIR_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'FIR_filter'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 60, Final II = 56, Depth = 56, function 'FIR_filter'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.607 seconds; current allocated memory: 334.441 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.713 seconds; current allocated memory: 335.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'FIR_HLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 335.551 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 335.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_10ns_26_1_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_10s_25_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_10s_26_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_11ns_27_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_11s_27_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_12ns_28_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_12s_28_1_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_13ns_29_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_14ns_30_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_15ns_31_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_6ns_22_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_6s_22_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_7ns_23_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_7s_23_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_8ns_24_1_1': 10 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_8s_24_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_9ns_25_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_9s_25_1_1': 10 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter'.
+INFO: [RTMG 210-278] Implementing memory 'FIR_HLS_FIR_filter_p_ZL10H_accu_FIR_0_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.037 seconds; current allocated memory: 343.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'FIR_HLS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/input_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/output_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'FIR_HLS' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_HLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.612 seconds; current allocated memory: 376.180 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.828 seconds; current allocated memory: 376.180 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.025 seconds; current allocated memory: 383.426 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for FIR_HLS.
+INFO: [VLOG 209-307] Generating Verilog RTL for FIR_HLS.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.55 MHz
+INFO: [HLS 200-112] Total CPU user time: 11 seconds. Total CPU system time: 3 seconds. Total elapsed time: 29.868 seconds; peak allocated memory: 383.551 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 34s

@@ -14,16 +14,17 @@ INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.dat' from 
 INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.dat' to the project
 INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.res' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(12)
 INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.res' to the project
-INFO: [HLS 200-1465] Applying ini 'syn.top=FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'syn.top=Transposed_FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(13)
 INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-1465] Applying ini 'part=xck26-sfvc784-2LV-c' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=Transposed_FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/hls_config.cfg(5)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.448 seconds; current allocated memory: 273.164 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.042 seconds; current allocated memory: 273.852 MB.
 INFO: [HLS 200-10] Analyzing design file 'FIR_HLS.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.909 seconds; current allocated memory: 276.270 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.206 seconds; current allocated memory: 276.590 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 824 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 13,319 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Transposed_FIR_HLS/Transposed_FIR_HLS/hls/syn/report/csynth_design_size.rpt
@@ -45,16 +46,16 @@ INFO: [HLS 214-291] Loop 'VITIS_LOOP_20_1' is marked as complete unroll implied 
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_20_1' (FIR_HLS.cpp:20:19) in function 'FIR_filter' completely with a factor of 391 (FIR_HLS.cpp:14:0)
 INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_accu_FIR' due to pipeline pragma (./FIR_HLS.h:9:0)
 INFO: [HLS 214-248] Applying array_partition to '_ZL10H_accu_FIR': Complete partitioning on dimension 1. (./FIR_HLS.h:9:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 8.534 seconds; current allocated memory: 277.902 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 277.902 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 9.826 seconds; current allocated memory: 278.676 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 278.676 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.272 seconds; current allocated memory: 283.156 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.122 seconds; current allocated memory: 284.180 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 285.168 MB.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.391 seconds; current allocated memory: 308.262 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.656 seconds; current allocated memory: 313.824 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 286.051 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.387 seconds; current allocated memory: 309.965 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.659 seconds; current allocated memory: 317.711 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'FIR_HLS' ...
+INFO: [HLS 200-10] Synthesizing 'Transposed_FIR_HLS' ...
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'FIR_filter' 
@@ -63,25 +64,25 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'FIR_filter'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, function 'FIR_filter'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.901 seconds; current allocated memory: 327.844 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.801 seconds; current allocated memory: 328.223 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.517 seconds; current allocated memory: 328.887 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.46 seconds; current allocated memory: 329.191 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'FIR_HLS' 
+INFO: [HLS 200-42] -- Implementing module 'Transposed_FIR_HLS' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.381 seconds; current allocated memory: 329.531 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.381 seconds; current allocated memory: 329.777 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 329.699 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 330.008 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -496,20 +497,20 @@ INFO: [RTGEN 206-100] Generating core module 'mul_16s_8s_24_1_1': 8 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_16s_9ns_25_1_1': 8 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_16s_9s_25_1_1': 10 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 16.515 seconds; current allocated memory: 341.598 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 16.77 seconds; current allocated memory: 342.320 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'FIR_HLS' 
+INFO: [HLS 200-10] -- Generating RTL for module 'Transposed_FIR_HLS' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/input_r' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/output_r' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'FIR_HLS' to 'ap_ctrl_none'.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_HLS'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.456 seconds; current allocated memory: 368.199 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.754 seconds; current allocated memory: 368.973 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.731 seconds; current allocated memory: 377.758 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for FIR_HLS.
-INFO: [VLOG 209-307] Generating Verilog RTL for FIR_HLS.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Transposed_FIR_HLS/input_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Transposed_FIR_HLS/output_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'Transposed_FIR_HLS' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Transposed_FIR_HLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.439 seconds; current allocated memory: 368.875 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.847 seconds; current allocated memory: 369.793 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.731 seconds; current allocated memory: 378.219 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Transposed_FIR_HLS.
+INFO: [VLOG 209-307] Generating Verilog RTL for Transposed_FIR_HLS.
 INFO: [HLS 200-789] **** Estimated Fmax: 254.58 MHz
-INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 4 seconds. Total elapsed time: 43.827 seconds; peak allocated memory: 378.395 MB.
+INFO: [HLS 200-112] Total CPU user time: 10 seconds. Total CPU system time: 4 seconds. Total elapsed time: 44.004 seconds; peak allocated memory: 378.871 MB.
 INFO: [v++ 60-791] Total elapsed time: 0h 0m 49s

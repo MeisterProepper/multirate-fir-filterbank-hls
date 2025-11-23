@@ -1,0 +1,205 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2024.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>3.720</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>3.720</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>3.720</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>6.280</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>6.280</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>6.280</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>6.280</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>110</DSP>
+    <FF>1725</FF>
+    <LATCH>0</LATCH>
+    <LUT>1564</LUT>
+    <SRL>190</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>288</BRAM>
+    <CLB>0</CLB>
+    <DSP>1248</DSP>
+    <FF>234240</FF>
+    <LUT>117120</LUT>
+    <URAM>64</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="FIR_Cascade_v2" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="7">grp_FIR_filter_1_fu_440 grp_FIR_filter_2_fu_430 grp_FIR_filter_fu_405 grp_FIR_filter_fu_419 ref_tmp_FIR_filter_transposed_fu_449 regslice_both_input_r_U regslice_both_output_r_U</SubModules>
+    <Resources DSP="110" FF="1725" LUT="1564" LogicLUT="1374" SRL="190"/>
+    <LocalResources FF="582" LUT="6" LogicLUT="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_1_fu_440" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_FIR_filter_1">
+    <SubModules count="2">ama_addmuladd_16s_16s_10s_32s_32_4_0_U91 mac_muladd_16s_16ns_26s_32_4_0_U90</SubModules>
+    <Resources DSP="2" FF="305" LUT="177" LogicLUT="129" SRL="48"/>
+    <LocalResources FF="305" LUT="135" LogicLUT="87" SRL="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_1.v" ORIG_REF_NAME="FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0">
+    <Resources DSP="1" LUT="34" LogicLUT="34"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_1.v" ORIG_REF_NAME="FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0">
+    <Resources DSP="1" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_2_fu_430" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_FIR_filter_2">
+    <SubModules count="3">am_addmul_16s_16s_15ns_32_4_0_U12 ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 ama_addmuladd_16s_16s_14s_32s_32_4_0_U14</SubModules>
+    <Resources DSP="3" FF="273" LUT="210" LogicLUT="130" SRL="80"/>
+    <LocalResources FF="273" LUT="136" LogicLUT="56" SRL="80"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" ORIG_REF_NAME="FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0">
+    <Resources DSP="1" LUT="20" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" ORIG_REF_NAME="FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0">
+    <Resources DSP="1" LUT="8" LogicLUT="8"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" ORIG_REF_NAME="FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0">
+    <Resources DSP="1" LUT="46" LogicLUT="46"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_405" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_FIR_filter">
+    <SubModules count="2">mac_muladd_16s_13s_29s_29_4_0_U2 mac_muladd_16s_15ns_30s_32_4_0_U3</SubModules>
+    <Resources DSP="3" FF="131" LUT="152" LogicLUT="120" SRL="32"/>
+    <LocalResources FF="131" LUT="80" LogicLUT="48" SRL="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter.v" ORIG_REF_NAME="FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0">
+    <Resources DSP="2" LUT="2" LogicLUT="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter.v" ORIG_REF_NAME="FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0">
+    <Resources DSP="1" LUT="70" LogicLUT="70"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_419" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_FIR_filter">
+    <SubModules count="2">mac_muladd_16s_13s_29s_29_4_0_U2 mac_muladd_16s_15ns_30s_32_4_0_U3</SubModules>
+    <Resources DSP="3" FF="121" LUT="60" LogicLUT="30" SRL="30"/>
+    <LocalResources FF="121" LUT="45" LogicLUT="15" SRL="30"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter.v" ORIG_REF_NAME="FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0">
+    <Resources DSP="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter.v" ORIG_REF_NAME="FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0">
+    <Resources DSP="1" LUT="15" LogicLUT="15"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ref_tmp_FIR_filter_transposed_fu_449" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_FIR_filter_transposed">
+    <SubModules count="1">mul_16s_8ns_23_1_1_U24</SubModules>
+    <Resources DSP="99" FF="241" LUT="893" LogicLUT="893"/>
+    <LocalResources DSP="98" FF="241" LUT="893" LogicLUT="893"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24" DEPTH="2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" ORIG_REF_NAME="FIR_Cascade_v2_mul_16s_8ns_23_1_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_input_r_U" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_regslice_both">
+    <Resources FF="37" LUT="35" LogicLUT="35"/>
+  </RtlModule>
+  <RtlModule CELL="inst/regslice_both_output_r_U" DEPTH="1" FILE_NAME="FIR_Cascade_v2.v" ORIG_REF_NAME="FIR_Cascade_v2_regslice_both">
+    <Resources FF="35" LUT="31" LogicLUT="31"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="3.682" DATAPATH_LOGIC_DELAY="3.102" DATAPATH_NET_DELAY="0.580" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[15]/D" LOGIC_LEVELS="12" MAX_FANOUT="3" SLACK="6.280" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3[7]_i_28" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_12" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg[7]_i_16__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[7]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[15]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[15]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" LINE_NUMBER="201"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.671" DATAPATH_LOGIC_DELAY="3.092" DATAPATH_NET_DELAY="0.579" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[13]/D" LOGIC_LEVELS="12" MAX_FANOUT="3" SLACK="6.290" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3[7]_i_28" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_12" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg[7]_i_16__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[7]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[15]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" LINE_NUMBER="201"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.668" DATAPATH_LOGIC_DELAY="3.088" DATAPATH_NET_DELAY="0.580" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[14]/D" LOGIC_LEVELS="12" MAX_FANOUT="3" SLACK="6.293" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3[7]_i_28" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_12" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg[7]_i_16__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[7]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[15]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[14]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" LINE_NUMBER="201"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.628" DATAPATH_LOGIC_DELAY="3.050" DATAPATH_NET_DELAY="0.578" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[12]/D" LOGIC_LEVELS="12" MAX_FANOUT="3" SLACK="6.334" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3[7]_i_28" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_12" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg[7]_i_16__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[7]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[15]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" LINE_NUMBER="201"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="3.625" DATAPATH_LOGIC_DELAY="3.045" DATAPATH_NET_DELAY="0.580" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[11]/D" LOGIC_LEVELS="12" MAX_FANOUT="3" SLACK="6.336" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/mul_16s_8ns_23_1_1_U24/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3[7]_i_28" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_12" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/ref_tmp_FIR_filter_transposed_fu_449/y3_reg[7]_i_1" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2_FIR_filter_transposed.v" LINE_NUMBER="1449"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg[7]_i_16__0" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[7]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/FIR_delays_write_int_reg_reg[15]_i_1__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="FIR_Cascade_v2.v" LINE_NUMBER="340"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_FIR_filter_2_fu_430/FIR_delays_write_int_reg_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="FIR_Cascade_v2_FIR_filter_2.v" LINE_NUMBER="201"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/FIR_Cascade_v2_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/FIR_Cascade_v2_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/FIR_Cascade_v2_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/FIR_Cascade_v2_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/FIR_Cascade_v2_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/FIR_Cascade_v2_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/FIR_Cascade_v2_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

@@ -9,4 +9,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("output_r_TVALID", 1, hls_out, 1, "axis", "out_vld", 1),
 	Port_Property("output_r_TREADY", 1, hls_in, 1, "axis", "out_acc", 1),
 };
-const char* HLS_Design_Meta::dut_name = "FIR_HLS";
+const char* HLS_Design_Meta::dut_name = "Direct_FIR_SRL";

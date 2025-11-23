@@ -1,0 +1,319 @@
+
+
+================================================================
+== Synthesis Summary Report of 'FIR_Cascade_v2'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 23 22:53:43 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        FIR_Cascade_v2
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |          Modules         | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
+    |          & Loops         | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ FIR_Cascade_v2          |     -|  0.51|       24|  240.000|         -|       25|     -|        no|     -|  58 (4%)|  6247 (2%)|  6636 (5%)|    -|
+    | + FIR_filter             |     -|  4.27|        4|   40.000|         -|        1|     -|       yes|     -|  3 (~0%)|  341 (~0%)|  111 (~0%)|    -|
+    | + FIR_filter             |     -|  4.27|        4|   40.000|         -|        1|     -|       yes|     -|  3 (~0%)|  341 (~0%)|  111 (~0%)|    -|
+    | + FIR_filter_2           |     -|  3.91|        5|   50.000|         -|        1|     -|       yes|     -|  3 (~0%)|  609 (~0%)|  244 (~0%)|    -|
+    | + FIR_filter_1           |     -|  4.61|        4|   40.000|         -|        1|     -|       yes|     -|  2 (~0%)|  513 (~0%)|  255 (~0%)|    -|
+    | + FIR_filter_transposed  |     -|  3.90|        0|    0.000|         -|        1|     -|       yes|     -|  47 (3%)|  3882 (1%)|  5370 (4%)|    -|
+    +--------------------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++-----------+-----------+---------------+-------+--------+--------+
+| Interface | Direction | Register Mode | TDATA | TREADY | TVALID |
++-----------+-----------+---------------+-------+--------+--------+
+| input_r   | in        | both          | 16    | 1      | 1      |
+| output_r  | out       | both          | 16    | 1      | 1      |
++-----------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| input    | in        | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
+| output   | out       | stream<ap_fixed<16, 1, AP_TRN, AP_WRAP, 0>, 0>& |
++----------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+
+| Argument | HW Interface | HW Type   |
++----------+--------------+-----------+
+| input    | input_r      | interface |
+| output   | output_r     | interface |
++----------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+--------------+------+-----------+---------+
+| Name                                         | DSP | Pragma | Variable     | Op   | Impl      | Latency |
++----------------------------------------------+-----+--------+--------------+------+-----------+---------+
+| + FIR_Cascade_v2                             | 58  |        |              |      |           |         |
+|   add_ln28_fu_812_p2                         |     |        | add_ln28     | add  | fabric    | 0       |
+|   add_ln32_fu_907_p2                         |     |        | add_ln32     | add  | fabric    | 0       |
+|  + FIR_filter (grp_FIR_filter_fu_405)        | 3   |        |              |      |           |         |
+|    mac_muladd_16s_13s_29s_29_4_0_U2          | 1   |        | FIR_accu32   | mul  | dsp_slice | 3       |
+|    mac_muladd_16s_15ns_30s_32_4_0_U3         | 1   |        | mul_ln66     | mul  | dsp_slice | 3       |
+|    mul_16s_13s_29_1_0_U1                     | 1   |        | mul_ln66_1   | mul  | auto      | 0       |
+|    mac_muladd_16s_13s_29s_29_4_0_U2          | 1   |        | tmp          | add  | dsp_slice | 3       |
+|    mac_muladd_16s_15ns_30s_32_4_0_U3         | 1   |        | FIR_accu32_2 | add  | dsp_slice | 3       |
+|  + FIR_filter (grp_FIR_filter_fu_419)        | 3   |        |              |      |           |         |
+|    mac_muladd_16s_13s_29s_29_4_0_U2          | 1   |        | FIR_accu32   | mul  | dsp_slice | 3       |
+|    mac_muladd_16s_15ns_30s_32_4_0_U3         | 1   |        | mul_ln66     | mul  | dsp_slice | 3       |
+|    mul_16s_13s_29_1_0_U1                     | 1   |        | mul_ln66_1   | mul  | auto      | 0       |
+|    mac_muladd_16s_13s_29s_29_4_0_U2          | 1   |        | tmp          | add  | dsp_slice | 3       |
+|    mac_muladd_16s_15ns_30s_32_4_0_U3         | 1   |        | FIR_accu32_2 | add  | dsp_slice | 3       |
+|  + FIR_filter_2                              | 3   |        |              |      |           |         |
+|    am_addmul_16s_16s_15ns_32_4_0_U12         | 1   |        | tmp          | add  | dsp_slice | 3       |
+|    am_addmul_16s_16s_15ns_32_4_0_U12         | 1   |        | tmp_cast     | sext | dsp_slice | 3       |
+|    am_addmul_16s_16s_15ns_32_4_0_U12         | 1   |        | tmp1         | mul  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_14s_32s_32_4_0_U14  | 1   |        | tmp2         | add  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_14s_32s_32_4_0_U14  | 1   |        | tmp2_cast    | sext | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_14s_32s_32_4_0_U14  | 1   |        | tmp3         | mul  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_14s_32s_32_4_0_U14  | 1   |        | tmp3_cast    | sext | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 | 1   |        | tmp4         | add  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 | 1   |        | tmp4_cast    | sext | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 | 1   |        | tmp5         | mul  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 | 1   |        | sext_ln66_4  | sext | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13 | 1   |        | add_ln66     | add  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_14s_32s_32_4_0_U14  | 1   |        | FIR_accu32   | add  | dsp_slice | 3       |
+|  + FIR_filter_1                              | 2   |        |              |      |           |         |
+|    mac_muladd_16s_16ns_26s_32_4_0_U90        | 1   |        | mul_ln66     | mul  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10s_32s_32_4_0_U91  | 1   |        | tmp          | add  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10s_32s_32_4_0_U91  | 1   |        | tmp_cast     | sext | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10s_32s_32_4_0_U91  | 1   |        | tmp1         | mul  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10s_32s_32_4_0_U91  | 1   |        | tmp1_cast    | sext | dsp_slice | 3       |
+|    tmp2_fu_86_p2                             |     |        | tmp2         | add  | fabric    | 0       |
+|    tmp3_fu_116_p2                            |     |        | tmp3         | sub  | fabric    | 0       |
+|    mac_muladd_16s_16ns_26s_32_4_0_U90        | 1   |        | add_ln66     | add  | dsp_slice | 3       |
+|    ama_addmuladd_16s_16s_10s_32s_32_4_0_U91  | 1   |        | FIR_accu32   | add  | dsp_slice | 3       |
+|  + FIR_filter_transposed                     | 47  |        |              |      |           |         |
+|    mul_16s_8ns_23_1_1_U24                    | 1   |        | mul_ln83     | mul  | auto      | 0       |
+|    add_ln83_fu_466_p2                        |     |        | add_ln83     | add  | fabric    | 0       |
+|    sub_ln86_fu_510_p2                        |     |        | sub_ln86     | sub  | fabric    | 0       |
+|    add_ln86_fu_520_p2                        |     |        | add_ln86     | add  | fabric    | 0       |
+|    mul_16s_7ns_23_1_1_U25                    | 1   |        | mul_ln86     | mul  | auto      | 0       |
+|    sub_ln86_1_fu_556_p2                      |     |        | sub_ln86_1   | sub  | fabric    | 0       |
+|    sub_ln86_2_fu_582_p2                      |     |        | sub_ln86_2   | sub  | fabric    | 0       |
+|    mul_16s_8s_24_1_1_U26                     | 1   |        | mul_ln86_1   | mul  | auto      | 0       |
+|    mul_16s_7ns_23_1_1_U27                    | 1   |        | mul_ln86_2   | mul  | auto      | 0       |
+|    mul_16s_8ns_24_1_1_U28                    | 1   |        | mul_ln86_3   | mul  | auto      | 0       |
+|    mul_16s_8ns_24_1_1_U29                    | 1   |        | mul_ln86_4   | mul  | auto      | 0       |
+|    add_ln86_122_fu_704_p2                    |     |        | add_ln86_122 | add  | fabric    | 0       |
+|    sub_ln86_5_fu_730_p2                      |     |        | sub_ln86_5   | sub  | fabric    | 0       |
+|    mul_16s_8s_24_1_1_U30                     | 1   |        | mul_ln86_5   | mul  | auto      | 0       |
+|    mul_16s_9ns_25_1_1_U31                    | 1   |        | mul_ln86_6   | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U32                     | 1   |        | mul_ln86_7   | mul  | auto      | 0       |
+|    mul_16s_7s_23_1_1_U33                     | 1   |        | mul_ln86_8   | mul  | auto      | 0       |
+|    mul_16s_9ns_25_1_1_U34                    | 1   |        | mul_ln86_9   | mul  | auto      | 0       |
+|    mul_16s_6ns_22_1_1_U35                    | 1   |        | mul_ln86_10  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U36                     | 1   |        | mul_ln86_11  | mul  | auto      | 0       |
+|    add_ln86_123_fu_822_p2                    |     |        | add_ln86_123 | add  | fabric    | 0       |
+|    mul_16s_7s_23_1_1_U37                     | 1   |        | mul_ln86_12  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U38                    | 1   |        | mul_ln86_13  | mul  | auto      | 0       |
+|    mul_16s_8ns_24_1_1_U39                    | 1   |        | mul_ln86_14  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_1_U40                   | 1   |        | mul_ln86_15  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U41                    | 1   |        | mul_ln86_16  | mul  | auto      | 0       |
+|    mul_16s_9ns_25_1_1_U42                    | 1   |        | mul_ln86_17  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_1_U43                   | 1   |        | mul_ln86_18  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U44                    | 1   |        | mul_ln86_19  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U45                    | 1   |        | mul_ln86_20  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_1_U46                   | 1   |        | mul_ln86_21  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_1_U47                   | 1   |        | mul_ln86_22  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U48                    | 1   |        | mul_ln86_23  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U49                    | 1   |        | mul_ln86_24  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U50                   | 1   |        | mul_ln86_25  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U51                    | 1   |        | mul_ln86_26  | mul  | auto      | 0       |
+|    mul_16s_10s_26_1_1_U52                    | 1   |        | mul_ln86_27  | mul  | auto      | 0       |
+|    mul_16s_11ns_27_1_1_U53                   | 1   |        | mul_ln86_28  | mul  | auto      | 0       |
+|    mul_16s_10ns_26_1_1_U54                   | 1   |        | mul_ln86_29  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U55                    | 1   |        | mul_ln86_30  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U56                     | 1   |        | mul_ln86_31  | mul  | auto      | 0       |
+|    mul_16s_12ns_28_1_1_U57                   | 1   |        | mul_ln86_32  | mul  | auto      | 0       |
+|    mul_16s_8ns_24_1_1_U58                    | 1   |        | mul_ln86_33  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U59                    | 1   |        | mul_ln86_34  | mul  | auto      | 0       |
+|    sub_ln86_8_fu_1102_p2                     |     |        | sub_ln86_8   | sub  | fabric    | 0       |
+|    mul_16s_12ns_28_1_1_U60                   | 1   |        | mul_ln86_35  | mul  | auto      | 0       |
+|    mul_16s_9s_25_1_1_U61                     | 1   |        | mul_ln86_36  | mul  | auto      | 0       |
+|    mul_16s_12s_28_1_1_U62                    | 1   |        | mul_ln86_37  | mul  | auto      | 0       |
+|    add_ln86_124_fu_1158_p2                   |     |        | add_ln86_124 | add  | fabric    | 0       |
+|    mul_16s_13ns_29_1_1_U63                   | 1   |        | mul_ln86_38  | mul  | auto      | 0       |
+|    mul_16s_11s_27_1_1_U64                    | 1   |        | mul_ln86_39  | mul  | auto      | 0       |
+|    mul_16s_13s_29_1_0_U65                    | 1   |        | mul_ln86_40  | mul  | auto      | 0       |
+|    mul_16s_12ns_28_1_1_U66                   | 1   |        | mul_ln86_41  | mul  | auto      | 0       |
+|    sub_ln86_9_fu_1224_p2                     |     |        | sub_ln86_9   | sub  | fabric    | 0       |
+|    mul_16s_13s_29_1_0_U67                    | 1   |        | mul_ln86_42  | mul  | auto      | 0       |
+|    mul_16s_14s_30_1_1_U68                    | 1   |        | mul_ln86_43  | mul  | auto      | 0       |
+|    mul_16s_15ns_31_1_1_U69                   | 1   |        | mul_ln86_44  | mul  | auto      | 0       |
+|    mul_16s_16ns_32_1_1_U70                   | 1   |        | mul_ln86_45  | mul  | auto      | 0       |
+|    add_ln86_1_fu_1274_p2                     |     |        | add_ln86_1   | add  | fabric    | 0       |
+|    add_ln86_2_fu_1284_p2                     |     |        | add_ln86_2   | add  | fabric    | 0       |
+|    add_ln86_3_fu_1294_p2                     |     |        | add_ln86_3   | add  | fabric    | 0       |
+|    add_ln86_4_fu_1304_p2                     |     |        | add_ln86_4   | add  | fabric    | 0       |
+|    add_ln86_5_fu_1314_p2                     |     |        | add_ln86_5   | add  | fabric    | 0       |
+|    add_ln86_6_fu_1324_p2                     |     |        | add_ln86_6   | add  | fabric    | 0       |
+|    add_ln86_7_fu_1334_p2                     |     |        | add_ln86_7   | add  | fabric    | 0       |
+|    add_ln86_8_fu_1344_p2                     |     |        | add_ln86_8   | add  | fabric    | 0       |
+|    add_ln86_9_fu_1354_p2                     |     |        | add_ln86_9   | add  | fabric    | 0       |
+|    add_ln86_10_fu_1364_p2                    |     |        | add_ln86_10  | add  | fabric    | 0       |
+|    add_ln86_11_fu_1374_p2                    |     |        | add_ln86_11  | add  | fabric    | 0       |
+|    add_ln86_12_fu_1384_p2                    |     |        | add_ln86_12  | add  | fabric    | 0       |
+|    add_ln86_13_fu_1394_p2                    |     |        | add_ln86_13  | add  | fabric    | 0       |
+|    add_ln86_14_fu_1404_p2                    |     |        | add_ln86_14  | add  | fabric    | 0       |
+|    add_ln86_15_fu_1414_p2                    |     |        | add_ln86_15  | add  | fabric    | 0       |
+|    add_ln86_16_fu_1424_p2                    |     |        | add_ln86_16  | add  | fabric    | 0       |
+|    add_ln86_17_fu_1434_p2                    |     |        | add_ln86_17  | add  | fabric    | 0       |
+|    add_ln86_18_fu_1444_p2                    |     |        | add_ln86_18  | add  | fabric    | 0       |
+|    add_ln86_19_fu_1454_p2                    |     |        | add_ln86_19  | add  | fabric    | 0       |
+|    add_ln86_20_fu_1464_p2                    |     |        | add_ln86_20  | add  | fabric    | 0       |
+|    add_ln86_21_fu_1474_p2                    |     |        | add_ln86_21  | add  | fabric    | 0       |
+|    add_ln86_22_fu_1484_p2                    |     |        | add_ln86_22  | add  | fabric    | 0       |
+|    add_ln86_23_fu_1494_p2                    |     |        | add_ln86_23  | add  | fabric    | 0       |
+|    add_ln86_24_fu_1504_p2                    |     |        | add_ln86_24  | add  | fabric    | 0       |
+|    add_ln86_25_fu_1514_p2                    |     |        | add_ln86_25  | add  | fabric    | 0       |
+|    add_ln86_26_fu_1524_p2                    |     |        | add_ln86_26  | add  | fabric    | 0       |
+|    add_ln86_27_fu_1534_p2                    |     |        | add_ln86_27  | add  | fabric    | 0       |
+|    add_ln86_28_fu_1544_p2                    |     |        | add_ln86_28  | add  | fabric    | 0       |
+|    add_ln86_29_fu_1554_p2                    |     |        | add_ln86_29  | add  | fabric    | 0       |
+|    add_ln86_30_fu_1564_p2                    |     |        | add_ln86_30  | add  | fabric    | 0       |
+|    add_ln86_31_fu_1574_p2                    |     |        | add_ln86_31  | add  | fabric    | 0       |
+|    add_ln86_32_fu_1584_p2                    |     |        | add_ln86_32  | add  | fabric    | 0       |
+|    add_ln86_33_fu_1594_p2                    |     |        | add_ln86_33  | add  | fabric    | 0       |
+|    add_ln86_34_fu_1604_p2                    |     |        | add_ln86_34  | add  | fabric    | 0       |
+|    add_ln86_35_fu_1614_p2                    |     |        | add_ln86_35  | add  | fabric    | 0       |
+|    add_ln86_36_fu_1624_p2                    |     |        | add_ln86_36  | add  | fabric    | 0       |
+|    add_ln86_37_fu_1634_p2                    |     |        | add_ln86_37  | add  | fabric    | 0       |
+|    add_ln86_38_fu_1644_p2                    |     |        | add_ln86_38  | add  | fabric    | 0       |
+|    add_ln86_39_fu_1654_p2                    |     |        | add_ln86_39  | add  | fabric    | 0       |
+|    add_ln86_40_fu_1664_p2                    |     |        | add_ln86_40  | add  | fabric    | 0       |
+|    add_ln86_41_fu_1674_p2                    |     |        | add_ln86_41  | add  | fabric    | 0       |
+|    add_ln86_42_fu_1684_p2                    |     |        | add_ln86_42  | add  | fabric    | 0       |
+|    add_ln86_43_fu_1694_p2                    |     |        | add_ln86_43  | add  | fabric    | 0       |
+|    add_ln86_44_fu_1704_p2                    |     |        | add_ln86_44  | add  | fabric    | 0       |
+|    add_ln86_45_fu_1714_p2                    |     |        | add_ln86_45  | add  | fabric    | 0       |
+|    add_ln86_46_fu_1724_p2                    |     |        | add_ln86_46  | add  | fabric    | 0       |
+|    add_ln86_47_fu_1734_p2                    |     |        | add_ln86_47  | add  | fabric    | 0       |
+|    add_ln86_48_fu_1744_p2                    |     |        | add_ln86_48  | add  | fabric    | 0       |
+|    add_ln86_49_fu_1754_p2                    |     |        | add_ln86_49  | add  | fabric    | 0       |
+|    add_ln86_50_fu_1764_p2                    |     |        | add_ln86_50  | add  | fabric    | 0       |
+|    add_ln86_51_fu_1774_p2                    |     |        | add_ln86_51  | add  | fabric    | 0       |
+|    add_ln86_52_fu_1784_p2                    |     |        | add_ln86_52  | add  | fabric    | 0       |
+|    add_ln86_53_fu_1794_p2                    |     |        | add_ln86_53  | add  | fabric    | 0       |
+|    add_ln86_54_fu_1804_p2                    |     |        | add_ln86_54  | add  | fabric    | 0       |
+|    add_ln86_55_fu_1814_p2                    |     |        | add_ln86_55  | add  | fabric    | 0       |
+|    add_ln86_56_fu_1824_p2                    |     |        | add_ln86_56  | add  | fabric    | 0       |
+|    add_ln86_57_fu_1834_p2                    |     |        | add_ln86_57  | add  | fabric    | 0       |
+|    add_ln86_58_fu_1844_p2                    |     |        | add_ln86_58  | add  | fabric    | 0       |
+|    add_ln86_59_fu_1854_p2                    |     |        | add_ln86_59  | add  | fabric    | 0       |
+|    add_ln86_60_fu_1864_p2                    |     |        | add_ln86_60  | add  | fabric    | 0       |
+|    add_ln86_61_fu_1874_p2                    |     |        | add_ln86_61  | add  | fabric    | 0       |
+|    add_ln86_62_fu_1884_p2                    |     |        | add_ln86_62  | add  | fabric    | 0       |
+|    add_ln86_63_fu_1894_p2                    |     |        | add_ln86_63  | add  | fabric    | 0       |
+|    add_ln86_64_fu_1904_p2                    |     |        | add_ln86_64  | add  | fabric    | 0       |
+|    add_ln86_65_fu_1914_p2                    |     |        | add_ln86_65  | add  | fabric    | 0       |
+|    add_ln86_66_fu_1924_p2                    |     |        | add_ln86_66  | add  | fabric    | 0       |
+|    add_ln86_67_fu_1934_p2                    |     |        | add_ln86_67  | add  | fabric    | 0       |
+|    add_ln86_68_fu_1944_p2                    |     |        | add_ln86_68  | add  | fabric    | 0       |
+|    add_ln86_69_fu_1954_p2                    |     |        | add_ln86_69  | add  | fabric    | 0       |
+|    add_ln86_70_fu_1964_p2                    |     |        | add_ln86_70  | add  | fabric    | 0       |
+|    add_ln86_71_fu_1974_p2                    |     |        | add_ln86_71  | add  | fabric    | 0       |
+|    add_ln86_72_fu_1984_p2                    |     |        | add_ln86_72  | add  | fabric    | 0       |
+|    add_ln86_73_fu_1994_p2                    |     |        | add_ln86_73  | add  | fabric    | 0       |
+|    add_ln86_74_fu_2004_p2                    |     |        | add_ln86_74  | add  | fabric    | 0       |
+|    add_ln86_75_fu_2014_p2                    |     |        | add_ln86_75  | add  | fabric    | 0       |
+|    add_ln86_76_fu_2024_p2                    |     |        | add_ln86_76  | add  | fabric    | 0       |
+|    add_ln86_77_fu_2034_p2                    |     |        | add_ln86_77  | add  | fabric    | 0       |
+|    add_ln86_78_fu_2044_p2                    |     |        | add_ln86_78  | add  | fabric    | 0       |
+|    add_ln86_79_fu_2054_p2                    |     |        | add_ln86_79  | add  | fabric    | 0       |
+|    add_ln86_80_fu_2064_p2                    |     |        | add_ln86_80  | add  | fabric    | 0       |
+|    add_ln86_81_fu_2074_p2                    |     |        | add_ln86_81  | add  | fabric    | 0       |
+|    add_ln86_82_fu_2084_p2                    |     |        | add_ln86_82  | add  | fabric    | 0       |
+|    add_ln86_83_fu_2094_p2                    |     |        | add_ln86_83  | add  | fabric    | 0       |
+|    add_ln86_84_fu_2104_p2                    |     |        | add_ln86_84  | add  | fabric    | 0       |
+|    add_ln86_85_fu_2114_p2                    |     |        | add_ln86_85  | add  | fabric    | 0       |
+|    add_ln86_86_fu_2124_p2                    |     |        | add_ln86_86  | add  | fabric    | 0       |
+|    add_ln86_87_fu_2134_p2                    |     |        | add_ln86_87  | add  | fabric    | 0       |
+|    add_ln86_88_fu_2144_p2                    |     |        | add_ln86_88  | add  | fabric    | 0       |
+|    add_ln86_89_fu_2154_p2                    |     |        | add_ln86_89  | add  | fabric    | 0       |
+|    add_ln86_90_fu_2164_p2                    |     |        | add_ln86_90  | add  | fabric    | 0       |
+|    add_ln86_91_fu_2174_p2                    |     |        | add_ln86_91  | add  | fabric    | 0       |
+|    add_ln86_92_fu_2184_p2                    |     |        | add_ln86_92  | add  | fabric    | 0       |
+|    add_ln86_93_fu_2194_p2                    |     |        | add_ln86_93  | add  | fabric    | 0       |
+|    add_ln86_94_fu_2204_p2                    |     |        | add_ln86_94  | add  | fabric    | 0       |
+|    add_ln86_95_fu_2214_p2                    |     |        | add_ln86_95  | add  | fabric    | 0       |
+|    add_ln86_96_fu_2224_p2                    |     |        | add_ln86_96  | add  | fabric    | 0       |
+|    add_ln86_97_fu_2234_p2                    |     |        | add_ln86_97  | add  | fabric    | 0       |
+|    add_ln86_98_fu_2244_p2                    |     |        | add_ln86_98  | add  | fabric    | 0       |
+|    add_ln86_99_fu_2254_p2                    |     |        | add_ln86_99  | add  | fabric    | 0       |
+|    add_ln86_100_fu_2264_p2                   |     |        | add_ln86_100 | add  | fabric    | 0       |
+|    add_ln86_101_fu_2274_p2                   |     |        | add_ln86_101 | add  | fabric    | 0       |
+|    add_ln86_102_fu_2284_p2                   |     |        | add_ln86_102 | add  | fabric    | 0       |
+|    add_ln86_103_fu_2294_p2                   |     |        | add_ln86_103 | add  | fabric    | 0       |
+|    add_ln86_104_fu_2304_p2                   |     |        | add_ln86_104 | add  | fabric    | 0       |
+|    add_ln86_105_fu_2314_p2                   |     |        | add_ln86_105 | add  | fabric    | 0       |
+|    add_ln86_106_fu_2324_p2                   |     |        | add_ln86_106 | add  | fabric    | 0       |
+|    add_ln86_107_fu_2334_p2                   |     |        | add_ln86_107 | add  | fabric    | 0       |
+|    add_ln86_108_fu_2344_p2                   |     |        | add_ln86_108 | add  | fabric    | 0       |
+|    add_ln86_109_fu_2354_p2                   |     |        | add_ln86_109 | add  | fabric    | 0       |
+|    add_ln86_110_fu_2364_p2                   |     |        | add_ln86_110 | add  | fabric    | 0       |
+|    add_ln86_111_fu_2378_p2                   |     |        | add_ln86_111 | add  | fabric    | 0       |
+|    add_ln86_112_fu_2392_p2                   |     |        | add_ln86_112 | add  | fabric    | 0       |
+|    add_ln86_113_fu_2406_p2                   |     |        | add_ln86_113 | add  | fabric    | 0       |
+|    add_ln86_114_fu_2420_p2                   |     |        | add_ln86_114 | add  | fabric    | 0       |
+|    add_ln86_115_fu_2434_p2                   |     |        | add_ln86_115 | add  | fabric    | 0       |
+|    add_ln86_116_fu_2444_p2                   |     |        | add_ln86_116 | add  | fabric    | 0       |
+|    add_ln86_117_fu_2458_p2                   |     |        | add_ln86_117 | add  | fabric    | 0       |
+|    add_ln86_118_fu_2468_p2                   |     |        | add_ln86_118 | add  | fabric    | 0       |
+|    add_ln86_119_fu_2482_p2                   |     |        | add_ln86_119 | add  | fabric    | 0       |
+|    add_ln86_120_fu_2492_p2                   |     |        | add_ln86_120 | add  | fabric    | 0       |
+|    add_ln86_121_fu_2506_p2                   |     |        | add_ln86_121 | add  | fabric    | 0       |
++----------------------------------------------+-----+--------+--------------+------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------+------------------------------------------+
+| Type      | Options                       | Location                                 |
++-----------+-------------------------------+------------------------------------------+
+| interface | mode=axis port=input          | FIR_HLS.cpp:21 in fir_cascade_v2, input  |
+| interface | mode=axis port=output         | FIR_HLS.cpp:22 in fir_cascade_v2, output |
+| interface | mode=ap_ctrl_none port=return | FIR_HLS.cpp:23 in fir_cascade_v2, return |
+| pipeline  |                               | FIR_HLS.cpp:59 in fir_filter             |
+| pipeline  |                               | FIR_HLS.cpp:80 in fir_filter_transposed  |
++-----------+-------------------------------+------------------------------------------+
+
+

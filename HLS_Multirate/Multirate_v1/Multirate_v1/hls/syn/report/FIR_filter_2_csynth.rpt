@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'FIR_filter_2'
 ================================================================
-* Date:           Wed Nov 12 23:44:07 2025
+* Date:           Sun Nov 16 16:18:05 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        Multirate_v1
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  5.855 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  3.392 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
     |   min   |   max   |    min    |    max    | min | max |   Type  |
     +---------+---------+-----------+-----------+-----+-----+---------+
-    |        1|        1|  10.000 ns|  10.000 ns|    1|    1|      yes|
+    |        5|        5|  50.000 ns|  50.000 ns|    1|    1|      yes|
     +---------+---------+-----------+-----------+-----+-----+---------+
 
     + Detail: 
@@ -48,15 +48,15 @@
 +-----------------+---------+------+--------+--------+-----+
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
-|DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|     896|    -|
+|DSP              |        -|     3|       -|       -|    -|
+|Expression       |        -|     -|       -|       -|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     4|       0|      40|    -|
+|Instance         |        -|     -|       -|       -|    -|
 |Memory           |        -|     -|       -|       -|    -|
-|Multiplexer      |        -|     -|       -|       -|    -|
-|Register         |        -|     -|     206|       -|    -|
+|Multiplexer      |        -|     -|       0|      84|    -|
+|Register         |        -|     -|     609|     160|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     4|     206|     936|    0|
+|Total            |        0|     3|     609|     244|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -65,17 +65,16 @@
 
 + Detail: 
     * Instance: 
-    +------------------------+--------------------+---------+----+---+----+-----+
-    |        Instance        |       Module       | BRAM_18K| DSP| FF| LUT| URAM|
-    +------------------------+--------------------+---------+----+---+----+-----+
-    |mul_32s_12s_43_1_1_U20  |mul_32s_12s_43_1_1  |        0|   2|  0|  20|    0|
-    |mul_32s_12s_44_1_1_U21  |mul_32s_12s_44_1_1  |        0|   2|  0|  20|    0|
-    +------------------------+--------------------+---------+----+---+----+-----+
-    |Total                   |                    |        0|   4|  0|  40|    0|
-    +------------------------+--------------------+---------+----+---+----+-----+
+    N/A
 
     * DSP: 
-    N/A
+    +------------------------------------------+--------------------------------------+---------------------+
+    |                 Instance                 |                Module                |      Expression     |
+    +------------------------------------------+--------------------------------------+---------------------+
+    |am_addmul_16s_16s_14ns_31_4_0_U19         |am_addmul_16s_16s_14ns_31_4_0         |       (i0 + i1) * i2|
+    |ama_addmuladd_16s_16s_13s_31s_31_4_0_U21  |ama_addmuladd_16s_16s_13s_31s_31_4_0  |  i0 + (i1 + i2) * i3|
+    |ama_addmuladd_16s_16s_9ns_31s_31_4_0_U20  |ama_addmuladd_16s_16s_9ns_31s_31_4_0  |  i0 + (i1 + i2) * i3|
+    +------------------------------------------+--------------------------------------+---------------------+
 
     * Memory: 
     N/A
@@ -84,52 +83,53 @@
     N/A
 
     * Expression: 
-    +-----------------------+----------+----+---+----+------------+------------+
-    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |add_ln45_10_fu_440_p2  |         +|   0|  0|  46|          46|          46|
-    |add_ln45_11_fu_457_p2  |         +|   0|  0|  46|          46|          46|
-    |add_ln45_12_fu_579_p2  |         +|   0|  0|  41|          41|          41|
-    |add_ln45_1_fu_360_p2   |         +|   0|  0|  54|          47|          47|
-    |add_ln45_2_fu_467_p2   |         +|   0|  0|  54|          47|          47|
-    |add_ln45_3_fu_499_p2   |         +|   0|  0|  54|          47|          47|
-    |add_ln45_4_fu_589_p2   |         +|   0|  0|  54|          47|          47|
-    |add_ln45_5_fu_210_p2   |         +|   0|  0|  41|          41|          41|
-    |add_ln45_6_fu_299_p2   |         +|   0|  0|  46|          46|          46|
-    |add_ln45_7_fu_333_p2   |         +|   0|  0|  46|          46|          46|
-    |add_ln45_8_fu_350_p2   |         +|   0|  0|  46|          46|          46|
-    |add_ln45_9_fu_406_p2   |         +|   0|  0|  46|          46|          46|
-    |add_ln45_fu_243_p2     |         +|   0|  0|  50|          43|          43|
-    |sub_ln45_1_fu_192_p2   |         -|   0|  0|  41|          41|          41|
-    |sub_ln45_2_fu_316_p2   |         -|   0|  0|  46|          46|          46|
-    |sub_ln45_3_fu_423_p2   |         -|   0|  0|  46|          46|          46|
-    |sub_ln45_4_fu_545_p2   |         -|   0|  0|  48|          41|          41|
-    |sub_ln45_5_fu_562_p2   |         -|   0|  0|  41|          41|          41|
-    |sub_ln45_fu_174_p2     |         -|   0|  0|  48|          41|          41|
-    |ap_enable_pp0          |       xor|   0|  0|   2|           1|           2|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |Total                  |          |   0|  0| 896|         846|         847|
-    +-----------------------+----------+----+---+----+------------+------------+
-
-    * Multiplexer: 
     N/A
 
+    * Multiplexer: 
+    +-------------+----+-----------+-----+-----------+
+    |     Name    | LUT| Input Size| Bits| Total Bits|
+    +-------------+----+-----------+-----+-----------+
+    |ap_return_0  |  14|          3|   16|         48|
+    |ap_return_1  |  14|          3|   16|         48|
+    |ap_return_2  |  14|          3|   16|         48|
+    |ap_return_3  |  14|          3|   16|         48|
+    |ap_return_4  |  14|          3|   16|         48|
+    |ap_return_5  |  14|          3|   16|         48|
+    +-------------+----+-----------+-----+-----------+
+    |Total        |  84|         18|   96|        288|
+    +-------------+----+-----------+-----+-----------+
+
     * Register: 
-    +---------------------------+----+----+-----+-----------+
-    |            Name           | FF | LUT| Bits| Const Bits|
-    +---------------------------+----+----+-----+-----------+
-    |FIR_delays_read_1_reg_642  |  32|   0|   32|          0|
-    |FIR_delays_read_2_reg_647  |  32|   0|   32|          0|
-    |FIR_delays_read_3_reg_657  |  32|   0|   32|          0|
-    |FIR_delays_read_4_reg_667  |  32|   0|   32|          0|
-    |FIR_delays_read_9_reg_673  |  32|   0|   32|          0|
-    |ap_CS_fsm                  |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1    |   1|   0|    1|          0|
-    |tmp_8_reg_681              |  28|   0|   28|          0|
-    |x_n_read_reg_637           |  16|   0|   16|          0|
-    +---------------------------+----+----+-----+-----------+
-    |Total                      | 206|   0|  206|          0|
-    +---------------------------+----+----+-----+-----------+
+    +-------------------------------+----+----+-----+-----------+
+    |              Name             | FF | LUT| Bits| Const Bits|
+    +-------------------------------+----+----+-----+-----------+
+    |FIR_delays_read11_reg_193      |  16|   0|   16|          0|
+    |FIR_delays_read_10_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_11_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_12_int_reg     |  16|   0|   16|          0|
+    |FIR_delays_read_1_reg_171      |  16|   0|   16|          0|
+    |FIR_delays_read_2_reg_177      |  16|   0|   16|          0|
+    |FIR_delays_read_3_reg_182      |  16|   0|   16|          0|
+    |FIR_delays_read_4_reg_187      |  16|   0|   16|          0|
+    |FIR_delays_read_9_int_reg      |  16|   0|   16|          0|
+    |FIR_delays_read_int_reg        |  16|   0|   16|          0|
+    |FIR_delays_write_int_reg       |  16|   0|   16|          0|
+    |FIR_delays_write_read_reg_165  |  16|   0|   16|          0|
+    |ap_ce_reg                      |   1|   0|    1|          0|
+    |ap_return_0_int_reg            |  16|   0|   16|          0|
+    |ap_return_1_int_reg            |  16|   0|   16|          0|
+    |ap_return_2_int_reg            |  16|   0|   16|          0|
+    |ap_return_3_int_reg            |  16|   0|   16|          0|
+    |ap_return_4_int_reg            |  16|   0|   16|          0|
+    |ap_return_5_int_reg            |  16|   0|   16|          0|
+    |FIR_delays_read_1_reg_171      |  64|  32|   16|          0|
+    |FIR_delays_read_2_reg_177      |  64|  32|   16|          0|
+    |FIR_delays_read_3_reg_182      |  64|  32|   16|          0|
+    |FIR_delays_read_4_reg_187      |  64|  32|   16|          0|
+    |FIR_delays_write_read_reg_165  |  64|  32|   16|          0|
+    +-------------------------------+----+----+-----+-----------+
+    |Total                          | 609| 160|  369|          0|
+    +-------------------------------+----+----+-----+-----------+
 
 
 
@@ -142,21 +142,18 @@
 +--------------------+-----+-----+------------+--------------------+--------------+
 |ap_clk              |   in|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
 |ap_rst              |   in|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_start            |   in|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_done             |  out|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_idle             |  out|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_ready            |  out|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
 |ap_return_0         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_return_1         |  out|   32|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_return_2         |  out|   32|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_return_3         |  out|   32|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_return_4         |  out|   32|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|ap_return_5         |  out|   32|  ap_ctrl_hs|        FIR_filter.2|  return value|
-|FIR_delays_read     |   in|   32|     ap_none|     FIR_delays_read|        scalar|
-|FIR_delays_read_14  |   in|   32|     ap_none|  FIR_delays_read_14|        scalar|
-|FIR_delays_read_15  |   in|   32|     ap_none|  FIR_delays_read_15|        scalar|
-|FIR_delays_read_16  |   in|   32|     ap_none|  FIR_delays_read_16|        scalar|
-|FIR_delays_read_17  |   in|   32|     ap_none|  FIR_delays_read_17|        scalar|
-|x_n                 |   in|   16|     ap_none|                 x_n|        scalar|
+|ap_return_1         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|ap_return_2         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|ap_return_3         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|ap_return_4         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|ap_return_5         |  out|   16|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|ap_ce               |   in|    1|  ap_ctrl_hs|        FIR_filter.2|  return value|
+|FIR_delays_read     |   in|   16|     ap_none|     FIR_delays_read|        scalar|
+|FIR_delays_read_9   |   in|   16|     ap_none|   FIR_delays_read_9|        scalar|
+|FIR_delays_read_10  |   in|   16|     ap_none|  FIR_delays_read_10|        scalar|
+|FIR_delays_read_11  |   in|   16|     ap_none|  FIR_delays_read_11|        scalar|
+|FIR_delays_read_12  |   in|   16|     ap_none|  FIR_delays_read_12|        scalar|
+|FIR_delays_write    |   in|   16|     ap_none|    FIR_delays_write|        scalar|
 +--------------------+-----+-----+------------+--------------------+--------------+
 

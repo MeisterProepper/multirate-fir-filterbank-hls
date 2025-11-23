@@ -15,7 +15,7 @@
         }
     },
     "0": {
-        "name": "FIR_HLS",
+        "name": "Transposed_FIR_HLS",
         "file": "FIR_HLS.cpp",
         "fileloc": "6",
         "instructions": "10",

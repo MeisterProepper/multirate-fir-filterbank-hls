@@ -1,14 +1,17 @@
 # This script segment is generated automatically by AutoPilot
 
-set name FIR_HLS_mul_32s_12s_43_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler Multirate_v1_am_addmul_16s_16s_14ns_31_4_0 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
-set name FIR_HLS_mul_32s_12s_44_1_1
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {mul} IMPL {auto} LATENCY 0 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler Multirate_v1_ama_addmuladd_16s_16s_9ns_31s_31_4_0 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler Multirate_v1_ama_addmuladd_16s_16s_13s_31s_31_4_0 BINDTYPE {op} TYPE {all} IMPL {dsp_slice} LATENCY 3
 }
 
 
@@ -22,7 +25,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 24 \
+    id 25 \
     name FIR_delays_read \
     type other \
     dir I \
@@ -30,22 +33,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_FIR_delays_read \
     op interface \
-    ports { FIR_delays_read { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 25 \
-    name FIR_delays_read_14 \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_FIR_delays_read_14 \
-    op interface \
-    ports { FIR_delays_read_14 { I 32 vector } } \
+    ports { FIR_delays_read { I 16 vector } } \
 } "
 }
 
@@ -53,14 +41,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 26 \
-    name FIR_delays_read_15 \
+    name FIR_delays_read_9 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_FIR_delays_read_15 \
+    corename dc_FIR_delays_read_9 \
     op interface \
-    ports { FIR_delays_read_15 { I 32 vector } } \
+    ports { FIR_delays_read_9 { I 16 vector } } \
 } "
 }
 
@@ -68,14 +56,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 27 \
-    name FIR_delays_read_16 \
+    name FIR_delays_read_10 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_FIR_delays_read_16 \
+    corename dc_FIR_delays_read_10 \
     op interface \
-    ports { FIR_delays_read_16 { I 32 vector } } \
+    ports { FIR_delays_read_10 { I 16 vector } } \
 } "
 }
 
@@ -83,14 +71,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 28 \
-    name FIR_delays_read_17 \
+    name FIR_delays_read_11 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_FIR_delays_read_17 \
+    corename dc_FIR_delays_read_11 \
     op interface \
-    ports { FIR_delays_read_17 { I 32 vector } } \
+    ports { FIR_delays_read_11 { I 16 vector } } \
 } "
 }
 
@@ -98,14 +86,29 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 29 \
-    name x_n \
+    name FIR_delays_read_12 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_x_n \
+    corename dc_FIR_delays_read_12 \
     op interface \
-    ports { x_n { I 16 vector } } \
+    ports { FIR_delays_read_12 { I 16 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 30 \
+    name FIR_delays_write \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_FIR_delays_write \
+    op interface \
+    ports { FIR_delays_write { I 16 vector } } \
 } "
 }
 
@@ -113,20 +116,6 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id -1 \
-    name ap_ctrl \
-    type ap_ctrl \
-    reset_level 1 \
-    sync_rst true \
-    corename ap_ctrl \
-    op interface \
-    ports { ap_start { I 1 bit } ap_ready { O 1 bit } ap_done { O 1 bit } ap_idle { O 1 bit } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id -2 \
     name ap_return \
     type ap_return \
     reset_level 1 \
@@ -144,7 +133,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -3 \
+    id -2 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -164,7 +153,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -4 \
+    id -3 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -174,6 +163,26 @@ eval "cg_default_interface_gen_reset { \
 }"
 } else {
 puts "@W \[IMPL-114\] Cannot find bus interface model in the library. Ignored generation of bus interface for '${PortName}'"
+}
+}
+
+
+# Adapter definition:
+set PortName ap_ce
+set DataWd 1 
+if {${::AESL::PGuard_autoexp_gen}} {
+if {[info proc cg_default_interface_gen_ce] == "cg_default_interface_gen_ce"} {
+eval "cg_default_interface_gen_ce { \
+    id -4 \
+    name ${PortName} \
+    reset_level 1 \
+    sync_rst true \
+    corename apif_ap_ce \
+    data_wd ${DataWd} \
+    op interface \
+}"
+} else {
+puts "@W \[IMPL-113\] Cannot find bus interface model in the library. Ignored generation of bus interface for '${PortName}'"
 }
 }
 

@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"FIR_HLS": {
-			"proto_instances": {
-			}
-		}
-	}
-}

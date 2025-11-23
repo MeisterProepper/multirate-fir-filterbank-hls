@@ -1,0 +1,186 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="Multirate_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=Multirate_v2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Multirate_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=input" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Multirate_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=axis port=output" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="Multirate_v2" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:61:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FIR_filter" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="FIR_HLS.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="FIR_filter_transposed" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="FIR_HLS.cpp:86:19" msg_body="Loop 'VITIS_LOOP_86_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_86_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="FIR_HLS.cpp:70:19" msg_body="Loop 'VITIS_LOOP_70_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_70_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="FIR_HLS.cpp:67:19" msg_body="Loop 'VITIS_LOOP_67_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_67_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:80:0" msg_body="Unrolling loop 'VITIS_LOOP_86_1' (FIR_HLS.cpp:86:19) in function 'FIR_filter_transposed' completely with a factor of 116">
+        <args Factor="116" LoopLoc="FIR_HLS.cpp:86:19" LoopName="VITIS_LOOP_86_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:60:0" msg_body="Unrolling loop 'VITIS_LOOP_70_2' (FIR_HLS.cpp:70:19) in function 'FIR_filter' completely with a factor of 4">
+        <args Factor="4" LoopLoc="FIR_HLS.cpp:70:19" LoopName="VITIS_LOOP_70_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:60:0" msg_body="Unrolling loop 'VITIS_LOOP_67_1' (FIR_HLS.cpp:67:19) in function 'FIR_filter' completely with a factor of 5">
+        <args Factor="5" LoopLoc="FIR_HLS.cpp:67:19" LoopName="VITIS_LOOP_67_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:60:0" msg_body="Unrolling loop 'VITIS_LOOP_70_2' (FIR_HLS.cpp:70:19) in function 'FIR_filter' completely with a factor of 5">
+        <args Factor="5" LoopLoc="FIR_HLS.cpp:70:19" LoopName="VITIS_LOOP_70_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:60:0" msg_body="Unrolling loop 'VITIS_LOOP_67_1' (FIR_HLS.cpp:67:19) in function 'FIR_filter' completely with a factor of 6">
+        <args Factor="6" LoopLoc="FIR_HLS.cpp:67:19" LoopName="VITIS_LOOP_67_1"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:66:0" msg_body="Automatically partitioning array '_ZL16b_FIR_dec_int_43' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL16b_FIR_dec_int_43"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:63:0" msg_body="Automatically partitioning array '_ZL16b_FIR_dec_int_42' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL16b_FIR_dec_int_42"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:60:0" msg_body="Automatically partitioning array '_ZL16b_FIR_dec_int_41' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL16b_FIR_dec_int_41"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:26:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_dec_40' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_dec_40"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:30:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_int_40' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_int_40"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:29:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_dec_43' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_dec_43"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:31:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_int_41' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_int_41"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:28:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_dec_42' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_dec_42"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:32:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_int_42' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_int_42"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:27:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_dec_41' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_dec_41"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:33:0" msg_body="Automatically partitioning array '_ZL19H_filter_FIR_int_43' dimension 1 completely based on constant index.">
+        <args Dim="1" Value="_ZL19H_filter_FIR_int_43"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./FIR_HLS.h:8:0" msg_body="array_partition dim=1 type=complete  variable=_ZL10H_accu_FIR 1 Multirate_v2 ./FIR_HLS.h:8:0 H_accu_FIR">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL10H_accu_FIR" PragmaType="array_partition" VarName="H_accu_FIR" varLoc="./FIR_HLS.h:8:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./FIR_HLS.h:8:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_accu_FIR' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_accu_FIR" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:60:0" msg_body="array_partition dim=1 type=complete  variable=_ZL16b_FIR_dec_int_41 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:60:0 b_FIR_dec_int_41">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL16b_FIR_dec_int_41" PragmaType="array_partition" VarName="b_FIR_dec_int_41" varLoc="./../../Matlab/FIR_multirate_HLS.h:60:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:60:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'b_FIR_dec_int_41' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="b_FIR_dec_int_41" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:63:0" msg_body="array_partition dim=1 type=complete  variable=_ZL16b_FIR_dec_int_42 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:63:0 b_FIR_dec_int_42">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL16b_FIR_dec_int_42" PragmaType="array_partition" VarName="b_FIR_dec_int_42" varLoc="./../../Matlab/FIR_multirate_HLS.h:63:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:63:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'b_FIR_dec_int_42' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="b_FIR_dec_int_42" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:66:0" msg_body="array_partition dim=1 type=complete  variable=_ZL16b_FIR_dec_int_43 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:66:0 b_FIR_dec_int_43">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL16b_FIR_dec_int_43" PragmaType="array_partition" VarName="b_FIR_dec_int_43" varLoc="./../../Matlab/FIR_multirate_HLS.h:66:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:66:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'b_FIR_dec_int_43' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="b_FIR_dec_int_43" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:26:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_40 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:26:0 H_filter_FIR_dec_40">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_40" PragmaType="array_partition" VarName="H_filter_FIR_dec_40" varLoc="./../../Matlab/FIR_multirate_HLS.h:26:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:26:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_40' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_40" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:27:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_41 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:27:0 H_filter_FIR_dec_41">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_41" PragmaType="array_partition" VarName="H_filter_FIR_dec_41" varLoc="./../../Matlab/FIR_multirate_HLS.h:27:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:27:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_41' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_41" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:28:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_42 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:28:0 H_filter_FIR_dec_42">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_42" PragmaType="array_partition" VarName="H_filter_FIR_dec_42" varLoc="./../../Matlab/FIR_multirate_HLS.h:28:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:28:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_42' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_42" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:29:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_43 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:29:0 H_filter_FIR_dec_43">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_dec_43" PragmaType="array_partition" VarName="H_filter_FIR_dec_43" varLoc="./../../Matlab/FIR_multirate_HLS.h:29:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:29:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_43' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_43" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:30:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_int_40 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:30:0 H_filter_FIR_int_40">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_int_40" PragmaType="array_partition" VarName="H_filter_FIR_int_40" varLoc="./../../Matlab/FIR_multirate_HLS.h:30:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:30:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_40' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_int_40" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:31:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_int_41 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:31:0 H_filter_FIR_int_41">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_int_41" PragmaType="array_partition" VarName="H_filter_FIR_int_41" varLoc="./../../Matlab/FIR_multirate_HLS.h:31:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:31:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_41' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_int_41" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:32:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_int_42 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:32:0 H_filter_FIR_int_42">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_int_42" PragmaType="array_partition" VarName="H_filter_FIR_int_42" varLoc="./../../Matlab/FIR_multirate_HLS.h:32:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:32:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_42' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_int_42" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:33:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_int_43 1 Multirate_v2 ./../../Matlab/FIR_multirate_HLS.h:33:0 H_filter_FIR_int_43">
+        <args PragmaFunction="Multirate_v2" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL19H_filter_FIR_int_43" PragmaType="array_partition" VarName="H_filter_FIR_int_43" varLoc="./../../Matlab/FIR_multirate_HLS.h:33:0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:33:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_43' due to pipeline pragma">
+        <args Dim="1" Mode="complete" Name="H_filter_FIR_int_43" PragmaType="array_partition"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:33:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_int_43': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_int_43"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:32:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_int_42': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_int_42"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:31:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_int_41': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_int_41"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:30:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_int_40': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_int_40"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:29:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_dec_43': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_dec_43"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:28:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_dec_42': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_dec_42"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:27:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_dec_41': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_dec_41"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:26:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_dec_40': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19H_filter_FIR_dec_40"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:66:0" msg_body="Applying array_partition to '_ZL16b_FIR_dec_int_43': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL16b_FIR_dec_int_43"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:63:0" msg_body="Applying array_partition to '_ZL16b_FIR_dec_int_42': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL16b_FIR_dec_int_42"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_multirate_HLS.h:60:0" msg_body="Applying array_partition to '_ZL16b_FIR_dec_int_41': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL16b_FIR_dec_int_41"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./FIR_HLS.h:8:0" msg_body="Applying array_partition to '_ZL10H_accu_FIR': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL10H_accu_FIR"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

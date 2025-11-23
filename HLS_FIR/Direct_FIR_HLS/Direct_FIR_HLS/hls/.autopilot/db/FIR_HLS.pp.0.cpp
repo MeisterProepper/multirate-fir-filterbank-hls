@@ -8476,7 +8476,7 @@ const coef_data_t b_FIR[392]={
 
 typedef ap_fixed<16,1> fir_data_t;
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+__attribute__((sdx_kernel("Direct_FIR_HLS", 0))) void Direct_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 # 2 "FIR_HLS.cpp" 2
@@ -8484,9 +8484,9 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("Direct_FIR_HLS", 0))) void Direct_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
+#pragma HLSDIRECTIVE TOP name=Direct_FIR_HLS
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input

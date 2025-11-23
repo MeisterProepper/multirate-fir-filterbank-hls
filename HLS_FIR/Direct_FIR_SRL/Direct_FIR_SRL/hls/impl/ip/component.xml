@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
-  <spirit:name>FIR_HLS</spirit:name>
+  <spirit:name>Direct_FIR_SRL</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -145,14 +145,14 @@
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Direct_FIR_SRL</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>5fe6c311</spirit:value>
+            <spirit:value>e825479a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -161,14 +161,14 @@
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Direct_FIR_SRL</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>637543e9</spirit:value>
+            <spirit:value>523ba000</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -177,14 +177,14 @@
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Direct_FIR_SRL</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>13921600</spirit:value>
+            <spirit:value>a8dcb681</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -193,14 +193,14 @@
         <spirit:displayName>VHDL Simulation</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Direct_FIR_SRL</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3476cb01</spirit:value>
+            <spirit:value>6d83b1dc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -374,622 +374,622 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/FIR_HLS_ooc.xdc</spirit:name>
+        <spirit:name>constraints/Direct_FIR_SRL_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_8ns_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_8ns_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_8s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_8s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_9ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_9ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_9s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_9s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10ns_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10ns_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11ns_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11ns_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_12s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_12s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_13ns_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_13ns_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_13ns_31_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_13ns_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_17s_17s_9s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_17s_17s_9s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_17s_18s_6ns_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_17s_18s_6ns_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_18s_18s_7ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_18s_18s_7ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_6ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_6ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_24s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_24s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8s_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8s_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_20s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_20s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_26s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_26s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_29s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_29s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_12ns_30s_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_12ns_30s_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_12s_29s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_12s_29s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_13ns_26s_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_26s_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_13ns_31s_31_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_31s_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_14ns_30s_32_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_14ns_30s_32_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_7ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_7ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_7s_22s_24_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_7s_22s_24_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_8s_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_8s_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_9s_24s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_24s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_9s_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_18s_7ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_18s_7ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_18s_16s_8ns_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_18s_16s_8ns_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_18s_16s_9ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_18s_16s_9ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_19s_16s_6ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_19s_16s_6ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_18s_16s_5ns_22s_23_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_22s_23_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_18s_16s_5ns_24s_24_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_24s_24_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_19s_16s_6ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_19s_16s_6ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_16s_10s_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_18s_7ns_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_18s_7ns_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_19s_8ns_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_19s_8ns_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_19s_8ns_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_19s_8ns_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_regslice_both.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_8ns_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_8ns_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_8s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_8s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_9ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_9ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_9s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_9s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10ns_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10ns_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_10s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_10s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11ns_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11ns_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_11s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_11s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_12s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_12s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_13ns_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_13ns_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_16s_16s_13ns_31_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_16s_16s_13ns_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_17s_17s_9s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_17s_17s_9s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_17s_18s_6ns_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_17s_18s_6ns_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_am_addmul_18s_18s_7ns_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_am_addmul_18s_18s_7ns_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_6ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_6ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_24s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_24s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_7ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_8s_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_8s_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_20s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_20s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_9s_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_10s_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11ns_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11ns_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_26s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_26s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_28s_28_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_28s_28_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_11s_29s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_29s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_12ns_30s_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_12ns_30s_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_12s_29s_29_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_12s_29s_29_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_13ns_26s_30_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_26s_30_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_13ns_31s_31_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_31s_31_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_16s_16s_14ns_30s_32_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_16s_16s_14ns_30s_32_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_7ns_26s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_7ns_26s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_7s_22s_24_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_7s_22s_24_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_8s_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_8s_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_9s_24s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_24s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_17s_9s_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_17s_18s_7ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_17s_18s_7ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_18s_16s_8ns_26s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_18s_16s_8ns_26s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_18s_16s_9ns_27s_27_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_18s_16s_9ns_27s_27_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_addmuladd_19s_16s_6ns_25s_26_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_addmuladd_19s_16s_6ns_25s_26_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_18s_16s_5ns_22s_23_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_22s_23_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_18s_16s_5ns_24s_24_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_24s_24_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_ama_submuladd_19s_16s_6ns_25s_25_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_ama_submuladd_19s_16s_6ns_25s_25_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_16s_10s_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_18s_7ns_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_18s_7ns_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_19s_8ns_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_19s_8ns_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_19s_8ns_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_mul_19s_8ns_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_regslice_both.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS.v</spirit:name>
+        <spirit:name>hdl/verilog/Direct_FIR_SRL.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -997,605 +997,605 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/FIR_HLS_ooc.xdc</spirit:name>
+        <spirit:name>constraints/Direct_FIR_SRL_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_8ns_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_8ns_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_8s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_8s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_9ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_9ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_9s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_9s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10ns_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10ns_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11ns_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11ns_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_12s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_12s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_13ns_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_13ns_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_13ns_31_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_13ns_31_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_17s_17s_9s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_17s_17s_9s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_17s_18s_6ns_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_17s_18s_6ns_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_18s_18s_7ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_18s_18s_7ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_6ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_6ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_24s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_24s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8s_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8s_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_20s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_20s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_26s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_26s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_29s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_29s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_12ns_30s_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_12ns_30s_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_12s_29s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_12s_29s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_13ns_26s_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_26s_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_13ns_31s_31_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_31s_31_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_14ns_30s_32_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_14ns_30s_32_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_7ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_7ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_7s_22s_24_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_7s_22s_24_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_8s_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_8s_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_9s_24s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_24s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_9s_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_18s_7ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_18s_7ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_18s_16s_8ns_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_18s_16s_8ns_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_18s_16s_9ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_18s_16s_9ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_19s_16s_6ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_19s_16s_6ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_18s_16s_5ns_22s_23_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_22s_23_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_18s_16s_5ns_24s_24_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_24s_24_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_19s_16s_6ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_19s_16s_6ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_16s_10s_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_18s_7ns_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_18s_7ns_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_19s_8ns_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_19s_8ns_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_19s_8ns_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_19s_8ns_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_regslice_both.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_regslice_both.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9586cbf4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_9d8f50c0</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_8ns_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_8ns_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_8s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_8s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_9ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_9ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_9s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_9s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10ns_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10ns_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_10s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_10s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11ns_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11ns_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_11s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_11s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_12s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_12s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_13ns_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_13ns_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_16s_16s_13ns_31_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_16s_16s_13ns_31_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_17s_17s_9s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_17s_17s_9s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_17s_18s_6ns_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_17s_18s_6ns_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_am_addmul_18s_18s_7ns_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_am_addmul_18s_18s_7ns_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_6ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_6ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_24s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_24s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_7ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_7ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_8s_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_8s_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_20s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_20s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_9s_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_9s_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_27s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_27s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_10s_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_10s_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11ns_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11ns_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_26s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_26s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_28s_28_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_28s_28_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_11s_29s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_11s_29s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_12ns_30s_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_12ns_30s_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_12s_29s_29_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_12s_29s_29_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_13ns_26s_30_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_26s_30_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_13ns_31s_31_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_13ns_31s_31_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_16s_16s_14ns_30s_32_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_16s_16s_14ns_30s_32_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_7ns_26s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_7ns_26s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_7s_22s_24_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_7s_22s_24_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_8s_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_8s_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_9s_24s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_24s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_17s_9s_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_17s_9s_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_17s_18s_7ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_17s_18s_7ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_18s_16s_8ns_26s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_18s_16s_8ns_26s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_18s_16s_9ns_27s_27_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_18s_16s_9ns_27s_27_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_addmuladd_19s_16s_6ns_25s_26_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_addmuladd_19s_16s_6ns_25s_26_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_18s_16s_5ns_22s_23_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_22s_23_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_18s_16s_5ns_24s_24_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_18s_16s_5ns_24s_24_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_ama_submuladd_19s_16s_6ns_25s_25_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_ama_submuladd_19s_16s_6ns_25s_25_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_fir_shiftreg_V_SHIFTREG_AUTO_0R0W.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_16s_10s_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_18s_7ns_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_18s_7ns_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_19s_8ns_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_19s_8ns_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_19s_8ns_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_mul_19s_8ns_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_regslice_both.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL_regslice_both.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Direct_FIR_SRL.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -1617,7 +1617,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/FIR_HLS_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/Direct_FIR_SRL_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -1636,7 +1636,7 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">FIR_HLS_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Direct_FIR_SRL_v1_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
@@ -1667,10 +1667,10 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VITIS_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Fir_hls</xilinx:displayName>
+      <xilinx:displayName>Direct_FIR_SRL</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114342840</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-11-11T00:20:50Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114350920</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-11-16T15:01:05Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -1679,9 +1679,9 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2a9abefc"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0d3853e8"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ba2e460e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c1d6b1d3"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="4e019372"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8ee20a8f"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

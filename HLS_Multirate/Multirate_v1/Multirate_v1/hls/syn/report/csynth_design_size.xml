@@ -2,44 +2,38 @@
     <item name="Total Instructions per Compilation Phase">
         <table>
             <keys size="4">Phase, Step, Instructions, Description</keys>
-            <column name="Compile/Link">, 7443, After all functions are compiled and linked into a single design</column>
+            <column name="Compile/Link">, 6296, After all functions are compiled and linked into a single design</column>
             <column name="">, , </column>
             <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
-            <column name="">(1) unroll, 1208, user unroll pragmas are applied</column>
-            <column name="">(2) simplification,   582, simplification of applied user unroll pragmas</column>
-            <column name="">(3) inline,   558, user inline pragmas are applied</column>
-            <column name="">(4) simplification,   558, simplification of applied user inline pragmas</column>
+            <column name="">(1) unroll, 1075, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   521, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   478, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   478, simplification of applied user inline pragmas</column>
             <column name="">, , </column>
             <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(1) array partition,   458, user array partition pragmas are applied</column>
-            <column name="">(2) simplification,   458, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
-            <column name="">(3) aggregate/disaggregate ,   458, user struct aggregate/disaggregate pragmas are applied</column>
-            <column name="">(4) array reshape,   458, apply array reshape pragmas</column>
-            <column name="">(5) access patterns, 2101, array access pattern optmizations</column>
+            <column name="">(1) array partition,   378, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   378, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   378, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   378, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 1448, array access pattern optmizations</column>
             <column name="">, , </column>
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
-            <column name="">(1) loop simplification, 1831, loop and instruction simplification</column>
-            <column name="">(2) parallelization, 1831, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 1759, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification, 1759, simplification of design after performance transformations</column>
+            <column name="">(1) loop simplification, 1195, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 1195, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 1123, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 1123, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 1763, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 1775, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 1125, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 1124, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="FIR_HLS" col1="FIR_HLS.cpp:8" col2="7443" col3="558" col4="2101" col5="1759" col6="1775">
-                    <row id="1" col0="DECIMATOR" col1="FIR_HLS.cpp:56" col2="3312" col3="243" col4="394" col5="283" col6="">
-                        <row id="3" col0="FIR_filter" col1="FIR_HLS.cpp:37" col2="2428" col2_disp="2,428 (4 calls)" col3="196" col3_disp="196 (4 calls)" col4="347" col4_disp=" 347 (4 calls)" col5="236" col5_disp=" 236 (4 calls)" col6=""/>
-                    </row>
-                    <row id="3" col0="FIR_filter" col1="FIR_HLS.cpp:37" col2="607" col3="49" col4="1290" col5="1170" col6=""/>
-                    <row id="5" col0="INTERPOLATOR" col1="FIR_HLS.cpp:89" col2="3473" col3="242" col4="393" col5="282" col6="">
-                        <row id="3" col0="FIR_filter" col1="FIR_HLS.cpp:37" col2="2428" col2_disp="2,428 (4 calls)" col3="196" col3_disp="196 (4 calls)" col4="347" col4_disp=" 347 (4 calls)" col5="236" col5_disp=" 236 (4 calls)" col6=""/>
-                    </row>
+                <row id="0" col0="Multirate_v1" col1="FIR_HLS.cpp:14" col2="6296" col3="478" col4="1448" col5="1123" col6="1124">
+                    <row id="7" col0="FIR_filter" col1="FIR_HLS.cpp:60" col2="4671" col2_disp="4,671 (9 calls)" col3="387" col3_disp="387 (9 calls)" col4="1357" col4_disp="1,357 (9 calls)" col5="1032" col5_disp="1,032 (9 calls)" col6="1041" col6_disp="1,041 (9 calls)"/>
                 </row>
             </rows>
             <notes/>

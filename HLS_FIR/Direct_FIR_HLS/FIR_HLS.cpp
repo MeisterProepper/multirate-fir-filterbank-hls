@@ -3,7 +3,7 @@
 
 
 
-void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+void Direct_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
     #pragma HLS INTERFACE mode=axis port=input
     #pragma HLS INTERFACE mode=axis port=output
     #pragma HLS INTERFACE mode=ap_ctrl_none port=return

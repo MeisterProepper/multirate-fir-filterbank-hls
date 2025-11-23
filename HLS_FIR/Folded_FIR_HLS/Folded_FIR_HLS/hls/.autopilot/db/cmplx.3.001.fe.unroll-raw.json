@@ -8,15 +8,15 @@
     "loads": {
       "L": 1
     },
-    "name": "FIR_HLS",
-    "total_instructions": 12161
+    "name": "Folded_FIR_HLS",
+    "total_instructions": 12158
   },
   "1": {
-    "basicblocks": 5505,
+    "basicblocks": 5502,
     "calls": "",
     "file": "FIR_HLS.cpp",
     "fileloc": 18,
-    "instructions": 12152,
+    "instructions": 12149,
     "loads": {
       "G": 1567
     },
@@ -25,6 +25,6 @@
       "G": 392,
       "L": 1
     },
-    "total_instructions": 12152
+    "total_instructions": 12149
   }
 }

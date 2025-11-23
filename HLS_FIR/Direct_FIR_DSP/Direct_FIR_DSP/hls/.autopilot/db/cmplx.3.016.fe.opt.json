@@ -9,7 +9,7 @@
       "G": 3,
       "L": 1
     },
-    "name": "FIR_HLS",
+    "name": "Direct_FIR_DSP",
     "stores": {
       "G": 2,
       "L": 1

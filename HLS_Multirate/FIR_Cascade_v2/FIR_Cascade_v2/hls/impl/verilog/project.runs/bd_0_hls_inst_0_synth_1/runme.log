@@ -1,0 +1,1290 @@
+
+*** Running vivado
+    with args -log bd_0_hls_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+
+
+WARNING: C:/AMD/Vivado/2024.2/tps/win64/jre11.0.16_1 does not exist.
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Nov 23 22:57:15 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_0_hls_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 51164
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMD/Vivado/2024.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_0_hls_inst_0
+Command: synth_design -top bd_0_hls_inst_0 -part xck26-sfvc784-2LV-c -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21704
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1677.184 ; gain = 178.203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_FIR_filter' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_13s_29_1_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_13s_29_1_0.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_13s_29_1_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_13s_29_1_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_FIR_filter' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_FIR_filter_2' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_FIR_filter_2' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_FIR_filter_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:54]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:61]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_FIR_filter_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_FIR_filter_transposed' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_transposed.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_8ns_23_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8ns_23_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_8ns_23_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8ns_23_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_7ns_23_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_7ns_23_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_7ns_23_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_7ns_23_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_8s_24_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8s_24_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_8s_24_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8s_24_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_8ns_24_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8ns_24_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_8ns_24_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_8ns_24_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_9ns_25_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_9ns_25_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_9ns_25_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_9ns_25_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_9s_25_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_9s_25_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_9s_25_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_9s_25_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_7s_23_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_7s_23_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_7s_23_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_7s_23_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_6ns_22_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_6ns_22_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_6ns_22_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_6ns_22_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_10s_26_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_10s_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_10s_26_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_10s_26_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_10ns_26_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_10ns_26_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_10ns_26_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_10ns_26_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_11ns_27_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_11ns_27_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_11ns_27_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_11ns_27_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_11s_27_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_11s_27_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_11s_27_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_11s_27_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_12ns_28_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_12ns_28_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_12ns_28_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_12ns_28_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_12s_28_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_12s_28_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_12s_28_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_12s_28_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_13ns_29_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_13ns_29_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_13ns_29_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_13ns_29_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_14s_30_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_14s_30_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_14s_30_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_14s_30_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_15ns_31_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_15ns_31_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_15ns_31_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_15ns_31_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_mul_16s_16ns_32_1_1' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_16ns_32_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_mul_16s_16ns_32_1_1' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mul_16s_16ns_32_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_FIR_filter_transposed' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter_transposed.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FIR_Cascade_v2_regslice_both' [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2_regslice_both' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'FIR_Cascade_v2' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1807.594 ; gain = 308.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1807.594 ; gain = 308.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1807.594 ; gain = 308.613
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1807.594 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/FIR_Cascade_v2_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1922.895 ; gain = 1.582
+Finished Parsing XDC File [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/FIR_Cascade_v2_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1922.895 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1923.207 ; gain = 0.312
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1923.207 ; gain = 424.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1923.207 ; gain = 424.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1923.207 ; gain = 424.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FIR_Cascade_v2_regslice_both'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'FIR_Cascade_v2_regslice_both'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1923.207 ; gain = 424.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 113   
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 1     
+	   3 Input   29 Bit       Adders := 1     
+	   2 Input   29 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 1     
+	   2 Input   27 Bit       Adders := 3     
+	   3 Input   26 Bit       Adders := 1     
+	   2 Input   26 Bit       Adders := 3     
+	   3 Input   25 Bit       Adders := 2     
+	   4 Input   25 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   3 Input   24 Bit       Adders := 2     
+	   2 Input   24 Bit       Adders := 1     
+	   3 Input   23 Bit       Adders := 2     
+	   3 Input   22 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
++---Registers : 
+	               43 Bit    Registers := 1     
+	               32 Bit    Registers := 112   
+	               31 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               29 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	               27 Bit    Registers := 2     
+	               26 Bit    Registers := 2     
+	               25 Bit    Registers := 2     
+	               23 Bit    Registers := 1     
+	               18 Bit    Registers := 5     
+	               16 Bit    Registers := 134   
+	               13 Bit    Registers := 8     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input   43 Bit        Muxes := 2     
+	   2 Input   38 Bit        Muxes := 1     
+	   2 Input   37 Bit        Muxes := 2     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 36    
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 21    
+	   4 Input    2 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Debug: swapped A/B pins for adder 00000157A44B0B90
+DSP Debug: swapped A/B pins for adder 00000157A43D9B70
+DSP Debug: swapped A/B pins for adder 00000157A55138A0
+DSP Debug: swapped A/B pins for adder 00000157A173EC00
+DSP Report: Generating DSP mul_16s_8ns_23_1_1_U24/tmp_product, operation Mode is: A*(B:0x64).
+DSP Report: operator mul_16s_8ns_23_1_1_U24/tmp_product is absorbed into DSP mul_16s_8ns_23_1_1_U24/tmp_product.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_120_reg, operation Mode is: C'+A*(B:0x34).
+DSP Report: register p_ZL10H_accu_FIR_121_reg is absorbed into DSP p_ZL10H_accu_FIR_120_reg.
+DSP Report: register p_ZL10H_accu_FIR_120_reg is absorbed into DSP p_ZL10H_accu_FIR_120_reg.
+DSP Report: operator add_ln86_120_fu_2492_p2 is absorbed into DSP p_ZL10H_accu_FIR_120_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U25/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_120_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_117_reg, operation Mode is: C'+A*(B:0x3ffb4).
+DSP Report: register p_ZL10H_accu_FIR_118_reg is absorbed into DSP p_ZL10H_accu_FIR_117_reg.
+DSP Report: register p_ZL10H_accu_FIR_117_reg is absorbed into DSP p_ZL10H_accu_FIR_117_reg.
+DSP Report: operator add_ln86_117_fu_2458_p2 is absorbed into DSP p_ZL10H_accu_FIR_117_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U26/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_117_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_116_reg, operation Mode is: PCIN+A*(B:0x3a).
+DSP Report: register p_ZL10H_accu_FIR_116_reg is absorbed into DSP p_ZL10H_accu_FIR_116_reg.
+DSP Report: operator add_ln86_116_fu_2444_p2 is absorbed into DSP p_ZL10H_accu_FIR_116_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U27/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_116_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_115_reg, operation Mode is: C+A*(B:0x46).
+DSP Report: register p_ZL10H_accu_FIR_115_reg is absorbed into DSP p_ZL10H_accu_FIR_115_reg.
+DSP Report: operator add_ln86_115_fu_2434_p2 is absorbed into DSP p_ZL10H_accu_FIR_115_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U28/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_115_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_113_reg, operation Mode is: C'+A*(B:0x3ffb4).
+DSP Report: register p_ZL10H_accu_FIR_114_reg is absorbed into DSP p_ZL10H_accu_FIR_113_reg.
+DSP Report: register p_ZL10H_accu_FIR_113_reg is absorbed into DSP p_ZL10H_accu_FIR_113_reg.
+DSP Report: operator add_ln86_113_fu_2406_p2 is absorbed into DSP p_ZL10H_accu_FIR_113_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U26/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_113_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_112_reg, operation Mode is: PCIN+A*(B:0x62).
+DSP Report: register p_ZL10H_accu_FIR_112_reg is absorbed into DSP p_ZL10H_accu_FIR_112_reg.
+DSP Report: operator add_ln86_112_fu_2392_p2 is absorbed into DSP p_ZL10H_accu_FIR_112_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U29/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_112_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_109_reg, operation Mode is: C'+A*(B:0x3ffba).
+DSP Report: register p_ZL10H_accu_FIR_110_reg is absorbed into DSP p_ZL10H_accu_FIR_109_reg.
+DSP Report: register p_ZL10H_accu_FIR_109_reg is absorbed into DSP p_ZL10H_accu_FIR_109_reg.
+DSP Report: operator add_ln86_109_fu_2354_p2 is absorbed into DSP p_ZL10H_accu_FIR_109_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U30/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_109_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_108_reg, operation Mode is: PCIN+A*(B:0x96).
+DSP Report: register p_ZL10H_accu_FIR_108_reg is absorbed into DSP p_ZL10H_accu_FIR_108_reg.
+DSP Report: operator add_ln86_108_fu_2344_p2 is absorbed into DSP p_ZL10H_accu_FIR_108_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U31/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_108_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_107_reg, operation Mode is: PCIN+A*(B:0x3a).
+DSP Report: register p_ZL10H_accu_FIR_107_reg is absorbed into DSP p_ZL10H_accu_FIR_107_reg.
+DSP Report: operator add_ln86_107_fu_2334_p2 is absorbed into DSP p_ZL10H_accu_FIR_107_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U27/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_107_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_106_reg, operation Mode is: PCIN+A*(B:0x3ff4c).
+DSP Report: register p_ZL10H_accu_FIR_106_reg is absorbed into DSP p_ZL10H_accu_FIR_106_reg.
+DSP Report: operator add_ln86_106_fu_2324_p2 is absorbed into DSP p_ZL10H_accu_FIR_106_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U32/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_106_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_105_reg, operation Mode is: PCIN+A*(B:0x3ffd2).
+DSP Report: register p_ZL10H_accu_FIR_105_reg is absorbed into DSP p_ZL10H_accu_FIR_105_reg.
+DSP Report: operator add_ln86_105_fu_2314_p2 is absorbed into DSP p_ZL10H_accu_FIR_105_reg.
+DSP Report: operator mul_16s_7s_23_1_1_U33/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_105_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_104_reg, operation Mode is: PCIN+A*(B:0xd2).
+DSP Report: register p_ZL10H_accu_FIR_104_reg is absorbed into DSP p_ZL10H_accu_FIR_104_reg.
+DSP Report: operator add_ln86_104_fu_2304_p2 is absorbed into DSP p_ZL10H_accu_FIR_104_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U34/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_104_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_103_reg, operation Mode is: PCIN+A*(B:0x16).
+DSP Report: register p_ZL10H_accu_FIR_103_reg is absorbed into DSP p_ZL10H_accu_FIR_103_reg.
+DSP Report: operator add_ln86_103_fu_2294_p2 is absorbed into DSP p_ZL10H_accu_FIR_103_reg.
+DSP Report: operator mul_16s_6ns_22_1_1_U35/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_103_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_102_reg, operation Mode is: PCIN+A*(B:0x3ff0e).
+DSP Report: register p_ZL10H_accu_FIR_102_reg is absorbed into DSP p_ZL10H_accu_FIR_102_reg.
+DSP Report: operator add_ln86_102_fu_2284_p2 is absorbed into DSP p_ZL10H_accu_FIR_102_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U36/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_102_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_99_reg, operation Mode is: C'+A*(B:0x3ffd6).
+DSP Report: register p_ZL10H_accu_FIR_100_reg is absorbed into DSP p_ZL10H_accu_FIR_99_reg.
+DSP Report: register p_ZL10H_accu_FIR_99_reg is absorbed into DSP p_ZL10H_accu_FIR_99_reg.
+DSP Report: operator add_ln86_99_fu_2254_p2 is absorbed into DSP p_ZL10H_accu_FIR_99_reg.
+DSP Report: operator mul_16s_7s_23_1_1_U37/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_99_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_98_reg, operation Mode is: PCIN+A*(B:0x3fed0).
+DSP Report: register p_ZL10H_accu_FIR_98_reg is absorbed into DSP p_ZL10H_accu_FIR_98_reg.
+DSP Report: operator add_ln86_98_fu_2244_p2 is absorbed into DSP p_ZL10H_accu_FIR_98_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U38/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_98_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_97_reg, operation Mode is: PCIN+A*(B:0x52).
+DSP Report: register p_ZL10H_accu_FIR_97_reg is absorbed into DSP p_ZL10H_accu_FIR_97_reg.
+DSP Report: operator add_ln86_97_fu_2234_p2 is absorbed into DSP p_ZL10H_accu_FIR_97_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U39/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_97_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_96_reg, operation Mode is: PCIN+A*(B:0x14a).
+DSP Report: register p_ZL10H_accu_FIR_96_reg is absorbed into DSP p_ZL10H_accu_FIR_96_reg.
+DSP Report: operator add_ln86_96_fu_2224_p2 is absorbed into DSP p_ZL10H_accu_FIR_96_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U40/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_96_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_94_reg, operation Mode is: C'+A*(B:0x3fe9c).
+DSP Report: register p_ZL10H_accu_FIR_95_reg is absorbed into DSP p_ZL10H_accu_FIR_94_reg.
+DSP Report: register p_ZL10H_accu_FIR_94_reg is absorbed into DSP p_ZL10H_accu_FIR_94_reg.
+DSP Report: operator add_ln86_94_fu_2204_p2 is absorbed into DSP p_ZL10H_accu_FIR_94_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U41/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_94_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_93_reg, operation Mode is: PCIN+A*(B:0xc4).
+DSP Report: register p_ZL10H_accu_FIR_93_reg is absorbed into DSP p_ZL10H_accu_FIR_93_reg.
+DSP Report: operator add_ln86_93_fu_2194_p2 is absorbed into DSP p_ZL10H_accu_FIR_93_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U42/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_93_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_92_reg, operation Mode is: PCIN+A*(B:0x176).
+DSP Report: register p_ZL10H_accu_FIR_92_reg is absorbed into DSP p_ZL10H_accu_FIR_92_reg.
+DSP Report: operator add_ln86_92_fu_2184_p2 is absorbed into DSP p_ZL10H_accu_FIR_92_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U43/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_92_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_91_reg, operation Mode is: PCIN+A*(B:0x3fef4).
+DSP Report: register p_ZL10H_accu_FIR_91_reg is absorbed into DSP p_ZL10H_accu_FIR_91_reg.
+DSP Report: operator add_ln86_91_fu_2174_p2 is absorbed into DSP p_ZL10H_accu_FIR_91_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U44/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_91_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_90_reg, operation Mode is: PCIN+A*(B:0x3fe7a).
+DSP Report: register p_ZL10H_accu_FIR_90_reg is absorbed into DSP p_ZL10H_accu_FIR_90_reg.
+DSP Report: operator add_ln86_90_fu_2164_p2 is absorbed into DSP p_ZL10H_accu_FIR_90_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U45/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_90_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_89_reg, operation Mode is: PCIN+A*(B:0x15c).
+DSP Report: register p_ZL10H_accu_FIR_89_reg is absorbed into DSP p_ZL10H_accu_FIR_89_reg.
+DSP Report: operator add_ln86_89_fu_2154_p2 is absorbed into DSP p_ZL10H_accu_FIR_89_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U46/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_89_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_88_reg, operation Mode is: PCIN+A*(B:0x18a).
+DSP Report: register p_ZL10H_accu_FIR_88_reg is absorbed into DSP p_ZL10H_accu_FIR_88_reg.
+DSP Report: operator add_ln86_88_fu_2144_p2 is absorbed into DSP p_ZL10H_accu_FIR_88_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U47/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_88_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_87_reg, operation Mode is: PCIN+A*(B:0x3fe44).
+DSP Report: register p_ZL10H_accu_FIR_87_reg is absorbed into DSP p_ZL10H_accu_FIR_87_reg.
+DSP Report: operator add_ln86_87_fu_2134_p2 is absorbed into DSP p_ZL10H_accu_FIR_87_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U48/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_87_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_86_reg, operation Mode is: PCIN+A*(B:0x3fe78).
+DSP Report: register p_ZL10H_accu_FIR_86_reg is absorbed into DSP p_ZL10H_accu_FIR_86_reg.
+DSP Report: operator add_ln86_86_fu_2124_p2 is absorbed into DSP p_ZL10H_accu_FIR_86_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U49/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_86_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_85_reg, operation Mode is: PCIN+A*(B:0x222).
+DSP Report: register p_ZL10H_accu_FIR_85_reg is absorbed into DSP p_ZL10H_accu_FIR_85_reg.
+DSP Report: operator add_ln86_85_fu_2114_p2 is absorbed into DSP p_ZL10H_accu_FIR_85_reg.
+DSP Report: operator mul_16s_11ns_27_1_1_U50/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_85_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_84_reg, operation Mode is: PCIN+A*(B:0x176).
+DSP Report: register p_ZL10H_accu_FIR_84_reg is absorbed into DSP p_ZL10H_accu_FIR_84_reg.
+DSP Report: operator add_ln86_84_fu_2104_p2 is absorbed into DSP p_ZL10H_accu_FIR_84_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U43/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_84_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_83_reg, operation Mode is: PCIN+A*(B:0x3fd66).
+DSP Report: register p_ZL10H_accu_FIR_83_reg is absorbed into DSP p_ZL10H_accu_FIR_83_reg.
+DSP Report: operator add_ln86_83_fu_2094_p2 is absorbed into DSP p_ZL10H_accu_FIR_83_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U51/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_83_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_82_reg, operation Mode is: PCIN+A*(B:0x3fea8).
+DSP Report: register p_ZL10H_accu_FIR_82_reg is absorbed into DSP p_ZL10H_accu_FIR_82_reg.
+DSP Report: operator add_ln86_82_fu_2084_p2 is absorbed into DSP p_ZL10H_accu_FIR_82_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U52/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_82_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_81_reg, operation Mode is: PCIN+A*(B:0x31e).
+DSP Report: register p_ZL10H_accu_FIR_81_reg is absorbed into DSP p_ZL10H_accu_FIR_81_reg.
+DSP Report: operator add_ln86_81_fu_2074_p2 is absorbed into DSP p_ZL10H_accu_FIR_81_reg.
+DSP Report: operator mul_16s_11ns_27_1_1_U53/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_81_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_80_reg, operation Mode is: PCIN+A*(B:0x126).
+DSP Report: register p_ZL10H_accu_FIR_80_reg is absorbed into DSP p_ZL10H_accu_FIR_80_reg.
+DSP Report: operator add_ln86_80_fu_2064_p2 is absorbed into DSP p_ZL10H_accu_FIR_80_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U54/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_80_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_79_reg, operation Mode is: PCIN+A*(B:0x3fc4a).
+DSP Report: register p_ZL10H_accu_FIR_79_reg is absorbed into DSP p_ZL10H_accu_FIR_79_reg.
+DSP Report: operator add_ln86_79_fu_2054_p2 is absorbed into DSP p_ZL10H_accu_FIR_79_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U55/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_79_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_78_reg, operation Mode is: PCIN+A*(B:0x3ff22).
+DSP Report: register p_ZL10H_accu_FIR_78_reg is absorbed into DSP p_ZL10H_accu_FIR_78_reg.
+DSP Report: operator add_ln86_78_fu_2044_p2 is absorbed into DSP p_ZL10H_accu_FIR_78_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U56/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_78_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_77_reg, operation Mode is: PCIN+A*(B:0x460).
+DSP Report: register p_ZL10H_accu_FIR_77_reg is absorbed into DSP p_ZL10H_accu_FIR_77_reg.
+DSP Report: operator add_ln86_77_fu_2034_p2 is absorbed into DSP p_ZL10H_accu_FIR_77_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U57/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_77_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_76_reg, operation Mode is: PCIN+A*(B:0x76).
+DSP Report: register p_ZL10H_accu_FIR_76_reg is absorbed into DSP p_ZL10H_accu_FIR_76_reg.
+DSP Report: operator add_ln86_76_fu_2024_p2 is absorbed into DSP p_ZL10H_accu_FIR_76_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U58/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_76_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_75_reg, operation Mode is: PCIN+A*(B:0x3fad4).
+DSP Report: register p_ZL10H_accu_FIR_75_reg is absorbed into DSP p_ZL10H_accu_FIR_75_reg.
+DSP Report: operator add_ln86_75_fu_2014_p2 is absorbed into DSP p_ZL10H_accu_FIR_75_reg.
+DSP Report: operator mul_16s_12s_28_1_1_U59/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_75_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_73_reg, operation Mode is: C'+A*(B:0x61c).
+DSP Report: register p_ZL10H_accu_FIR_74_reg is absorbed into DSP p_ZL10H_accu_FIR_73_reg.
+DSP Report: register p_ZL10H_accu_FIR_73_reg is absorbed into DSP p_ZL10H_accu_FIR_73_reg.
+DSP Report: operator add_ln86_73_fu_1994_p2 is absorbed into DSP p_ZL10H_accu_FIR_73_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U60/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_73_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_72_reg, operation Mode is: PCIN+A*(B:0x3ff1e).
+DSP Report: register p_ZL10H_accu_FIR_72_reg is absorbed into DSP p_ZL10H_accu_FIR_72_reg.
+DSP Report: operator add_ln86_72_fu_1984_p2 is absorbed into DSP p_ZL10H_accu_FIR_72_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U61/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_72_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_71_reg, operation Mode is: PCIN+A*(B:0x3f8b2).
+DSP Report: register p_ZL10H_accu_FIR_71_reg is absorbed into DSP p_ZL10H_accu_FIR_71_reg.
+DSP Report: operator add_ln86_71_fu_1974_p2 is absorbed into DSP p_ZL10H_accu_FIR_71_reg.
+DSP Report: operator mul_16s_12s_28_1_1_U62/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_71_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_69_reg, operation Mode is: C'+A*(B:0x8e4).
+DSP Report: register p_ZL10H_accu_FIR_70_reg is absorbed into DSP p_ZL10H_accu_FIR_69_reg.
+DSP Report: register p_ZL10H_accu_FIR_69_reg is absorbed into DSP p_ZL10H_accu_FIR_69_reg.
+DSP Report: operator add_ln86_69_fu_1954_p2 is absorbed into DSP p_ZL10H_accu_FIR_69_reg.
+DSP Report: operator mul_16s_13ns_29_1_1_U63/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_69_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_68_reg, operation Mode is: PCIN+A*(B:0x3fc42).
+DSP Report: register p_ZL10H_accu_FIR_68_reg is absorbed into DSP p_ZL10H_accu_FIR_68_reg.
+DSP Report: operator add_ln86_68_fu_1944_p2 is absorbed into DSP p_ZL10H_accu_FIR_68_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U64/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_68_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_67_reg, operation Mode is: PCIN+A*(B:0x3f4b8).
+DSP Report: register p_ZL10H_accu_FIR_67_reg is absorbed into DSP p_ZL10H_accu_FIR_67_reg.
+DSP Report: operator add_ln86_67_fu_1934_p2 is absorbed into DSP p_ZL10H_accu_FIR_67_reg.
+DSP Report: operator mul_16s_13s_29_1_0_U65/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_67_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_66_reg, operation Mode is: PCIN+A*(B:0x6aa).
+DSP Report: register p_ZL10H_accu_FIR_66_reg is absorbed into DSP p_ZL10H_accu_FIR_66_reg.
+DSP Report: operator add_ln86_66_fu_1924_p2 is absorbed into DSP p_ZL10H_accu_FIR_66_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U66/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_66_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_64_reg, operation Mode is: C'+A*(B:0x3f32c).
+DSP Report: register p_ZL10H_accu_FIR_65_reg is absorbed into DSP p_ZL10H_accu_FIR_64_reg.
+DSP Report: register p_ZL10H_accu_FIR_64_reg is absorbed into DSP p_ZL10H_accu_FIR_64_reg.
+DSP Report: operator add_ln86_64_fu_1904_p2 is absorbed into DSP p_ZL10H_accu_FIR_64_reg.
+DSP Report: operator mul_16s_13s_29_1_0_U67/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_64_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_63_reg, operation Mode is: PCIN+A*(B:0x3e5fc).
+DSP Report: register p_ZL10H_accu_FIR_63_reg is absorbed into DSP p_ZL10H_accu_FIR_63_reg.
+DSP Report: operator add_ln86_63_fu_1894_p2 is absorbed into DSP p_ZL10H_accu_FIR_63_reg.
+DSP Report: operator mul_16s_14s_30_1_1_U68/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_63_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_62_reg, operation Mode is: PCIN+A*(B:0x22f8).
+DSP Report: register p_ZL10H_accu_FIR_62_reg is absorbed into DSP p_ZL10H_accu_FIR_62_reg.
+DSP Report: operator add_ln86_62_fu_1884_p2 is absorbed into DSP p_ZL10H_accu_FIR_62_reg.
+DSP Report: operator mul_16s_15ns_31_1_1_U69/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_62_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_61_reg, operation Mode is: PCIN+A*(B:0x7674).
+DSP Report: register p_ZL10H_accu_FIR_61_reg is absorbed into DSP p_ZL10H_accu_FIR_61_reg.
+DSP Report: operator add_ln86_61_fu_1874_p2 is absorbed into DSP p_ZL10H_accu_FIR_61_reg.
+DSP Report: operator mul_16s_16ns_32_1_1_U70/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_61_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_60_reg, operation Mode is: PCIN+A*(B:0x7674).
+DSP Report: register p_ZL10H_accu_FIR_60_reg is absorbed into DSP p_ZL10H_accu_FIR_60_reg.
+DSP Report: operator add_ln86_60_fu_1864_p2 is absorbed into DSP p_ZL10H_accu_FIR_60_reg.
+DSP Report: operator mul_16s_16ns_32_1_1_U70/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_60_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_59_reg, operation Mode is: PCIN+A*(B:0x22f8).
+DSP Report: register p_ZL10H_accu_FIR_59_reg is absorbed into DSP p_ZL10H_accu_FIR_59_reg.
+DSP Report: operator add_ln86_59_fu_1854_p2 is absorbed into DSP p_ZL10H_accu_FIR_59_reg.
+DSP Report: operator mul_16s_15ns_31_1_1_U69/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_59_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_58_reg, operation Mode is: PCIN+A*(B:0x3e5fc).
+DSP Report: register p_ZL10H_accu_FIR_58_reg is absorbed into DSP p_ZL10H_accu_FIR_58_reg.
+DSP Report: operator add_ln86_58_fu_1844_p2 is absorbed into DSP p_ZL10H_accu_FIR_58_reg.
+DSP Report: operator mul_16s_14s_30_1_1_U68/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_58_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_57_reg, operation Mode is: PCIN+A*(B:0x3f32c).
+DSP Report: register p_ZL10H_accu_FIR_57_reg is absorbed into DSP p_ZL10H_accu_FIR_57_reg.
+DSP Report: operator add_ln86_57_fu_1834_p2 is absorbed into DSP p_ZL10H_accu_FIR_57_reg.
+DSP Report: operator mul_16s_13s_29_1_0_U67/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_57_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_55_reg, operation Mode is: C'+A*(B:0x6aa).
+DSP Report: register p_ZL10H_accu_FIR_56_reg is absorbed into DSP p_ZL10H_accu_FIR_55_reg.
+DSP Report: register p_ZL10H_accu_FIR_55_reg is absorbed into DSP p_ZL10H_accu_FIR_55_reg.
+DSP Report: operator add_ln86_55_fu_1814_p2 is absorbed into DSP p_ZL10H_accu_FIR_55_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U66/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_55_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_54_reg, operation Mode is: PCIN+A*(B:0x3f4b8).
+DSP Report: register p_ZL10H_accu_FIR_54_reg is absorbed into DSP p_ZL10H_accu_FIR_54_reg.
+DSP Report: operator add_ln86_54_fu_1804_p2 is absorbed into DSP p_ZL10H_accu_FIR_54_reg.
+DSP Report: operator mul_16s_13s_29_1_0_U65/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_54_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_53_reg, operation Mode is: PCIN+A*(B:0x3fc42).
+DSP Report: register p_ZL10H_accu_FIR_53_reg is absorbed into DSP p_ZL10H_accu_FIR_53_reg.
+DSP Report: operator add_ln86_53_fu_1794_p2 is absorbed into DSP p_ZL10H_accu_FIR_53_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U64/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_53_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_52_reg, operation Mode is: PCIN+A*(B:0x8e4).
+DSP Report: register p_ZL10H_accu_FIR_52_reg is absorbed into DSP p_ZL10H_accu_FIR_52_reg.
+DSP Report: operator add_ln86_52_fu_1784_p2 is absorbed into DSP p_ZL10H_accu_FIR_52_reg.
+DSP Report: operator mul_16s_13ns_29_1_1_U63/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_52_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_50_reg, operation Mode is: C'+A*(B:0x3f8b2).
+DSP Report: register p_ZL10H_accu_FIR_51_reg is absorbed into DSP p_ZL10H_accu_FIR_50_reg.
+DSP Report: register p_ZL10H_accu_FIR_50_reg is absorbed into DSP p_ZL10H_accu_FIR_50_reg.
+DSP Report: operator add_ln86_50_fu_1764_p2 is absorbed into DSP p_ZL10H_accu_FIR_50_reg.
+DSP Report: operator mul_16s_12s_28_1_1_U62/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_50_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_49_reg, operation Mode is: PCIN+A*(B:0x3ff1e).
+DSP Report: register p_ZL10H_accu_FIR_49_reg is absorbed into DSP p_ZL10H_accu_FIR_49_reg.
+DSP Report: operator add_ln86_49_fu_1754_p2 is absorbed into DSP p_ZL10H_accu_FIR_49_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U61/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_49_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_48_reg, operation Mode is: PCIN+A*(B:0x61c).
+DSP Report: register p_ZL10H_accu_FIR_48_reg is absorbed into DSP p_ZL10H_accu_FIR_48_reg.
+DSP Report: operator add_ln86_48_fu_1744_p2 is absorbed into DSP p_ZL10H_accu_FIR_48_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U60/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_48_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_46_reg, operation Mode is: C'+A*(B:0x3fad4).
+DSP Report: register p_ZL10H_accu_FIR_47_reg is absorbed into DSP p_ZL10H_accu_FIR_46_reg.
+DSP Report: register p_ZL10H_accu_FIR_46_reg is absorbed into DSP p_ZL10H_accu_FIR_46_reg.
+DSP Report: operator add_ln86_46_fu_1724_p2 is absorbed into DSP p_ZL10H_accu_FIR_46_reg.
+DSP Report: operator mul_16s_12s_28_1_1_U59/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_46_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_45_reg, operation Mode is: PCIN+A*(B:0x76).
+DSP Report: register p_ZL10H_accu_FIR_45_reg is absorbed into DSP p_ZL10H_accu_FIR_45_reg.
+DSP Report: operator add_ln86_45_fu_1714_p2 is absorbed into DSP p_ZL10H_accu_FIR_45_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U58/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_45_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_44_reg, operation Mode is: PCIN+A*(B:0x460).
+DSP Report: register p_ZL10H_accu_FIR_44_reg is absorbed into DSP p_ZL10H_accu_FIR_44_reg.
+DSP Report: operator add_ln86_44_fu_1704_p2 is absorbed into DSP p_ZL10H_accu_FIR_44_reg.
+DSP Report: operator mul_16s_12ns_28_1_1_U57/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_44_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_43_reg, operation Mode is: PCIN+A*(B:0x3ff22).
+DSP Report: register p_ZL10H_accu_FIR_43_reg is absorbed into DSP p_ZL10H_accu_FIR_43_reg.
+DSP Report: operator add_ln86_43_fu_1694_p2 is absorbed into DSP p_ZL10H_accu_FIR_43_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U56/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_43_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_42_reg, operation Mode is: PCIN+A*(B:0x3fc4a).
+DSP Report: register p_ZL10H_accu_FIR_42_reg is absorbed into DSP p_ZL10H_accu_FIR_42_reg.
+DSP Report: operator add_ln86_42_fu_1684_p2 is absorbed into DSP p_ZL10H_accu_FIR_42_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U55/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_42_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_41_reg, operation Mode is: PCIN+A*(B:0x126).
+DSP Report: register p_ZL10H_accu_FIR_41_reg is absorbed into DSP p_ZL10H_accu_FIR_41_reg.
+DSP Report: operator add_ln86_41_fu_1674_p2 is absorbed into DSP p_ZL10H_accu_FIR_41_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U54/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_41_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_40_reg, operation Mode is: PCIN+A*(B:0x31e).
+DSP Report: register p_ZL10H_accu_FIR_40_reg is absorbed into DSP p_ZL10H_accu_FIR_40_reg.
+DSP Report: operator add_ln86_40_fu_1664_p2 is absorbed into DSP p_ZL10H_accu_FIR_40_reg.
+DSP Report: operator mul_16s_11ns_27_1_1_U53/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_40_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_39_reg, operation Mode is: PCIN+A*(B:0x3fea8).
+DSP Report: register p_ZL10H_accu_FIR_39_reg is absorbed into DSP p_ZL10H_accu_FIR_39_reg.
+DSP Report: operator add_ln86_39_fu_1654_p2 is absorbed into DSP p_ZL10H_accu_FIR_39_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U52/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_39_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_38_reg, operation Mode is: PCIN+A*(B:0x3fd66).
+DSP Report: register p_ZL10H_accu_FIR_38_reg is absorbed into DSP p_ZL10H_accu_FIR_38_reg.
+DSP Report: operator add_ln86_38_fu_1644_p2 is absorbed into DSP p_ZL10H_accu_FIR_38_reg.
+DSP Report: operator mul_16s_11s_27_1_1_U51/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_38_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_37_reg, operation Mode is: PCIN+A*(B:0x176).
+DSP Report: register p_ZL10H_accu_FIR_37_reg is absorbed into DSP p_ZL10H_accu_FIR_37_reg.
+DSP Report: operator add_ln86_37_fu_1634_p2 is absorbed into DSP p_ZL10H_accu_FIR_37_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U43/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_37_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_36_reg, operation Mode is: PCIN+A*(B:0x222).
+DSP Report: register p_ZL10H_accu_FIR_36_reg is absorbed into DSP p_ZL10H_accu_FIR_36_reg.
+DSP Report: operator add_ln86_36_fu_1624_p2 is absorbed into DSP p_ZL10H_accu_FIR_36_reg.
+DSP Report: operator mul_16s_11ns_27_1_1_U50/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_36_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_35_reg, operation Mode is: PCIN+A*(B:0x3fe78).
+DSP Report: register p_ZL10H_accu_FIR_35_reg is absorbed into DSP p_ZL10H_accu_FIR_35_reg.
+DSP Report: operator add_ln86_35_fu_1614_p2 is absorbed into DSP p_ZL10H_accu_FIR_35_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U49/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_35_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_34_reg, operation Mode is: PCIN+A*(B:0x3fe44).
+DSP Report: register p_ZL10H_accu_FIR_34_reg is absorbed into DSP p_ZL10H_accu_FIR_34_reg.
+DSP Report: operator add_ln86_34_fu_1604_p2 is absorbed into DSP p_ZL10H_accu_FIR_34_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U48/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_34_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_33_reg, operation Mode is: PCIN+A*(B:0x18a).
+DSP Report: register p_ZL10H_accu_FIR_33_reg is absorbed into DSP p_ZL10H_accu_FIR_33_reg.
+DSP Report: operator add_ln86_33_fu_1594_p2 is absorbed into DSP p_ZL10H_accu_FIR_33_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U47/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_33_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_32_reg, operation Mode is: PCIN+A*(B:0x15c).
+DSP Report: register p_ZL10H_accu_FIR_32_reg is absorbed into DSP p_ZL10H_accu_FIR_32_reg.
+DSP Report: operator add_ln86_32_fu_1584_p2 is absorbed into DSP p_ZL10H_accu_FIR_32_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U46/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_32_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_31_reg, operation Mode is: PCIN+A*(B:0x3fe7a).
+DSP Report: register p_ZL10H_accu_FIR_31_reg is absorbed into DSP p_ZL10H_accu_FIR_31_reg.
+DSP Report: operator add_ln86_31_fu_1574_p2 is absorbed into DSP p_ZL10H_accu_FIR_31_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U45/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_31_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_30_reg, operation Mode is: PCIN+A*(B:0x3fef4).
+DSP Report: register p_ZL10H_accu_FIR_30_reg is absorbed into DSP p_ZL10H_accu_FIR_30_reg.
+DSP Report: operator add_ln86_30_fu_1564_p2 is absorbed into DSP p_ZL10H_accu_FIR_30_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U44/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_30_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_29_reg, operation Mode is: PCIN+A*(B:0x176).
+DSP Report: register p_ZL10H_accu_FIR_29_reg is absorbed into DSP p_ZL10H_accu_FIR_29_reg.
+DSP Report: operator add_ln86_29_fu_1554_p2 is absorbed into DSP p_ZL10H_accu_FIR_29_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U43/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_29_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_28_reg, operation Mode is: PCIN+A*(B:0xc4).
+DSP Report: register p_ZL10H_accu_FIR_28_reg is absorbed into DSP p_ZL10H_accu_FIR_28_reg.
+DSP Report: operator add_ln86_28_fu_1544_p2 is absorbed into DSP p_ZL10H_accu_FIR_28_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U42/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_28_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_27_reg, operation Mode is: PCIN+A*(B:0x3fe9c).
+DSP Report: register p_ZL10H_accu_FIR_27_reg is absorbed into DSP p_ZL10H_accu_FIR_27_reg.
+DSP Report: operator add_ln86_27_fu_1534_p2 is absorbed into DSP p_ZL10H_accu_FIR_27_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U41/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_27_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_25_reg, operation Mode is: C'+A*(B:0x14a).
+DSP Report: register p_ZL10H_accu_FIR_26_reg is absorbed into DSP p_ZL10H_accu_FIR_25_reg.
+DSP Report: register p_ZL10H_accu_FIR_25_reg is absorbed into DSP p_ZL10H_accu_FIR_25_reg.
+DSP Report: operator add_ln86_25_fu_1514_p2 is absorbed into DSP p_ZL10H_accu_FIR_25_reg.
+DSP Report: operator mul_16s_10ns_26_1_1_U40/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_25_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_24_reg, operation Mode is: PCIN+A*(B:0x52).
+DSP Report: register p_ZL10H_accu_FIR_24_reg is absorbed into DSP p_ZL10H_accu_FIR_24_reg.
+DSP Report: operator add_ln86_24_fu_1504_p2 is absorbed into DSP p_ZL10H_accu_FIR_24_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U39/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_24_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_23_reg, operation Mode is: PCIN+A*(B:0x3fed0).
+DSP Report: register p_ZL10H_accu_FIR_23_reg is absorbed into DSP p_ZL10H_accu_FIR_23_reg.
+DSP Report: operator add_ln86_23_fu_1494_p2 is absorbed into DSP p_ZL10H_accu_FIR_23_reg.
+DSP Report: operator mul_16s_10s_26_1_1_U38/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_23_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_22_reg, operation Mode is: PCIN+A*(B:0x3ffd6).
+DSP Report: register p_ZL10H_accu_FIR_22_reg is absorbed into DSP p_ZL10H_accu_FIR_22_reg.
+DSP Report: operator add_ln86_22_fu_1484_p2 is absorbed into DSP p_ZL10H_accu_FIR_22_reg.
+DSP Report: operator mul_16s_7s_23_1_1_U37/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_22_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_19_reg, operation Mode is: C'+A*(B:0x3ff0e).
+DSP Report: register p_ZL10H_accu_FIR_20_reg is absorbed into DSP p_ZL10H_accu_FIR_19_reg.
+DSP Report: register p_ZL10H_accu_FIR_19_reg is absorbed into DSP p_ZL10H_accu_FIR_19_reg.
+DSP Report: operator add_ln86_19_fu_1454_p2 is absorbed into DSP p_ZL10H_accu_FIR_19_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U36/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_19_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_18_reg, operation Mode is: PCIN+A*(B:0x16).
+DSP Report: register p_ZL10H_accu_FIR_18_reg is absorbed into DSP p_ZL10H_accu_FIR_18_reg.
+DSP Report: operator add_ln86_18_fu_1444_p2 is absorbed into DSP p_ZL10H_accu_FIR_18_reg.
+DSP Report: operator mul_16s_6ns_22_1_1_U35/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_18_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_17_reg, operation Mode is: PCIN+A*(B:0xd2).
+DSP Report: register p_ZL10H_accu_FIR_17_reg is absorbed into DSP p_ZL10H_accu_FIR_17_reg.
+DSP Report: operator add_ln86_17_fu_1434_p2 is absorbed into DSP p_ZL10H_accu_FIR_17_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U34/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_17_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_16_reg, operation Mode is: PCIN+A*(B:0x3ffd2).
+DSP Report: register p_ZL10H_accu_FIR_16_reg is absorbed into DSP p_ZL10H_accu_FIR_16_reg.
+DSP Report: operator add_ln86_16_fu_1424_p2 is absorbed into DSP p_ZL10H_accu_FIR_16_reg.
+DSP Report: operator mul_16s_7s_23_1_1_U33/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_16_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_15_reg, operation Mode is: PCIN+A*(B:0x3ff4c).
+DSP Report: register p_ZL10H_accu_FIR_15_reg is absorbed into DSP p_ZL10H_accu_FIR_15_reg.
+DSP Report: operator add_ln86_15_fu_1414_p2 is absorbed into DSP p_ZL10H_accu_FIR_15_reg.
+DSP Report: operator mul_16s_9s_25_1_1_U32/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_15_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_14_reg, operation Mode is: PCIN+A*(B:0x3a).
+DSP Report: register p_ZL10H_accu_FIR_14_reg is absorbed into DSP p_ZL10H_accu_FIR_14_reg.
+DSP Report: operator add_ln86_14_fu_1404_p2 is absorbed into DSP p_ZL10H_accu_FIR_14_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U27/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_14_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_13_reg, operation Mode is: PCIN+A*(B:0x96).
+DSP Report: register p_ZL10H_accu_FIR_13_reg is absorbed into DSP p_ZL10H_accu_FIR_13_reg.
+DSP Report: operator add_ln86_13_fu_1394_p2 is absorbed into DSP p_ZL10H_accu_FIR_13_reg.
+DSP Report: operator mul_16s_9ns_25_1_1_U31/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_13_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_12_reg, operation Mode is: PCIN+A*(B:0x3ffba).
+DSP Report: register p_ZL10H_accu_FIR_12_reg is absorbed into DSP p_ZL10H_accu_FIR_12_reg.
+DSP Report: operator add_ln86_12_fu_1384_p2 is absorbed into DSP p_ZL10H_accu_FIR_12_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U30/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_12_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_9_reg, operation Mode is: C'+A*(B:0x62).
+DSP Report: register p_ZL10H_accu_FIR_10_reg is absorbed into DSP p_ZL10H_accu_FIR_9_reg.
+DSP Report: register p_ZL10H_accu_FIR_9_reg is absorbed into DSP p_ZL10H_accu_FIR_9_reg.
+DSP Report: operator add_ln86_9_fu_1354_p2 is absorbed into DSP p_ZL10H_accu_FIR_9_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U29/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_9_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_8_reg, operation Mode is: PCIN+A*(B:0x3ffb4).
+DSP Report: register p_ZL10H_accu_FIR_8_reg is absorbed into DSP p_ZL10H_accu_FIR_8_reg.
+DSP Report: operator add_ln86_8_fu_1344_p2 is absorbed into DSP p_ZL10H_accu_FIR_8_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U26/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_8_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_6_reg, operation Mode is: C'+A*(B:0x46).
+DSP Report: register p_ZL10H_accu_FIR_7_reg is absorbed into DSP p_ZL10H_accu_FIR_6_reg.
+DSP Report: register p_ZL10H_accu_FIR_6_reg is absorbed into DSP p_ZL10H_accu_FIR_6_reg.
+DSP Report: operator add_ln86_6_fu_1324_p2 is absorbed into DSP p_ZL10H_accu_FIR_6_reg.
+DSP Report: operator mul_16s_8ns_24_1_1_U28/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_6_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_5_reg, operation Mode is: PCIN+A*(B:0x3a).
+DSP Report: register p_ZL10H_accu_FIR_5_reg is absorbed into DSP p_ZL10H_accu_FIR_5_reg.
+DSP Report: operator add_ln86_5_fu_1314_p2 is absorbed into DSP p_ZL10H_accu_FIR_5_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U27/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_5_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_4_reg, operation Mode is: PCIN+A*(B:0x3ffb4).
+DSP Report: register p_ZL10H_accu_FIR_4_reg is absorbed into DSP p_ZL10H_accu_FIR_4_reg.
+DSP Report: operator add_ln86_4_fu_1304_p2 is absorbed into DSP p_ZL10H_accu_FIR_4_reg.
+DSP Report: operator mul_16s_8s_24_1_1_U26/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_4_reg.
+DSP Report: Generating DSP p_ZL10H_accu_FIR_1_reg, operation Mode is: C'+A*(B:0x34).
+DSP Report: register p_ZL10H_accu_FIR_2_reg is absorbed into DSP p_ZL10H_accu_FIR_1_reg.
+DSP Report: register p_ZL10H_accu_FIR_1_reg is absorbed into DSP p_ZL10H_accu_FIR_1_reg.
+DSP Report: operator add_ln86_1_fu_1274_p2 is absorbed into DSP p_ZL10H_accu_FIR_1_reg.
+DSP Report: operator mul_16s_7ns_23_1_1_U25/tmp_product is absorbed into DSP p_ZL10H_accu_FIR_1_reg.
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '29' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '29' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_419/ap_return_0_int_reg_reg' and it is trimmed from '16' to '15' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_FIR_filter.v:151]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '29' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '29' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'storemerge2_in_in_in_reg_371_reg' and it is trimmed from '16' to '15' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2.v:423]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:51]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0.v:43]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:44]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0.v:36]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:51]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0.v:43]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:51]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:43]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0.v:40]
+WARNING: [Synth 8-3936] Found unconnected internal register 'grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '32' bits. [c:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/747f/hdl/verilog/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0.v:43]
+DSP Report: Generating DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (C+((A:0x81b2)'*B'')')'.
+DSP Report: register grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+((D'+A'')*(B:0x3feb0)')')'.
+DSP Report: register grp_FIR_filter_1_fu_440/FIR_delays_read_15_reg_186_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/FIR_delays_read_22_int_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/FIR_delays_read_17_reg_197_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/ad_reg_reg is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/ad is absorbed into DSP grp_FIR_filter_1_fu_440/ama_addmuladd_16s_16s_10s_32s_32_4_0_U91/FIR_Cascade_v2_ama_addmuladd_16s_16s_10s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: ((D'+A2)*(B:0x4d04)')'.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_11_int_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_10_int_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/ad_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/ad is absorbed into DSP grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+((D'+A'')*(B:0x2ca)')')'.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_write_read_reg_161_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_int_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read11_reg_189_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/ad_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/ad is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_10ns_32s_32_4_0_U13/FIR_Cascade_v2_ama_addmuladd_16s_16s_10ns_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+((D'+A'')*(B:0x3efd4)')')'.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_1_reg_167_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_4_reg_183_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/FIR_delays_read_4_reg_183_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/ad_reg_reg is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/ad is absorbed into DSP grp_FIR_filter_2_fu_430/ama_addmuladd_16s_16s_14s_32s_32_4_0_U14/FIR_Cascade_v2_ama_addmuladd_16s_16s_14s_32s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg, operation Mode is: (A''*B'')'.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+A''*B'')'.
+DSP Report: register grp_FIR_filter_fu_419/FIR_coe_0_2_val_read_reg_148_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/FIR_coe_0_2_val_read_reg_148_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/FIR_delays_read_26_reg_159_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/FIR_delays_read_26_reg_159_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_419/mul_16s_13s_29_1_0_U1/tmp_product is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (C+((A:0x76ee)'*B'')')'.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg, operation Mode is: (A''*B'')'.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (PCIN+A''*B'')'.
+DSP Report: register grp_FIR_filter_fu_405/FIR_coe_0_2_val_read_reg_148_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/FIR_coe_0_2_val_read_reg_148_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/FIR_delays_read_26_reg_159_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/FIR_delays_read_26_reg_159_pp0_iter1_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_405/mul_16s_13s_29_1_0_U1/tmp_product is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: Generating DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg, operation Mode is: (C+((A:0x76ee)'*B'')')'.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/b_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: register grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m_reg_reg is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+DSP Report: operator grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/m is absorbed into DSP grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1928.992 ; gain = 430.012
+---------------------------------------------------------------------------------
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 0 : 589 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 1 : 304 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 2 : 421 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 3 : 460 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 4 : 306 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 5 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 6 : 306 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 7 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 8 : 306 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 9 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 10 : 306 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 11 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 12 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 13 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 14 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 15 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 16 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 17 : 437 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 18 : 460 8265 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_46_reg_24 : 0 19 : 437 8265 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg_2b : 0 0 : 2665 8217 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg_2b : 0 1 : 2776 8217 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_2_fu_430/am_addmul_16s_16s_15ns_32_4_0_U12/FIR_Cascade_v2_am_addmul_16s_16s_15ns_32_4_0_DSP48_0_U/p_reg_reg_2b : 0 2 : 2776 8217 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 0 : 552 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 1 : 460 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 2 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 3 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 4 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 5 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 6 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 7 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 8 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 9 : 306 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 10 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 11 : 306 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 12 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 13 : 306 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 14 : 437 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 15 : 306 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 16 : 460 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 17 : 421 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 18 : 304 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_94_reg_15 : 0 19 : 421 8212 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 0 : 638 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 1 : 751 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 2 : 732 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 3 : 979 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 4 : 979 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 5 : 732 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 6 : 751 6109 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_64_reg_1e : 0 7 : 547 6109 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg_2e : 0 0 : 2585 5361 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_1_fu_440/mac_muladd_16s_16ns_26s_32_4_0_U90/FIR_Cascade_v2_mac_muladd_16s_16ns_26s_32_4_0_DSP48_0_U/p_reg_reg_2e : 0 1 : 2776 5361 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg_30 : 0 0 : 1831 3501 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_405/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg_30 : 0 1 : 1670 3501 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg_35 : 0 0 : 1831 3501 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_419/mac_muladd_16s_13s_29s_29_4_0_U2/FIR_Cascade_v2_mac_muladd_16s_13s_29s_29_4_0_DSP48_0_U/m_reg_reg_35 : 0 1 : 1670 3501 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 0 : 455 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 1 : 460 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 2 : 301 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 3 : 460 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 4 : 301 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 5 : 460 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 6 : 365 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_109_reg_c : 0 7 : 460 3262 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 0 : 434 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 1 : 365 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 2 : 460 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 3 : 301 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 4 : 460 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 5 : 301 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 6 : 460 3085 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_19_reg_26 : 0 7 : 304 3085 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_405/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg_33 : 0 0 : 2581 2581 : Used 1 time 0
+ Sort Area is  grp_FIR_filter_fu_419/mac_muladd_16s_15ns_30s_32_4_0_U3/FIR_Cascade_v2_mac_muladd_16s_15ns_30s_32_4_0_DSP48_0_U/p_reg_reg_36 : 0 0 : 2581 2581 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_55_reg_22 : 0 0 : 589 1989 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_55_reg_22 : 0 1 : 547 1989 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_55_reg_22 : 0 2 : 306 1989 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_55_reg_22 : 0 3 : 547 1989 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_69_reg_1b : 0 0 : 638 1912 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_69_reg_1b : 0 1 : 306 1912 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_69_reg_1b : 0 2 : 547 1912 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_69_reg_1b : 0 3 : 421 1912 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_99_reg_11 : 0 0 : 489 1667 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_99_reg_11 : 0 1 : 437 1667 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_99_reg_11 : 0 2 : 304 1667 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_99_reg_11 : 0 3 : 437 1667 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_25_reg_25 : 0 0 : 552 1594 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_25_reg_25 : 0 1 : 304 1594 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_25_reg_25 : 0 2 : 437 1594 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_25_reg_25 : 0 3 : 301 1594 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_50_reg_23 : 0 0 : 589 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_50_reg_23 : 0 1 : 460 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_50_reg_23 : 0 2 : 421 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_73_reg_19 : 0 0 : 589 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_73_reg_19 : 0 1 : 460 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_73_reg_19 : 0 2 : 421 1470 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_6_reg_29 : 0 0 : 455 1060 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_6_reg_29 : 0 1 : 301 1060 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_6_reg_29 : 0 2 : 304 1060 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_113_reg_9 : 0 0 : 446 822 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_113_reg_9 : 0 1 : 376 822 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_9_reg_28 : 0 0 : 455 759 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_9_reg_28 : 0 1 : 304 759 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_117_reg_4 : 0 0 : 428 704 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_117_reg_4 : 0 1 : 276 704 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_1_reg_2a : 0 0 : 489 489 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_115_reg_7 : 0 0 : 306 306 : Used 1 time 0
+ Sort Area is  p_ZL10H_accu_FIR_120_reg_2 : 0 0 : 297 297 : Used 1 time 0
+ Sort Area is  mul_16s_8ns_23_1_1_U24/tmp_product_0 : 0 0 : 248 248 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-------------------------------------+----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                          | DSP Mapping                      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------+----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Cascade_v2_mul_16s_8ns_23_1_1    | A*(B:0x64)                       | 16     | 8      | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x34)                    | 16     | 7      | 25     | -      | 25     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3ffb4)                 | 16     | 8      | 26     | -      | 27     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3a)                  | 16     | 7      | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C+A*(B:0x46)                     | 16     | 8      | 27     | -      | 28     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3ffb4)                 | 16     | 8      | 29     | -      | 30     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x62)                  | 16     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3ffba)                 | 16     | 8      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x96)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3a)                  | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff4c)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffd2)               | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0xd2)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x16)                  | 16     | 6      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff0e)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3ffd6)                 | 16     | 7      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fed0)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x52)                  | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x14a)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3fe9c)                 | 16     | 10     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0xc4)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x176)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fef4)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe7a)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x15c)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x18a)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe44)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe78)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x222)                 | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x176)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fd66)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fea8)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x31e)                 | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x126)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fc4a)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff22)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x460)                 | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x76)                  | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fad4)               | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x61c)                   | 16     | 12     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff1e)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3f8b2)               | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x8e4)                   | 16     | 13     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fc42)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3f4b8)               | 16     | 13     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x6aa)                 | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3f32c)                 | 16     | 13     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3e5fc)               | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x22f8)                | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x7674)                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x7674)                | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x22f8)                | 16     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3e5fc)               | 16     | 14     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3f32c)               | 16     | 13     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x6aa)                   | 16     | 12     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3f4b8)               | 16     | 13     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fc42)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x8e4)                 | 16     | 13     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3f8b2)                 | 16     | 12     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff1e)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x61c)                 | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3fad4)                 | 16     | 12     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x76)                  | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x460)                 | 16     | 12     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff22)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fc4a)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x126)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x31e)                 | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fea8)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fd66)               | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x176)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x222)                 | 16     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe78)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe44)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x18a)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x15c)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe7a)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fef4)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x176)                 | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0xc4)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fe9c)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x14a)                   | 16     | 10     | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x52)                  | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3fed0)               | 16     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffd6)               | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x3ff0e)                 | 16     | 9      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x16)                  | 16     | 6      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0xd2)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffd2)               | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ff4c)               | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3a)                  | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x96)                  | 16     | 9      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffba)               | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x62)                    | 16     | 8      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffb4)               | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x46)                    | 16     | 8      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3a)                  | 16     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | PCIN+A*(B:0x3ffb4)               | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | C'+A*(B:0x34)                    | 16     | 7      | 32     | -      | 32     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (C+((A:0x81b2)'*B'')')'          | 17     | 18     | 26     | -      | 32     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')*(B:0x3feb0)')')' | 16     | 18     | -      | 16     | 32     | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | ((D'+A2)*(B:0x4d04)')'           | 16     | 18     | -      | 16     | 36     | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')*(B:0x2ca)')')'   | 16     | 18     | -      | 16     | 32     | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')*(B:0x3efd4)')')' | 16     | 18     | -      | 16     | 32     | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (A''*B'')'                       | 17     | 14     | -      | -      | 31     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|FIR_Cascade_v2                       | (PCIN+A''*B'')'                  | 16     | 13     | -      | -      | 29     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (C+((A:0x76ee)'*B'')')'          | 17     | 18     | 30     | -      | 32     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
+|FIR_Cascade_v2                       | (A''*B'')'                       | 17     | 14     | -      | -      | 31     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|FIR_Cascade_v2                       | (PCIN+A''*B'')'                  | 16     | 13     | -      | -      | 29     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (C+((A:0x76ee)'*B'')')'          | 17     | 18     | 30     | -      | 32     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
++-------------------------------------+----------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2587.684 ; gain = 1088.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2652.133 ; gain = 1153.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 2679.555 ; gain = 1180.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:10 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name    | RTL Name                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|FIR_Cascade_v2 | grp_FIR_filter_1_fu_440/FIR_delays_read_15_reg_186_pp0_iter3_reg_reg[15]    | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_1_fu_440/FIR_delays_read_16_reg_192_pp0_iter3_reg_reg[15]    | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_1_fu_440/FIR_delays_read_17_reg_197_pp0_iter3_reg_reg[15]    | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_2_fu_430/FIR_delays_write_read_reg_161_pp0_iter4_reg_reg[15] | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_2_fu_430/FIR_delays_read_1_reg_167_pp0_iter4_reg_reg[15]     | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_2_fu_430/FIR_delays_read_2_reg_173_pp0_iter4_reg_reg[15]     | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_2_fu_430/FIR_delays_read_3_reg_178_pp0_iter4_reg_reg[15]     | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_2_fu_430/FIR_delays_read_4_reg_183_pp0_iter4_reg_reg[15]     | 5      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_fu_419/FIR_delays_write_read_reg_143_pp0_iter3_reg_reg[15]   | 4      | 15    | NO           | NO                 | YES               | 15     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_fu_419/FIR_delays_read_25_reg_153_pp0_iter3_reg_reg[15]      | 4      | 15    | NO           | NO                 | YES               | 15     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_fu_405/FIR_delays_write_read_reg_143_pp0_iter3_reg_reg[15]   | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|FIR_Cascade_v2 | grp_FIR_filter_fu_405/FIR_delays_read_25_reg_153_pp0_iter3_reg_reg[15]      | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++---------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                          | DSP Mapping             | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')'*B')')' | 30     | 18     | -      | 27     | 32     | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (C+(A''*B')')'          | 30     | 16     | 48     | -      | 0      | 2    | 1    | 0    | -    | -     | 1    | 1    | 
+|FIR_Cascade_v2                       | (((D'+A')'*B')')'       | 30     | 15     | -      | 27     | 0      | 1    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')'*B')')' | 30     | 10     | -      | 27     | 0      | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+((D'+A'')'*B')')' | 30     | 18     | -      | 27     | 32     | 2    | 1    | -    | 1    | 1     | 1    | 1    | 
+|FIR_Cascade_v2                       | (A''*B'')'              | 30     | 18     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+A''*B'')'         | 30     | 18     | -      | -      | 29     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (C+(A''*B')')'          | 30     | 15     | 48     | -      | 32     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
+|FIR_Cascade_v2                       | (A''*B'')'              | 30     | 12     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (PCIN+A''*B'')'         | 30     | 18     | -      | -      | 29     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2                       | (C+(A''*B')')'          | 30     | 15     | 48     | -      | 32     | 2    | 1    | 0    | -    | -     | 1    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 6      | 48     | -      | 25     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 6      | -      | -      | 27     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C+A'*B)'               | 30     | 7      | 48     | -      | 28     | 1    | 0    | 0    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 7      | -      | -      | 31     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 6      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 5      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 7      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 10     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 10     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 11     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 7      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 11     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 12     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 11     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 14     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 15     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 0      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 14     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 11     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 12     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 11     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 7      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 11     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 10     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 10     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 9      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 9      | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 7      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 18     | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 5      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 6      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 8      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 7      | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 7      | 48     | -      | 0      | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 6      | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (PCIN+A'*B)'            | 30     | 18     | -      | -      | 32     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_FIR_filter_transposed | (C'+A'*B)'              | 30     | 6      | 48     | -      | 32     | 1    | 0    | 1    | -    | -     | 0    | 1    | 
+|FIR_Cascade_v2_mul_16s_8ns_23_1_1    | A'*B                    | 30     | 7      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++-------------------------------------+-------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |   144|
+|2     |DSP_ALU         |   110|
+|4     |DSP_A_B_DATA    |   110|
+|8     |DSP_C_DATA      |   110|
+|10    |DSP_MULTIPLIER  |   110|
+|12    |DSP_M_DATA      |   110|
+|14    |DSP_OUTPUT      |   110|
+|16    |DSP_PREADD      |   110|
+|17    |DSP_PREADD_DATA |   110|
+|19    |LUT1            |    34|
+|20    |LUT2            |   895|
+|21    |LUT3            |   428|
+|22    |LUT4            |   153|
+|23    |LUT5            |    59|
+|24    |LUT6            |    95|
+|25    |SRL16E          |   190|
+|26    |FDRE            |  1720|
+|27    |FDSE            |     5|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:01:02 . Memory (MB): peak = 2862.820 ; gain = 1248.227
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 2862.820 ; gain = 1363.840
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.107 . Memory (MB): peak = 2862.820 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 254 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2862.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 110 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 110 instances
+
+Synth Design complete | Checksum: 6d60f4c4
+INFO: [Common 17-83] Releasing license: Synthesis
+105 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:23 . Memory (MB): peak = 2862.820 ; gain = 2356.586
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2862.820 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 310c2451abd971f9
+INFO: [Coretcl 2-1174] Renamed 27 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2862.820 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/HLS-multirate-DSP/HLS_Multirate/FIR_Cascade_v2/FIR_Cascade_v2/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 23 22:58:52 2025...

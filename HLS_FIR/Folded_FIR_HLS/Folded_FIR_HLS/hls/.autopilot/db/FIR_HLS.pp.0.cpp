@@ -8477,7 +8477,7 @@ const coef_data_t b_FIR[392]={
 typedef ap_fixed<16,1> fir_data_t;
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+__attribute__((sdx_kernel("Folded_FIR_HLS", 0))) void Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 # 2 "FIR_HLS.cpp" 2
@@ -31530,9 +31530,9 @@ namespace std
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("Folded_FIR_HLS", 0))) void Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
+#pragma HLSDIRECTIVE TOP name=Folded_FIR_HLS
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input
@@ -31548,24 +31548,19 @@ __attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
 #pragma HLS PIPELINE
- fir_data_t y;
 
+ fir_data_t y;
  ap_fixed<32,1> FIR_accu32=0;
- ap_fixed<32,1> FIR_accutest32=0;
+
     FIR_delays[N_delays-1] = x_n;
 
 
-
-
-
-    VITIS_LOOP_30_1: for(int i= 0; i < ((N_delays/2) ); i++){
+    VITIS_LOOP_27_1: for(int i= 0; i < ((N_delays/2) ); i++){
   FIR_accu32 += FIR_coe[i] * (FIR_delays[i] + FIR_delays[N_delays -i-1]);
-
   }
 
-
-
-    VITIS_LOOP_37_2: for(int i=1; i < N_delays; i++) FIR_delays[i-1] = FIR_delays[i];
+    VITIS_LOOP_31_2: for(int i=1; i < N_delays; i++)
+        FIR_delays[i-1] = FIR_delays[i];
 
  y = FIR_accu32;
  return y;

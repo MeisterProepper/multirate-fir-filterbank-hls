@@ -5,7 +5,7 @@
     "file": "FIR_HLS.cpp",
     "fileloc": 6,
     "instructions": 2332,
-    "name": "FIR_HLS",
+    "name": "Direct_FIR_SRL",
     "total_instructions": 2332
   }
 }

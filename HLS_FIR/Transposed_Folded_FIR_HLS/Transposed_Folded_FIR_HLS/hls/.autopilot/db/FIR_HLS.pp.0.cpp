@@ -8478,7 +8478,7 @@ typedef ap_fixed<16,1> fir_data_t;
 typedef ap_fixed<32,1> accu_data_t;
 static accu_data_t H_accu_FIR1[392];
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+__attribute__((sdx_kernel("Transposed_Folded_FIR_HLS", 0))) void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 # 2 "FIR_HLS.cpp" 2
@@ -31531,9 +31531,9 @@ namespace std
 
 
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("Transposed_Folded_FIR_HLS", 0))) void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
+#pragma HLSDIRECTIVE TOP name=Transposed_Folded_FIR_HLS
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input
@@ -31545,23 +31545,19 @@ __attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &
 }
 
 
-
-
-
 fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
 #pragma HLS PIPELINE
  fir_data_t y;
     accu_data_t FIR_delays2[N_delays];
     accu_data_t FIR_delays3[N_delays/2];
 
-    VITIS_LOOP_25_1: for(int i=0; i < (N_delays/2); i++){
+    VITIS_LOOP_22_1: for(int i=0; i < (N_delays/2); i++){
   FIR_delays3[i] = FIR_coe[i] * x_n;
-
-        }
+    }
 
     y = FIR_delays1[0] + FIR_delays3[0];
 
- VITIS_LOOP_32_2: for(int i=1; i < N_delays; i++){
+ VITIS_LOOP_28_2: for(int i=1; i < N_delays; i++){
   FIR_delays3[i] = FIR_coe[i] * x_n;
         if (i < (N_delays/2)) {
             FIR_delays1[i-1] = FIR_delays1[i] + FIR_delays3[i];
@@ -31569,12 +31565,7 @@ fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], in
         else {
             FIR_delays1[i-1] = FIR_delays1[i] + FIR_delays3[N_delays-i-1];
         }
-
-
-        }
-
-
-
+    }
 
  return y;
 }

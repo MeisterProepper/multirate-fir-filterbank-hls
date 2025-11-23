@@ -66,7 +66,7 @@ int main() {
 
     // Run DUT for each input sample
     for (int i = 0; i < num_input_samples; i++) {
-        FIR_HLS(input_stream, output_stream);
+        Direct_FIR_DSP_HLS(input_stream, output_stream);
     }
 
 

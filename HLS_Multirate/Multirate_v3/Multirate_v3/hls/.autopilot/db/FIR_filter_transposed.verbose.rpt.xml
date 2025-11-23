@@ -1,0 +1,126 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'FIR_filter_transposed'" level="0">
+<item name = "Date">Sun Nov 16 16:27:03 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">Multirate_v3</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.396 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 156, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 5, 0, 25, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available">288, 1248, 234240, 117120, 64</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, 0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_10s_16s_25_1_1_U1">mul_10s_16s_25_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_10s_26_1_1_U5">mul_16s_10s_26_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_13s_29_1_1_U2">mul_16s_13s_29_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_13s_29_1_1_U4">mul_16s_13s_29_1_1, 0, 1, 0, 5, 0</column>
+<column name="mul_16s_14ns_30_1_1_U3">mul_16s_14ns_30_1_1, 0, 1, 0, 5, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln84_fu_142_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln87_4_fu_264_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln87_5_fu_270_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln87_fu_192_p2">+, 0, 0, 39, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_ready">out, 1, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_return_0">out, 16, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_return_2">out, 32, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_return_3">out, 32, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_return_4">out, 32, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, FIR_filter_transposed, return value</column>
+<column name="FIR_delays_read">in, 32, ap_none, FIR_delays_read, scalar</column>
+<column name="FIR_delays_read_25">in, 32, ap_none, FIR_delays_read_25, scalar</column>
+<column name="FIR_delays_read_26">in, 32, ap_none, FIR_delays_read_26, scalar</column>
+<column name="FIR_delays_read_27">in, 32, ap_none, FIR_delays_read_27, scalar</column>
+<column name="FIR_coe_read">in, 10, ap_none, FIR_coe_read, scalar</column>
+<column name="FIR_coe_read_14">in, 13, ap_none, FIR_coe_read_14, scalar</column>
+<column name="FIR_coe_read_15">in, 14, ap_none, FIR_coe_read_15, scalar</column>
+<column name="FIR_coe_read_16">in, 13, ap_none, FIR_coe_read_16, scalar</column>
+<column name="FIR_coe_read_17">in, 10, ap_none, FIR_coe_read_17, scalar</column>
+<column name="x_n">in, 16, ap_none, x_n, scalar</column>
+</table>
+</item>
+</section>
+</profile>

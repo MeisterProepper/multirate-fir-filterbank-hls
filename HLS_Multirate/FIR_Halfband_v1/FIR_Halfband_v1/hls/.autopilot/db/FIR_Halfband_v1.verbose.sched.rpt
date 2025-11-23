@@ -1,0 +1,407 @@
+
+
+================================================================
+== Vitis HLS Report for 'FIR_Halfband_v1'
+================================================================
+* Date:           Sun Nov 23 21:45:54 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FIR_Halfband_v1
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.736 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  70.000 ns|  70.000 ns|    8|    8|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 14 2 8 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 13 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 7 
+13 --> 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 13 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.73>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%spectopmodule_ln20 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_0" [FIR_HLS.cpp:20]   --->   Operation 20 'spectopmodule' 'spectopmodule_ln20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln20 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0" [FIR_HLS.cpp:20]   --->   Operation 21 'specinterface' 'specinterface_ln20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %input_r, void @empty_2, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %input_r"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %output_r, void @empty_2, i32 1, i32 1, void @empty_3, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %output_r"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%mod_value1_load = load i1 %mod_value1" [FIR_HLS.cpp:26]   --->   Operation 26 'load' 'mod_value1_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.07ns)   --->   "%input_r_read = read i16 @_ssdm_op_Read.axis.volatile.i16P128A, i16 %input_r" [FIR_HLS.cpp:51]   --->   Operation 27 'read' 'input_r_read' <Predicate = true> <Delay = 0.07> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %mod_value1_load, void %if.then, void %if.else23" [FIR_HLS.cpp:26]   --->   Operation 28 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.71ns)   --->   "%p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %input_r_read, i1 1" [FIR_HLS.cpp:28]   --->   Operation 29 'memshiftread' 'p_s' <Predicate = (!mod_value1_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln29 = sext i16 %p_s" [FIR_HLS.cpp:29]   --->   Operation 30 'sext' 'sext_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node add_ln29)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %p_s, i32 15" [FIR_HLS.cpp:29]   --->   Operation 31 'bitselect' 'tmp' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.85ns)   --->   "%sub_ln29 = sub i17 0, i17 %sext_ln29" [FIR_HLS.cpp:29]   --->   Operation 32 'sub' 'sub_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln29_1_cast = partselect i15 @_ssdm_op_PartSelect.i15.i17.i32.i32, i17 %sub_ln29, i32 1, i32 15" [FIR_HLS.cpp:29]   --->   Operation 33 'partselect' 'trunc_ln29_1_cast' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node add_ln29)   --->   "%trunc_ln29_2 = partselect i15 @_ssdm_op_PartSelect.i15.i16.i32.i32, i16 %p_s, i32 1, i32 15" [FIR_HLS.cpp:29]   --->   Operation 34 'partselect' 'trunc_ln29_2' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.84ns)   --->   "%sub_ln29_1 = sub i15 0, i15 %trunc_ln29_1_cast" [FIR_HLS.cpp:29]   --->   Operation 35 'sub' 'sub_ln29_1' <Predicate = (!mod_value1_load)> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node add_ln29)   --->   "%select_ln29 = select i1 %tmp, i15 %sub_ln29_1, i15 %trunc_ln29_2" [FIR_HLS.cpp:29]   --->   Operation 36 'select' 'select_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node add_ln29)   --->   "%sext_ln29_1 = sext i15 %select_ln29" [FIR_HLS.cpp:29]   --->   Operation 37 'sext' 'sext_ln29_1' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%y1_phase1_load = load i16 %y1_phase1" [FIR_HLS.cpp:29]   --->   Operation 38 'load' 'y1_phase1_load' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.85ns) (out node of the LUT)   --->   "%add_ln29 = add i16 %y1_phase1_load, i16 %sext_ln29_1" [FIR_HLS.cpp:29]   --->   Operation 39 'add' 'add_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%mod_value2_load = load i1 %mod_value2" [FIR_HLS.cpp:31]   --->   Operation 40 'load' 'mod_value2_load' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %mod_value2_load, void %if.then5, void %if.else" [FIR_HLS.cpp:31]   --->   Operation 41 'br' 'br_ln31' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_2_21_0_load = load i16 %p_ZL21H_filter_FIR_dec_2_21_0" [FIR_HLS.cpp:42]   --->   Operation 42 'load' 'p_ZL21H_filter_FIR_dec_2_21_0_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_2_21_1_load = load i16 %p_ZL21H_filter_FIR_dec_2_21_1" [FIR_HLS.cpp:42]   --->   Operation 43 'load' 'p_ZL21H_filter_FIR_dec_2_21_1_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_2_21_2_load = load i16 %p_ZL21H_filter_FIR_dec_2_21_2" [FIR_HLS.cpp:42]   --->   Operation 44 'load' 'p_ZL21H_filter_FIR_dec_2_21_2_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_2_21_3_load = load i16 %p_ZL21H_filter_FIR_dec_2_21_3" [FIR_HLS.cpp:42]   --->   Operation 45 'load' 'p_ZL21H_filter_FIR_dec_2_21_3_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_2_21_4_load = load i16 %p_ZL21H_filter_FIR_dec_2_21_4" [FIR_HLS.cpp:42]   --->   Operation 46 'load' 'p_ZL21H_filter_FIR_dec_2_21_4_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 47 [7/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 47 'call' 'call_ret2' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%y3_load = load i16 %y3" [FIR_HLS.cpp:43]   --->   Operation 48 'load' 'y3_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_2_21_0_load = load i16 %p_ZL21H_filter_FIR_int_2_21_0" [FIR_HLS.cpp:43]   --->   Operation 49 'load' 'p_ZL21H_filter_FIR_int_2_21_0_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_2_21_1_load = load i16 %p_ZL21H_filter_FIR_int_2_21_1" [FIR_HLS.cpp:43]   --->   Operation 50 'load' 'p_ZL21H_filter_FIR_int_2_21_1_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_2_21_2_load = load i16 %p_ZL21H_filter_FIR_int_2_21_2" [FIR_HLS.cpp:43]   --->   Operation 51 'load' 'p_ZL21H_filter_FIR_int_2_21_2_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_2_21_3_load = load i16 %p_ZL21H_filter_FIR_int_2_21_3" [FIR_HLS.cpp:43]   --->   Operation 52 'load' 'p_ZL21H_filter_FIR_int_2_21_3_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_2_21_4_load = load i16 %p_ZL21H_filter_FIR_int_2_21_4" [FIR_HLS.cpp:43]   --->   Operation 53 'load' 'p_ZL21H_filter_FIR_int_2_21_4_load' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 0.00>
+ST_1 : Operation 54 [7/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 54 'call' 'call_ret3' <Predicate = (!mod_value1_load & mod_value2_load)> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_1_21_0_load = load i16 %p_ZL21H_filter_FIR_dec_1_21_0" [FIR_HLS.cpp:51]   --->   Operation 55 'load' 'p_ZL21H_filter_FIR_dec_1_21_0_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_1_21_1_load = load i16 %p_ZL21H_filter_FIR_dec_1_21_1" [FIR_HLS.cpp:51]   --->   Operation 56 'load' 'p_ZL21H_filter_FIR_dec_1_21_1_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_dec_1_21_2_load = load i16 %p_ZL21H_filter_FIR_dec_1_21_2" [FIR_HLS.cpp:51]   --->   Operation 57 'load' 'p_ZL21H_filter_FIR_dec_1_21_2_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 58 [6/6] (3.39ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 58 'call' 'call_ret1' <Predicate = (mod_value1_load)> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%y4_load = load i16 %y4" [FIR_HLS.cpp:52]   --->   Operation 59 'load' 'y4_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_1_21_0_load = load i16 %p_ZL21H_filter_FIR_int_1_21_0" [FIR_HLS.cpp:52]   --->   Operation 60 'load' 'p_ZL21H_filter_FIR_int_1_21_0_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_1_21_1_load = load i16 %p_ZL21H_filter_FIR_int_1_21_1" [FIR_HLS.cpp:52]   --->   Operation 61 'load' 'p_ZL21H_filter_FIR_int_1_21_1_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_1_21_2_load = load i16 %p_ZL21H_filter_FIR_int_1_21_2" [FIR_HLS.cpp:52]   --->   Operation 62 'load' 'p_ZL21H_filter_FIR_int_1_21_2_load' <Predicate = (mod_value1_load)> <Delay = 0.00>
+ST_1 : Operation 63 [6/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 63 'call' 'call_ret' <Predicate = (mod_value1_load)> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 5.95>
+ST_2 : Operation 64 [1/1] (0.71ns)   --->   "%p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %add_ln29, i1 1" [FIR_HLS.cpp:34]   --->   Operation 64 'memshiftread' 'p_1' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 4> <ShiftMem>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%sext_ln35 = sext i16 %p_1" [FIR_HLS.cpp:35]   --->   Operation 65 'sext' 'sext_ln35' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%tmp_23 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %p_1, i32 15" [FIR_HLS.cpp:35]   --->   Operation 66 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.85ns)   --->   "%sub_ln35 = sub i17 0, i17 %sext_ln35" [FIR_HLS.cpp:35]   --->   Operation 67 'sub' 'sub_ln35' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%trunc_ln35_1_cast = partselect i15 @_ssdm_op_PartSelect.i15.i17.i32.i32, i17 %sub_ln35, i32 1, i32 15" [FIR_HLS.cpp:35]   --->   Operation 68 'partselect' 'trunc_ln35_1_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%trunc_ln35_2 = partselect i15 @_ssdm_op_PartSelect.i15.i16.i32.i32, i16 %p_1, i32 1, i32 15" [FIR_HLS.cpp:35]   --->   Operation 69 'partselect' 'trunc_ln35_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.84ns)   --->   "%sub_ln35_1 = sub i15 0, i15 %trunc_ln35_1_cast" [FIR_HLS.cpp:35]   --->   Operation 70 'sub' 'sub_ln35_1' <Predicate = true> <Delay = 0.84> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%select_ln35 = select i1 %tmp_23, i15 %sub_ln35_1, i15 %trunc_ln35_2" [FIR_HLS.cpp:35]   --->   Operation 71 'select' 'select_ln35' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%sext_ln35_1 = sext i15 %select_ln35" [FIR_HLS.cpp:35]   --->   Operation 72 'sext' 'sext_ln35_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%y2_phase1_load = load i16 %y2_phase1" [FIR_HLS.cpp:35]   --->   Operation 73 'load' 'y2_phase1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.85ns) (out node of the LUT)   --->   "%add_ln35 = add i16 %y2_phase1_load, i16 %sext_ln35_1" [FIR_HLS.cpp:35]   --->   Operation 74 'add' 'add_ln35' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [6/6] (2.69ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 75 'call' 'p_2' <Predicate = true> <Delay = 2.69> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 4.28>
+ST_3 : Operation 76 [5/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 76 'call' 'p_2' <Predicate = true> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 4.28>
+ST_4 : Operation 77 [4/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 77 'call' 'p_2' <Predicate = true> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 4.28>
+ST_5 : Operation 78 [3/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 78 'call' 'p_2' <Predicate = true> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 4.28>
+ST_6 : Operation 79 [2/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 79 'call' 'p_2' <Predicate = true> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
+
+State 7 <SV = 6> <Delay = 6.59>
+ST_7 : Operation 80 [1/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 80 'call' 'p_2' <Predicate = (!mod_value2_load)> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 81 [1/1] (0.00ns)   --->   "%store_ln36 = store i16 %p_2, i16 %y3" [FIR_HLS.cpp:36]   --->   Operation 81 'store' 'store_ln36' <Predicate = (!mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 82 [1/1] (0.71ns)   --->   "%p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %p_2, i1 1" [FIR_HLS.cpp:38]   --->   Operation 82 'memshiftread' 'p_3' <Predicate = (!mod_value2_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 4> <ShiftMem>
+ST_7 : Operation 83 [1/1] (0.42ns)   --->   "%br_ln40 = br void %if.end" [FIR_HLS.cpp:40]   --->   Operation 83 'br' 'br_ln40' <Predicate = (!mod_value2_load)> <Delay = 0.42>
+ST_7 : Operation 84 [1/7] (0.64ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 84 'call' 'call_ret2' <Predicate = (mod_value2_load)> <Delay = 0.64> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%newret9 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 85 'extractvalue' 'newret9' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "%newret1 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 86 'extractvalue' 'newret1' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 87 [1/1] (0.00ns)   --->   "%newret10 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 87 'extractvalue' 'newret10' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%newret11 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 88 'extractvalue' 'newret11' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%newret12 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 89 'extractvalue' 'newret12' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (0.00ns)   --->   "%newret13 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 90 'extractvalue' 'newret13' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 91 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret1, i16 %p_ZL21H_filter_FIR_dec_2_21_0" [FIR_HLS.cpp:42]   --->   Operation 91 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 92 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret10, i16 %p_ZL21H_filter_FIR_dec_2_21_1" [FIR_HLS.cpp:42]   --->   Operation 92 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret11, i16 %p_ZL21H_filter_FIR_dec_2_21_2" [FIR_HLS.cpp:42]   --->   Operation 93 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret12, i16 %p_ZL21H_filter_FIR_dec_2_21_3" [FIR_HLS.cpp:42]   --->   Operation 94 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret13, i16 %p_ZL21H_filter_FIR_dec_2_21_4" [FIR_HLS.cpp:42]   --->   Operation 95 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%store_ln42 = store i16 %newret9, i16 %y2_phase1" [FIR_HLS.cpp:42]   --->   Operation 96 'store' 'store_ln42' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 97 [1/7] (0.64ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 97 'call' 'call_ret3' <Predicate = (mod_value2_load)> <Delay = 0.64> <CoreType = "Generic">   --->   Generic Core
+ST_7 : Operation 98 [1/1] (0.00ns)   --->   "%newret14 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 98 'extractvalue' 'newret14' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 99 [1/1] (0.00ns)   --->   "%newret15 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 99 'extractvalue' 'newret15' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "%newret16 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 100 'extractvalue' 'newret16' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 101 [1/1] (0.00ns)   --->   "%newret17 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 101 'extractvalue' 'newret17' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 102 [1/1] (0.00ns)   --->   "%newret18 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 102 'extractvalue' 'newret18' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 103 [1/1] (0.00ns)   --->   "%newret19 = extractvalue i96 %call_ret3" [FIR_HLS.cpp:43]   --->   Operation 103 'extractvalue' 'newret19' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %newret15, i16 %p_ZL21H_filter_FIR_int_2_21_0" [FIR_HLS.cpp:43]   --->   Operation 104 'store' 'store_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 105 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %newret16, i16 %p_ZL21H_filter_FIR_int_2_21_1" [FIR_HLS.cpp:43]   --->   Operation 105 'store' 'store_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %newret17, i16 %p_ZL21H_filter_FIR_int_2_21_2" [FIR_HLS.cpp:43]   --->   Operation 106 'store' 'store_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %newret18, i16 %p_ZL21H_filter_FIR_int_2_21_3" [FIR_HLS.cpp:43]   --->   Operation 107 'store' 'store_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %newret19, i16 %p_ZL21H_filter_FIR_int_2_21_4" [FIR_HLS.cpp:43]   --->   Operation 108 'store' 'store_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (0.00ns)   --->   "%shl_ln43 = shl i16 %newret14, i16 1" [FIR_HLS.cpp:43]   --->   Operation 109 'shl' 'shl_ln43' <Predicate = (mod_value2_load)> <Delay = 0.00>
+ST_7 : Operation 110 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end"   --->   Operation 110 'br' 'br_ln0' <Predicate = (mod_value2_load)> <Delay = 0.42>
+ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%p_013_0_0_0 = phi i16 %shl_ln43, void %if.else, i16 %p_3, void %if.then5" [FIR_HLS.cpp:43]   --->   Operation 111 'phi' 'p_013_0_0_0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %p_013_0_0_0, i16 %y4" [FIR_HLS.cpp:43]   --->   Operation 112 'store' 'store_ln43' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 113 [1/1] (0.71ns)   --->   "%p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1" [FIR_HLS.cpp:47]   --->   Operation 113 'memshiftread' 'p_0' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
+ST_7 : Operation 114 [2/2] (0.45ns)   --->   "%write_ln47 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %output_r, i16 %p_0" [FIR_HLS.cpp:47]   --->   Operation 114 'write' 'write_ln47' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+
+State 8 <SV = 1> <Delay = 3.39>
+ST_8 : Operation 115 [6/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 115 'call' 'call_ret2' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_8 : Operation 116 [6/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 116 'call' 'call_ret3' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 9 <SV = 2> <Delay = 3.39>
+ST_9 : Operation 117 [5/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 117 'call' 'call_ret2' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_9 : Operation 118 [5/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 118 'call' 'call_ret3' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 10 <SV = 3> <Delay = 3.39>
+ST_10 : Operation 119 [4/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 119 'call' 'call_ret2' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_10 : Operation 120 [4/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 120 'call' 'call_ret3' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 4> <Delay = 3.39>
+ST_11 : Operation 121 [3/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 121 'call' 'call_ret2' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_11 : Operation 122 [3/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 122 'call' 'call_ret3' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 5> <Delay = 3.39>
+ST_12 : Operation 123 [2/7] (3.39ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 123 'call' 'call_ret2' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_12 : Operation 124 [2/7] (3.39ns)   --->   "%call_ret3 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_int_2_21_0_load, i16 %p_ZL21H_filter_FIR_int_2_21_1_load, i16 %p_ZL21H_filter_FIR_int_2_21_2_load, i16 %p_ZL21H_filter_FIR_int_2_21_3_load, i16 %p_ZL21H_filter_FIR_int_2_21_4_load, i16 %y3_load" [FIR_HLS.cpp:43]   --->   Operation 124 'call' 'call_ret3' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 13 <SV = 7> <Delay = 0.45>
+ST_13 : Operation 125 [1/1] (0.00ns)   --->   "%storemerge1 = phi i1 0, void %if.else, i1 1, void %if.then5"   --->   Operation 125 'phi' 'storemerge1' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_13 : Operation 126 [1/1] (0.00ns)   --->   "%store_ln0 = store i1 %storemerge1, i1 %mod_value2"   --->   Operation 126 'store' 'store_ln0' <Predicate = (!mod_value1_load)> <Delay = 0.00>
+ST_13 : Operation 127 [1/2] (0.45ns)   --->   "%write_ln47 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %output_r, i16 %p_0" [FIR_HLS.cpp:47]   --->   Operation 127 'write' 'write_ln47' <Predicate = (!mod_value1_load)> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_13 : Operation 128 [1/1] (0.42ns)   --->   "%br_ln49 = br void %if.end30" [FIR_HLS.cpp:49]   --->   Operation 128 'br' 'br_ln49' <Predicate = (!mod_value1_load)> <Delay = 0.42>
+ST_13 : Operation 129 [1/1] (0.00ns)   --->   "%storemerge = phi i1 0, void %if.else23, i1 1, void %if.end"   --->   Operation 129 'phi' 'storemerge' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 130 [1/1] (0.00ns)   --->   "%store_ln0 = store i1 %storemerge, i1 %mod_value1"   --->   Operation 130 'store' 'store_ln0' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 131 [1/1] (0.00ns)   --->   "%ret_ln56 = ret" [FIR_HLS.cpp:56]   --->   Operation 131 'ret' 'ret_ln56' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 1> <Delay = 3.39>
+ST_14 : Operation 132 [5/6] (3.39ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 132 'call' 'call_ret1' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_14 : Operation 133 [5/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 133 'call' 'call_ret' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 2> <Delay = 3.39>
+ST_15 : Operation 134 [4/6] (3.39ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 134 'call' 'call_ret1' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_15 : Operation 135 [4/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 135 'call' 'call_ret' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 16 <SV = 3> <Delay = 3.39>
+ST_16 : Operation 136 [3/6] (3.39ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 136 'call' 'call_ret1' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_16 : Operation 137 [3/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 137 'call' 'call_ret' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 17 <SV = 4> <Delay = 3.39>
+ST_17 : Operation 138 [2/6] (3.39ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 138 'call' 'call_ret1' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+ST_17 : Operation 139 [2/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 139 'call' 'call_ret' <Predicate = true> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
+
+State 18 <SV = 5> <Delay = 1.09>
+ST_18 : Operation 140 [1/6] (0.64ns)   --->   "%call_ret1 = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_dec_1_21_0_load, i16 %p_ZL21H_filter_FIR_dec_1_21_1_load, i16 %p_ZL21H_filter_FIR_dec_1_21_2_load, i16 %input_r_read" [FIR_HLS.cpp:51]   --->   Operation 140 'call' 'call_ret1' <Predicate = true> <Delay = 0.64> <CoreType = "Generic">   --->   Generic Core
+ST_18 : Operation 141 [1/1] (0.00ns)   --->   "%newret2 = extractvalue i64 %call_ret1" [FIR_HLS.cpp:51]   --->   Operation 141 'extractvalue' 'newret2' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 142 [1/1] (0.00ns)   --->   "%newret3 = extractvalue i64 %call_ret1" [FIR_HLS.cpp:51]   --->   Operation 142 'extractvalue' 'newret3' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 143 [1/1] (0.00ns)   --->   "%newret4 = extractvalue i64 %call_ret1" [FIR_HLS.cpp:51]   --->   Operation 143 'extractvalue' 'newret4' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 144 [1/1] (0.00ns)   --->   "%newret5 = extractvalue i64 %call_ret1" [FIR_HLS.cpp:51]   --->   Operation 144 'extractvalue' 'newret5' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 145 [1/1] (0.00ns)   --->   "%store_ln51 = store i16 %newret3, i16 %p_ZL21H_filter_FIR_dec_1_21_0" [FIR_HLS.cpp:51]   --->   Operation 145 'store' 'store_ln51' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 146 [1/1] (0.00ns)   --->   "%store_ln51 = store i16 %newret4, i16 %p_ZL21H_filter_FIR_dec_1_21_1" [FIR_HLS.cpp:51]   --->   Operation 146 'store' 'store_ln51' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 147 [1/1] (0.00ns)   --->   "%store_ln51 = store i16 %newret5, i16 %p_ZL21H_filter_FIR_dec_1_21_2" [FIR_HLS.cpp:51]   --->   Operation 147 'store' 'store_ln51' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 148 [1/1] (0.00ns)   --->   "%store_ln51 = store i16 %newret2, i16 %y1_phase1" [FIR_HLS.cpp:51]   --->   Operation 148 'store' 'store_ln51' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 149 [1/6] (0.64ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 149 'call' 'call_ret' <Predicate = true> <Delay = 0.64> <CoreType = "Generic">   --->   Generic Core
+ST_18 : Operation 150 [1/1] (0.00ns)   --->   "%newret = extractvalue i64 %call_ret" [FIR_HLS.cpp:52]   --->   Operation 150 'extractvalue' 'newret' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 151 [1/1] (0.00ns)   --->   "%newret6 = extractvalue i64 %call_ret" [FIR_HLS.cpp:52]   --->   Operation 151 'extractvalue' 'newret6' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 152 [1/1] (0.00ns)   --->   "%newret7 = extractvalue i64 %call_ret" [FIR_HLS.cpp:52]   --->   Operation 152 'extractvalue' 'newret7' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 153 [1/1] (0.00ns)   --->   "%newret8 = extractvalue i64 %call_ret" [FIR_HLS.cpp:52]   --->   Operation 153 'extractvalue' 'newret8' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln52 = store i16 %newret6, i16 %p_ZL21H_filter_FIR_int_1_21_0" [FIR_HLS.cpp:52]   --->   Operation 154 'store' 'store_ln52' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 155 [1/1] (0.00ns)   --->   "%store_ln52 = store i16 %newret7, i16 %p_ZL21H_filter_FIR_int_1_21_1" [FIR_HLS.cpp:52]   --->   Operation 155 'store' 'store_ln52' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 156 [1/1] (0.00ns)   --->   "%store_ln52 = store i16 %newret8, i16 %p_ZL21H_filter_FIR_int_1_21_2" [FIR_HLS.cpp:52]   --->   Operation 156 'store' 'store_ln52' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 157 [1/1] (0.00ns)   --->   "%shl_ln52 = shl i16 %newret, i16 1" [FIR_HLS.cpp:52]   --->   Operation 157 'shl' 'shl_ln52' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 158 [2/2] (0.45ns)   --->   "%write_ln52 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %output_r, i16 %shl_ln52" [FIR_HLS.cpp:52]   --->   Operation 158 'write' 'write_ln52' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+
+State 19 <SV = 6> <Delay = 0.45>
+ST_19 : Operation 159 [1/2] (0.45ns)   --->   "%write_ln52 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %output_r, i16 %shl_ln52" [FIR_HLS.cpp:52]   --->   Operation 159 'write' 'write_ln52' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
+ST_19 : Operation 160 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end30"   --->   Operation 160 'br' 'br_ln0' <Predicate = true> <Delay = 0.42>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.736ns
+The critical path consists of the following:
+	axis read operation ('input_r_read', FIR_HLS.cpp:51) on port 'input_r' (FIR_HLS.cpp:51) [155]  (0.079 ns)
+	'memshiftread' operation 16 bit ('p_s', FIR_HLS.cpp:28) [158]  (0.717 ns)
+	'sub' operation 17 bit ('sub_ln29', FIR_HLS.cpp:29) [161]  (0.853 ns)
+	'sub' operation 15 bit ('sub_ln29_1', FIR_HLS.cpp:29) [164]  (0.842 ns)
+	'select' operation 15 bit ('select_ln29', FIR_HLS.cpp:29) [165]  (0.000 ns)
+	'add' operation 16 bit ('add_ln29', FIR_HLS.cpp:29) [168]  (0.853 ns)
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 2>: 5.957ns
+The critical path consists of the following:
+	'memshiftread' operation 16 bit ('p_1', FIR_HLS.cpp:34) [172]  (0.717 ns)
+	'sub' operation 17 bit ('sub_ln35', FIR_HLS.cpp:35) [175]  (0.853 ns)
+	'sub' operation 15 bit ('sub_ln35_1', FIR_HLS.cpp:35) [178]  (0.842 ns)
+	'select' operation 15 bit ('select_ln35', FIR_HLS.cpp:35) [179]  (0.000 ns)
+	'add' operation 16 bit ('add_ln35', FIR_HLS.cpp:35) [182]  (0.853 ns)
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (2.692 ns)
+
+ <State 3>: 4.281ns
+The critical path consists of the following:
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (4.281 ns)
+
+ <State 4>: 4.281ns
+The critical path consists of the following:
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (4.281 ns)
+
+ <State 5>: 4.281ns
+The critical path consists of the following:
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (4.281 ns)
+
+ <State 6>: 4.281ns
+The critical path consists of the following:
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (4.281 ns)
+
+ <State 7>: 6.595ns
+The critical path consists of the following:
+	'call' operation 16 bit ('p_2', FIR_HLS.cpp:36) to 'FIR_filter' [183]  (4.281 ns)
+	'memshiftread' operation 16 bit ('p_3', FIR_HLS.cpp:38) [185]  (0.717 ns)
+	multiplexor before 'phi' operation 16 bit ('p_013_0_0_0', FIR_HLS.cpp:43) with incoming values : ('p_3', FIR_HLS.cpp:38) ('shl_ln43', FIR_HLS.cpp:43) [227]  (0.427 ns)
+	'phi' operation 16 bit ('p_013_0_0_0', FIR_HLS.cpp:43) with incoming values : ('p_3', FIR_HLS.cpp:38) ('shl_ln43', FIR_HLS.cpp:43) [227]  (0.000 ns)
+	'memshiftread' operation 16 bit ('p_0', FIR_HLS.cpp:47) [231]  (0.717 ns)
+	axis write operation ('write_ln47', FIR_HLS.cpp:47) on port 'output_r' (FIR_HLS.cpp:47) [232]  (0.453 ns)
+
+ <State 8>: 3.392ns
+The critical path consists of the following:
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 9>: 3.392ns
+The critical path consists of the following:
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 10>: 3.392ns
+The critical path consists of the following:
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 11>: 3.392ns
+The critical path consists of the following:
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 12>: 3.392ns
+The critical path consists of the following:
+	'call' operation 96 bit ('call_ret2', FIR_HLS.cpp:42) to 'FIR_filter.1' [193]  (3.392 ns)
+
+ <State 13>: 0.453ns
+The critical path consists of the following:
+	axis write operation ('write_ln47', FIR_HLS.cpp:47) on port 'output_r' (FIR_HLS.cpp:47) [232]  (0.453 ns)
+
+ <State 14>: 3.392ns
+The critical path consists of the following:
+	'call' operation 64 bit ('call_ret1', FIR_HLS.cpp:51) to 'FIR_filter.2' [238]  (3.392 ns)
+
+ <State 15>: 3.392ns
+The critical path consists of the following:
+	'call' operation 64 bit ('call_ret1', FIR_HLS.cpp:51) to 'FIR_filter.2' [238]  (3.392 ns)
+
+ <State 16>: 3.392ns
+The critical path consists of the following:
+	'call' operation 64 bit ('call_ret1', FIR_HLS.cpp:51) to 'FIR_filter.2' [238]  (3.392 ns)
+
+ <State 17>: 3.392ns
+The critical path consists of the following:
+	'call' operation 64 bit ('call_ret1', FIR_HLS.cpp:51) to 'FIR_filter.2' [238]  (3.392 ns)
+
+ <State 18>: 1.098ns
+The critical path consists of the following:
+	'call' operation 64 bit ('call_ret', FIR_HLS.cpp:52) to 'FIR_filter.2' [251]  (0.645 ns)
+	'shl' operation 16 bit ('shl_ln52', FIR_HLS.cpp:52) [259]  (0.000 ns)
+	axis write operation ('write_ln52', FIR_HLS.cpp:52) on port 'output_r' (FIR_HLS.cpp:52) [260]  (0.453 ns)
+
+ <State 19>: 0.453ns
+The critical path consists of the following:
+	axis write operation ('write_ln52', FIR_HLS.cpp:52) on port 'output_r' (FIR_HLS.cpp:52) [260]  (0.453 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

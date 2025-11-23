@@ -8,7 +8,7 @@
     "loads": {
       "G": 3
     },
-    "name": "FIR_HLS",
+    "name": "Direct_FIR_DSP",
     "stores": {
       "G": 2
     },

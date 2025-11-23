@@ -1,0 +1,196 @@
+
+
+================================================================
+== Vitis HLS Report for 'FIR_filter_3'
+================================================================
+* Date:           Sun Nov 23 16:17:32 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FIR_Cascade_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.392 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        5|        5|  50.000 ns|  50.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.39>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%FIR_delays_write_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_write" [FIR_HLS.cpp:58]   --->   Operation 7 'read' 'FIR_delays_write_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%FIR_delays_read_1 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_read_12" [FIR_HLS.cpp:58]   --->   Operation 8 'read' 'FIR_delays_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%FIR_delays_read_2 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_read_11" [FIR_HLS.cpp:58]   --->   Operation 9 'read' 'FIR_delays_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%FIR_delays_read_3 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_read_10" [FIR_HLS.cpp:58]   --->   Operation 10 'read' 'FIR_delays_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%FIR_delays_read_4 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_read_9" [FIR_HLS.cpp:58]   --->   Operation 11 'read' 'FIR_delays_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%FIR_delays_read11 = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %FIR_delays_read" [FIR_HLS.cpp:58]   --->   Operation 12 'read' 'FIR_delays_read11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln66_1 = sext i16 %FIR_delays_read_2" [FIR_HLS.cpp:66]   --->   Operation 13 'sext' 'sext_ln66_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln66_2 = sext i16 %FIR_delays_read_3" [FIR_HLS.cpp:66]   --->   Operation 14 'sext' 'sext_ln66_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (2.39ns) (grouped into DSP with root node tmp1)   --->   "%tmp = add i17 %sext_ln66_2, i17 %sext_ln66_1" [FIR_HLS.cpp:66]   --->   Operation 15 'add' 'tmp' <Predicate = true> <Delay = 2.39> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 16 [1/1] (0.00ns) (grouped into DSP with root node tmp1)   --->   "%tmp_cast = sext i17 %tmp" [FIR_HLS.cpp:66]   --->   Operation 16 'sext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [4/4] (0.99ns) (root node of the DSP)   --->   "%tmp1 = mul i32 %tmp_cast, i32 19716" [FIR_HLS.cpp:66]   --->   Operation 17 'mul' 'tmp1' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 2.69>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%sext_ln61 = sext i16 %FIR_delays_write_read" [FIR_HLS.cpp:61]   --->   Operation 18 'sext' 'sext_ln61' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%FIR_delays_read_cast = sext i16 %FIR_delays_read11" [FIR_HLS.cpp:58]   --->   Operation 19 'sext' 'FIR_delays_read_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [3/4] (0.99ns) (root node of the DSP)   --->   "%tmp1 = mul i32 %tmp_cast, i32 19716" [FIR_HLS.cpp:66]   --->   Operation 20 'mul' 'tmp1' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 21 [1/1] (1.69ns) (grouped into DSP with root node add_ln66)   --->   "%tmp4 = add i17 %FIR_delays_read_cast, i17 %sext_ln61" [FIR_HLS.cpp:58]   --->   Operation 21 'add' 'tmp4' <Predicate = true> <Delay = 1.69> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 22 [1/1] (0.00ns) (grouped into DSP with root node add_ln66)   --->   "%tmp4_cast = sext i17 %tmp4" [FIR_HLS.cpp:58]   --->   Operation 22 'sext' 'tmp4_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [3/3] (0.99ns) (grouped into DSP with root node add_ln66)   --->   "%tmp5 = mul i28 %tmp4_cast, i28 714" [FIR_HLS.cpp:58]   --->   Operation 23 'mul' 'tmp5' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 2.69>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln66 = sext i16 %FIR_delays_read_1" [FIR_HLS.cpp:66]   --->   Operation 24 'sext' 'sext_ln66' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln66_3 = sext i16 %FIR_delays_read_4" [FIR_HLS.cpp:66]   --->   Operation 25 'sext' 'sext_ln66_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [2/4] (0.99ns) (root node of the DSP)   --->   "%tmp1 = mul i32 %tmp_cast, i32 19716" [FIR_HLS.cpp:66]   --->   Operation 26 'mul' 'tmp1' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 27 [1/1] (1.69ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp2 = add i17 %sext_ln66_3, i17 %sext_ln66" [FIR_HLS.cpp:66]   --->   Operation 27 'add' 'tmp2' <Predicate = true> <Delay = 1.69> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 28 [1/1] (0.00ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp2_cast = sext i17 %tmp2" [FIR_HLS.cpp:66]   --->   Operation 28 'sext' 'tmp2_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [3/3] (0.99ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp3 = mul i31 %tmp2_cast, i31 2147479508" [FIR_HLS.cpp:66]   --->   Operation 29 'mul' 'tmp3' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 30 [2/3] (0.99ns) (grouped into DSP with root node add_ln66)   --->   "%tmp5 = mul i28 %tmp4_cast, i28 714" [FIR_HLS.cpp:58]   --->   Operation 30 'mul' 'tmp5' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 0.99>
+ST_4 : Operation 31 [1/4] (0.00ns) (root node of the DSP)   --->   "%tmp1 = mul i32 %tmp_cast, i32 19716" [FIR_HLS.cpp:66]   --->   Operation 31 'mul' 'tmp1' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 32 [2/3] (0.99ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp3 = mul i31 %tmp2_cast, i31 2147479508" [FIR_HLS.cpp:66]   --->   Operation 32 'mul' 'tmp3' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 33 [1/3] (0.00ns) (grouped into DSP with root node add_ln66)   --->   "%tmp5 = mul i28 %tmp4_cast, i28 714" [FIR_HLS.cpp:58]   --->   Operation 33 'mul' 'tmp5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 34 [1/1] (0.00ns) (grouped into DSP with root node add_ln66)   --->   "%sext_ln66_4 = sext i28 %tmp5" [FIR_HLS.cpp:66]   --->   Operation 34 'sext' 'sext_ln66_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln66 = add i32 %tmp1, i32 %sext_ln66_4" [FIR_HLS.cpp:66]   --->   Operation 35 'add' 'add_ln66' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 1.29>
+ST_5 : Operation 36 [1/3] (0.00ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp3 = mul i31 %tmp2_cast, i31 2147479508" [FIR_HLS.cpp:66]   --->   Operation 36 'mul' 'tmp3' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 37 [1/1] (0.00ns) (grouped into DSP with root node FIR_accu32)   --->   "%tmp3_cast = sext i31 %tmp3" [FIR_HLS.cpp:66]   --->   Operation 37 'sext' 'tmp3_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln66 = add i32 %tmp1, i32 %sext_ln66_4" [FIR_HLS.cpp:66]   --->   Operation 38 'add' 'add_ln66' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 39 [2/2] (0.64ns) (root node of the DSP)   --->   "%FIR_accu32 = add i32 %add_ln66, i32 %tmp3_cast" [FIR_HLS.cpp:66]   --->   Operation 39 'add' 'FIR_accu32' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 0.64>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%specpipeline_ln58 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_3" [FIR_HLS.cpp:58]   --->   Operation 40 'specpipeline' 'specpipeline_ln58' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/2] (0.64ns) (root node of the DSP)   --->   "%FIR_accu32 = add i32 %add_ln66, i32 %tmp3_cast" [FIR_HLS.cpp:66]   --->   Operation 41 'add' 'FIR_accu32' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%y = partselect i16 @_ssdm_op_PartSelect.i16.i32.i32.i32, i32 %FIR_accu32, i32 16, i32 31" [FIR_HLS.cpp:68]   --->   Operation 42 'partselect' 'y' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%newret = insertvalue i96 <undef>, i16 %y" [FIR_HLS.cpp:68]   --->   Operation 43 'insertvalue' 'newret' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%newret2 = insertvalue i96 %newret, i16 %FIR_delays_read_4" [FIR_HLS.cpp:68]   --->   Operation 44 'insertvalue' 'newret2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%newret4 = insertvalue i96 %newret2, i16 %FIR_delays_read_3" [FIR_HLS.cpp:68]   --->   Operation 45 'insertvalue' 'newret4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/1] (0.00ns)   --->   "%newret6 = insertvalue i96 %newret4, i16 %FIR_delays_read_2" [FIR_HLS.cpp:68]   --->   Operation 46 'insertvalue' 'newret6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%newret8 = insertvalue i96 %newret6, i16 %FIR_delays_read_1" [FIR_HLS.cpp:68]   --->   Operation 47 'insertvalue' 'newret8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 48 [1/1] (0.00ns)   --->   "%newret1 = insertvalue i96 %newret8, i16 %FIR_delays_write_read" [FIR_HLS.cpp:68]   --->   Operation 48 'insertvalue' 'newret1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%ret_ln68 = ret i96 %newret1" [FIR_HLS.cpp:68]   --->   Operation 49 'ret' 'ret_ln68' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.392ns
+The critical path consists of the following:
+	wire read operation ('FIR_delays', FIR_HLS.cpp:58) on port 'FIR_delays_read_11' (FIR_HLS.cpp:58) [10]  (0.000 ns)
+	'add' operation 17 bit of DSP[22] ('tmp', FIR_HLS.cpp:66) [20]  (2.396 ns)
+	'mul' operation 32 bit of DSP[22] ('tmp1', FIR_HLS.cpp:66) [22]  (0.996 ns)
+
+ <State 2>: 2.692ns
+The critical path consists of the following:
+	'add' operation 17 bit of DSP[31] ('tmp4', FIR_HLS.cpp:58) [27]  (1.696 ns)
+	'mul' operation 28 bit of DSP[31] ('tmp5', FIR_HLS.cpp:58) [29]  (0.996 ns)
+
+ <State 3>: 2.692ns
+The critical path consists of the following:
+	'add' operation 17 bit of DSP[32] ('tmp2', FIR_HLS.cpp:66) [23]  (1.696 ns)
+	'mul' operation 31 bit of DSP[32] ('tmp3', FIR_HLS.cpp:66) [25]  (0.996 ns)
+
+ <State 4>: 0.996ns
+The critical path consists of the following:
+	'mul' operation 31 bit of DSP[32] ('tmp3', FIR_HLS.cpp:66) [25]  (0.996 ns)
+
+ <State 5>: 1.290ns
+The critical path consists of the following:
+	'add' operation 32 bit of DSP[31] ('add_ln66', FIR_HLS.cpp:66) [31]  (0.645 ns)
+	'add' operation 32 bit of DSP[32] ('FIR_accu32', FIR_HLS.cpp:66) [32]  (0.645 ns)
+
+ <State 6>: 0.645ns
+The critical path consists of the following:
+	'add' operation 32 bit of DSP[32] ('FIR_accu32', FIR_HLS.cpp:66) [32]  (0.645 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

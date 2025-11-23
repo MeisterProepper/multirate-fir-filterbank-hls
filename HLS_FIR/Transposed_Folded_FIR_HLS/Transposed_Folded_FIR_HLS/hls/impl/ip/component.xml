@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
-  <spirit:name>FIR_HLS</spirit:name>
+  <spirit:name>Transposed_Folded_FIR_HLS</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -145,14 +145,14 @@
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Transposed_Folded_FIR_HLS</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6a3f004b</spirit:value>
+            <spirit:value>794943a5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -161,14 +161,14 @@
         <spirit:displayName>Verilog Simulation</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Transposed_Folded_FIR_HLS</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ec1cbc32</spirit:value>
+            <spirit:value>0d9a8f89</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -177,14 +177,14 @@
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Transposed_Folded_FIR_HLS</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>279a4cf0</spirit:value>
+            <spirit:value>7fb0aa48</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -193,14 +193,14 @@
         <spirit:displayName>VHDL Simulation</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>FIR_HLS</spirit:modelName>
+        <spirit:modelName>Transposed_Folded_FIR_HLS</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>17da7349</spirit:value>
+            <spirit:value>9714bb9b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -374,208 +374,208 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/FIR_HLS_ooc.xdc</spirit:name>
+        <spirit:name>constraints/Transposed_Folded_FIR_HLS_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_FIR_filter.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_FIR_filter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_6ns_22_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_6ns_22_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_6s_22_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_6s_22_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_7ns_23_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_7ns_23_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_7s_23_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_7s_23_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_8ns_24_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_8ns_24_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_8s_24_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_8s_24_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_9ns_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_9ns_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_9s_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_9s_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10ns_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_10ns_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_11ns_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_11ns_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_11s_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_11s_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_12ns_28_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_12ns_28_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_12s_28_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_12s_28_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_13ns_29_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_13ns_29_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_14ns_30_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_14ns_30_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_15ns_31_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_15ns_31_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_regslice_both.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_FIR_filter.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_FIR_filter.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_hls_deadlock_idx0_monitor.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_hls_deadlock_kernel_monitor_top.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_6ns_22_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_6ns_22_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_6s_22_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_6s_22_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_7ns_23_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_7ns_23_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_7s_23_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_7s_23_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_8ns_24_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_8ns_24_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_8s_24_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_8s_24_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_9ns_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_9ns_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_9s_25_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_9s_25_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10ns_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_10ns_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_10s_26_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_11ns_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_11ns_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_11s_27_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_11s_27_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_12ns_28_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_12ns_28_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_12s_28_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_12s_28_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_13ns_29_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_13ns_29_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_14ns_30_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_14ns_30_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_mul_16s_15ns_31_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_mul_16s_15ns_31_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS_regslice_both.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS_regslice_both.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/FIR_HLS.v</spirit:name>
+        <spirit:name>hdl/verilog/Transposed_Folded_FIR_HLS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -583,191 +583,191 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>constraints/FIR_HLS_ooc.xdc</spirit:name>
+        <spirit:name>constraints/Transposed_Folded_FIR_HLS_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_FIR_filter.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_FIR_filter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_6ns_22_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_6ns_22_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_6s_22_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_6s_22_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_7ns_23_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_7ns_23_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_7s_23_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_7s_23_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_8ns_24_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_8ns_24_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_8s_24_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_8s_24_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_9ns_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_9ns_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_9s_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_9s_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10ns_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_10ns_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_11ns_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_11ns_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_11s_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_11s_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_12ns_28_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_12ns_28_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_12s_28_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_12s_28_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_13ns_29_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_13ns_29_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_14ns_30_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_14ns_30_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_15ns_31_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_15ns_31_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_regslice_both.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_regslice_both.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f78a1c24</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_65235271</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_FIR_filter.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_FIR_filter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_6ns_22_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_6ns_22_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_6s_22_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_6s_22_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_7ns_23_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_7ns_23_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_7s_23_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_7s_23_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_8ns_24_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_8ns_24_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_8s_24_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_8s_24_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_9ns_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_9ns_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_9s_25_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_9s_25_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10ns_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_10ns_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_10s_26_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_11ns_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_11ns_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_11s_27_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_11s_27_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_12ns_28_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_12ns_28_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_12s_28_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_12s_28_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_13ns_29_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_13ns_29_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_14ns_30_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_14ns_30_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_mul_16s_15ns_31_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_mul_16s_15ns_31_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS_regslice_both.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS_regslice_both.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/FIR_HLS.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/Transposed_Folded_FIR_HLS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -789,7 +789,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/FIR_HLS_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/Transposed_Folded_FIR_HLS_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -808,7 +808,7 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">FIR_HLS_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Transposed_Folded_FIR_HLS_v1_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
@@ -839,10 +839,10 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VITIS_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Fir_hls</xilinx:displayName>
+      <xilinx:displayName>Transposed_Folded_FIR_HLS</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2114344944</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-11-12T11:24:38Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2114350934</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-11-16T15:14:44Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -851,9 +851,9 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2024.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2a9abefc"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d32a614f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="6f3fdb9e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="c1d6b1d3"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="28ff3a5d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="97036b98"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

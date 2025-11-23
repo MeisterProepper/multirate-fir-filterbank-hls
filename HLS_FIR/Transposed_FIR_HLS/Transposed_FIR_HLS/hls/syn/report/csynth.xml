@@ -6,7 +6,7 @@
         <unit>ns</unit>
         <ProductFamily>zynquplus</ProductFamily>
         <Part>xck26-sfvc784-2LV-c</Part>
-        <TopModelName>FIR_HLS</TopModelName>
+        <TopModelName>Transposed_FIR_HLS</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
@@ -53,7 +53,7 @@
     <InterfaceSummary>
         <RtlPorts>
             <name>ap_clk</name>
-            <Object>FIR_HLS</Object>
+            <Object>Transposed_FIR_HLS</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_none</IOProtocol>
@@ -64,7 +64,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_rst_n</name>
-            <Object>FIR_HLS</Object>
+            <Object>Transposed_FIR_HLS</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_none</IOProtocol>
@@ -148,7 +148,7 @@
     </InterfaceSummary>
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="3">
-            <ModuleName>FIR_HLS</ModuleName>
+            <ModuleName>Transposed_FIR_HLS</ModuleName>
             <InstancesList>
                 <Instance>
                     <InstName>p_0_FIR_filter_fu_827</InstName>
@@ -741,7 +741,7 @@
             </BindNodes>
         </Module>
         <Module>
-            <Name>FIR_HLS</Name>
+            <Name>Transposed_FIR_HLS</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
@@ -786,7 +786,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export display_name="Transposed_FIR_HLS"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="input" index="0" direction="in" srcType="stream&lt;ap_fixed&lt;16, 1, AP_TRN, AP_WRAP, 0&gt;, 0&gt;&amp;" srcSize="16">
             <hwRefs>
@@ -883,9 +885,9 @@
     </ReportSWInterface>
     <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
     <PragmaReport>
-        <Pragma type="interface" location="FIR_HLS.cpp:7" status="valid" parentFunction="fir_hls" variable="input" isDirective="0" options="mode=axis port=input"/>
-        <Pragma type="interface" location="FIR_HLS.cpp:8" status="valid" parentFunction="fir_hls" variable="output" isDirective="0" options="mode=axis port=output"/>
-        <Pragma type="interface" location="FIR_HLS.cpp:9" status="valid" parentFunction="fir_hls" variable="return" isDirective="0" options="mode=ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="FIR_HLS.cpp:7" status="valid" parentFunction="transposed_fir_hls" variable="input" isDirective="0" options="mode=axis port=input"/>
+        <Pragma type="interface" location="FIR_HLS.cpp:8" status="valid" parentFunction="transposed_fir_hls" variable="output" isDirective="0" options="mode=axis port=output"/>
+        <Pragma type="interface" location="FIR_HLS.cpp:9" status="valid" parentFunction="transposed_fir_hls" variable="return" isDirective="0" options="mode=ap_ctrl_none port=return"/>
         <Pragma type="pipeline" location="FIR_HLS.cpp:15" status="valid" parentFunction="fir_filter" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>

@@ -1,0 +1,33 @@
+{
+  "0": {
+    "basicblocks": 57,
+    "calls": "1 1 1 1 1",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 20,
+    "instructions": 193,
+    "loads": {
+      "G": 17,
+      "L": 5
+    },
+    "name": "FIR_Halfband_v1",
+    "stores": {
+      "G": 11
+    },
+    "total_instructions": 653
+  },
+  "1": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 63,
+    "instructions": 92,
+    "loads": {
+      "L": 3
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 92
+  }
+}

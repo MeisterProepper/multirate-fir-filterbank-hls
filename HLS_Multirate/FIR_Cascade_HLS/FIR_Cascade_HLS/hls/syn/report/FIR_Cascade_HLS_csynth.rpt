@@ -1,0 +1,206 @@
+
+
+================================================================
+== Vitis HLS Report for 'FIR_Cascade_HLS'
+================================================================
+* Date:           Sun Nov 23 16:17:46 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        FIR_Cascade_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.890 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        7|       29|  70.000 ns|  0.290 us|    8|   30|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+--------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                         |              |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |         Instance        |    Module    |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------+--------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_FIR_filter_1_fu_405  |FIR_filter_1  |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+        |grp_FIR_filter_1_fu_419  |FIR_filter_1  |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+        |grp_FIR_filter_3_fu_430  |FIR_filter_3  |        5|        5|  50.000 ns|  50.000 ns|    1|    1|      yes|
+        |grp_FIR_filter_2_fu_440  |FIR_filter_2  |        4|        4|  40.000 ns|  40.000 ns|    1|    1|      yes|
+        |grp_FIR_filter_fu_449    |FIR_filter    |        5|        5|  50.000 ns|  50.000 ns|    1|    1|      yes|
+        +-------------------------+--------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      48|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    57|    5398|    2521|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       0|     534|    -|
+|Register         |        -|     -|     572|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|    57|    5970|    3103|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     4|       2|       2|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+--------------+---------+----+------+------+-----+
+    |         Instance        |    Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------+--------------+---------+----+------+------+-----+
+    |grp_FIR_filter_fu_449    |FIR_filter    |        0|  46|  3594|  1800|    0|
+    |grp_FIR_filter_1_fu_405  |FIR_filter_1  |        0|   3|   341|   111|    0|
+    |grp_FIR_filter_1_fu_419  |FIR_filter_1  |        0|   3|   341|   111|    0|
+    |grp_FIR_filter_2_fu_440  |FIR_filter_2  |        0|   2|   513|   255|    0|
+    |grp_FIR_filter_3_fu_430  |FIR_filter_3  |        0|   3|   609|   244|    0|
+    +-------------------------+--------------+---------+----+------+------+-----+
+    |Total                    |              |        0|  57|  5398|  2521|    0|
+    +-------------------------+--------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln28_fu_811_p2         |         +|   0|  0|  23|          16|          16|
+    |grp_FIR_filter_fu_449_x_n  |         +|   0|  0|  23|          16|          16|
+    |ap_block_state47           |        or|   0|  0|   2|           1|           1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  48|          33|          33|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------+-----+-----------+-----+-----------+
+    |                      Name                     | LUT | Input Size| Bits| Total Bits|
+    +-----------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                      |  239|         54|    1|         54|
+    |ap_phi_mux_storemerge2_in_in_in_phi_fu_374_p4  |    9|          2|   16|         32|
+    |ap_phi_mux_storemerge_phi_fu_397_p4            |    9|          2|    1|          2|
+    |grp_FIR_filter_1_fu_405_FIR_coe_0_0_val        |   14|          3|   13|         39|
+    |grp_FIR_filter_1_fu_405_FIR_coe_0_2_val        |   14|          3|   13|         39|
+    |grp_FIR_filter_1_fu_405_FIR_delays_read        |   20|          4|   16|         64|
+    |grp_FIR_filter_1_fu_405_FIR_delays_read_28     |   20|          4|   16|         64|
+    |grp_FIR_filter_1_fu_405_FIR_delays_write       |   14|          3|   16|         48|
+    |grp_FIR_filter_2_fu_440_FIR_delays_read        |   14|          3|   16|         48|
+    |grp_FIR_filter_2_fu_440_FIR_delays_read_22     |   14|          3|   16|         48|
+    |grp_FIR_filter_2_fu_440_FIR_delays_read_23     |   14|          3|   16|         48|
+    |grp_FIR_filter_2_fu_440_FIR_delays_read_24     |   14|          3|   16|         48|
+    |grp_FIR_filter_2_fu_440_FIR_delays_write       |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_read        |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_read_10     |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_read_11     |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_read_12     |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_read_9      |   14|          3|   16|         48|
+    |grp_FIR_filter_3_fu_430_FIR_delays_write       |   14|          3|   16|         48|
+    |input_r_TDATA_blk_n                            |    9|          2|    1|          2|
+    |output_r_TDATA_blk_n                           |    9|          2|    1|          2|
+    |output_r_TDATA_int_regslice                    |   14|          3|   16|         48|
+    |storemerge2_in_in_in_reg_371                   |    9|          2|   16|         32|
+    +-----------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                          |  534|        117|  302|        954|
+    +-----------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                           |  53|   0|   53|          0|
+    |grp_FIR_filter_fu_449_ap_start_reg  |   1|   0|    1|          0|
+    |mod_value1                          |   1|   0|    1|          0|
+    |mod_value1_load_reg_1161            |   1|   0|    1|          0|
+    |mod_value2                          |   1|   0|    1|          0|
+    |mod_value2_load_reg_1199            |   1|   0|    1|          0|
+    |p_ZL21H_filter_FIR_dec_1_20_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_1_20_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_1_21_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_1_21_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_20_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_20_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_20_2       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_20_3       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_20_4       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_21_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_21_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_21_2       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_dec_2_21_3       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_1_20_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_1_20_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_1_21_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_1_21_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_20_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_20_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_20_2       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_20_3       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_20_4       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_21_0       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_21_1       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_21_2       |  16|   0|   16|          0|
+    |p_ZL21H_filter_FIR_int_2_21_3       |  16|   0|   16|          0|
+    |ref_tmp_reg_1230                    |  16|   0|   16|          0|
+    |storemerge1_reg_380                 |   1|   0|    1|          0|
+    |storemerge2_in_in_in_reg_371        |  16|   0|   16|          0|
+    |storemerge_reg_393                  |   1|   0|    1|          0|
+    |y1_phase1                           |  16|   0|   16|          0|
+    |y2_phase1                           |  16|   0|   16|          0|
+    |y3                                  |  16|   0|   16|          0|
+    |y4                                  |  16|   0|   16|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               | 572|   0|  572|          0|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+--------------+-----------------+--------------+
+|    RTL Ports    | Dir | Bits|   Protocol   |  Source Object  |    C Type    |
++-----------------+-----+-----+--------------+-----------------+--------------+
+|ap_clk           |   in|    1|  ap_ctrl_none|  FIR_Cascade_HLS|  return value|
+|ap_rst_n         |   in|    1|  ap_ctrl_none|  FIR_Cascade_HLS|  return value|
+|input_r_TDATA    |   in|   16|          axis|          input_r|       pointer|
+|input_r_TVALID   |   in|    1|          axis|          input_r|       pointer|
+|input_r_TREADY   |  out|    1|          axis|          input_r|       pointer|
+|output_r_TDATA   |  out|   16|          axis|         output_r|       pointer|
+|output_r_TVALID  |  out|    1|          axis|         output_r|       pointer|
+|output_r_TREADY  |   in|    1|          axis|         output_r|       pointer|
++-----------------+-----+-----+--------------+-----------------+--------------+
+

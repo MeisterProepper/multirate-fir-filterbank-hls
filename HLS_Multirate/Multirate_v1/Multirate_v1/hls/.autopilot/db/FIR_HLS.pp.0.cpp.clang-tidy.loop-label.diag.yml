@@ -38,21 +38,21 @@ Diagnostics:
         Length:          0
         ReplacementText: 'VITIS_LOOP_1248_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_44_1:  '
-    FileOffset:      44
+    Message:         'Added loop label VITIS_LOOP_67_1:  '
+    FileOffset:      67
     FilePath:        FIR_HLS.cpp
     Replacements:    
       - FilePath:        'C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp'
-        Offset:          938641
+        Offset:          939538
         Length:          0
-        ReplacementText: 'VITIS_LOOP_44_1: '
+        ReplacementText: 'VITIS_LOOP_67_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_47_2:  '
-    FileOffset:      47
+    Message:         'Added loop label VITIS_LOOP_70_2:  '
+    FileOffset:      70
     FilePath:        FIR_HLS.cpp
     Replacements:    
       - FilePath:        'C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp'
-        Offset:          938732
+        Offset:          939629
         Length:          0
-        ReplacementText: 'VITIS_LOOP_47_2: '
+        ReplacementText: 'VITIS_LOOP_70_2: '
 ...

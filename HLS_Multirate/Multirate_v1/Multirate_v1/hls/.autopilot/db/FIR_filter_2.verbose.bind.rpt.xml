@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'FIR_filter_2'" level="0">
-<item name = "Date">Wed Nov 12 23:43:58 2025
+<item name = "Date">Sun Nov 16 16:18:01 2025
 </item>
 <item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
 <item name = "Project">Multirate_v1</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 5.855 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 3.392 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="">5, 5, 50.000 ns, 50.000 ns, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Detail">

@@ -8,7 +8,7 @@
     "loads": {
       "L": 2
     },
-    "name": "FIR_HLS",
+    "name": "Transposed_Folded_FIR_HLS",
     "stores": {
       "L": 1
     },
@@ -18,7 +18,7 @@
     "basicblocks": 1,
     "calls": "",
     "file": "FIR_HLS.cpp",
-    "fileloc": 19,
+    "fileloc": 16,
     "instructions": 1469,
     "loads": {
       "G": 392

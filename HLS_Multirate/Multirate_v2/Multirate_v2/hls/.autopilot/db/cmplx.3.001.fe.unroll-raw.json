@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 87,
+    "calls": "2 1 2 2 2 2 2 2 2",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 14,
+    "instructions": 247,
+    "loads": {
+      "G": 20,
+      "L": 9
+    },
+    "name": "Multirate_v2",
+    "stores": {
+      "G": 7
+    },
+    "total_instructions": 4971
+  },
+  "1": {
+    "basicblocks": 2113,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 80,
+    "instructions": 3988,
+    "loads": {
+      "G": 351
+    },
+    "name": "FIR_filter_transposed",
+    "stores": {
+      "G": 116,
+      "L": 1
+    },
+    "total_instructions": 3988
+  },
+  "2": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 60,
+    "instructions": 92,
+    "loads": {
+      "L": 3
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 92
+  }
+}

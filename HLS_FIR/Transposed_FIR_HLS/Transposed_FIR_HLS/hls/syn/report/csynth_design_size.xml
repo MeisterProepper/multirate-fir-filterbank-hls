@@ -32,7 +32,7 @@
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="FIR_HLS" col1="FIR_HLS.cpp:6" col2="824" col3="1478" col4="1478" col5="1478" col6="1486">
+                <row id="0" col0="Transposed_FIR_HLS" col1="FIR_HLS.cpp:6" col2="824" col3="1478" col4="1478" col5="1478" col6="1486">
                     <row id="1" col0="FIR_filter" col1="FIR_HLS.cpp:14" col2="799" col3="1469" col4="1469" col5="1469" col6="1470"/>
                 </row>
             </rows>

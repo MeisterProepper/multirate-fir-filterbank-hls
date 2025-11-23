@@ -1,0 +1,11 @@
+{
+  "name": "FIR_Cascade_v2",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "FIR_Cascade_v2"
+  }
+}

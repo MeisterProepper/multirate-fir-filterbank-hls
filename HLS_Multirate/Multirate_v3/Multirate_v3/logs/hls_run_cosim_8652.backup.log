@@ -1,0 +1,721 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3 
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=FIR_HLS.cpp' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/FIR_HLS.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=FIR_HLS.h' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/FIR_HLS.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=../../Matlab/FIR_multirate_HLS.h' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file 'C:/HLS-multirate-DSP/Matlab/FIR_multirate_HLS.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=FIR_HLS_TB.cpp' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/FIR_HLS_TB.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_multirate.res' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_multirate.res' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_multirate.dat' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_multirate.dat' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=FIR_HLS' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xck26-sfvc784-2LV-c' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/hls_config.cfg(5)
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/AMD/Vitis/2024.2/vcxx/libexec/clang++"
+   Compiling FIR_HLS_TB.cpp_pre.cpp.tb.cpp
+   Compiling apatb_FIR_HLS.cpp
+   Compiling apatb_FIR_HLS_util.cpp
+   Compiling FIR_HLS.cpp_pre.cpp.tb.cpp
+   Compiling apatb_FIR_HLS_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: Reading ../../../../../../Matlab/TS_HLS_multirate.dat
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_multirate.dat
+INFO: Reading ../../../../../../Matlab/TS_HLS_multirate.res
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_multirate.res
+INFO: Input and reference data lengths match.
+Mismatch at sample  280: ref=-0.358093, dut=-0.304932
+Mismatch at sample  281: ref=-0.481445, dut=-0.420898
+Mismatch at sample  282: ref=-0.582062, dut=-0.569702
+Mismatch at sample  283: ref=-0.672455, dut=-0.785156
+Mismatch at sample  284: ref=-0.771301, dut=0.978027
+Mismatch at sample  285: ref=-0.851379, dut=0.883667
+Mismatch at sample  286: ref=-0.910278, dut=-0.931274
+Mismatch at sample  287: ref=-0.951416, dut=-0.438354
+Mismatch at sample  288: ref=-0.987885, dut=0.21582
+Mismatch at sample  289: ref=0.999847, dut=0.791748
+Mismatch at sample  290: ref=-0.999756, dut=-0.976807
+Mismatch at sample  291: ref=-0.980927, dut=0.810913
+Mismatch at sample  292: ref=-0.947968, dut=0.255737
+Mismatch at sample  293: ref=-0.892883, dut=-0.379883
+Mismatch at sample  294: ref=-0.838196, dut=-0.859253
+Mismatch at sample  295: ref=-0.769135, dut=0.96582
+Mismatch at sample  296: ref=-0.679352, dut=-0.930054
+Mismatch at sample  297: ref=-0.573975, dut=-0.686768
+Mismatch at sample  298: ref=-0.480408, dut=-0.46814
+Mismatch at sample  299: ref=-0.378174, dut=-0.317749
+Mismatch at sample  300: ref=-0.251801, dut=-0.19873
+---------------------------------------
+Testbench Results
+Samples processed : 460
+Mismatches        : 21
+Status: FAIL [!!] (21 samples out of tolerance)
+---------------------------------------
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 460
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v3\Multirate_v3\hls\sim\verilog>set PATH= 
+
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v3\Multirate_v3\hls\sim\verilog>call C:/AMD/Vivado/2024.2/bin/xelab xil_defaultlib.apatb_FIR_HLS_top glbl -Oenable_linking_all_libraries  -prj FIR_HLS.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib "ieee_proposed=./ieee_proposed" -s FIR_HLS  
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMD/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_FIR_HLS_top glbl -Oenable_linking_all_libraries -prj FIR_HLS.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_24 -L floating_point_v7_1_19 --lib ieee_proposed=./ieee_proposed -s FIR_HLS 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/AESL_axi_s_input_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_input_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/AESL_axi_s_output_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_output_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_FIR_HLS_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_FIR_filter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_FIR_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_FIR_filter_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_FIR_filter_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_FIR_filter_transposed.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_FIR_filter_transposed
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mac_muladd_16s_16ns_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mac_muladd_16s_16ns_32ns_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mac_muladd_16s_16ns_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_10ns_26_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_10ns_26_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_10s_26_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_10s_26_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_11ns_27_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_11ns_27_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_11s_27_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_11s_27_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_12ns_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_12ns_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_12s_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_12s_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_13ns_29_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_13ns_29_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_13s_29_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_13s_29_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_14s_30_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_14s_30_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_16ns_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_16ns_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_6ns_22_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_6ns_22_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_7s_23_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_7s_23_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_8ns_24_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_8ns_24_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_8s_24_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_8s_24_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_9ns_25_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_9ns_25_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_16s_9s_25_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_16s_9s_25_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_10s_42_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_10s_42_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_12s_43_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_12s_43_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_12s_44_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_12s_44_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_13s_44_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_13s_44_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_13s_45_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_13s_45_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_mul_32s_14ns_46_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_mul_32s_14ns_46_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FIR_HLS_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_10s_42_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_13s_44_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_13s_45_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_14ns_46_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_FIR_filter
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_12s_43_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_32s_12s_44_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_FIR_filter_1
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_9s_25_1_1(NUM_ST...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_8ns_24_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_8s_24_1_1(NUM_ST...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_6ns_22_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_7s_23_1_1(NUM_ST...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_9ns_25_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_10ns_26_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_10s_26_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_11ns_27_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_11s_27_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_12ns_28_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_12s_28_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_13s_29_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_13ns_29_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_14s_30_1_1(NUM_S...
+Compiling module xil_defaultlib.FIR_HLS_mul_16s_16ns_32_1_1(NUM_...
+Compiling module xil_defaultlib.FIR_HLS_mac_muladd_16s_16ns_32ns...
+Compiling module xil_defaultlib.FIR_HLS_mac_muladd_16s_16ns_32ns...
+Compiling module xil_defaultlib.FIR_HLS_FIR_filter_transposed
+Compiling module xil_defaultlib.FIR_HLS_regslice_both(DataWidth=...
+Compiling module xil_defaultlib.FIR_HLS
+Compiling module xil_defaultlib.fifo(DEPTH=2,WIDTH=16)
+Compiling module xil_defaultlib.AESL_axi_s_input_r
+Compiling module xil_defaultlib.AESL_axi_s_output_r
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_FIR_HLS_top
+Compiling module work.glbl
+Built simulation snapshot FIR_HLS
+
+****** xsim v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sun Nov 16 02:15:55 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/FIR_HLS/xsim_script.tcl
+# xsim {FIR_HLS} -autoloadwcfg -tclbatch {FIR_HLS.tcl}
+Time resolution is 1 ps
+source FIR_HLS.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 460 [0.00%] @ "125000"
+// RTL Simulation : 1 / 460 [87.50%] @ "225000"
+// RTL Simulation : 2 / 460 [125.00%] @ "265000"
+// RTL Simulation : 3 / 460 [175.00%] @ "315000"
+// RTL Simulation : 4 / 460 [125.00%] @ "365000"
+// RTL Simulation : 5 / 460 [187.50%] @ "465000"
+// RTL Simulation : 6 / 460 [175.00%] @ "505000"
+// RTL Simulation : 7 / 460 [175.00%] @ "555000"
+// RTL Simulation : 8 / 460 [125.00%] @ "605000"
+// RTL Simulation : 9 / 460 [187.50%] @ "705000"
+// RTL Simulation : 10 / 460 [175.00%] @ "745000"
+// RTL Simulation : 11 / 460 [175.00%] @ "795000"
+// RTL Simulation : 12 / 460 [125.00%] @ "845000"
+// RTL Simulation : 13 / 460 [187.50%] @ "945000"
+// RTL Simulation : 14 / 460 [175.00%] @ "985000"
+// RTL Simulation : 15 / 460 [175.00%] @ "1035000"
+// RTL Simulation : 16 / 460 [125.00%] @ "1085000"
+// RTL Simulation : 17 / 460 [187.50%] @ "1185000"
+// RTL Simulation : 18 / 460 [175.00%] @ "1225000"
+// RTL Simulation : 19 / 460 [175.00%] @ "1275000"
+// RTL Simulation : 20 / 460 [125.00%] @ "1325000"
+// RTL Simulation : 21 / 460 [187.50%] @ "1425000"
+// RTL Simulation : 22 / 460 [175.00%] @ "1465000"
+// RTL Simulation : 23 / 460 [175.00%] @ "1515000"
+// RTL Simulation : 24 / 460 [125.00%] @ "1565000"
+// RTL Simulation : 25 / 460 [187.50%] @ "1665000"
+// RTL Simulation : 26 / 460 [175.00%] @ "1705000"
+// RTL Simulation : 27 / 460 [175.00%] @ "1755000"
+// RTL Simulation : 28 / 460 [125.00%] @ "1805000"
+// RTL Simulation : 29 / 460 [187.50%] @ "1905000"
+// RTL Simulation : 30 / 460 [175.00%] @ "1945000"
+// RTL Simulation : 31 / 460 [175.00%] @ "1995000"
+// RTL Simulation : 32 / 460 [125.00%] @ "2045000"
+// RTL Simulation : 33 / 460 [187.50%] @ "2145000"
+// RTL Simulation : 34 / 460 [175.00%] @ "2185000"
+// RTL Simulation : 35 / 460 [175.00%] @ "2235000"
+// RTL Simulation : 36 / 460 [125.00%] @ "2285000"
+// RTL Simulation : 37 / 460 [187.50%] @ "2385000"
+// RTL Simulation : 38 / 460 [175.00%] @ "2425000"
+// RTL Simulation : 39 / 460 [175.00%] @ "2475000"
+// RTL Simulation : 40 / 460 [125.00%] @ "2525000"
+// RTL Simulation : 41 / 460 [187.50%] @ "2625000"
+// RTL Simulation : 42 / 460 [175.00%] @ "2665000"
+// RTL Simulation : 43 / 460 [175.00%] @ "2715000"
+// RTL Simulation : 44 / 460 [125.00%] @ "2765000"
+// RTL Simulation : 45 / 460 [187.50%] @ "2865000"
+// RTL Simulation : 46 / 460 [175.00%] @ "2905000"
+// RTL Simulation : 47 / 460 [175.00%] @ "2955000"
+// RTL Simulation : 48 / 460 [125.00%] @ "3005000"
+// RTL Simulation : 49 / 460 [187.50%] @ "3105000"
+// RTL Simulation : 50 / 460 [175.00%] @ "3145000"
+// RTL Simulation : 51 / 460 [175.00%] @ "3195000"
+// RTL Simulation : 52 / 460 [125.00%] @ "3245000"
+// RTL Simulation : 53 / 460 [187.50%] @ "3345000"
+// RTL Simulation : 54 / 460 [175.00%] @ "3385000"
+// RTL Simulation : 55 / 460 [175.00%] @ "3435000"
+// RTL Simulation : 56 / 460 [125.00%] @ "3485000"
+// RTL Simulation : 57 / 460 [187.50%] @ "3585000"
+// RTL Simulation : 58 / 460 [175.00%] @ "3625000"
+// RTL Simulation : 59 / 460 [175.00%] @ "3675000"
+// RTL Simulation : 60 / 460 [125.00%] @ "3725000"
+// RTL Simulation : 61 / 460 [187.50%] @ "3825000"
+// RTL Simulation : 62 / 460 [175.00%] @ "3865000"
+// RTL Simulation : 63 / 460 [175.00%] @ "3915000"
+// RTL Simulation : 64 / 460 [125.00%] @ "3965000"
+// RTL Simulation : 65 / 460 [187.50%] @ "4065000"
+// RTL Simulation : 66 / 460 [175.00%] @ "4105000"
+// RTL Simulation : 67 / 460 [175.00%] @ "4155000"
+// RTL Simulation : 68 / 460 [125.00%] @ "4205000"
+// RTL Simulation : 69 / 460 [187.50%] @ "4305000"
+// RTL Simulation : 70 / 460 [175.00%] @ "4345000"
+// RTL Simulation : 71 / 460 [175.00%] @ "4395000"
+// RTL Simulation : 72 / 460 [125.00%] @ "4445000"
+// RTL Simulation : 73 / 460 [187.50%] @ "4545000"
+// RTL Simulation : 74 / 460 [175.00%] @ "4585000"
+// RTL Simulation : 75 / 460 [175.00%] @ "4635000"
+// RTL Simulation : 76 / 460 [125.00%] @ "4685000"
+// RTL Simulation : 77 / 460 [187.50%] @ "4785000"
+// RTL Simulation : 78 / 460 [175.00%] @ "4825000"
+// RTL Simulation : 79 / 460 [175.00%] @ "4875000"
+// RTL Simulation : 80 / 460 [125.00%] @ "4925000"
+// RTL Simulation : 81 / 460 [187.50%] @ "5025000"
+// RTL Simulation : 82 / 460 [175.00%] @ "5065000"
+// RTL Simulation : 83 / 460 [175.00%] @ "5115000"
+// RTL Simulation : 84 / 460 [125.00%] @ "5165000"
+// RTL Simulation : 85 / 460 [187.50%] @ "5265000"
+// RTL Simulation : 86 / 460 [175.00%] @ "5305000"
+// RTL Simulation : 87 / 460 [175.00%] @ "5355000"
+// RTL Simulation : 88 / 460 [125.00%] @ "5405000"
+// RTL Simulation : 89 / 460 [187.50%] @ "5505000"
+// RTL Simulation : 90 / 460 [175.00%] @ "5545000"
+// RTL Simulation : 91 / 460 [175.00%] @ "5595000"
+// RTL Simulation : 92 / 460 [125.00%] @ "5645000"
+// RTL Simulation : 93 / 460 [187.50%] @ "5745000"
+// RTL Simulation : 94 / 460 [175.00%] @ "5785000"
+// RTL Simulation : 95 / 460 [175.00%] @ "5835000"
+// RTL Simulation : 96 / 460 [125.00%] @ "5885000"
+// RTL Simulation : 97 / 460 [187.50%] @ "5985000"
+// RTL Simulation : 98 / 460 [175.00%] @ "6025000"
+// RTL Simulation : 99 / 460 [175.00%] @ "6075000"
+// RTL Simulation : 100 / 460 [125.00%] @ "6125000"
+// RTL Simulation : 101 / 460 [187.50%] @ "6225000"
+// RTL Simulation : 102 / 460 [175.00%] @ "6265000"
+// RTL Simulation : 103 / 460 [175.00%] @ "6315000"
+// RTL Simulation : 104 / 460 [125.00%] @ "6365000"
+// RTL Simulation : 105 / 460 [187.50%] @ "6465000"
+// RTL Simulation : 106 / 460 [175.00%] @ "6505000"
+// RTL Simulation : 107 / 460 [175.00%] @ "6555000"
+// RTL Simulation : 108 / 460 [125.00%] @ "6605000"
+// RTL Simulation : 109 / 460 [187.50%] @ "6705000"
+// RTL Simulation : 110 / 460 [175.00%] @ "6745000"
+// RTL Simulation : 111 / 460 [175.00%] @ "6795000"
+// RTL Simulation : 112 / 460 [125.00%] @ "6845000"
+// RTL Simulation : 113 / 460 [187.50%] @ "6945000"
+// RTL Simulation : 114 / 460 [175.00%] @ "6985000"
+// RTL Simulation : 115 / 460 [175.00%] @ "7035000"
+// RTL Simulation : 116 / 460 [125.00%] @ "7085000"
+// RTL Simulation : 117 / 460 [187.50%] @ "7185000"
+// RTL Simulation : 118 / 460 [175.00%] @ "7225000"
+// RTL Simulation : 119 / 460 [175.00%] @ "7275000"
+// RTL Simulation : 120 / 460 [125.00%] @ "7325000"
+// RTL Simulation : 121 / 460 [187.50%] @ "7425000"
+// RTL Simulation : 122 / 460 [175.00%] @ "7465000"
+// RTL Simulation : 123 / 460 [175.00%] @ "7515000"
+// RTL Simulation : 124 / 460 [125.00%] @ "7565000"
+// RTL Simulation : 125 / 460 [187.50%] @ "7665000"
+// RTL Simulation : 126 / 460 [175.00%] @ "7705000"
+// RTL Simulation : 127 / 460 [175.00%] @ "7755000"
+// RTL Simulation : 128 / 460 [125.00%] @ "7805000"
+// RTL Simulation : 129 / 460 [187.50%] @ "7905000"
+// RTL Simulation : 130 / 460 [175.00%] @ "7945000"
+// RTL Simulation : 131 / 460 [175.00%] @ "7995000"
+// RTL Simulation : 132 / 460 [125.00%] @ "8045000"
+// RTL Simulation : 133 / 460 [187.50%] @ "8145000"
+// RTL Simulation : 134 / 460 [175.00%] @ "8185000"
+// RTL Simulation : 135 / 460 [175.00%] @ "8235000"
+// RTL Simulation : 136 / 460 [125.00%] @ "8285000"
+// RTL Simulation : 137 / 460 [187.50%] @ "8385000"
+// RTL Simulation : 138 / 460 [175.00%] @ "8425000"
+// RTL Simulation : 139 / 460 [175.00%] @ "8475000"
+// RTL Simulation : 140 / 460 [125.00%] @ "8525000"
+// RTL Simulation : 141 / 460 [187.50%] @ "8625000"
+// RTL Simulation : 142 / 460 [175.00%] @ "8665000"
+// RTL Simulation : 143 / 460 [175.00%] @ "8715000"
+// RTL Simulation : 144 / 460 [125.00%] @ "8765000"
+// RTL Simulation : 145 / 460 [187.50%] @ "8865000"
+// RTL Simulation : 146 / 460 [175.00%] @ "8905000"
+// RTL Simulation : 147 / 460 [175.00%] @ "8955000"
+// RTL Simulation : 148 / 460 [125.00%] @ "9005000"
+// RTL Simulation : 149 / 460 [187.50%] @ "9105000"
+// RTL Simulation : 150 / 460 [175.00%] @ "9145000"
+// RTL Simulation : 151 / 460 [175.00%] @ "9195000"
+// RTL Simulation : 152 / 460 [125.00%] @ "9245000"
+// RTL Simulation : 153 / 460 [187.50%] @ "9345000"
+// RTL Simulation : 154 / 460 [175.00%] @ "9385000"
+// RTL Simulation : 155 / 460 [175.00%] @ "9435000"
+// RTL Simulation : 156 / 460 [125.00%] @ "9485000"
+// RTL Simulation : 157 / 460 [187.50%] @ "9585000"
+// RTL Simulation : 158 / 460 [175.00%] @ "9625000"
+// RTL Simulation : 159 / 460 [175.00%] @ "9675000"
+// RTL Simulation : 160 / 460 [125.00%] @ "9725000"
+// RTL Simulation : 161 / 460 [187.50%] @ "9825000"
+// RTL Simulation : 162 / 460 [175.00%] @ "9865000"
+// RTL Simulation : 163 / 460 [175.00%] @ "9915000"
+// RTL Simulation : 164 / 460 [125.00%] @ "9965000"
+// RTL Simulation : 165 / 460 [187.50%] @ "10065000"
+// RTL Simulation : 166 / 460 [175.00%] @ "10105000"
+// RTL Simulation : 167 / 460 [175.00%] @ "10155000"
+// RTL Simulation : 168 / 460 [125.00%] @ "10205000"
+// RTL Simulation : 169 / 460 [187.50%] @ "10305000"
+// RTL Simulation : 170 / 460 [175.00%] @ "10345000"
+// RTL Simulation : 171 / 460 [175.00%] @ "10395000"
+// RTL Simulation : 172 / 460 [125.00%] @ "10445000"
+// RTL Simulation : 173 / 460 [187.50%] @ "10545000"
+// RTL Simulation : 174 / 460 [175.00%] @ "10585000"
+// RTL Simulation : 175 / 460 [175.00%] @ "10635000"
+// RTL Simulation : 176 / 460 [125.00%] @ "10685000"
+// RTL Simulation : 177 / 460 [187.50%] @ "10785000"
+// RTL Simulation : 178 / 460 [175.00%] @ "10825000"
+// RTL Simulation : 179 / 460 [175.00%] @ "10875000"
+// RTL Simulation : 180 / 460 [125.00%] @ "10925000"
+// RTL Simulation : 181 / 460 [187.50%] @ "11025000"
+// RTL Simulation : 182 / 460 [175.00%] @ "11065000"
+// RTL Simulation : 183 / 460 [175.00%] @ "11115000"
+// RTL Simulation : 184 / 460 [125.00%] @ "11165000"
+// RTL Simulation : 185 / 460 [187.50%] @ "11265000"
+// RTL Simulation : 186 / 460 [175.00%] @ "11305000"
+// RTL Simulation : 187 / 460 [175.00%] @ "11355000"
+// RTL Simulation : 188 / 460 [125.00%] @ "11405000"
+// RTL Simulation : 189 / 460 [187.50%] @ "11505000"
+// RTL Simulation : 190 / 460 [175.00%] @ "11545000"
+// RTL Simulation : 191 / 460 [175.00%] @ "11595000"
+// RTL Simulation : 192 / 460 [125.00%] @ "11645000"
+// RTL Simulation : 193 / 460 [187.50%] @ "11745000"
+// RTL Simulation : 194 / 460 [175.00%] @ "11785000"
+// RTL Simulation : 195 / 460 [175.00%] @ "11835000"
+// RTL Simulation : 196 / 460 [125.00%] @ "11885000"
+// RTL Simulation : 197 / 460 [187.50%] @ "11985000"
+// RTL Simulation : 198 / 460 [175.00%] @ "12025000"
+// RTL Simulation : 199 / 460 [175.00%] @ "12075000"
+// RTL Simulation : 200 / 460 [125.00%] @ "12125000"
+// RTL Simulation : 201 / 460 [187.50%] @ "12225000"
+// RTL Simulation : 202 / 460 [175.00%] @ "12265000"
+// RTL Simulation : 203 / 460 [175.00%] @ "12315000"
+// RTL Simulation : 204 / 460 [125.00%] @ "12365000"
+// RTL Simulation : 205 / 460 [187.50%] @ "12465000"
+// RTL Simulation : 206 / 460 [175.00%] @ "12505000"
+// RTL Simulation : 207 / 460 [175.00%] @ "12555000"
+// RTL Simulation : 208 / 460 [125.00%] @ "12605000"
+// RTL Simulation : 209 / 460 [187.50%] @ "12705000"
+// RTL Simulation : 210 / 460 [175.00%] @ "12745000"
+// RTL Simulation : 211 / 460 [175.00%] @ "12795000"
+// RTL Simulation : 212 / 460 [125.00%] @ "12845000"
+// RTL Simulation : 213 / 460 [187.50%] @ "12945000"
+// RTL Simulation : 214 / 460 [175.00%] @ "12985000"
+// RTL Simulation : 215 / 460 [175.00%] @ "13035000"
+// RTL Simulation : 216 / 460 [125.00%] @ "13085000"
+// RTL Simulation : 217 / 460 [187.50%] @ "13185000"
+// RTL Simulation : 218 / 460 [175.00%] @ "13225000"
+// RTL Simulation : 219 / 460 [175.00%] @ "13275000"
+// RTL Simulation : 220 / 460 [125.00%] @ "13325000"
+// RTL Simulation : 221 / 460 [187.50%] @ "13425000"
+// RTL Simulation : 222 / 460 [175.00%] @ "13465000"
+// RTL Simulation : 223 / 460 [175.00%] @ "13515000"
+// RTL Simulation : 224 / 460 [125.00%] @ "13565000"
+// RTL Simulation : 225 / 460 [187.50%] @ "13665000"
+// RTL Simulation : 226 / 460 [175.00%] @ "13705000"
+// RTL Simulation : 227 / 460 [175.00%] @ "13755000"
+// RTL Simulation : 228 / 460 [125.00%] @ "13805000"
+// RTL Simulation : 229 / 460 [187.50%] @ "13905000"
+// RTL Simulation : 230 / 460 [175.00%] @ "13945000"
+// RTL Simulation : 231 / 460 [175.00%] @ "13995000"
+// RTL Simulation : 232 / 460 [125.00%] @ "14045000"
+// RTL Simulation : 233 / 460 [187.50%] @ "14145000"
+// RTL Simulation : 234 / 460 [175.00%] @ "14185000"
+// RTL Simulation : 235 / 460 [175.00%] @ "14235000"
+// RTL Simulation : 236 / 460 [125.00%] @ "14285000"
+// RTL Simulation : 237 / 460 [187.50%] @ "14385000"
+// RTL Simulation : 238 / 460 [175.00%] @ "14425000"
+// RTL Simulation : 239 / 460 [175.00%] @ "14475000"
+// RTL Simulation : 240 / 460 [125.00%] @ "14525000"
+// RTL Simulation : 241 / 460 [187.50%] @ "14625000"
+// RTL Simulation : 242 / 460 [175.00%] @ "14665000"
+// RTL Simulation : 243 / 460 [175.00%] @ "14715000"
+// RTL Simulation : 244 / 460 [125.00%] @ "14765000"
+// RTL Simulation : 245 / 460 [187.50%] @ "14865000"
+// RTL Simulation : 246 / 460 [175.00%] @ "14905000"
+// RTL Simulation : 247 / 460 [175.00%] @ "14955000"
+// RTL Simulation : 248 / 460 [125.00%] @ "15005000"
+// RTL Simulation : 249 / 460 [187.50%] @ "15105000"
+// RTL Simulation : 250 / 460 [175.00%] @ "15145000"
+// RTL Simulation : 251 / 460 [175.00%] @ "15195000"
+// RTL Simulation : 252 / 460 [125.00%] @ "15245000"
+// RTL Simulation : 253 / 460 [187.50%] @ "15345000"
+// RTL Simulation : 254 / 460 [175.00%] @ "15385000"
+// RTL Simulation : 255 / 460 [175.00%] @ "15435000"
+// RTL Simulation : 256 / 460 [125.00%] @ "15485000"
+// RTL Simulation : 257 / 460 [187.50%] @ "15585000"
+// RTL Simulation : 258 / 460 [175.00%] @ "15625000"
+// RTL Simulation : 259 / 460 [175.00%] @ "15675000"
+// RTL Simulation : 260 / 460 [125.00%] @ "15725000"
+// RTL Simulation : 261 / 460 [187.50%] @ "15825000"
+// RTL Simulation : 262 / 460 [175.00%] @ "15865000"
+// RTL Simulation : 263 / 460 [175.00%] @ "15915000"
+// RTL Simulation : 264 / 460 [125.00%] @ "15965000"
+// RTL Simulation : 265 / 460 [187.50%] @ "16065000"
+// RTL Simulation : 266 / 460 [175.00%] @ "16105000"
+// RTL Simulation : 267 / 460 [175.00%] @ "16155000"
+// RTL Simulation : 268 / 460 [125.00%] @ "16205000"
+// RTL Simulation : 269 / 460 [187.50%] @ "16305000"
+// RTL Simulation : 270 / 460 [175.00%] @ "16345000"
+// RTL Simulation : 271 / 460 [175.00%] @ "16395000"
+// RTL Simulation : 272 / 460 [125.00%] @ "16445000"
+// RTL Simulation : 273 / 460 [187.50%] @ "16545000"
+// RTL Simulation : 274 / 460 [175.00%] @ "16585000"
+// RTL Simulation : 275 / 460 [175.00%] @ "16635000"
+// RTL Simulation : 276 / 460 [125.00%] @ "16685000"
+// RTL Simulation : 277 / 460 [187.50%] @ "16785000"
+// RTL Simulation : 278 / 460 [175.00%] @ "16825000"
+// RTL Simulation : 279 / 460 [175.00%] @ "16875000"
+// RTL Simulation : 280 / 460 [125.00%] @ "16925000"
+// RTL Simulation : 281 / 460 [187.50%] @ "17025000"
+// RTL Simulation : 282 / 460 [175.00%] @ "17065000"
+// RTL Simulation : 283 / 460 [175.00%] @ "17115000"
+// RTL Simulation : 284 / 460 [125.00%] @ "17165000"
+// RTL Simulation : 285 / 460 [187.50%] @ "17265000"
+// RTL Simulation : 286 / 460 [175.00%] @ "17305000"
+// RTL Simulation : 287 / 460 [175.00%] @ "17355000"
+// RTL Simulation : 288 / 460 [125.00%] @ "17405000"
+// RTL Simulation : 289 / 460 [187.50%] @ "17505000"
+// RTL Simulation : 290 / 460 [175.00%] @ "17545000"
+// RTL Simulation : 291 / 460 [175.00%] @ "17595000"
+// RTL Simulation : 292 / 460 [125.00%] @ "17645000"
+// RTL Simulation : 293 / 460 [187.50%] @ "17745000"
+// RTL Simulation : 294 / 460 [175.00%] @ "17785000"
+// RTL Simulation : 295 / 460 [175.00%] @ "17835000"
+// RTL Simulation : 296 / 460 [125.00%] @ "17885000"
+// RTL Simulation : 297 / 460 [187.50%] @ "17985000"
+// RTL Simulation : 298 / 460 [175.00%] @ "18025000"
+// RTL Simulation : 299 / 460 [175.00%] @ "18075000"
+// RTL Simulation : 300 / 460 [125.00%] @ "18125000"
+// RTL Simulation : 301 / 460 [187.50%] @ "18225000"
+// RTL Simulation : 302 / 460 [175.00%] @ "18265000"
+// RTL Simulation : 303 / 460 [175.00%] @ "18315000"
+// RTL Simulation : 304 / 460 [125.00%] @ "18365000"
+// RTL Simulation : 305 / 460 [187.50%] @ "18465000"
+// RTL Simulation : 306 / 460 [175.00%] @ "18505000"
+// RTL Simulation : 307 / 460 [175.00%] @ "18555000"
+// RTL Simulation : 308 / 460 [125.00%] @ "18605000"
+// RTL Simulation : 309 / 460 [187.50%] @ "18705000"
+// RTL Simulation : 310 / 460 [175.00%] @ "18745000"
+// RTL Simulation : 311 / 460 [175.00%] @ "18795000"
+// RTL Simulation : 312 / 460 [125.00%] @ "18845000"
+// RTL Simulation : 313 / 460 [187.50%] @ "18945000"
+// RTL Simulation : 314 / 460 [175.00%] @ "18985000"
+// RTL Simulation : 315 / 460 [175.00%] @ "19035000"
+// RTL Simulation : 316 / 460 [125.00%] @ "19085000"
+// RTL Simulation : 317 / 460 [187.50%] @ "19185000"
+// RTL Simulation : 318 / 460 [175.00%] @ "19225000"
+// RTL Simulation : 319 / 460 [175.00%] @ "19275000"
+// RTL Simulation : 320 / 460 [125.00%] @ "19325000"
+// RTL Simulation : 321 / 460 [187.50%] @ "19425000"
+// RTL Simulation : 322 / 460 [175.00%] @ "19465000"
+// RTL Simulation : 323 / 460 [175.00%] @ "19515000"
+// RTL Simulation : 324 / 460 [125.00%] @ "19565000"
+// RTL Simulation : 325 / 460 [187.50%] @ "19665000"
+// RTL Simulation : 326 / 460 [175.00%] @ "19705000"
+// RTL Simulation : 327 / 460 [175.00%] @ "19755000"
+// RTL Simulation : 328 / 460 [125.00%] @ "19805000"
+// RTL Simulation : 329 / 460 [187.50%] @ "19905000"
+// RTL Simulation : 330 / 460 [175.00%] @ "19945000"
+// RTL Simulation : 331 / 460 [175.00%] @ "19995000"
+// RTL Simulation : 332 / 460 [125.00%] @ "20045000"
+// RTL Simulation : 333 / 460 [187.50%] @ "20145000"
+// RTL Simulation : 334 / 460 [175.00%] @ "20185000"
+// RTL Simulation : 335 / 460 [175.00%] @ "20235000"
+// RTL Simulation : 336 / 460 [125.00%] @ "20285000"
+// RTL Simulation : 337 / 460 [187.50%] @ "20385000"
+// RTL Simulation : 338 / 460 [175.00%] @ "20425000"
+// RTL Simulation : 339 / 460 [175.00%] @ "20475000"
+// RTL Simulation : 340 / 460 [125.00%] @ "20525000"
+// RTL Simulation : 341 / 460 [187.50%] @ "20625000"
+// RTL Simulation : 342 / 460 [175.00%] @ "20665000"
+// RTL Simulation : 343 / 460 [175.00%] @ "20715000"
+// RTL Simulation : 344 / 460 [125.00%] @ "20765000"
+// RTL Simulation : 345 / 460 [187.50%] @ "20865000"
+// RTL Simulation : 346 / 460 [175.00%] @ "20905000"
+// RTL Simulation : 347 / 460 [175.00%] @ "20955000"
+// RTL Simulation : 348 / 460 [125.00%] @ "21005000"
+// RTL Simulation : 349 / 460 [187.50%] @ "21105000"
+// RTL Simulation : 350 / 460 [175.00%] @ "21145000"
+// RTL Simulation : 351 / 460 [175.00%] @ "21195000"
+// RTL Simulation : 352 / 460 [125.00%] @ "21245000"
+// RTL Simulation : 353 / 460 [187.50%] @ "21345000"
+// RTL Simulation : 354 / 460 [175.00%] @ "21385000"
+// RTL Simulation : 355 / 460 [175.00%] @ "21435000"
+// RTL Simulation : 356 / 460 [125.00%] @ "21485000"
+// RTL Simulation : 357 / 460 [187.50%] @ "21585000"
+// RTL Simulation : 358 / 460 [175.00%] @ "21625000"
+// RTL Simulation : 359 / 460 [175.00%] @ "21675000"
+// RTL Simulation : 360 / 460 [125.00%] @ "21725000"
+// RTL Simulation : 361 / 460 [187.50%] @ "21825000"
+// RTL Simulation : 362 / 460 [175.00%] @ "21865000"
+// RTL Simulation : 363 / 460 [175.00%] @ "21915000"
+// RTL Simulation : 364 / 460 [125.00%] @ "21965000"
+// RTL Simulation : 365 / 460 [187.50%] @ "22065000"
+// RTL Simulation : 366 / 460 [175.00%] @ "22105000"
+// RTL Simulation : 367 / 460 [175.00%] @ "22155000"
+// RTL Simulation : 368 / 460 [125.00%] @ "22205000"
+// RTL Simulation : 369 / 460 [187.50%] @ "22305000"
+// RTL Simulation : 370 / 460 [175.00%] @ "22345000"
+// RTL Simulation : 371 / 460 [175.00%] @ "22395000"
+// RTL Simulation : 372 / 460 [125.00%] @ "22445000"
+// RTL Simulation : 373 / 460 [187.50%] @ "22545000"
+// RTL Simulation : 374 / 460 [175.00%] @ "22585000"
+// RTL Simulation : 375 / 460 [175.00%] @ "22635000"
+// RTL Simulation : 376 / 460 [125.00%] @ "22685000"
+// RTL Simulation : 377 / 460 [187.50%] @ "22785000"
+// RTL Simulation : 378 / 460 [175.00%] @ "22825000"
+// RTL Simulation : 379 / 460 [175.00%] @ "22875000"
+// RTL Simulation : 380 / 460 [125.00%] @ "22925000"
+// RTL Simulation : 381 / 460 [187.50%] @ "23025000"
+// RTL Simulation : 382 / 460 [175.00%] @ "23065000"
+// RTL Simulation : 383 / 460 [175.00%] @ "23115000"
+// RTL Simulation : 384 / 460 [125.00%] @ "23165000"
+// RTL Simulation : 385 / 460 [187.50%] @ "23265000"
+// RTL Simulation : 386 / 460 [175.00%] @ "23305000"
+// RTL Simulation : 387 / 460 [175.00%] @ "23355000"
+// RTL Simulation : 388 / 460 [125.00%] @ "23405000"
+// RTL Simulation : 389 / 460 [187.50%] @ "23505000"
+// RTL Simulation : 390 / 460 [175.00%] @ "23545000"
+// RTL Simulation : 391 / 460 [175.00%] @ "23595000"
+// RTL Simulation : 392 / 460 [125.00%] @ "23645000"
+// RTL Simulation : 393 / 460 [187.50%] @ "23745000"
+// RTL Simulation : 394 / 460 [175.00%] @ "23785000"
+// RTL Simulation : 395 / 460 [175.00%] @ "23835000"
+// RTL Simulation : 396 / 460 [125.00%] @ "23885000"
+// RTL Simulation : 397 / 460 [187.50%] @ "23985000"
+// RTL Simulation : 398 / 460 [175.00%] @ "24025000"
+// RTL Simulation : 399 / 460 [175.00%] @ "24075000"
+// RTL Simulation : 400 / 460 [125.00%] @ "24125000"
+// RTL Simulation : 401 / 460 [187.50%] @ "24225000"
+// RTL Simulation : 402 / 460 [175.00%] @ "24265000"
+// RTL Simulation : 403 / 460 [175.00%] @ "24315000"
+// RTL Simulation : 404 / 460 [125.00%] @ "24365000"
+// RTL Simulation : 405 / 460 [187.50%] @ "24465000"
+// RTL Simulation : 406 / 460 [175.00%] @ "24505000"
+// RTL Simulation : 407 / 460 [175.00%] @ "24555000"
+// RTL Simulation : 408 / 460 [125.00%] @ "24605000"
+// RTL Simulation : 409 / 460 [187.50%] @ "24705000"
+// RTL Simulation : 410 / 460 [175.00%] @ "24745000"
+// RTL Simulation : 411 / 460 [175.00%] @ "24795000"
+// RTL Simulation : 412 / 460 [125.00%] @ "24845000"
+// RTL Simulation : 413 / 460 [187.50%] @ "24945000"
+// RTL Simulation : 414 / 460 [175.00%] @ "24985000"
+// RTL Simulation : 415 / 460 [175.00%] @ "25035000"
+// RTL Simulation : 416 / 460 [125.00%] @ "25085000"
+// RTL Simulation : 417 / 460 [187.50%] @ "25185000"
+// RTL Simulation : 418 / 460 [175.00%] @ "25225000"
+// RTL Simulation : 419 / 460 [175.00%] @ "25275000"
+// RTL Simulation : 420 / 460 [125.00%] @ "25325000"
+// RTL Simulation : 421 / 460 [187.50%] @ "25425000"
+// RTL Simulation : 422 / 460 [175.00%] @ "25465000"
+// RTL Simulation : 423 / 460 [175.00%] @ "25515000"
+// RTL Simulation : 424 / 460 [125.00%] @ "25565000"
+// RTL Simulation : 425 / 460 [187.50%] @ "25665000"
+// RTL Simulation : 426 / 460 [175.00%] @ "25705000"
+// RTL Simulation : 427 / 460 [175.00%] @ "25755000"
+// RTL Simulation : 428 / 460 [125.00%] @ "25805000"
+// RTL Simulation : 429 / 460 [187.50%] @ "25905000"
+// RTL Simulation : 430 / 460 [175.00%] @ "25945000"
+// RTL Simulation : 431 / 460 [175.00%] @ "25995000"
+// RTL Simulation : 432 / 460 [125.00%] @ "26045000"
+// RTL Simulation : 433 / 460 [187.50%] @ "26145000"
+// RTL Simulation : 434 / 460 [175.00%] @ "26185000"
+// RTL Simulation : 435 / 460 [175.00%] @ "26235000"
+// RTL Simulation : 436 / 460 [125.00%] @ "26285000"
+// RTL Simulation : 437 / 460 [187.50%] @ "26385000"
+// RTL Simulation : 438 / 460 [175.00%] @ "26425000"
+// RTL Simulation : 439 / 460 [175.00%] @ "26475000"
+// RTL Simulation : 440 / 460 [125.00%] @ "26525000"
+// RTL Simulation : 441 / 460 [187.50%] @ "26625000"
+// RTL Simulation : 442 / 460 [175.00%] @ "26665000"
+// RTL Simulation : 443 / 460 [175.00%] @ "26715000"
+// RTL Simulation : 444 / 460 [125.00%] @ "26765000"
+// RTL Simulation : 445 / 460 [187.50%] @ "26865000"
+// RTL Simulation : 446 / 460 [175.00%] @ "26905000"
+// RTL Simulation : 447 / 460 [175.00%] @ "26955000"
+// RTL Simulation : 448 / 460 [125.00%] @ "27005000"
+// RTL Simulation : 449 / 460 [187.50%] @ "27105000"
+// RTL Simulation : 450 / 460 [175.00%] @ "27145000"
+// RTL Simulation : 451 / 460 [175.00%] @ "27195000"
+// RTL Simulation : 452 / 460 [125.00%] @ "27245000"
+// RTL Simulation : 453 / 460 [187.50%] @ "27345000"
+// RTL Simulation : 454 / 460 [175.00%] @ "27385000"
+// RTL Simulation : 455 / 460 [175.00%] @ "27435000"
+// RTL Simulation : 456 / 460 [125.00%] @ "27485000"
+// RTL Simulation : 457 / 460 [187.50%] @ "27585000"
+// RTL Simulation : 458 / 460 [175.00%] @ "27625000"
+// RTL Simulation : 459 / 460 [175.00%] @ "27675000"
+// RTL Simulation : 460 / 460 [100.00%] @ "27725000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 27785 ns : File "C:/HLS-multirate-DSP/HLS_Multirate/Multirate_v3/Multirate_v3/hls/sim/verilog/FIR_HLS.autotb.v" Line 196
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Nov 16 02:16:01 2025...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: Reading ../../../../../../Matlab/TS_HLS_multirate.dat
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_multirate.dat
+INFO: Reading ../../../../../../Matlab/TS_HLS_multirate.res
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_multirate.res
+INFO: Input and reference data lengths match.
+Mismatch at sample  280: ref=-0.358093, dut=-0.304932
+Mismatch at sample  281: ref=-0.481445, dut=-0.420898
+Mismatch at sample  282: ref=-0.582062, dut=-0.569702
+Mismatch at sample  283: ref=-0.672455, dut=-0.785156
+Mismatch at sample  284: ref=-0.771301, dut=0.978027
+Mismatch at sample  285: ref=-0.851379, dut=0.883667
+Mismatch at sample  286: ref=-0.910278, dut=-0.931274
+Mismatch at sample  287: ref=-0.951416, dut=-0.438354
+Mismatch at sample  288: ref=-0.987885, dut=0.21582
+Mismatch at sample  289: ref=0.999847, dut=0.791748
+Mismatch at sample  290: ref=-0.999756, dut=-0.976807
+Mismatch at sample  291: ref=-0.980927, dut=0.810913
+Mismatch at sample  292: ref=-0.947968, dut=0.255737
+Mismatch at sample  293: ref=-0.892883, dut=-0.379883
+Mismatch at sample  294: ref=-0.838196, dut=-0.859253
+Mismatch at sample  295: ref=-0.769135, dut=0.96582
+Mismatch at sample  296: ref=-0.679352, dut=-0.930054
+Mismatch at sample  297: ref=-0.573975, dut=-0.686768
+Mismatch at sample  298: ref=-0.480408, dut=-0.46814
+Mismatch at sample  299: ref=-0.378174, dut=-0.317749
+Mismatch at sample  300: ref=-0.251801, dut=-0.19873
+---------------------------------------
+Testbench Results
+Samples processed : 460
+Mismatches        : 21
+Status: FAIL [!!] (21 samples out of tolerance)
+---------------------------------------
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 460
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 53.454 seconds; peak allocated memory: 344.203 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 58s

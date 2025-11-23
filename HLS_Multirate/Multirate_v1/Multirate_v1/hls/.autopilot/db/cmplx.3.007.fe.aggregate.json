@@ -1,42 +1,26 @@
 {
   "0": {
-    "basicblocks": 4,
-    "calls": "5 2 1",
+    "basicblocks": 6,
+    "calls": "2 1 2 3 3 3 3 3 3",
     "file": "FIR_HLS.cpp",
-    "fileloc": 8,
-    "instructions": 24,
+    "fileloc": 14,
+    "instructions": 91,
     "loads": {
-      "G": 1,
-      "L": 1
+      "G": 7,
+      "L": 9
     },
-    "name": "FIR_HLS",
+    "name": "Multirate_v1",
     "stores": {
-      "G": 1
+      "G": 5
     },
-    "total_instructions": 458
+    "total_instructions": 378
   },
   "1": {
-    "basicblocks": 6,
-    "calls": "3 4 4 4",
-    "file": "FIR_HLS.cpp",
-    "fileloc": 89,
-    "instructions": 46,
-    "loads": {
-      "G": 4,
-      "L": 4
-    },
-    "name": "INTERPOLATOR",
-    "stores": {
-      "G": 2
-    },
-    "total_instructions": 198
-  },
-  "2": {
     "basicblocks": 5,
     "calls": "",
     "file": "FIR_HLS.cpp",
-    "fileloc": 37,
-    "instructions": 37,
+    "fileloc": 60,
+    "instructions": 31,
     "loads": {
       "G": 3
     },
@@ -45,14 +29,14 @@
       "G": 2,
       "L": 1
     },
-    "total_instructions": 37
+    "total_instructions": 31
   },
-  "3": {
+  "2": {
     "basicblocks": 5,
     "calls": "",
     "file": "FIR_HLS.cpp",
-    "fileloc": 37,
-    "instructions": 38,
+    "fileloc": 60,
+    "instructions": 32,
     "loads": {
       "G": 1,
       "L": 2
@@ -61,14 +45,14 @@
     "stores": {
       "L": 3
     },
-    "total_instructions": 38
+    "total_instructions": 32
   },
-  "4": {
+  "3": {
     "basicblocks": 5,
     "calls": "",
     "file": "FIR_HLS.cpp",
-    "fileloc": 37,
-    "instructions": 38,
+    "fileloc": 60,
+    "instructions": 32,
     "loads": {
       "L": 3
     },
@@ -76,22 +60,6 @@
     "stores": {
       "L": 3
     },
-    "total_instructions": 38
-  },
-  "5": {
-    "basicblocks": 6,
-    "calls": "3 4 4 4",
-    "file": "FIR_HLS.cpp",
-    "fileloc": 56,
-    "instructions": 47,
-    "loads": {
-      "G": 4,
-      "L": 4
-    },
-    "name": "DECIMATOR",
-    "stores": {
-      "G": 4
-    },
-    "total_instructions": 199
+    "total_instructions": 32
   }
 }

@@ -3,7 +3,7 @@
 
 
 
-void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+void Direct_FIR_DSP_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
     #pragma HLS INTERFACE mode=axis port=input
     #pragma HLS INTERFACE mode=axis port=output
     #pragma HLS INTERFACE mode=ap_ctrl_none port=return
@@ -16,7 +16,7 @@ void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
-    //#pragma HLS PIPELINE
+    #pragma HLS PIPELINE
 	fir_data_t  y;
 	ap_fixed<32,1> FIR_accu32=0;
 

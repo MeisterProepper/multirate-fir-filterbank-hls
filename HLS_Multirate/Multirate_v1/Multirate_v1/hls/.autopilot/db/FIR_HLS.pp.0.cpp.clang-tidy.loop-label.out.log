@@ -18,13 +18,13 @@ C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\F
       ^~~
       VITIS_LOOP_1248_1: 
 C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:4048:7: note: FIX-IT applied suggested code changes
-C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5938:2: warning: Added loop label VITIS_LOOP_44_1:   [xilinx-label-all-loops]
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5951:2: warning: Added loop label VITIS_LOOP_67_1:   [xilinx-label-all-loops]
  for(int i = 0; i < N_delays; i++)
  ^~~
- VITIS_LOOP_44_1: 
-C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5938:2: note: FIX-IT applied suggested code changes
-C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5941:2: warning: Added loop label VITIS_LOOP_47_2:   [xilinx-label-all-loops]
+ VITIS_LOOP_67_1: 
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5951:2: note: FIX-IT applied suggested code changes
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5954:2: warning: Added loop label VITIS_LOOP_70_2:   [xilinx-label-all-loops]
  for(int i = 1; i < N_delays; i++)
  ^~~
- VITIS_LOOP_47_2: 
-C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5941:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_70_2: 
+C:\HLS-multirate-DSP\HLS_Multirate\Multirate_v1\Multirate_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp:5954:2: note: FIX-IT applied suggested code changes

@@ -14,19 +14,20 @@ INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.dat' from 
 INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.dat' to the project
 INFO: [HLS 200-1465] Applying ini 'tb.file=../../Matlab/TS_HLS_normal.res' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(12)
 INFO: [HLS 200-10] Adding test bench file 'C:/HLS-multirate-DSP/Matlab/TS_HLS_normal.res' to the project
-INFO: [HLS 200-1465] Applying ini 'syn.top=FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(13)
+INFO: [HLS 200-1465] Applying ini 'syn.top=Folded_FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(13)
 INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(4)
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
 INFO: [HLS 200-1465] Applying ini 'part=xck26-sfvc784-2LV-c' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(1)
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=Folded_FIR_HLS' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/hls_config.cfg(5)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 4.496 seconds; current allocated memory: 272.594 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 4.103 seconds; current allocated memory: 272.852 MB.
 INFO: [HLS 200-10] Analyzing design file 'FIR_HLS.cpp' ... 
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.892 seconds; current allocated memory: 275.773 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.904 seconds; current allocated memory: 275.891 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 791 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 200-1995] There were 12,161 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 736 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 12,158 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 3,417 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 3,011 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 3,011 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
@@ -41,130 +42,130 @@ INFO: [HLS 200-1995] There were 2,736 instructions in the design after the 'Perf
 INFO: [HLS 200-1995] There were 2,736 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 2,738 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 2,744 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_FIR/Folded_FIR_HLS/Folded_FIR_HLS/hls/syn/report/csynth_design_size.rpt
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_37_2' is marked as complete unroll implied by the pipeline pragma (FIR_HLS.cpp:37:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_30_1' is marked as complete unroll implied by the pipeline pragma (FIR_HLS.cpp:30:22)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_37_2' (FIR_HLS.cpp:37:22) in function 'FIR_filter' completely with a factor of 391 (FIR_HLS.cpp:18:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_30_1' (FIR_HLS.cpp:30:22) in function 'FIR_filter' completely with a factor of 196 (FIR_HLS.cpp:18:0)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_31_2' is marked as complete unroll implied by the pipeline pragma (FIR_HLS.cpp:31:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_27_1' is marked as complete unroll implied by the pipeline pragma (FIR_HLS.cpp:27:22)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_31_2' (FIR_HLS.cpp:31:22) in function 'FIR_filter' completely with a factor of 391 (FIR_HLS.cpp:18:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_27_1' (FIR_HLS.cpp:27:22) in function 'FIR_filter' completely with a factor of 196 (FIR_HLS.cpp:18:0)
 INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR' due to pipeline pragma (./../../Matlab/FIR_normal_HLS.h:18:0)
 INFO: [HLS 214-248] Applying array_partition to '_ZL12H_filter_FIR': Complete partitioning on dimension 1. (./../../Matlab/FIR_normal_HLS.h:18:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 14.105 seconds; current allocated memory: 277.648 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 277.648 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.136 seconds; current allocated memory: 277.895 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 277.895 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.319 seconds; current allocated memory: 284.949 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 285.055 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.167 seconds; current allocated memory: 288.039 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 288.141 MB.
 INFO: [XFORM 203-11] Balancing expressions in function 'FIR_filter' (FIR_HLS.cpp:18:45)...126 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.568 seconds; current allocated memory: 312.078 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.751 seconds; current allocated memory: 320.145 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.544 seconds; current allocated memory: 313.602 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.639 seconds; current allocated memory: 321.551 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'FIR_HLS' ...
+INFO: [HLS 200-10] Synthesizing 'Folded_FIR_HLS' ...
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'FIR_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_307) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_306) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_304) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_303) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_300) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_299) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_297) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_296) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_292) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_291) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_289) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_288) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_285) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_284) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_282) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_277) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_274) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_273) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_270) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_269) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_268) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_267) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_262) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_260) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_259) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_256) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_255) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_254) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_253) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_247) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_246) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_244) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_243) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_240) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_239) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_238) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_237) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_233) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_230) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_229) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_226) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_225) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_223) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_218) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_217) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_215) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_214) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_210) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_208) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_203) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_200) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_197) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_196) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_195) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln31_194) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_307) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_306) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_304) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_303) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_300) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_299) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_297) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_296) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_292) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_291) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_289) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_288) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_285) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_284) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_282) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_277) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_274) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_273) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_270) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_269) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_268) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_267) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_262) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_260) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_259) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_256) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_255) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_254) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_253) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_247) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_246) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_244) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_243) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_240) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_239) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_238) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_237) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_233) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_230) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_229) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_226) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_225) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_223) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_218) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_217) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_215) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_214) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_210) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_208) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_203) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_200) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_197) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_196) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_195) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln28_194) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_59) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=tmp123) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=tmp111) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=tmp96) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=tmp85) to 3 in order to utilize available DSP registers.
 INFO: [HLS 200-486] Changing DSP latency (root=tmp80) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_58) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_56) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_54) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_53) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_50) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_48) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_46) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_43) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_40) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_37) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_35) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_33) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_30) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_28) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_26) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_23) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_18) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_15) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=mul_ln31_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_58) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_54) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_50) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_46) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_30) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_26) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln28_12) to 3 in order to utilize available DSP registers.
 INFO: [SCHED 204-61] Pipelining function 'FIR_filter'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, function 'FIR_filter'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 5.878 seconds; current allocated memory: 340.461 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.59 seconds; current allocated memory: 339.941 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.919 seconds; current allocated memory: 341.465 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.858 seconds; current allocated memory: 340.938 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'FIR_HLS' 
+INFO: [HLS 200-42] -- Implementing module 'Folded_FIR_HLS' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.581 seconds; current allocated memory: 341.570 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.551 seconds; current allocated memory: 341.039 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 341.613 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.086 seconds; current allocated memory: 341.062 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -622,20 +623,20 @@ INFO: [RTGEN 206-100] Generating core module 'ama_submuladd_18s_17s_6ns_22s_25_4
 INFO: [RTGEN 206-100] Generating core module 'ama_submuladd_18s_17s_7ns_25s_26_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_19s_8ns_27_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 18.165 seconds; current allocated memory: 357.145 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 18.255 seconds; current allocated memory: 356.625 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'FIR_HLS' 
+INFO: [HLS 200-10] -- Generating RTL for module 'Folded_FIR_HLS' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/input_r' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'FIR_HLS/output_r' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'FIR_HLS' to 'ap_ctrl_none'.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_HLS'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.311 seconds; current allocated memory: 390.484 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.688 seconds; current allocated memory: 390.484 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.405 seconds; current allocated memory: 398.852 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for FIR_HLS.
-INFO: [VLOG 209-307] Generating Verilog RTL for FIR_HLS.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Folded_FIR_HLS/input_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Folded_FIR_HLS/output_r' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'Folded_FIR_HLS' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Folded_FIR_HLS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 3.338 seconds; current allocated memory: 390.074 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.963 seconds; current allocated memory: 390.219 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.914 seconds; current allocated memory: 398.812 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for Folded_FIR_HLS.
+INFO: [VLOG 209-307] Generating Verilog RTL for Folded_FIR_HLS.
 INFO: [HLS 200-789] **** Estimated Fmax: 173.90 MHz
-INFO: [HLS 200-112] Total CPU user time: 14 seconds. Total CPU system time: 5 seconds. Total elapsed time: 62.625 seconds; peak allocated memory: 399.762 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 1m 8s
+INFO: [HLS 200-112] Total CPU user time: 13 seconds. Total CPU system time: 5 seconds. Total elapsed time: 55.462 seconds; peak allocated memory: 399.789 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 0s

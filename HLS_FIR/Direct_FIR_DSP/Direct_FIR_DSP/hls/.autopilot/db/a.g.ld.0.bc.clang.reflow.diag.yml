@@ -2,12 +2,12 @@
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 13, Column: 22 }
-Function:        _Z7FIR_HLSRN3hls6streamIsLi0EEES2_
+Function:        _Z14Direct_FIR_DSPRN3hls6streamIsLi0EEES2_
 Args:            
   - Callee:          'FIR_filter(short*, short const*, short, short, int)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 20, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'FIR_HLS(hls::stream<short, 0>&, hls::stream<short, 0>&)'
+  - Caller:          'Direct_FIR_DSP(hls::stream<short, 0>&, hls::stream<short, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
@@ -15,37 +15,37 @@ Args:
 Pass:            inline
 Name:            NeverInline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 13, Column: 22 }
-Function:        _Z7FIR_HLSRN3hls6streamIsLi0EEES2_
+Function:        _Z14Direct_FIR_DSPRN3hls6streamIsLi0EEES2_
 Args:            
   - Callee:          'FIR_filter(short*, short const*, short, short, int)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 20, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          'FIR_HLS(hls::stream<short, 0>&, hls::stream<short, 0>&)'
+  - Caller:          'Direct_FIR_DSP(hls::stream<short, 0>&, hls::stream<short, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-Function:        apatb_FIR_HLS_ir
+Function:        apatb_Direct_FIR_DSP_ir
 Args:            
-  - Callee:          'FIR_HLS(hls::stream<short, 0>&, hls::stream<short, 0>&)'
+  - Callee:          'Direct_FIR_DSP(hls::stream<short, 0>&, hls::stream<short, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ' not inlined into '
-  - Caller:          apatb_FIR_HLS_ir
+  - Caller:          apatb_Direct_FIR_DSP_ir
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            Inline
 DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
-Function:        _Z7FIR_HLSRN3hls6streamIsLi0EEES2_
+Function:        _Z14Direct_FIR_DSPRN3hls6streamIsLi0EEES2_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'FIR_filter(short*, short const*, short, short, int)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 20, Column: 0 }
   - String:          ''' into '''
-  - Caller:          'FIR_HLS(hls::stream<short, 0>&, hls::stream<short, 0>&)'
+  - Caller:          'Direct_FIR_DSP(hls::stream<short, 0>&, hls::stream<short, 0>&)'
     DebugLoc:        { File: FIR_HLS.cpp, Line: 6, Column: 0 }
   - String:          ''''
 ...

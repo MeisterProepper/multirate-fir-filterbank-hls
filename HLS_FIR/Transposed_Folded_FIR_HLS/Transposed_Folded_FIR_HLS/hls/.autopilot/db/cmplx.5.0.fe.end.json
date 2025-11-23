@@ -2,7 +2,7 @@
     "1": {
         "name": "FIR_filter",
         "file": "FIR_HLS.cpp",
-        "fileloc": "19",
+        "fileloc": "16",
         "instructions": "1548",
         "total_instructions": "1548",
         "calls": "",
@@ -15,7 +15,7 @@
         }
     },
     "0": {
-        "name": "FIR_HLS",
+        "name": "Transposed_Folded_FIR_HLS",
         "file": "FIR_HLS.cpp",
         "fileloc": "6",
         "instructions": "10",

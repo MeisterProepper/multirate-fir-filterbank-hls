@@ -5826,7 +5826,7 @@ inline __attribute__((nodebug)) bool operator!=(
 # 1 "./../../Matlab/FIR_multirate_HLS.h" 1
 # 16 "./../../Matlab/FIR_multirate_HLS.h"
 typedef ap_fixed<16,1> coef_data_t;
-typedef ap_fixed<32,1> delay_data_t;
+typedef ap_fixed<16,1> delay_data_t;
 
 
 
@@ -5882,7 +5882,7 @@ const coef_data_t b_FIR_dec_int_43[5]={
 
 typedef ap_fixed<16,1> fir_data_t;
 
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+__attribute__((sdx_kernel("Multirate_v1", 0))) void Multirate_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 
@@ -5893,35 +5893,48 @@ void INTERPOLATOR(hls::stream<fir_data_t> &in, hls::stream<fir_data_t> &out);
 
 
 
+    static short mod_value=0;
+    static fir_data_t y1_phase0=0;
+    static fir_data_t y1_phase1=0;
+    static fir_data_t y1_phase2=0;
+    static fir_data_t y1_phase3=0;
+    static fir_data_t y1_ges =0;
+    static fir_data_t y2=0;
 
-
-__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("Multirate_v1", 0))) void Multirate_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=FIR_HLS
-# 8 "FIR_HLS.cpp"
+#pragma HLSDIRECTIVE TOP name=Multirate_v1
+# 14 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input
 #pragma HLS INTERFACE mode=axis port=output
 #pragma HLS INTERFACE mode=ap_ctrl_none port=return
-#pragma HLS DATAFLOW
+# 29 "FIR_HLS.cpp"
+ if (mod_value==0) {
+        y1_phase0 = FIR_filter(H_filter_FIR_dec_40, b_FIR_dec_int_40, 6, input.read());
 
+        y1_ges = y1_phase0 + y1_phase1 + y1_phase2 + y1_phase3;
 
- static short mod_value=0;
-    static hls::stream<fir_data_t> dec_out;
-    static hls::stream<fir_data_t> kernel_out;
-
-    DECIMATOR(input, dec_out);
-    if (mod_value==0) {
-        kernel_out.write(FIR_filter(H_filter_FIR_kernel, b_FIR_kernel, 117, dec_out.read()));
+        y2 = FIR_filter(H_filter_FIR_kernel, b_FIR_kernel, 117, y1_ges);
+        output.write(FIR_filter(H_filter_FIR_int_40, b_FIR_dec_int_40, 6, y2)*4);
+        mod_value=1;
+    }
+    else if (mod_value==1) {
+        y1_phase1 = FIR_filter(H_filter_FIR_dec_43, b_FIR_dec_int_43, 5, input.read());
+        output.write(FIR_filter(H_filter_FIR_int_41, b_FIR_dec_int_41, 5, y2)*4);
+        mod_value=2;
+    }
+    else if (mod_value==2) {
+        y1_phase2 = FIR_filter(H_filter_FIR_dec_42, b_FIR_dec_int_42, 5, input.read());
+        output.write(FIR_filter(H_filter_FIR_int_42, b_FIR_dec_int_42, 5, y2)*4);
         mod_value=3;
+
     }
     else {
-        mod_value--;
+        y1_phase3 = FIR_filter(H_filter_FIR_dec_41, b_FIR_dec_int_41, 5, input.read());
+        output.write( FIR_filter(H_filter_FIR_int_43, b_FIR_dec_int_43, 5, y2)*4);
+        mod_value=0;
     }
-
-    INTERPOLATOR(kernel_out, output);
-
-
 
 }
 
@@ -5935,71 +5948,12 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 
  FIR_delays[N_delays-1] = x_n;
 
- VITIS_LOOP_44_1: for(int i = 0; i < N_delays; i++)
+ VITIS_LOOP_67_1: for(int i = 0; i < N_delays; i++)
   FIR_accu32 += FIR_delays[N_delays-1-i] * FIR_coe[i];
 
- VITIS_LOOP_47_2: for(int i = 1; i < N_delays; i++)
+ VITIS_LOOP_70_2: for(int i = 1; i < N_delays; i++)
   FIR_delays[i-1] = FIR_delays[i];
 
  y = FIR_accu32;
  return y;
-}
-
-
-
-void DECIMATOR(hls::stream<fir_data_t> &in, hls::stream<fir_data_t> &out){
-
-    static short mod_value=0;
-    static fir_data_t y1_phase0=0;
-    static fir_data_t y1_phase1=0;
-    static fir_data_t y1_phase2=0;
-    static fir_data_t y1_phase3=0;
-
-    if (mod_value==0) {
-        y1_phase0 = FIR_filter(H_filter_FIR_dec_40, b_FIR_dec_int_40, 6, in.read());
-        out.write( y1_phase0 + y1_phase1 + y1_phase2 + y1_phase3);
-        mod_value=1;
-    }
-    else if (mod_value==1) {
-        y1_phase1 = FIR_filter(H_filter_FIR_dec_43, b_FIR_dec_int_43, 5, in.read());
-        mod_value=2;
-    }
-    else if (mod_value==2) {
-        y1_phase2 = FIR_filter(H_filter_FIR_dec_42, b_FIR_dec_int_42, 5, in.read());
-        mod_value=3;
-
-    }
-    else {
-        y1_phase3 = FIR_filter(H_filter_FIR_dec_41, b_FIR_dec_int_41, 5, in.read());
-        mod_value=0;
-    }
-
-}
-
-
-
-
-
-void INTERPOLATOR(hls::stream<fir_data_t> &in, hls::stream<fir_data_t> &out){
-    static short mod_value=0;
-    static fir_data_t y2=0;
-    if (mod_value==0) {
-        y2 = in.read();
-        out.write(FIR_filter(H_filter_FIR_int_40, b_FIR_dec_int_40, 6, y2)*4);
-        mod_value=1;
-    }
-    else if (mod_value==1) {
-        out.write(FIR_filter(H_filter_FIR_int_41, b_FIR_dec_int_41, 5, y2)*4);
-        mod_value=2;
-    }
-    else if (mod_value==2) {
-        out.write(FIR_filter(H_filter_FIR_int_42, b_FIR_dec_int_42, 5, y2)*4);
-        mod_value=3;
-
-    }
-    else {
-        out.write( FIR_filter(H_filter_FIR_int_43, b_FIR_dec_int_43, 5, y2)*4);
-        mod_value=0;
-    }
-
 }

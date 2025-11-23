@@ -8,5 +8,5 @@ typedef ap_fixed<16,1> fir_data_t;
 
 static ap_shift_reg<delay_data_t,N_DELAYS_FIR> fir_shiftreg;
 
-void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+void Direct_FIR_SRL(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
