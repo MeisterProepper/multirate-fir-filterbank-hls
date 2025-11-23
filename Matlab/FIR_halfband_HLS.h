@@ -13,26 +13,27 @@
 //------------------------------------------- 
  
 #include <ap_fixed.h> 
+#include <ap_shift_reg.h> 
  
 typedef ap_fixed<16,1> coef_data_t; 
 typedef ap_fixed<16,1> delay_data_t; 
  
 #define N_DELAYS_FIR_kernel_MM 124
-#define N_DELAYS_FIR_dec_int_1_20 5
+#define N_DELAYS_FIR_dec_int_1_20 2
 #define N_DELAYS_FIR_dec_int_1_21 4
-
-#define N_DELAYS_FIR_dec_int_2_20 7
+#define N_DELAYS_FIR_dec_int_2_20 3
 #define N_DELAYS_FIR_dec_int_2_21 6
 
 static delay_data_t H_filter_FIR_kernel[N_DELAYS_FIR_kernel_MM]; 
-static delay_data_t H_filter_FIR_dec_1_20[N_DELAYS_FIR_dec_int_1_20]; 
 static delay_data_t H_filter_FIR_dec_1_21[N_DELAYS_FIR_dec_int_1_21]; 
-static delay_data_t H_filter_FIR_int_1_20[N_DELAYS_FIR_dec_int_1_20]; 
 static delay_data_t H_filter_FIR_int_1_21[N_DELAYS_FIR_dec_int_1_21]; 
-static delay_data_t H_filter_FIR_dec_2_20[N_DELAYS_FIR_dec_int_2_20]; 
 static delay_data_t H_filter_FIR_dec_2_21[N_DELAYS_FIR_dec_int_2_21]; 
-static delay_data_t H_filter_FIR_int_2_20[N_DELAYS_FIR_dec_int_2_20]; 
 static delay_data_t H_filter_FIR_int_2_21[N_DELAYS_FIR_dec_int_2_21]; 
+
+static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_1_20> H_dec_1_20; 
+static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_1_20> H_int_1_20; 
+static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_2_20> H_dec_2_20; 
+static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_2_20> H_int_2_20; 
 
 const coef_data_t b_FIR_kernel[124]={
  0.001530, -0.002912, 0.000811, 0.000938, -0.000937, -0.001138,
@@ -57,14 +58,8 @@ const coef_data_t b_FIR_kernel[124]={
  -0.001154, -0.001219, 0.001083, 0.000905, -0.001138, -0.000937,
  0.000938, 0.000811, -0.002912, 0.001530,};
 
-const coef_data_t b_FIR_dec_int_1_20[5]={
- -0.000000, 0.000000, 0.500000, 0.000000, -0.000000,};
-
 const coef_data_t b_FIR_dec_int_1_21[4]={
  -0.035056, 0.284772, 0.284772, -0.035056,};
-
-const coef_data_t b_FIR_dec_int_2_20[7]={
- 0.000006, -0.000027, 0.000048, 0.499945, 0.000048, -0.000027, 0.000006,};
 
 const coef_data_t b_FIR_dec_int_2_21[6]={
  0.012880, -0.063609, 0.301481, 0.301481, -0.063609, 0.012880,};

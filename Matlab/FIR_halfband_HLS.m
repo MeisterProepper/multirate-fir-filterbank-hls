@@ -225,7 +225,8 @@ fprintf(file_ID, '// N_FIR_dec_int_1 = %d\n',  N_FIR_Dec_Int1);
 fprintf(file_ID, '// N_FIR_dec_int_2 = %d\n',  N_FIR_Dec_Int2);
 fprintf(file_ID, '//------------------------------------------- \n \n');
 
-fprintf(file_ID, '#include <ap_fixed.h> \n \n');
+fprintf(file_ID, '#include <ap_fixed.h> \n');
+fprintf(file_ID, '#include <ap_shift_reg.h> \n \n');
 
 fprintf(file_ID, 'typedef ap_fixed<16,1> coef_data_t; \n');
 fprintf(file_ID, 'typedef ap_fixed<16,1> delay_data_t; \n \n');
@@ -234,42 +235,39 @@ fprintf(file_ID, 'typedef ap_fixed<16,1> delay_data_t; \n \n');
 
 fprintf(file_ID, '#define N_DELAYS_FIR_kernel_MM %d\n', length(b_FIR_kernel_MM));
 
-for i=1:MM1
-    fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_1_%d%d %d\n', MM1, i-1, length(b_dec_int1{i}));
-end
+fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_1_20 %d\n', (length(b_dec_int1{1})-1)/2);
+
+fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_1_21 %d\n', length(b_dec_int1{2}));
+
+fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_2_20 %d\n', (length(b_dec_int2{1})-1)/2);
+
+fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_2_21 %d\n', length(b_dec_int2{2}));
+
 fprintf(file_ID, '\n');
-
-
-
-
-for i=1:MM2
-    fprintf(file_ID, '#define N_DELAYS_FIR_dec_int_2_%d%d %d\n', MM2, i-1, length(b_dec_int2{i}));
-end
-fprintf(file_ID, '\n');
-
 
 
 fprintf(file_ID, 'static delay_data_t H_filter_FIR_kernel[N_DELAYS_FIR_kernel_MM]; \n');
 
-for i=1:MM1
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_1_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n', MM1, i-1,MM1,i-1);
-end
+fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_1_21[N_DELAYS_FIR_dec_int_1_21]; \n');
 
-for i=1:MM1
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_1_%d%d[N_DELAYS_FIR_dec_int_1_%d%d]; \n',MM1,i-1,MM1,i-1);
-end
+fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_1_21[N_DELAYS_FIR_dec_int_1_21]; \n');
 
-for i=1:MM2
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_2_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n', MM2, i-1,MM2,i-1);
-end
+fprintf(file_ID, 'static delay_data_t H_filter_FIR_dec_2_21[N_DELAYS_FIR_dec_int_2_21]; \n');
 
-for i=1:MM2
-    fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_2_%d%d[N_DELAYS_FIR_dec_int_2_%d%d]; \n',MM2,i-1,MM2,i-1);
-end
-
+fprintf(file_ID, 'static delay_data_t H_filter_FIR_int_2_21[N_DELAYS_FIR_dec_int_2_21]; \n');
 
 fprintf(file_ID, '\n');
 
+
+fprintf(file_ID, 'static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_1_20> H_dec_1_20; \n');
+
+fprintf(file_ID, 'static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_1_20> H_int_1_20; \n');
+
+fprintf(file_ID, 'static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_2_20> H_dec_2_20; \n');
+
+fprintf(file_ID, 'static ap_shift_reg<delay_data_t,N_DELAYS_FIR_dec_int_2_20> H_int_2_20; \n');
+
+fprintf(file_ID, '\n');
 
 
 fprintf(file_ID, 'const coef_data_t b_FIR_kernel');
@@ -287,7 +285,7 @@ end
 fprintf(file_ID,'};\n\n');
 
 
-for x = 1 : MM1
+for x = 2 : MM1
     j = 0;
     fprintf(file_ID, 'const coef_data_t b_FIR_dec_int_1_%d%d',MM1,x-1);
     fprintf(file_ID,['[',num2str(length(b_dec_int1{x})),']={\n']);
@@ -301,7 +299,7 @@ for x = 1 : MM1
     fprintf(file_ID,'};\n\n');
 end
 
-for x = 1 : MM2
+for x = 2 : MM2
     j = 0;
     fprintf(file_ID, 'const coef_data_t b_FIR_dec_int_2_%d%d',MM2,x-1);
     fprintf(file_ID,['[',num2str(length(b_dec_int2{x})),']={\n']);
@@ -320,7 +318,7 @@ fclose(file_ID);
 
 %---------------------------------------------------------------------------
 % write to file !
-% create TS_HLS_multirate_cascade.dat file
+% create TS_HLS_multirate_halfband.dat file
 
 fprintf('test signal is written to file ==> ');
 filename = 'TS_HLS_halfband.dat';
@@ -337,7 +335,7 @@ fclose(file_ID);
 
 %---------------------------------------------------------------------------
 % write to file !
-% create TS_HLS_multirate_cascade.res file
+% create TS_HLS_multirate_halfband.res file
 
 fprintf('golden vector is written to file ==> ');
 filename = 'TS_HLS_halfband.res';
