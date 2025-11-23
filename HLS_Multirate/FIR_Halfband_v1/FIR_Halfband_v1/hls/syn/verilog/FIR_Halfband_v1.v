@@ -71,18 +71,18 @@ reg   [15:0] p_ZL21H_filter_FIR_dec_1_21_2;
 reg   [15:0] p_ZL21H_filter_FIR_int_1_21_0;
 reg   [15:0] p_ZL21H_filter_FIR_int_1_21_1;
 reg   [15:0] p_ZL21H_filter_FIR_int_1_21_2;
-reg    Halfband_delay10_V_ce0;
-reg    Halfband_delay10_V_we0;
-wire   [15:0] Halfband_delay10_V_q0;
-reg    Halfband_delay20_V_ce0;
-reg    Halfband_delay20_V_we0;
-wire   [15:0] Halfband_delay20_V_q0;
-reg    Halfband_delay21_V_ce0;
-reg    Halfband_delay21_V_we0;
-wire   [15:0] Halfband_delay21_V_q0;
-reg    Halfband_delay11_V_ce0;
-reg    Halfband_delay11_V_we0;
-wire   [15:0] Halfband_delay11_V_q0;
+reg    H_dec_1_20_V_ce0;
+reg    H_dec_1_20_V_we0;
+wire   [15:0] H_dec_1_20_V_q0;
+reg    H_dec_2_20_V_ce0;
+reg    H_dec_2_20_V_we0;
+wire   [15:0] H_dec_2_20_V_q0;
+reg    H_int_2_20_V_ce0;
+reg    H_int_2_20_V_we0;
+wire   [15:0] H_int_2_20_V_q0;
+reg    H_int_1_20_V_ce0;
+reg    H_int_1_20_V_we0;
+wire   [15:0] H_int_1_20_V_q0;
 reg    input_r_TDATA_blk_n;
 (* fsm_encoding = "none" *) reg   [18:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
@@ -216,60 +216,60 @@ initial begin
 #0 grp_FIR_filter_fu_448_ap_start_reg = 1'b0;
 end
 
-FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W #(
+FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W #(
     .DataWidth( 16 ),
-    .AddressRange( 3 ),
-    .AddressWidth( 2 ))
-Halfband_delay10_V_U(
+    .AddressRange( 2 ),
+    .AddressWidth( 1 ))
+H_dec_1_20_V_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(2'd1),
-    .ce0(Halfband_delay10_V_ce0),
-    .we0(Halfband_delay10_V_we0),
+    .address0(1'd1),
+    .ce0(H_dec_1_20_V_ce0),
+    .we0(H_dec_1_20_V_we0),
     .d0(input_r_TDATA_int_regslice),
-    .q0(Halfband_delay10_V_q0)
+    .q0(H_dec_1_20_V_q0)
 );
 
-FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W #(
-    .DataWidth( 16 ),
-    .AddressRange( 4 ),
-    .AddressWidth( 2 ))
-Halfband_delay20_V_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .address0(2'd2),
-    .ce0(Halfband_delay20_V_ce0),
-    .we0(Halfband_delay20_V_we0),
-    .d0(add_ln29_reg_1207),
-    .q0(Halfband_delay20_V_q0)
-);
-
-FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W #(
-    .DataWidth( 16 ),
-    .AddressRange( 4 ),
-    .AddressWidth( 2 ))
-Halfband_delay21_V_U(
-    .clk(ap_clk),
-    .reset(ap_rst_n_inv),
-    .address0(2'd2),
-    .ce0(Halfband_delay21_V_ce0),
-    .we0(Halfband_delay21_V_we0),
-    .d0(grp_FIR_filter_fu_448_ap_return),
-    .q0(Halfband_delay21_V_q0)
-);
-
-FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W #(
+FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W #(
     .DataWidth( 16 ),
     .AddressRange( 3 ),
     .AddressWidth( 2 ))
-Halfband_delay11_V_U(
+H_dec_2_20_V_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
-    .address0(2'd1),
-    .ce0(Halfband_delay11_V_ce0),
-    .we0(Halfband_delay11_V_we0),
+    .address0(2'd2),
+    .ce0(H_dec_2_20_V_ce0),
+    .we0(H_dec_2_20_V_we0),
+    .d0(add_ln29_reg_1207),
+    .q0(H_dec_2_20_V_q0)
+);
+
+FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W #(
+    .DataWidth( 16 ),
+    .AddressRange( 3 ),
+    .AddressWidth( 2 ))
+H_int_2_20_V_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(2'd2),
+    .ce0(H_int_2_20_V_ce0),
+    .we0(H_int_2_20_V_we0),
+    .d0(grp_FIR_filter_fu_448_ap_return),
+    .q0(H_int_2_20_V_q0)
+);
+
+FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W #(
+    .DataWidth( 16 ),
+    .AddressRange( 2 ),
+    .AddressWidth( 1 ))
+H_int_1_20_V_U(
+    .clk(ap_clk),
+    .reset(ap_rst_n_inv),
+    .address0(1'd1),
+    .ce0(H_int_1_20_V_ce0),
+    .we0(H_int_1_20_V_we0),
     .d0(ap_phi_mux_p_013_0_0_0_phi_fu_380_p4),
-    .q0(Halfband_delay11_V_q0)
+    .q0(H_int_1_20_V_q0)
 );
 
 FIR_Halfband_v1_FIR_filter_1 grp_FIR_filter_1_fu_411(
@@ -471,65 +471,65 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (mod_value1_load_load_fu_699_p1 == 1'd0) & (input_r_TVALID_int_regslice == 1'b1))) begin
-        Halfband_delay10_V_ce0 = 1'd1;
+        H_dec_1_20_V_ce0 = 1'd1;
     end else begin
-        Halfband_delay10_V_ce0 = 1'b0;
+        H_dec_1_20_V_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (mod_value1_load_load_fu_699_p1 == 1'd0) & (input_r_TVALID_int_regslice == 1'b1))) begin
-        Halfband_delay10_V_we0 = 1'd1;
+        H_dec_1_20_V_we0 = 1'd1;
     end else begin
-        Halfband_delay10_V_we0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) & (output_r_TREADY_int_regslice == 1'b1))) begin
-        Halfband_delay11_V_ce0 = 1'd1;
-    end else begin
-        Halfband_delay11_V_ce0 = 1'b0;
-    end
-end
-
-always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state7) & (output_r_TREADY_int_regslice == 1'b1))) begin
-        Halfband_delay11_V_we0 = 1'd1;
-    end else begin
-        Halfband_delay11_V_we0 = 1'b0;
+        H_dec_1_20_V_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        Halfband_delay20_V_ce0 = 1'd1;
+        H_dec_2_20_V_ce0 = 1'd1;
     end else begin
-        Halfband_delay20_V_ce0 = 1'b0;
+        H_dec_2_20_V_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        Halfband_delay20_V_we0 = 1'd1;
+        H_dec_2_20_V_we0 = 1'd1;
     end else begin
-        Halfband_delay20_V_we0 = 1'b0;
+        H_dec_2_20_V_we0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state7) & (output_r_TREADY_int_regslice == 1'b1))) begin
+        H_int_1_20_V_ce0 = 1'd1;
+    end else begin
+        H_int_1_20_V_ce0 = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_state7) & (output_r_TREADY_int_regslice == 1'b1))) begin
+        H_int_1_20_V_we0 = 1'd1;
+    end else begin
+        H_int_1_20_V_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state7) & (mod_value2_load_reg_1213 == 1'd0) & (output_r_TREADY_int_regslice == 1'b1))) begin
-        Halfband_delay21_V_ce0 = 1'd1;
+        H_int_2_20_V_ce0 = 1'd1;
     end else begin
-        Halfband_delay21_V_ce0 = 1'b0;
+        H_int_2_20_V_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state7) & (mod_value2_load_reg_1213 == 1'd0) & (output_r_TREADY_int_regslice == 1'b1))) begin
-        Halfband_delay21_V_we0 = 1'd1;
+        H_int_2_20_V_we0 = 1'd1;
     end else begin
-        Halfband_delay21_V_we0 = 1'b0;
+        H_int_2_20_V_we0 = 1'b0;
     end
 end
 
@@ -604,7 +604,7 @@ assign ap_ST_fsm_state9_blk = 1'b0;
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state7)) begin
         if ((mod_value2_load_reg_1213 == 1'd0)) begin
-            ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 = Halfband_delay21_V_q0;
+            ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 = H_int_2_20_V_q0;
         end else if ((mod_value2_load_reg_1213 == 1'd1)) begin
             ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 = shl_ln43_fu_1081_p2;
         end else begin
@@ -652,7 +652,7 @@ always @ (*) begin
         if ((1'b1 == ap_CS_fsm_state18)) begin
             output_r_TDATA_int_regslice = shl_ln52_fu_1191_p2;
         end else if ((1'b1 == ap_CS_fsm_state7)) begin
-            output_r_TDATA_int_regslice = Halfband_delay11_V_q0;
+            output_r_TDATA_int_regslice = H_int_1_20_V_q0;
         end else begin
             output_r_TDATA_int_regslice = 'bx;
         end
@@ -802,13 +802,13 @@ assign select_ln35_fu_927_p3 = ((tmp_23_fu_887_p3[0:0] == 1'b1) ? sub_ln35_1_fu_
 
 assign sext_ln29_1_fu_765_p1 = $signed(select_ln29_fu_757_p3);
 
-assign sext_ln29_fu_713_p0 = Halfband_delay10_V_q0;
+assign sext_ln29_fu_713_p0 = H_dec_1_20_V_q0;
 
 assign sext_ln29_fu_713_p1 = sext_ln29_fu_713_p0;
 
 assign sext_ln35_1_fu_935_p1 = $signed(select_ln35_fu_927_p3);
 
-assign sext_ln35_fu_883_p0 = Halfband_delay20_V_q0;
+assign sext_ln35_fu_883_p0 = H_dec_2_20_V_q0;
 
 assign sext_ln35_fu_883_p1 = sext_ln35_fu_883_p0;
 
@@ -824,23 +824,23 @@ assign sub_ln35_1_fu_921_p2 = (15'd0 - trunc_ln35_1_cast_fu_901_p4);
 
 assign sub_ln35_fu_895_p2 = ($signed(17'd0) - $signed(sext_ln35_fu_883_p1));
 
-assign tmp_23_fu_887_p1 = Halfband_delay20_V_q0;
+assign tmp_23_fu_887_p1 = H_dec_2_20_V_q0;
 
 assign tmp_23_fu_887_p3 = tmp_23_fu_887_p1[32'd15];
 
-assign tmp_fu_717_p1 = Halfband_delay10_V_q0;
+assign tmp_fu_717_p1 = H_dec_1_20_V_q0;
 
 assign tmp_fu_717_p3 = tmp_fu_717_p1[32'd15];
 
 assign trunc_ln29_1_cast_fu_731_p4 = {{sub_ln29_fu_725_p2[15:1]}};
 
-assign trunc_ln29_2_fu_741_p1 = Halfband_delay10_V_q0;
+assign trunc_ln29_2_fu_741_p1 = H_dec_1_20_V_q0;
 
 assign trunc_ln29_2_fu_741_p4 = {{trunc_ln29_2_fu_741_p1[15:1]}};
 
 assign trunc_ln35_1_cast_fu_901_p4 = {{sub_ln35_fu_895_p2[15:1]}};
 
-assign trunc_ln35_2_fu_911_p1 = Halfband_delay20_V_q0;
+assign trunc_ln35_2_fu_911_p1 = H_dec_2_20_V_q0;
 
 assign trunc_ln35_2_fu_911_p4 = {{trunc_ln35_2_fu_911_p1[15:1]}};
 

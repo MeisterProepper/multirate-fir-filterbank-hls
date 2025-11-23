@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        FIR_HLS.cpp
     Replacements:    
       - FilePath:        'C:\HLS-multirate-DSP\HLS_Multirate\FIR_Halfband_v1\FIR_Halfband_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp'
-        Offset:          1005607
+        Offset:          1005214
         Length:          0
         ReplacementText: 'VITIS_LOOP_70_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        FIR_HLS.cpp
     Replacements:    
       - FilePath:        'C:\HLS-multirate-DSP\HLS_Multirate\FIR_Halfband_v1\FIR_Halfband_v1\hls\.autopilot\db\FIR_HLS.pp.0.cpp'
-        Offset:          1005698
+        Offset:          1005305
         Length:          0
         ReplacementText: 'VITIS_LOOP_73_2: '
 ...

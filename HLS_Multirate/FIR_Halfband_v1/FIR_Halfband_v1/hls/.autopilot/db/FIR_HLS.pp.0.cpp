@@ -8399,19 +8399,26 @@ class ap_shift_reg
 };
 # 4 "./FIR_HLS.h" 2
 # 1 "./../../Matlab/FIR_halfband_HLS.h" 1
-# 17 "./../../Matlab/FIR_halfband_HLS.h"
+# 18 "./../../Matlab/FIR_halfband_HLS.h"
 typedef ap_fixed<16,1> coef_data_t;
 typedef ap_fixed<16,1> delay_data_t;
-# 27 "./../../Matlab/FIR_halfband_HLS.h"
+
+
+
+
+
+
+
 static delay_data_t H_filter_FIR_kernel[124];
-static delay_data_t H_filter_FIR_dec_1_20[3];
 static delay_data_t H_filter_FIR_dec_1_21[4];
-static delay_data_t H_filter_FIR_int_1_20[3];
 static delay_data_t H_filter_FIR_int_1_21[4];
-static delay_data_t H_filter_FIR_dec_2_20[4];
 static delay_data_t H_filter_FIR_dec_2_21[6];
-static delay_data_t H_filter_FIR_int_2_20[4];
 static delay_data_t H_filter_FIR_int_2_21[6];
+
+static ap_shift_reg<delay_data_t,2> H_dec_1_20;
+static ap_shift_reg<delay_data_t,2> H_int_1_20;
+static ap_shift_reg<delay_data_t,3> H_dec_2_20;
+static ap_shift_reg<delay_data_t,3> H_int_2_20;
 
 const coef_data_t b_FIR_kernel[124]={
  0.001530, -0.002912, 0.000811, 0.000938, -0.000937, -0.001138,
@@ -8436,14 +8443,8 @@ const coef_data_t b_FIR_kernel[124]={
  -0.001154, -0.001219, 0.001083, 0.000905, -0.001138, -0.000937,
  0.000938, 0.000811, -0.002912, 0.001530,};
 
-const coef_data_t b_FIR_dec_int_1_20[3]={
- 0, 0, 0.500000};
-
 const coef_data_t b_FIR_dec_int_1_21[4]={
  -0.035056, 0.284772, 0.284772, -0.035056,};
-
-const coef_data_t b_FIR_dec_int_2_20[4]={
- 0, 0, 0, 0.5};
 
 const coef_data_t b_FIR_dec_int_2_21[6]={
  0.012880, -0.063609, 0.301481, 0.301481, -0.063609, 0.012880,};
@@ -8451,10 +8452,6 @@ const coef_data_t b_FIR_dec_int_2_21[6]={
 
 typedef ap_fixed<16,1> fir_data_t;
 
-static ap_shift_reg<fir_data_t,3> Halfband_delay10={0};
-static ap_shift_reg<fir_data_t,3> Halfband_delay11={0};
-static ap_shift_reg<fir_data_t,4> Halfband_delay20={0};
-static ap_shift_reg<fir_data_t,4> Halfband_delay21={0};
 
 __attribute__((sdx_kernel("FIR_Halfband_v1", 0))) void FIR_Halfband_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
@@ -8490,17 +8487,17 @@ __attribute__((sdx_kernel("FIR_Halfband_v1", 0))) void FIR_Halfband_v1(hls::stre
 
  if (mod_value1==0) {
 
-        y1_phase0 = Halfband_delay10.shift(input.read(),1);
+        y1_phase0 = H_dec_1_20.shift(input.read(),1);
         y1_ges = (y1_phase0/2) + y1_phase1;
 
         if (mod_value2==0) {
 
 
-            y2_phase0 = Halfband_delay20.shift(y1_ges,2);
+            y2_phase0 = H_dec_2_20.shift(y1_ges,2);
             y2 = (y2_phase0/2) + y2_phase1;
             y3 = FIR_filter(H_filter_FIR_kernel, b_FIR_kernel, 124, y2);
 
-            y4 = Halfband_delay21.shift(y3,2);
+            y4 = H_int_2_20.shift(y3,2);
             mod_value2=1;
         }
         else {
@@ -8509,7 +8506,7 @@ __attribute__((sdx_kernel("FIR_Halfband_v1", 0))) void FIR_Halfband_v1(hls::stre
             mod_value2=0;
         }
 
-        output.write(Halfband_delay11.shift(y4,1));
+        output.write(H_int_1_20.shift(y4,1));
         mod_value1=1;
     }
     else {

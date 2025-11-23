@@ -6185,7 +6185,7 @@
             <Obj>
               <type>0</type>
               <id>727</id>
-              <name>Halfband_delay10_V</name>
+              <name>H_dec_1_20_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -6196,15 +6196,15 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Halfband_delay10_V_U</rtlName>
+              <rtlName>H_dec_1_20_V_U</rtlName>
               <control>auto</control>
               <opType>ram_1p</opType>
               <implIndex>auto</implIndex>
               <coreName>ShiftReg</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>3</storageDepth>
+              <storageDepth>2</storageDepth>
               <coreId>76</coreId>
-              <rtlModuleName>FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
+              <rtlModuleName>FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -6226,7 +6226,7 @@
             <Obj>
               <type>0</type>
               <id>728</id>
-              <name>Halfband_delay20_V</name>
+              <name>H_dec_2_20_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -6237,15 +6237,15 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Halfband_delay20_V_U</rtlName>
+              <rtlName>H_dec_2_20_V_U</rtlName>
               <control>auto</control>
               <opType>ram_1p</opType>
               <implIndex>auto</implIndex>
               <coreName>ShiftReg</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>4</storageDepth>
+              <storageDepth>3</storageDepth>
               <coreId>76</coreId>
-              <rtlModuleName>FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
+              <rtlModuleName>FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -6267,7 +6267,7 @@
             <Obj>
               <type>0</type>
               <id>729</id>
-              <name>Halfband_delay21_V</name>
+              <name>H_int_2_20_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -6278,15 +6278,15 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Halfband_delay21_V_U</rtlName>
+              <rtlName>H_int_2_20_V_U</rtlName>
               <control>auto</control>
               <opType>ram_1p</opType>
               <implIndex>auto</implIndex>
               <coreName>ShiftReg</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>4</storageDepth>
+              <storageDepth>3</storageDepth>
               <coreId>76</coreId>
-              <rtlModuleName>FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
+              <rtlModuleName>FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -6308,7 +6308,7 @@
             <Obj>
               <type>0</type>
               <id>730</id>
-              <name>Halfband_delay11_V</name>
+              <name>H_int_1_20_V</name>
               <fileName/>
               <fileDirectory/>
               <lineNumber>0</lineNumber>
@@ -6319,15 +6319,15 @@
                 <item_version>0</item_version>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>Halfband_delay11_V_U</rtlName>
+              <rtlName>H_int_1_20_V_U</rtlName>
               <control>auto</control>
               <opType>ram_1p</opType>
               <implIndex>auto</implIndex>
               <coreName>ShiftReg</coreName>
               <isStorage>1</isStorage>
-              <storageDepth>3</storageDepth>
+              <storageDepth>2</storageDepth>
               <coreId>76</coreId>
-              <rtlModuleName>FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
+              <rtlModuleName>FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W</rtlModuleName>
             </Obj>
             <bitwidth>0</bitwidth>
           </Value>
@@ -11087,7 +11087,38 @@
         <count>4</count>
         <item_version>0</item_version>
         <item>
-          <first>Halfband_delay10_V_U</first>
+          <first>H_dec_1_20_V_U</first>
+          <second>
+            <count>6</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Words)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>16</second>
+            </item>
+            <item>
+              <first>(2Banks)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(3W*Bits*Banks)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>32</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>H_dec_2_20_V_U</first>
           <second>
             <count>6</count>
             <item_version>0</item_version>
@@ -11118,7 +11149,38 @@
           </second>
         </item>
         <item>
-          <first>Halfband_delay11_V_U</first>
+          <first>H_int_1_20_V_U</first>
+          <second>
+            <count>6</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0Words)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1Bits)</first>
+              <second>16</second>
+            </item>
+            <item>
+              <first>(2Banks)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(3W*Bits*Banks)</first>
+              <second>32</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>64</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>32</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>H_int_2_20_V_U</first>
           <second>
             <count>6</count>
             <item_version>0</item_version>
@@ -11137,68 +11199,6 @@
             <item>
               <first>(3W*Bits*Banks)</first>
               <second>48</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Halfband_delay20_V_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Words)</first>
-              <second>4</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>(2Banks)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(3W*Bits*Banks)</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>64</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>32</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>Halfband_delay21_V_U</first>
-          <second>
-            <count>6</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0Words)</first>
-              <second>4</second>
-            </item>
-            <item>
-              <first>(1Bits)</first>
-              <second>16</second>
-            </item>
-            <item>
-              <first>(2Banks)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(3W*Bits*Banks)</first>
-              <second>64</second>
             </item>
             <item>
               <first>FF</first>
@@ -12105,7 +12105,7 @@
         <count>4</count>
         <item_version>0</item_version>
         <item>
-          <first>Halfband_delay10_V_U</first>
+          <first>H_dec_1_20_V_U</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -12113,15 +12113,7 @@
           </second>
         </item>
         <item>
-          <first>Halfband_delay11_V_U</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>82</item>
-          </second>
-        </item>
-        <item>
-          <first>Halfband_delay20_V_U</first>
+          <first>H_dec_2_20_V_U</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -12129,7 +12121,15 @@
           </second>
         </item>
         <item>
-          <first>Halfband_delay21_V_U</first>
+          <first>H_int_1_20_V_U</first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>82</item>
+          </second>
+        </item>
+        <item>
+          <first>H_int_2_20_V_U</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

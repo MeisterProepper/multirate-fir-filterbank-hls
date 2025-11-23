@@ -280,7 +280,7 @@ entry:8 %br_ln26 = br i1 %mod_value1_load, void %if.then, void %if.else23
 
 <Node id="158" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then:0 %p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %input_r_read, i1 1
+if.then:0 %p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %input_r_read, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_s"/></StgValue>
@@ -855,7 +855,7 @@ if.else23:16 %call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_2
 
 <Node id="172" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then5:0 %p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %add_ln29, i1 1
+if.then5:0 %p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %add_ln29, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_1"/></StgValue>
@@ -1143,7 +1143,7 @@ if.then5:12 %store_ln36 = store i16 %p_2, i16 %y3
 
 <Node id="185" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then5:13 %p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %p_2, i1 1
+if.then5:13 %p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %p_2, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_3"/></StgValue>
@@ -1636,7 +1636,7 @@ if.end:2 %store_ln43 = store i16 %p_013_0_0_0, i16 %y4
 
 <Node id="231" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.end:4 %p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1
+if.end:4 %p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_0"/></StgValue>

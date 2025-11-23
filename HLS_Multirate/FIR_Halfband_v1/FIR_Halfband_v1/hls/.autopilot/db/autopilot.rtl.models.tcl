@@ -57,8 +57,8 @@ set SynModuleInfo {
   }
   {SRCNAME FIR_Halfband_v1 MODELNAME FIR_Halfband_v1 RTLNAME FIR_Halfband_v1 IS_TOP 1
     SUBMODULES {
-      {MODELNAME FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W RTLNAME FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
-      {MODELNAME FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W RTLNAME FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W RTLNAME FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
+      {MODELNAME FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W RTLNAME FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W BINDTYPE storage TYPE shiftreg IMPL auto LATENCY 1 ALLOW_PRAGMA 1}
       {MODELNAME FIR_Halfband_v1_regslice_both RTLNAME FIR_Halfband_v1_regslice_both BINDTYPE interface TYPE adapter IMPL reg_slice}
     }
   }

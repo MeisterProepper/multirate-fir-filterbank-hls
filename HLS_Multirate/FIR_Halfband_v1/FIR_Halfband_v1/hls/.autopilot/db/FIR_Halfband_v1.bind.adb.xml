@@ -280,7 +280,7 @@ entry:8 %br_ln26 = br i1 %mod_value1_load, void %if.then, void %if.else23
 
 <Node id="158" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then:0 %p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %input_r_read, i1 1
+if.then:0 %p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %input_r_read, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_s"/></StgValue>
@@ -855,7 +855,7 @@ if.else23:16 %call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_2
 
 <Node id="172" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then5:0 %p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %add_ln29, i1 1
+if.then5:0 %p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %add_ln29, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_1"/></StgValue>
@@ -1143,7 +1143,7 @@ if.then5:12 %store_ln36 = store i16 %p_2, i16 %y3
 
 <Node id="185" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.then5:13 %p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %p_2, i1 1
+if.then5:13 %p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %p_2, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_3"/></StgValue>
@@ -1636,7 +1636,7 @@ if.end:2 %store_ln43 = store i16 %p_013_0_0_0, i16 %y4
 
 <Node id="231" bw="16" op_0_bw="16" op_1_bw="16" op_2_bw="16" op_3_bw="1">
 <![CDATA[
-if.end:4 %p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1
+if.end:4 %p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="p_0"/></StgValue>
@@ -2832,20 +2832,20 @@ if.else23:26 %br_ln0 = br void %if.end30
 <port id="331" name="p_ZL21H_filter_FIR_int_1_21_2" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="p_ZL21H_filter_FIR_int_1_21_2"/></StgValue>
 </port>
-<port id="332" name="Halfband_delay10_V" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="Halfband_delay10_V"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="332" name="H_dec_1_20_V" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="H_dec_1_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="333" name="Halfband_delay20_V" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="Halfband_delay20_V"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="333" name="H_dec_2_20_V" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="H_dec_2_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="334" name="Halfband_delay21_V" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="Halfband_delay21_V"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="334" name="H_int_2_20_V" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="H_int_2_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="335" name="Halfband_delay11_V" dir="3" iftype="1">
-<core>ShiftReg</core><StgValue><ssdm name="Halfband_delay11_V"/><MemPortTyVec>2 </MemPortTyVec>
+<port id="335" name="H_int_1_20_V" dir="3" iftype="1">
+<core>ShiftReg</core><StgValue><ssdm name="H_int_1_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </port>
 </ports>
@@ -2992,7 +2992,7 @@ if.else23:26 %br_ln0 = br void %if.end30
 </dataflow>
 <dataflow id="417" from="mod_value1_load" to="br_ln26" fromId="26" toId="28">
 </dataflow>
-<dataflow id="419" from="_ssdm_op_MemShiftRead.[3 x i16]P0A" to="p_s" fromId="418" toId="29">
+<dataflow id="419" from="_ssdm_op_MemShiftRead.[2 x i16]P0A" to="p_s" fromId="418" toId="29">
 </dataflow>
 <dataflow id="421" from="StgValue_420" to="p_s" fromId="420" toId="29">
 </dataflow>
@@ -3134,7 +3134,7 @@ if.else23:26 %br_ln0 = br void %if.end30
 </dataflow>
 <dataflow id="499" from="y4_load" to="call_ret" fromId="59" toId="63">
 </dataflow>
-<dataflow id="501" from="_ssdm_op_MemShiftRead.[4 x i16]P0A" to="p_1" fromId="500" toId="64">
+<dataflow id="501" from="_ssdm_op_MemShiftRead.[3 x i16]P0A" to="p_1" fromId="500" toId="64">
 </dataflow>
 <dataflow id="503" from="StgValue_502" to="p_1" fromId="502" toId="64">
 </dataflow>
@@ -4692,7 +4692,7 @@ if.else23:26 %br_ln0 = br void %if.end30
 </dataflow>
 <dataflow id="1281" from="y3" to="store_ln36" fromId="314" toId="81">
 </dataflow>
-<dataflow id="1282" from="_ssdm_op_MemShiftRead.[4 x i16]P0A" to="p_3" fromId="500" toId="82">
+<dataflow id="1282" from="_ssdm_op_MemShiftRead.[3 x i16]P0A" to="p_3" fromId="500" toId="82">
 </dataflow>
 <dataflow id="1284" from="StgValue_1283" to="p_3" fromId="1283" toId="82">
 </dataflow>
@@ -4820,7 +4820,7 @@ if.else23:26 %br_ln0 = br void %if.end30
 </dataflow>
 <dataflow id="1343" from="y4" to="store_ln43" fromId="325" toId="112">
 </dataflow>
-<dataflow id="1344" from="_ssdm_op_MemShiftRead.[3 x i16]P0A" to="p_0" fromId="418" toId="113">
+<dataflow id="1344" from="_ssdm_op_MemShiftRead.[2 x i16]P0A" to="p_0" fromId="418" toId="113">
 </dataflow>
 <dataflow id="1346" from="StgValue_1345" to="p_0" fromId="1345" toId="113">
 </dataflow>

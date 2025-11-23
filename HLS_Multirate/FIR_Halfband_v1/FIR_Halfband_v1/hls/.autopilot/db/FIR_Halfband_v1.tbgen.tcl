@@ -462,14 +462,14 @@ set RtlHierarchyInfo {[
 			{"Name" : "p_ZL21H_filter_FIR_int_1_21_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "p_ZL21H_filter_FIR_int_1_21_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "p_ZL21H_filter_FIR_int_1_21_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "Halfband_delay10_V", "Type" : "Memory", "Direction" : "X"},
-			{"Name" : "Halfband_delay20_V", "Type" : "Memory", "Direction" : "X"},
-			{"Name" : "Halfband_delay21_V", "Type" : "Memory", "Direction" : "X"},
-			{"Name" : "Halfband_delay11_V", "Type" : "Memory", "Direction" : "X"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay10_V_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay20_V_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay21_V_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay11_V_U", "Parent" : "0"},
+			{"Name" : "H_dec_1_20_V", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "H_dec_2_20_V", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "H_int_2_20_V", "Type" : "Memory", "Direction" : "X"},
+			{"Name" : "H_int_1_20_V", "Type" : "Memory", "Direction" : "X"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_dec_1_20_V_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_dec_2_20_V_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_int_2_20_V_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_int_1_20_V_U", "Parent" : "0"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_FIR_filter_1_fu_411", "Parent" : "0", "Child" : ["6", "7", "8"],
 		"CDFG" : "FIR_filter_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -898,10 +898,10 @@ set ArgLastReadFirstWriteLatency {
 		p_ZL21H_filter_FIR_int_1_21_0 {Type IO LastRead -1 FirstWrite -1}
 		p_ZL21H_filter_FIR_int_1_21_1 {Type IO LastRead -1 FirstWrite -1}
 		p_ZL21H_filter_FIR_int_1_21_2 {Type IO LastRead -1 FirstWrite -1}
-		Halfband_delay10_V {Type X LastRead -1 FirstWrite -1}
-		Halfband_delay20_V {Type X LastRead -1 FirstWrite -1}
-		Halfband_delay21_V {Type X LastRead -1 FirstWrite -1}
-		Halfband_delay11_V {Type X LastRead -1 FirstWrite -1}}
+		H_dec_1_20_V {Type X LastRead -1 FirstWrite -1}
+		H_dec_2_20_V {Type X LastRead -1 FirstWrite -1}
+		H_int_2_20_V {Type X LastRead -1 FirstWrite -1}
+		H_int_1_20_V {Type X LastRead -1 FirstWrite -1}}
 	FIR_filter_1 {
 		FIR_delays_read {Type I LastRead 0 FirstWrite -1}
 		FIR_delays_read_21 {Type I LastRead 0 FirstWrite -1}

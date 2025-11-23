@@ -1,5 +1,5 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="" msg_id="207-5584" msg_severity="WARNING" msg_loc="C:/AMD/Vitis/2024.2/common/technology/autopilot\ap_shift_reg.h:54:9" msg_body="there are more than one pragma inline in the function scope, ignore the pragma">
+    <msg msg_groups="" msg_id="207-5584" msg_severity="WARNING" msg_loc="C:/AMD/Vitis/2024.2/common/technology/autopilot\ap_shift_reg.h:47:9" msg_body="there are more than one pragma inline in the function scope, ignore the pragma">
         <args/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/AMD/Vitis/2024.2/common/technology/autopilot\ap_shift_reg.h:47:9" msg_body="HLS pragma dump">
@@ -53,16 +53,16 @@
     <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="FIR_HLS.cpp:63:0" msg_body="Unrolling loop 'VITIS_LOOP_70_1' (FIR_HLS.cpp:70:19) in function 'FIR_filter' completely with a factor of 124">
         <args Factor="124" LoopLoc="FIR_HLS.cpp:70:19" LoopName="VITIS_LOOP_70_1"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:33:0" msg_body="Automatically partitioning array '_ZL21H_filter_FIR_dec_2_21' dimension 1 completely based on constant index.">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:30:0" msg_body="Automatically partitioning array '_ZL21H_filter_FIR_dec_2_21' dimension 1 completely based on constant index.">
         <args Dim="1" Value="_ZL21H_filter_FIR_dec_2_21"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:35:0" msg_body="Automatically partitioning array '_ZL21H_filter_FIR_int_2_21' dimension 1 completely based on constant index.">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Automatically partitioning array '_ZL21H_filter_FIR_int_2_21' dimension 1 completely based on constant index.">
         <args Dim="1" Value="_ZL21H_filter_FIR_int_2_21"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Automatically partitioning small array '_ZL21H_filter_FIR_dec_1_21' completely based on array size.">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:28:0" msg_body="Automatically partitioning small array '_ZL21H_filter_FIR_dec_1_21' completely based on array size.">
         <args Value="_ZL21H_filter_FIR_dec_1_21"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Automatically partitioning small array '_ZL21H_filter_FIR_int_1_21' completely based on array size.">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-421" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Automatically partitioning small array '_ZL21H_filter_FIR_int_1_21' completely based on array size.">
         <args Value="_ZL21H_filter_FIR_int_1_21"/>
     </msg>
     <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:27:0" msg_body="array_partition dim=1 type=complete  variable=_ZL19H_filter_FIR_kernel 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:27:0 H_filter_FIR_kernel">
@@ -71,40 +71,40 @@
     <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:27:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_kernel' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="H_filter_FIR_kernel" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_1_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:29:0 H_filter_FIR_dec_1_21">
-        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_1_21" PragmaType="array_partition" VarName="H_filter_FIR_dec_1_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:29:0"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:28:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_1_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:28:0 H_filter_FIR_dec_1_21">
+        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_1_21" PragmaType="array_partition" VarName="H_filter_FIR_dec_1_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:28:0"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_1_21' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:28:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_1_21' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_1_21" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:33:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_2_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:33:0 H_filter_FIR_dec_2_21">
-        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_2_21" PragmaType="array_partition" VarName="H_filter_FIR_dec_2_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:33:0"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:30:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_2_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:30:0 H_filter_FIR_dec_2_21">
+        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_dec_2_21" PragmaType="array_partition" VarName="H_filter_FIR_dec_2_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:30:0"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:33:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_2_21' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:30:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_2_21' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="H_filter_FIR_dec_2_21" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_int_1_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:31:0 H_filter_FIR_int_1_21">
-        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_int_1_21" PragmaType="array_partition" VarName="H_filter_FIR_int_1_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:31:0"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_int_1_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:29:0 H_filter_FIR_int_1_21">
+        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_int_1_21" PragmaType="array_partition" VarName="H_filter_FIR_int_1_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:29:0"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_1_21' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_1_21' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="H_filter_FIR_int_1_21" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:35:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_int_2_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:35:0 H_filter_FIR_int_2_21">
-        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_int_2_21" PragmaType="array_partition" VarName="H_filter_FIR_int_2_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:35:0"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="array_partition dim=1 type=complete  variable=_ZL21H_filter_FIR_int_2_21 1 FIR_Halfband_v1 ./../../Matlab/FIR_halfband_HLS.h:31:0 H_filter_FIR_int_2_21">
+        <args PragmaFunction="FIR_Halfband_v1" PragmaIsAuto="1" PragmaOptions="dim=1 type=complete  variable=_ZL21H_filter_FIR_int_2_21" PragmaType="array_partition" VarName="H_filter_FIR_int_2_21" varLoc="./../../Matlab/FIR_halfband_HLS.h:31:0"/>
     </msg>
-    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:35:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_2_21' due to pipeline pragma">
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-270" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_2_21' due to pipeline pragma">
         <args Dim="1" Mode="complete" Name="H_filter_FIR_int_2_21" PragmaType="array_partition"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:35:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_int_2_21': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_int_2_21': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_ZL21H_filter_FIR_int_2_21"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:31:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_int_1_21': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_int_1_21': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_ZL21H_filter_FIR_int_1_21"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:33:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_dec_2_21': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:30:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_dec_2_21': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_ZL21H_filter_FIR_dec_2_21"/>
     </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:29:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_dec_1_21': Complete partitioning on dimension 1.">
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:28:0" msg_body="Applying array_partition to '_ZL21H_filter_FIR_dec_1_21': Complete partitioning on dimension 1.">
         <args Dim="1" Mode="Complete" UOName="_ZL21H_filter_FIR_dec_1_21"/>
     </msg>
     <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./../../Matlab/FIR_halfband_HLS.h:27:0" msg_body="Applying array_partition to '_ZL19H_filter_FIR_kernel': Complete partitioning on dimension 1.">

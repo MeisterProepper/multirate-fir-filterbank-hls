@@ -56,7 +56,6 @@ architecture behav of FIR_Halfband_v1 is
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_lv2_2 : STD_LOGIC_VECTOR (1 downto 0) := "10";
     constant ap_const_lv32_F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001111";
     constant ap_const_lv17_0 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000000";
@@ -86,18 +85,18 @@ architecture behav of FIR_Halfband_v1 is
     signal p_ZL21H_filter_FIR_int_1_21_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal p_ZL21H_filter_FIR_int_1_21_1 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal p_ZL21H_filter_FIR_int_1_21_2 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal Halfband_delay10_V_ce0 : STD_LOGIC;
-    signal Halfband_delay10_V_we0 : STD_LOGIC;
-    signal Halfband_delay10_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal Halfband_delay20_V_ce0 : STD_LOGIC;
-    signal Halfband_delay20_V_we0 : STD_LOGIC;
-    signal Halfband_delay20_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal Halfband_delay21_V_ce0 : STD_LOGIC;
-    signal Halfband_delay21_V_we0 : STD_LOGIC;
-    signal Halfband_delay21_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal Halfband_delay11_V_ce0 : STD_LOGIC;
-    signal Halfband_delay11_V_we0 : STD_LOGIC;
-    signal Halfband_delay11_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal H_dec_1_20_V_ce0 : STD_LOGIC;
+    signal H_dec_1_20_V_we0 : STD_LOGIC;
+    signal H_dec_1_20_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal H_dec_2_20_V_ce0 : STD_LOGIC;
+    signal H_dec_2_20_V_we0 : STD_LOGIC;
+    signal H_dec_2_20_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal H_int_2_20_V_ce0 : STD_LOGIC;
+    signal H_int_2_20_V_we0 : STD_LOGIC;
+    signal H_int_2_20_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal H_int_1_20_V_ce0 : STD_LOGIC;
+    signal H_int_1_20_V_we0 : STD_LOGIC;
+    signal H_int_1_20_V_q0 : STD_LOGIC_VECTOR (15 downto 0);
     signal input_r_TDATA_blk_n : STD_LOGIC;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000001";
     attribute fsm_encoding : string;
@@ -258,7 +257,7 @@ architecture behav of FIR_Halfband_v1 is
     end component;
 
 
-    component FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W IS
+    component FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -266,7 +265,7 @@ architecture behav of FIR_Halfband_v1 is
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (1 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (0 downto 0);
         ce0 : IN STD_LOGIC;
         we0 : IN STD_LOGIC;
         d0 : IN STD_LOGIC_VECTOR (15 downto 0);
@@ -274,7 +273,7 @@ architecture behav of FIR_Halfband_v1 is
     end component;
 
 
-    component FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W IS
+    component FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -308,49 +307,21 @@ architecture behav of FIR_Halfband_v1 is
 
 
 begin
-    Halfband_delay10_V_U : component FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W
+    H_dec_1_20_V_U : component FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W
     generic map (
         DataWidth => 16,
-        AddressRange => 3,
-        AddressWidth => 2)
+        AddressRange => 2,
+        AddressWidth => 1)
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
-        address0 => ap_const_lv2_1,
-        ce0 => Halfband_delay10_V_ce0,
-        we0 => Halfband_delay10_V_we0,
+        address0 => ap_const_lv1_1,
+        ce0 => H_dec_1_20_V_ce0,
+        we0 => H_dec_1_20_V_we0,
         d0 => input_r_TDATA_int_regslice,
-        q0 => Halfband_delay10_V_q0);
+        q0 => H_dec_1_20_V_q0);
 
-    Halfband_delay20_V_U : component FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W
-    generic map (
-        DataWidth => 16,
-        AddressRange => 4,
-        AddressWidth => 2)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        address0 => ap_const_lv2_2,
-        ce0 => Halfband_delay20_V_ce0,
-        we0 => Halfband_delay20_V_we0,
-        d0 => add_ln29_reg_1207,
-        q0 => Halfband_delay20_V_q0);
-
-    Halfband_delay21_V_U : component FIR_Halfband_v1_Halfband_delay20_V_SHIFTREG_AUTO_0R0W
-    generic map (
-        DataWidth => 16,
-        AddressRange => 4,
-        AddressWidth => 2)
-    port map (
-        clk => ap_clk,
-        reset => ap_rst_n_inv,
-        address0 => ap_const_lv2_2,
-        ce0 => Halfband_delay21_V_ce0,
-        we0 => Halfband_delay21_V_we0,
-        d0 => grp_FIR_filter_fu_448_ap_return,
-        q0 => Halfband_delay21_V_q0);
-
-    Halfband_delay11_V_U : component FIR_Halfband_v1_Halfband_delay10_V_SHIFTREG_AUTO_0R0W
+    H_dec_2_20_V_U : component FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W
     generic map (
         DataWidth => 16,
         AddressRange => 3,
@@ -358,11 +329,39 @@ begin
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
-        address0 => ap_const_lv2_1,
-        ce0 => Halfband_delay11_V_ce0,
-        we0 => Halfband_delay11_V_we0,
+        address0 => ap_const_lv2_2,
+        ce0 => H_dec_2_20_V_ce0,
+        we0 => H_dec_2_20_V_we0,
+        d0 => add_ln29_reg_1207,
+        q0 => H_dec_2_20_V_q0);
+
+    H_int_2_20_V_U : component FIR_Halfband_v1_H_dec_2_20_V_SHIFTREG_AUTO_0R0W
+    generic map (
+        DataWidth => 16,
+        AddressRange => 3,
+        AddressWidth => 2)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        address0 => ap_const_lv2_2,
+        ce0 => H_int_2_20_V_ce0,
+        we0 => H_int_2_20_V_we0,
+        d0 => grp_FIR_filter_fu_448_ap_return,
+        q0 => H_int_2_20_V_q0);
+
+    H_int_1_20_V_U : component FIR_Halfband_v1_H_dec_1_20_V_SHIFTREG_AUTO_0R0W
+    generic map (
+        DataWidth => 16,
+        AddressRange => 2,
+        AddressWidth => 1)
+    port map (
+        clk => ap_clk,
+        reset => ap_rst_n_inv,
+        address0 => ap_const_lv1_1,
+        ce0 => H_int_1_20_V_ce0,
+        we0 => H_int_1_20_V_we0,
         d0 => ap_phi_mux_p_013_0_0_0_phi_fu_380_p4,
-        q0 => Halfband_delay11_V_q0);
+        q0 => H_int_1_20_V_q0);
 
     grp_FIR_filter_1_fu_411 : component FIR_Halfband_v1_FIR_filter_1
     port map (
@@ -663,82 +662,82 @@ begin
         end case;
     end process;
 
-    Halfband_delay10_V_ce0_assign_proc : process(ap_CS_fsm_state1, mod_value1_load_load_fu_699_p1, input_r_TVALID_int_regslice)
+    H_dec_1_20_V_ce0_assign_proc : process(ap_CS_fsm_state1, mod_value1_load_load_fu_699_p1, input_r_TVALID_int_regslice)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state1) and (mod_value1_load_load_fu_699_p1 = ap_const_lv1_0) and (input_r_TVALID_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay10_V_ce0 <= ap_const_logic_1;
+            H_dec_1_20_V_ce0 <= ap_const_logic_1;
         else 
-            Halfband_delay10_V_ce0 <= ap_const_logic_0;
+            H_dec_1_20_V_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    Halfband_delay10_V_we0_assign_proc : process(ap_CS_fsm_state1, mod_value1_load_load_fu_699_p1, input_r_TVALID_int_regslice)
+    H_dec_1_20_V_we0_assign_proc : process(ap_CS_fsm_state1, mod_value1_load_load_fu_699_p1, input_r_TVALID_int_regslice)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state1) and (mod_value1_load_load_fu_699_p1 = ap_const_lv1_0) and (input_r_TVALID_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay10_V_we0 <= ap_const_logic_1;
+            H_dec_1_20_V_we0 <= ap_const_logic_1;
         else 
-            Halfband_delay10_V_we0 <= ap_const_logic_0;
+            H_dec_1_20_V_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    Halfband_delay11_V_ce0_assign_proc : process(ap_CS_fsm_state7, output_r_TREADY_int_regslice)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay11_V_ce0 <= ap_const_logic_1;
-        else 
-            Halfband_delay11_V_ce0 <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    Halfband_delay11_V_we0_assign_proc : process(ap_CS_fsm_state7, output_r_TREADY_int_regslice)
-    begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay11_V_we0 <= ap_const_logic_1;
-        else 
-            Halfband_delay11_V_we0 <= ap_const_logic_0;
-        end if; 
-    end process;
-
-
-    Halfband_delay20_V_ce0_assign_proc : process(ap_CS_fsm_state2)
+    H_dec_2_20_V_ce0_assign_proc : process(ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            Halfband_delay20_V_ce0 <= ap_const_logic_1;
+            H_dec_2_20_V_ce0 <= ap_const_logic_1;
         else 
-            Halfband_delay20_V_ce0 <= ap_const_logic_0;
+            H_dec_2_20_V_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    Halfband_delay20_V_we0_assign_proc : process(ap_CS_fsm_state2)
+    H_dec_2_20_V_we0_assign_proc : process(ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            Halfband_delay20_V_we0 <= ap_const_logic_1;
+            H_dec_2_20_V_we0 <= ap_const_logic_1;
         else 
-            Halfband_delay20_V_we0 <= ap_const_logic_0;
+            H_dec_2_20_V_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    Halfband_delay21_V_ce0_assign_proc : process(ap_CS_fsm_state7, mod_value2_load_reg_1213, output_r_TREADY_int_regslice)
+    H_int_1_20_V_ce0_assign_proc : process(ap_CS_fsm_state7, output_r_TREADY_int_regslice)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (mod_value2_load_reg_1213 = ap_const_lv1_0) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay21_V_ce0 <= ap_const_logic_1;
+        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
+            H_int_1_20_V_ce0 <= ap_const_logic_1;
         else 
-            Halfband_delay21_V_ce0 <= ap_const_logic_0;
+            H_int_1_20_V_ce0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    Halfband_delay21_V_we0_assign_proc : process(ap_CS_fsm_state7, mod_value2_load_reg_1213, output_r_TREADY_int_regslice)
+    H_int_1_20_V_we0_assign_proc : process(ap_CS_fsm_state7, output_r_TREADY_int_regslice)
+    begin
+        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
+            H_int_1_20_V_we0 <= ap_const_logic_1;
+        else 
+            H_int_1_20_V_we0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    H_int_2_20_V_ce0_assign_proc : process(ap_CS_fsm_state7, mod_value2_load_reg_1213, output_r_TREADY_int_regslice)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state7) and (mod_value2_load_reg_1213 = ap_const_lv1_0) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
-            Halfband_delay21_V_we0 <= ap_const_logic_1;
+            H_int_2_20_V_ce0 <= ap_const_logic_1;
         else 
-            Halfband_delay21_V_we0 <= ap_const_logic_0;
+            H_int_2_20_V_ce0 <= ap_const_logic_0;
+        end if; 
+    end process;
+
+
+    H_int_2_20_V_we0_assign_proc : process(ap_CS_fsm_state7, mod_value2_load_reg_1213, output_r_TREADY_int_regslice)
+    begin
+        if (((ap_const_logic_1 = ap_CS_fsm_state7) and (mod_value2_load_reg_1213 = ap_const_lv1_0) and (output_r_TREADY_int_regslice = ap_const_logic_1))) then 
+            H_int_2_20_V_we0 <= ap_const_logic_1;
+        else 
+            H_int_2_20_V_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
@@ -821,11 +820,11 @@ begin
     end process;
 
 
-    ap_phi_mux_p_013_0_0_0_phi_fu_380_p4_assign_proc : process(Halfband_delay21_V_q0, ap_CS_fsm_state7, mod_value2_load_reg_1213, shl_ln43_fu_1081_p2)
+    ap_phi_mux_p_013_0_0_0_phi_fu_380_p4_assign_proc : process(H_int_2_20_V_q0, ap_CS_fsm_state7, mod_value2_load_reg_1213, shl_ln43_fu_1081_p2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state7)) then
             if ((mod_value2_load_reg_1213 = ap_const_lv1_0)) then 
-                ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 <= Halfband_delay21_V_q0;
+                ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 <= H_int_2_20_V_q0;
             elsif ((mod_value2_load_reg_1213 = ap_const_lv1_1)) then 
                 ap_phi_mux_p_013_0_0_0_phi_fu_380_p4 <= shl_ln43_fu_1081_p2;
             else 
@@ -889,13 +888,13 @@ begin
     end process;
 
 
-    output_r_TDATA_int_regslice_assign_proc : process(Halfband_delay11_V_q0, ap_CS_fsm_state7, ap_CS_fsm_state18, shl_ln52_fu_1191_p2, output_r_TREADY_int_regslice)
+    output_r_TDATA_int_regslice_assign_proc : process(H_int_1_20_V_q0, ap_CS_fsm_state7, ap_CS_fsm_state18, shl_ln52_fu_1191_p2, output_r_TREADY_int_regslice)
     begin
         if ((output_r_TREADY_int_regslice = ap_const_logic_1)) then
             if ((ap_const_logic_1 = ap_CS_fsm_state18)) then 
                 output_r_TDATA_int_regslice <= shl_ln52_fu_1191_p2;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state7)) then 
-                output_r_TDATA_int_regslice <= Halfband_delay11_V_q0;
+                output_r_TDATA_int_regslice <= H_int_1_20_V_q0;
             else 
                 output_r_TDATA_int_regslice <= "XXXXXXXXXXXXXXXX";
             end if;
@@ -923,12 +922,12 @@ begin
         trunc_ln35_2_fu_911_p4;
         sext_ln29_1_fu_765_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(select_ln29_fu_757_p3),16));
 
-    sext_ln29_fu_713_p0 <= Halfband_delay10_V_q0;
+    sext_ln29_fu_713_p0 <= H_dec_1_20_V_q0;
         sext_ln29_fu_713_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln29_fu_713_p0),17));
 
         sext_ln35_1_fu_935_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(select_ln35_fu_927_p3),16));
 
-    sext_ln35_fu_883_p0 <= Halfband_delay20_V_q0;
+    sext_ln35_fu_883_p0 <= H_dec_2_20_V_q0;
         sext_ln35_fu_883_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(sext_ln35_fu_883_p0),17));
 
     shl_ln43_fu_1081_p2 <= std_logic_vector(shift_left(unsigned(grp_FIR_filter_1_fu_421_ap_return_0),to_integer(unsigned('0' & ap_const_lv16_1(16-1 downto 0)))));
@@ -937,14 +936,14 @@ begin
     sub_ln29_fu_725_p2 <= std_logic_vector(unsigned(ap_const_lv17_0) - unsigned(sext_ln29_fu_713_p1));
     sub_ln35_1_fu_921_p2 <= std_logic_vector(unsigned(ap_const_lv15_0) - unsigned(trunc_ln35_1_cast_fu_901_p4));
     sub_ln35_fu_895_p2 <= std_logic_vector(unsigned(ap_const_lv17_0) - unsigned(sext_ln35_fu_883_p1));
-    tmp_23_fu_887_p1 <= Halfband_delay20_V_q0;
+    tmp_23_fu_887_p1 <= H_dec_2_20_V_q0;
     tmp_23_fu_887_p3 <= tmp_23_fu_887_p1(15 downto 15);
-    tmp_fu_717_p1 <= Halfband_delay10_V_q0;
+    tmp_fu_717_p1 <= H_dec_1_20_V_q0;
     tmp_fu_717_p3 <= tmp_fu_717_p1(15 downto 15);
     trunc_ln29_1_cast_fu_731_p4 <= sub_ln29_fu_725_p2(15 downto 1);
-    trunc_ln29_2_fu_741_p1 <= Halfband_delay10_V_q0;
+    trunc_ln29_2_fu_741_p1 <= H_dec_1_20_V_q0;
     trunc_ln29_2_fu_741_p4 <= trunc_ln29_2_fu_741_p1(15 downto 1);
     trunc_ln35_1_cast_fu_901_p4 <= sub_ln35_fu_895_p2(15 downto 1);
-    trunc_ln35_2_fu_911_p1 <= Halfband_delay20_V_q0;
+    trunc_ln35_2_fu_911_p1 <= H_dec_2_20_V_q0;
     trunc_ln35_2_fu_911_p4 <= trunc_ln35_2_fu_911_p1(15 downto 1);
 end behav;

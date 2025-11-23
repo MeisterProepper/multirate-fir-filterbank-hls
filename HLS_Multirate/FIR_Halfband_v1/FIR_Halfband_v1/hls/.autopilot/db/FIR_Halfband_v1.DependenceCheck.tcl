@@ -2,10 +2,10 @@
 
 set RtlHierarchyInfo {[
 	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST"},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay10_V_U"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay20_V_U"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay21_V_U"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.Halfband_delay11_V_U"},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_dec_1_20_V_U"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_dec_2_20_V_U"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_int_2_20_V_U"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.H_int_1_20_V_U"},
 	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_FIR_filter_1_fu_411"},
 	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_FIR_filter_1_fu_411.am_addmul_16s_16s_15ns_32_4_1_U90"},
 	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_FIR_filter_1_fu_411.ama_addmuladd_16s_16s_10ns_32s_32_4_1_U91"},

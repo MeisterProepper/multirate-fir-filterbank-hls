@@ -22,10 +22,10 @@ INFO: [HLS 200-1465] Applying ini 'part=xck26-sfvc784-2LV-c' from C:/HLS-multira
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
 INFO: [HLS 200-1465] Applying ini 'package.ip.display_name=FIR_Halfband_v1' from C:/HLS-multirate-DSP/HLS_Multirate/FIR_Halfband_v1/hls_config.cfg(14)
 INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from C:/HLS-multirate-DSP/HLS_Multirate/FIR_Halfband_v1/hls_config.cfg(5)
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.179 seconds; current allocated memory: 273.336 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 4.14 seconds; current allocated memory: 272.910 MB.
 INFO: [HLS 200-10] Analyzing design file 'FIR_HLS.cpp' ... 
-WARNING: [HLS 207-5584] there are more than one pragma inline in the function scope, ignore the pragma  (C:/AMD/Vitis/2024.2/common/technology/autopilot\ap_shift_reg.h:54:9)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.795 seconds; current allocated memory: 276.035 MB.
+WARNING: [HLS 207-5584] there are more than one pragma inline in the function scope, ignore the pragma  (C:/AMD/Vitis/2024.2/common/technology/autopilot\ap_shift_reg.h:47:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.011 seconds; current allocated memory: 275.789 MB.
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 INFO: [HLS 200-1995] There were 3,778 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_Multirate/FIR_Halfband_v1/FIR_Halfband_v1/hls/syn/report/csynth_design_size.rpt
 INFO: [HLS 200-1995] There were 653 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: C:/HLS-multirate-DSP/HLS_Multirate/FIR_Halfband_v1/FIR_Halfband_v1/hls/syn/report/csynth_design_size.rpt
@@ -51,29 +51,29 @@ INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_2' (FIR_HLS.cpp:73:19) in func
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (FIR_HLS.cpp:70:19) in function 'FIR_filter' completely with a factor of 6 (FIR_HLS.cpp:63:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_73_2' (FIR_HLS.cpp:73:19) in function 'FIR_filter' completely with a factor of 123 (FIR_HLS.cpp:63:0)
 INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_70_1' (FIR_HLS.cpp:70:19) in function 'FIR_filter' completely with a factor of 124 (FIR_HLS.cpp:63:0)
-INFO: [HLS 214-449] Automatically partitioning array '_ZL21H_filter_FIR_dec_2_21' dimension 1 completely based on constant index. (./../../Matlab/FIR_halfband_HLS.h:33:0)
-INFO: [HLS 214-449] Automatically partitioning array '_ZL21H_filter_FIR_int_2_21' dimension 1 completely based on constant index. (./../../Matlab/FIR_halfband_HLS.h:35:0)
-INFO: [HLS 214-421] Automatically partitioning small array '_ZL21H_filter_FIR_dec_1_21' completely based on array size. (./../../Matlab/FIR_halfband_HLS.h:29:0)
-INFO: [HLS 214-421] Automatically partitioning small array '_ZL21H_filter_FIR_int_1_21' completely based on array size. (./../../Matlab/FIR_halfband_HLS.h:31:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZL21H_filter_FIR_dec_2_21' dimension 1 completely based on constant index. (./../../Matlab/FIR_halfband_HLS.h:30:0)
+INFO: [HLS 214-449] Automatically partitioning array '_ZL21H_filter_FIR_int_2_21' dimension 1 completely based on constant index. (./../../Matlab/FIR_halfband_HLS.h:31:0)
+INFO: [HLS 214-421] Automatically partitioning small array '_ZL21H_filter_FIR_dec_1_21' completely based on array size. (./../../Matlab/FIR_halfband_HLS.h:28:0)
+INFO: [HLS 214-421] Automatically partitioning small array '_ZL21H_filter_FIR_int_1_21' completely based on array size. (./../../Matlab/FIR_halfband_HLS.h:29:0)
 INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_kernel' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:27:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_1_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:29:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_2_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:33:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_1_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:31:0)
-INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_2_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:35:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_int_2_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:35:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_int_1_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:31:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_dec_2_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:33:0)
-INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_dec_1_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:29:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_1_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:28:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_dec_2_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:30:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_1_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:29:0)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'H_filter_FIR_int_2_21' due to pipeline pragma (./../../Matlab/FIR_halfband_HLS.h:31:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_int_2_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:31:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_int_1_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:29:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_dec_2_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:30:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL21H_filter_FIR_dec_1_21': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:28:0)
 INFO: [HLS 214-248] Applying array_partition to '_ZL19H_filter_FIR_kernel': Complete partitioning on dimension 1. (./../../Matlab/FIR_halfband_HLS.h:27:0)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.272 seconds; current allocated memory: 278.047 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 278.047 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 10.299 seconds; current allocated memory: 277.980 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 277.980 MB.
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 282.820 MB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 282.586 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.458 seconds; current allocated memory: 284.996 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.295 seconds; current allocated memory: 284.570 MB.
 INFO: [XFORM 203-11] Balancing expressions in function 'FIR_filter' (FIR_HLS.cpp:63:1)...66 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 306.949 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 328.117 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.237 seconds; current allocated memory: 306.402 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.289 seconds; current allocated memory: 327.957 MB.
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'FIR_Halfband_v1' ...
 WARNING: [SYN 201-103] Legalizing function name 'FIR_filter.1' to 'FIR_filter_1'.
@@ -131,13 +131,13 @@ INFO: [HLS 200-486] Changing DSP latency (root=tmp3) to 3 in order to utilize av
 INFO: [SCHED 204-61] Pipelining function 'FIR_filter'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, function 'FIR_filter'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.021 seconds; current allocated memory: 336.965 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.998 seconds; current allocated memory: 336.312 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.255 seconds; current allocated memory: 338.117 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.269 seconds; current allocated memory: 337.508 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'FIR_filter_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -148,13 +148,13 @@ INFO: [HLS 200-486] Changing DSP latency (root=tmp1) to 3 in order to utilize av
 INFO: [SCHED 204-61] Pipelining function 'FIR_filter.1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, function 'FIR_filter.1'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 338.383 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.315 seconds; current allocated memory: 337.875 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 338.422 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 337.910 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'FIR_filter_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -164,25 +164,25 @@ INFO: [HLS 200-486] Changing DSP latency (root=tmp1) to 3 in order to utilize av
 INFO: [SCHED 204-61] Pipelining function 'FIR_filter.2'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, function 'FIR_filter.2'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 338.664 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 337.973 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 338.664 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 337.973 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'FIR_Halfband_v1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.124 seconds; current allocated memory: 339.191 MB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 338.543 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 339.863 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.092 seconds; current allocated memory: 339.566 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -353,7 +353,7 @@ INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_17s_17s_6ns_25s_25_4
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_17s_17s_8s_24s_25_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'mul_18s_8ns_25_1_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.879 seconds; current allocated memory: 346.930 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.017 seconds; current allocated memory: 346.582 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter_1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -361,14 +361,14 @@ INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_15ns_32_4_1': 1 
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_16s_16s_10ns_32s_32_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_16s_16s_14s_32s_32_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.232 seconds; current allocated memory: 358.645 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.542 seconds; current allocated memory: 358.344 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_filter_2' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [RTGEN 206-100] Generating core module 'am_addmul_16s_16s_15ns_32_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_16s_16s_13s_32s_32_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_filter_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.211 seconds; current allocated memory: 358.758 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 358.344 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'FIR_Halfband_v1' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -399,11 +399,11 @@ WARNING: [RTGEN 206-101] Register 'p_ZL21H_filter_FIR_int_1_21_0' is power-on in
 WARNING: [RTGEN 206-101] Register 'p_ZL21H_filter_FIR_int_1_21_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'p_ZL21H_filter_FIR_int_1_21_2' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'FIR_Halfband_v1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.601 seconds; current allocated memory: 360.758 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.953 seconds; current allocated memory: 365.422 MB.
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.875 seconds; current allocated memory: 370.582 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.899 seconds; current allocated memory: 360.012 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.574 seconds; current allocated memory: 364.891 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.796 seconds; current allocated memory: 370.121 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for FIR_Halfband_v1.
 INFO: [VLOG 209-307] Generating Verilog RTL for FIR_Halfband_v1.
 INFO: [HLS 200-789] **** Estimated Fmax: 148.46 MHz
-INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 3 seconds. Total elapsed time: 37.129 seconds; peak allocated memory: 371.438 MB.
-INFO: [v++ 60-791] Total elapsed time: 0h 0m 42s
+INFO: [HLS 200-112] Total CPU user time: 8 seconds. Total CPU system time: 4 seconds. Total elapsed time: 40.692 seconds; peak allocated memory: 370.770 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 45s

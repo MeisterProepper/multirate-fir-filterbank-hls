@@ -33,7 +33,7 @@
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
                 <row id="0" col0="FIR_Halfband_v1" col1="FIR_HLS.cpp:20" col2="3778" col3="307" col4="1176" col5="966" col6="979">
-                    <row id="1" col0="FIR_filter" col1="FIR_HLS.cpp:63" col2="2595" col2_disp="2,595 (5 calls)" col3="215" col3_disp="215 (5 calls)" col4="1084" col4_disp="1,084 (5 calls)" col5="874" col5_disp="874 (5 calls)" col6="879" col6_disp="879 (5 calls)"/>
+                    <row id="7" col0="FIR_filter" col1="FIR_HLS.cpp:63" col2="2595" col2_disp="2,595 (5 calls)" col3="215" col3_disp="215 (5 calls)" col4="1084" col4_disp="1,084 (5 calls)" col5="874" col5_disp="874 (5 calls)" col6="879" col6_disp="879 (5 calls)"/>
                 </row>
             </rows>
             <notes/>

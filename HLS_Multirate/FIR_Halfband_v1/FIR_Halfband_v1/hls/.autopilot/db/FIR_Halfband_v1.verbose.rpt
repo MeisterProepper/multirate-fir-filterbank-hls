@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'FIR_Halfband_v1'
 ================================================================
-* Date:           Sun Nov 23 21:46:05 2025
+* Date:           Sun Nov 23 23:46:25 2025
 
 * Version:        2024.2 (Build 5238294 on Nov  8 2024)
 * Project:        FIR_Halfband_v1
@@ -90,16 +90,16 @@
     N/A
 
     * Memory: 
-    +----------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |        Memory        |                 Module                | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +----------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |Halfband_delay10_V_U  |Halfband_delay10_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     3|   16|     1|           48|
-    |Halfband_delay11_V_U  |Halfband_delay10_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     3|   16|     1|           48|
-    |Halfband_delay20_V_U  |Halfband_delay20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     4|   16|     1|           64|
-    |Halfband_delay21_V_U  |Halfband_delay20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     4|   16|     1|           64|
-    +----------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |Total                 |                                       |        0| 256| 128|    0|    14|   64|     4|          224|
-    +----------------------+---------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    +----------------+---------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |     Memory     |              Module             | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+---------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |H_dec_1_20_V_U  |H_dec_1_20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     2|   16|     1|           32|
+    |H_int_1_20_V_U  |H_dec_1_20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     2|   16|     1|           32|
+    |H_dec_2_20_V_U  |H_dec_2_20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     3|   16|     1|           48|
+    |H_int_2_20_V_U  |H_dec_2_20_V_SHIFTREG_AUTO_0R0W  |        0|  64|  32|    0|     3|   16|     1|           48|
+    +----------------+---------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total           |                                 |        0| 256| 128|    0|    10|   64|     4|          160|
+    +----------------+---------------------------------+---------+----+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -254,7 +254,7 @@ ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%mod_value1_load = load i1 %mod_value1" [FIR_HLS.cpp:26]   --->   Operation 26 'load' 'mod_value1_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 27 [1/1] (0.07ns)   --->   "%input_r_read = read i16 @_ssdm_op_Read.axis.volatile.i16P128A, i16 %input_r" [FIR_HLS.cpp:51]   --->   Operation 27 'read' 'input_r_read' <Predicate = true> <Delay = 0.07> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
 ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln26 = br i1 %mod_value1_load, void %if.then, void %if.else23" [FIR_HLS.cpp:26]   --->   Operation 28 'br' 'br_ln26' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.71ns)   --->   "%p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %input_r_read, i1 1" [FIR_HLS.cpp:28]   --->   Operation 29 'memshiftread' 'p_s' <Predicate = (!mod_value1_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
+ST_1 : Operation 29 [1/1] (0.71ns)   --->   "%p_s = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %input_r_read, i1 1" [FIR_HLS.cpp:28]   --->   Operation 29 'memshiftread' 'p_s' <Predicate = (!mod_value1_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 2> <ShiftMem>
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln29 = sext i16 %p_s" [FIR_HLS.cpp:29]   --->   Operation 30 'sext' 'sext_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node add_ln29)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %p_s, i32 15" [FIR_HLS.cpp:29]   --->   Operation 31 'bitselect' 'tmp' <Predicate = (!mod_value1_load)> <Delay = 0.00>
 ST_1 : Operation 32 [1/1] (0.85ns)   --->   "%sub_ln29 = sub i17 0, i17 %sext_ln29" [FIR_HLS.cpp:29]   --->   Operation 32 'sub' 'sub_ln29' <Predicate = (!mod_value1_load)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -291,7 +291,7 @@ ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%p_ZL21H_filter_FIR_int_1_21_2_load
 ST_1 : Operation 63 [6/6] (3.39ns)   --->   "%call_ret = call i64 @FIR_filter.2, i16 %p_ZL21H_filter_FIR_int_1_21_0_load, i16 %p_ZL21H_filter_FIR_int_1_21_1_load, i16 %p_ZL21H_filter_FIR_int_1_21_2_load, i16 %y4_load" [FIR_HLS.cpp:52]   --->   Operation 63 'call' 'call_ret' <Predicate = (mod_value1_load)> <Delay = 3.39> <CoreType = "Generic">   --->   Generic Core
 
 State 2 <SV = 1> <Delay = 5.95>
-ST_2 : Operation 64 [1/1] (0.71ns)   --->   "%p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %add_ln29, i1 1" [FIR_HLS.cpp:34]   --->   Operation 64 'memshiftread' 'p_1' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 4> <ShiftMem>
+ST_2 : Operation 64 [1/1] (0.71ns)   --->   "%p_1 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %add_ln29, i1 1" [FIR_HLS.cpp:34]   --->   Operation 64 'memshiftread' 'p_1' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
 ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%sext_ln35 = sext i16 %p_1" [FIR_HLS.cpp:35]   --->   Operation 65 'sext' 'sext_ln35' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node add_ln35)   --->   "%tmp_23 = bitselect i1 @_ssdm_op_BitSelect.i1.i16.i32, i16 %p_1, i32 15" [FIR_HLS.cpp:35]   --->   Operation 66 'bitselect' 'tmp_23' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 67 [1/1] (0.85ns)   --->   "%sub_ln35 = sub i17 0, i17 %sext_ln35" [FIR_HLS.cpp:35]   --->   Operation 67 'sub' 'sub_ln35' <Predicate = true> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -319,7 +319,7 @@ ST_6 : Operation 79 [2/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %a
 State 7 <SV = 6> <Delay = 6.59>
 ST_7 : Operation 80 [1/6] (4.28ns)   --->   "%p_2 = call i16 @FIR_filter, i16 %add_ln35, i16 %p_ZL19H_filter_FIR_kernel_122, i16 %p_ZL19H_filter_FIR_kernel_121, i16 %p_ZL19H_filter_FIR_kernel_120, i16 %p_ZL19H_filter_FIR_kernel_119, i16 %p_ZL19H_filter_FIR_kernel_118, i16 %p_ZL19H_filter_FIR_kernel_117, i16 %p_ZL19H_filter_FIR_kernel_116, i16 %p_ZL19H_filter_FIR_kernel_115, i16 %p_ZL19H_filter_FIR_kernel_114, i16 %p_ZL19H_filter_FIR_kernel_113, i16 %p_ZL19H_filter_FIR_kernel_112, i16 %p_ZL19H_filter_FIR_kernel_111, i16 %p_ZL19H_filter_FIR_kernel_110, i16 %p_ZL19H_filter_FIR_kernel_109, i16 %p_ZL19H_filter_FIR_kernel_108, i16 %p_ZL19H_filter_FIR_kernel_107, i16 %p_ZL19H_filter_FIR_kernel_106, i16 %p_ZL19H_filter_FIR_kernel_105, i16 %p_ZL19H_filter_FIR_kernel_104, i16 %p_ZL19H_filter_FIR_kernel_103, i16 %p_ZL19H_filter_FIR_kernel_102, i16 %p_ZL19H_filter_FIR_kernel_101, i16 %p_ZL19H_filter_FIR_kernel_100, i16 %p_ZL19H_filter_FIR_kernel_99, i16 %p_ZL19H_filter_FIR_kernel_98, i16 %p_ZL19H_filter_FIR_kernel_97, i16 %p_ZL19H_filter_FIR_kernel_96, i16 %p_ZL19H_filter_FIR_kernel_95, i16 %p_ZL19H_filter_FIR_kernel_94, i16 %p_ZL19H_filter_FIR_kernel_93, i16 %p_ZL19H_filter_FIR_kernel_92, i16 %p_ZL19H_filter_FIR_kernel_91, i16 %p_ZL19H_filter_FIR_kernel_90, i16 %p_ZL19H_filter_FIR_kernel_89, i16 %p_ZL19H_filter_FIR_kernel_88, i16 %p_ZL19H_filter_FIR_kernel_87, i16 %p_ZL19H_filter_FIR_kernel_86, i16 %p_ZL19H_filter_FIR_kernel_85, i16 %p_ZL19H_filter_FIR_kernel_84, i16 %p_ZL19H_filter_FIR_kernel_83, i16 %p_ZL19H_filter_FIR_kernel_82, i16 %p_ZL19H_filter_FIR_kernel_81, i16 %p_ZL19H_filter_FIR_kernel_80, i16 %p_ZL19H_filter_FIR_kernel_79, i16 %p_ZL19H_filter_FIR_kernel_78, i16 %p_ZL19H_filter_FIR_kernel_77, i16 %p_ZL19H_filter_FIR_kernel_76, i16 %p_ZL19H_filter_FIR_kernel_75, i16 %p_ZL19H_filter_FIR_kernel_74, i16 %p_ZL19H_filter_FIR_kernel_73, i16 %p_ZL19H_filter_FIR_kernel_72, i16 %p_ZL19H_filter_FIR_kernel_71, i16 %p_ZL19H_filter_FIR_kernel_70, i16 %p_ZL19H_filter_FIR_kernel_69, i16 %p_ZL19H_filter_FIR_kernel_68, i16 %p_ZL19H_filter_FIR_kernel_67, i16 %p_ZL19H_filter_FIR_kernel_66, i16 %p_ZL19H_filter_FIR_kernel_65, i16 %p_ZL19H_filter_FIR_kernel_64, i16 %p_ZL19H_filter_FIR_kernel_63, i16 %p_ZL19H_filter_FIR_kernel_62, i16 %p_ZL19H_filter_FIR_kernel_61, i16 %p_ZL19H_filter_FIR_kernel_60, i16 %p_ZL19H_filter_FIR_kernel_59, i16 %p_ZL19H_filter_FIR_kernel_58, i16 %p_ZL19H_filter_FIR_kernel_57, i16 %p_ZL19H_filter_FIR_kernel_56, i16 %p_ZL19H_filter_FIR_kernel_55, i16 %p_ZL19H_filter_FIR_kernel_54, i16 %p_ZL19H_filter_FIR_kernel_53, i16 %p_ZL19H_filter_FIR_kernel_52, i16 %p_ZL19H_filter_FIR_kernel_51, i16 %p_ZL19H_filter_FIR_kernel_50, i16 %p_ZL19H_filter_FIR_kernel_49, i16 %p_ZL19H_filter_FIR_kernel_48, i16 %p_ZL19H_filter_FIR_kernel_47, i16 %p_ZL19H_filter_FIR_kernel_46, i16 %p_ZL19H_filter_FIR_kernel_45, i16 %p_ZL19H_filter_FIR_kernel_44, i16 %p_ZL19H_filter_FIR_kernel_43, i16 %p_ZL19H_filter_FIR_kernel_42, i16 %p_ZL19H_filter_FIR_kernel_41, i16 %p_ZL19H_filter_FIR_kernel_40, i16 %p_ZL19H_filter_FIR_kernel_39, i16 %p_ZL19H_filter_FIR_kernel_38, i16 %p_ZL19H_filter_FIR_kernel_37, i16 %p_ZL19H_filter_FIR_kernel_36, i16 %p_ZL19H_filter_FIR_kernel_35, i16 %p_ZL19H_filter_FIR_kernel_34, i16 %p_ZL19H_filter_FIR_kernel_33, i16 %p_ZL19H_filter_FIR_kernel_32, i16 %p_ZL19H_filter_FIR_kernel_31, i16 %p_ZL19H_filter_FIR_kernel_30, i16 %p_ZL19H_filter_FIR_kernel_29, i16 %p_ZL19H_filter_FIR_kernel_28, i16 %p_ZL19H_filter_FIR_kernel_27, i16 %p_ZL19H_filter_FIR_kernel_26, i16 %p_ZL19H_filter_FIR_kernel_25, i16 %p_ZL19H_filter_FIR_kernel_24, i16 %p_ZL19H_filter_FIR_kernel_23, i16 %p_ZL19H_filter_FIR_kernel_22, i16 %p_ZL19H_filter_FIR_kernel_21, i16 %p_ZL19H_filter_FIR_kernel_20, i16 %p_ZL19H_filter_FIR_kernel_19, i16 %p_ZL19H_filter_FIR_kernel_18, i16 %p_ZL19H_filter_FIR_kernel_17, i16 %p_ZL19H_filter_FIR_kernel_16, i16 %p_ZL19H_filter_FIR_kernel_15, i16 %p_ZL19H_filter_FIR_kernel_14, i16 %p_ZL19H_filter_FIR_kernel_13, i16 %p_ZL19H_filter_FIR_kernel_12, i16 %p_ZL19H_filter_FIR_kernel_11, i16 %p_ZL19H_filter_FIR_kernel_10, i16 %p_ZL19H_filter_FIR_kernel_9, i16 %p_ZL19H_filter_FIR_kernel_8, i16 %p_ZL19H_filter_FIR_kernel_7, i16 %p_ZL19H_filter_FIR_kernel_6, i16 %p_ZL19H_filter_FIR_kernel_5, i16 %p_ZL19H_filter_FIR_kernel_4, i16 %p_ZL19H_filter_FIR_kernel_3, i16 %p_ZL19H_filter_FIR_kernel_2, i16 %p_ZL19H_filter_FIR_kernel_1, i16 %p_ZL19H_filter_FIR_kernel_0" [FIR_HLS.cpp:36]   --->   Operation 80 'call' 'p_2' <Predicate = (!mod_value2_load)> <Delay = 4.28> <CoreType = "Generic">   --->   Generic Core
 ST_7 : Operation 81 [1/1] (0.00ns)   --->   "%store_ln36 = store i16 %p_2, i16 %y3" [FIR_HLS.cpp:36]   --->   Operation 81 'store' 'store_ln36' <Predicate = (!mod_value2_load)> <Delay = 0.00>
-ST_7 : Operation 82 [1/1] (0.71ns)   --->   "%p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[4 x i16]P0A, i16 2, i16 %p_2, i1 1" [FIR_HLS.cpp:38]   --->   Operation 82 'memshiftread' 'p_3' <Predicate = (!mod_value2_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 4> <ShiftMem>
+ST_7 : Operation 82 [1/1] (0.71ns)   --->   "%p_3 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 2, i16 %p_2, i1 1" [FIR_HLS.cpp:38]   --->   Operation 82 'memshiftread' 'p_3' <Predicate = (!mod_value2_load)> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
 ST_7 : Operation 83 [1/1] (0.42ns)   --->   "%br_ln40 = br void %if.end" [FIR_HLS.cpp:40]   --->   Operation 83 'br' 'br_ln40' <Predicate = (!mod_value2_load)> <Delay = 0.42>
 ST_7 : Operation 84 [1/7] (0.64ns)   --->   "%call_ret2 = call i96 @FIR_filter.1, i16 %p_ZL21H_filter_FIR_dec_2_21_0_load, i16 %p_ZL21H_filter_FIR_dec_2_21_1_load, i16 %p_ZL21H_filter_FIR_dec_2_21_2_load, i16 %p_ZL21H_filter_FIR_dec_2_21_3_load, i16 %p_ZL21H_filter_FIR_dec_2_21_4_load, i16 %add_ln29" [FIR_HLS.cpp:42]   --->   Operation 84 'call' 'call_ret2' <Predicate = (mod_value2_load)> <Delay = 0.64> <CoreType = "Generic">   --->   Generic Core
 ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%newret9 = extractvalue i96 %call_ret2" [FIR_HLS.cpp:42]   --->   Operation 85 'extractvalue' 'newret9' <Predicate = (mod_value2_load)> <Delay = 0.00>
@@ -350,7 +350,7 @@ ST_7 : Operation 109 [1/1] (0.00ns)   --->   "%shl_ln43 = shl i16 %newret14, i16
 ST_7 : Operation 110 [1/1] (0.42ns)   --->   "%br_ln0 = br void %if.end"   --->   Operation 110 'br' 'br_ln0' <Predicate = (mod_value2_load)> <Delay = 0.42>
 ST_7 : Operation 111 [1/1] (0.00ns)   --->   "%p_013_0_0_0 = phi i16 %shl_ln43, void %if.else, i16 %p_3, void %if.then5" [FIR_HLS.cpp:43]   --->   Operation 111 'phi' 'p_013_0_0_0' <Predicate = true> <Delay = 0.00>
 ST_7 : Operation 112 [1/1] (0.00ns)   --->   "%store_ln43 = store i16 %p_013_0_0_0, i16 %y4" [FIR_HLS.cpp:43]   --->   Operation 112 'store' 'store_ln43' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 113 [1/1] (0.71ns)   --->   "%p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[3 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1" [FIR_HLS.cpp:47]   --->   Operation 113 'memshiftread' 'p_0' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 3> <ShiftMem>
+ST_7 : Operation 113 [1/1] (0.71ns)   --->   "%p_0 = memshiftread i16 @_ssdm_op_MemShiftRead.[2 x i16]P0A, i16 1, i16 %p_013_0_0_0, i1 1" [FIR_HLS.cpp:47]   --->   Operation 113 'memshiftread' 'p_0' <Predicate = true> <Delay = 0.71> <CoreInst = "ShiftReg">   --->   Core 76 'ShiftReg' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'load' 'memshiftread'> <Ports = 1> <Width = 16> <Depth = 2> <ShiftMem>
 ST_7 : Operation 114 [2/2] (0.45ns)   --->   "%write_ln47 = write void @_ssdm_op_Write.axis.volatile.i16P128A, i16 %output_r, i16 %p_0" [FIR_HLS.cpp:47]   --->   Operation 114 'write' 'write_ln47' <Predicate = true> <Delay = 0.45> <CoreInst = "regslice">   --->   Core 147 'regslice' <Latency = 0> <II = 1> <Delay = 0.59> <Adapter> <Opcode : 'read' 'write'>
 
 State 8 <SV = 1> <Delay = 3.39>
@@ -582,10 +582,10 @@ Port [ p_ZL21H_filter_FIR_dec_1_21_2]:  wired=0; compound=0; hidden=1; nouse=0; 
 Port [ p_ZL21H_filter_FIR_int_1_21_0]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
 Port [ p_ZL21H_filter_FIR_int_1_21_1]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
 Port [ p_ZL21H_filter_FIR_int_1_21_2]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; IO mode=ap_ovld:ce=0
-Port [ Halfband_delay10_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
-Port [ Halfband_delay20_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
-Port [ Halfband_delay21_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
-Port [ Halfband_delay11_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ H_dec_1_20_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ H_dec_2_20_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ H_int_2_20_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ H_int_1_20_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=1; extern=0; dir=3; type=1; pingpong=0; private_global=1; MemPort=[2]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -2032,42 +2032,42 @@ br_ln0                             (br           ) [ 00000000000001000001]
 </bind>
 </comp>
 
-<comp id="294" class="1000" name="Halfband_delay10_V">
+<comp id="294" class="1000" name="H_dec_1_20_V">
 <pin_list>
 <pin id="295" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Halfband_delay10_V"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="H_dec_1_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="296" class="1000" name="Halfband_delay20_V">
+<comp id="296" class="1000" name="H_dec_2_20_V">
 <pin_list>
 <pin id="297" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Halfband_delay20_V"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="H_dec_2_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="298" class="1000" name="Halfband_delay21_V">
+<comp id="298" class="1000" name="H_int_2_20_V">
 <pin_list>
 <pin id="299" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Halfband_delay21_V"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="H_int_2_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="300" class="1000" name="Halfband_delay11_V">
+<comp id="300" class="1000" name="H_int_1_20_V">
 <pin_list>
 <pin id="301" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="Halfband_delay11_V"/><MemPortTyVec>2 </MemPortTyVec>
+<StgValue><ssdm name="H_int_1_20_V"/><MemPortTyVec>2 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -2185,7 +2185,7 @@ br_ln0                             (br           ) [ 00000000000001000001]
 <pin id="327" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_MemShiftRead.[3 x i16]P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_MemShiftRead.[2 x i16]P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -2284,7 +2284,7 @@ br_ln0                             (br           ) [ 00000000000001000001]
 <pin id="349" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_MemShiftRead.[4 x i16]P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_MemShiftRead.[3 x i16]P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -4709,10 +4709,10 @@ br_ln0                             (br           ) [ 00000000000001000001]
 	Port: p_ZL21H_filter_FIR_int_1_21_0 | {18 }
 	Port: p_ZL21H_filter_FIR_int_1_21_1 | {18 }
 	Port: p_ZL21H_filter_FIR_int_1_21_2 | {18 }
-	Port: Halfband_delay10_V | {1 }
-	Port: Halfband_delay20_V | {2 }
-	Port: Halfband_delay21_V | {7 }
-	Port: Halfband_delay11_V | {7 }
+	Port: H_dec_1_20_V | {1 }
+	Port: H_dec_2_20_V | {2 }
+	Port: H_int_2_20_V | {7 }
+	Port: H_int_1_20_V | {7 }
  - Input state : 
 	Port: FIR_Halfband_v1 : input_r | {1 }
 	Port: FIR_Halfband_v1 : mod_value1 | {1 }
@@ -4860,10 +4860,10 @@ br_ln0                             (br           ) [ 00000000000001000001]
 	Port: FIR_Halfband_v1 : p_ZL21H_filter_FIR_int_1_21_0 | {1 }
 	Port: FIR_Halfband_v1 : p_ZL21H_filter_FIR_int_1_21_1 | {1 }
 	Port: FIR_Halfband_v1 : p_ZL21H_filter_FIR_int_1_21_2 | {1 }
-	Port: FIR_Halfband_v1 : Halfband_delay10_V | {1 }
-	Port: FIR_Halfband_v1 : Halfband_delay20_V | {2 }
-	Port: FIR_Halfband_v1 : Halfband_delay21_V | {7 }
-	Port: FIR_Halfband_v1 : Halfband_delay11_V | {7 }
+	Port: FIR_Halfband_v1 : H_dec_1_20_V | {1 }
+	Port: FIR_Halfband_v1 : H_dec_2_20_V | {2 }
+	Port: FIR_Halfband_v1 : H_int_2_20_V | {7 }
+	Port: FIR_Halfband_v1 : H_int_1_20_V | {7 }
   - Chain level:
 	State 1
 		br_ln26 : 1
@@ -5036,16 +5036,16 @@ br_ln0                             (br           ) [ 00000000000001000001]
 |----------|--------------------------|---------|---------|---------|---------|
 
 Memories:
-+------------------+--------+--------+
-|                  |   FF   |   LUT  |
-+------------------+--------+--------+
-|Halfband_delay10_V|   64   |   32   |
-|Halfband_delay11_V|   64   |   32   |
-|Halfband_delay20_V|   64   |   32   |
-|Halfband_delay21_V|   64   |   32   |
-+------------------+--------+--------+
-|       Total      |   256  |   128  |
-+------------------+--------+--------+
++------------+--------+--------+
+|            |   FF   |   LUT  |
++------------+--------+--------+
+|H_dec_1_20_V|   64   |   32   |
+|H_dec_2_20_V|   64   |   32   |
+|H_int_1_20_V|   64   |   32   |
+|H_int_2_20_V|   64   |   32   |
++------------+--------+--------+
+|    Total   |   256  |   128  |
++------------+--------+--------+
 
 * Register list:
 +-------------------------------------------+--------+

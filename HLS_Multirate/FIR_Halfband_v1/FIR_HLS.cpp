@@ -25,17 +25,17 @@ void FIR_Halfband_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &ou
 
     if (mod_value1==0) {
         //y1_phase0 = FIR_filter(H_filter_FIR_dec_1_20, b_FIR_dec_int_1_20, N_DELAYS_FIR_dec_int_1_20, input.read());
-        y1_phase0 = Halfband_delay10.shift(input.read(),1);
+        y1_phase0 = H_dec_1_20.shift(input.read(),1);
         y1_ges = (y1_phase0/2) + y1_phase1;
 
         if (mod_value2==0) {
             //y2_phase0 = FIR_filter(H_filter_FIR_dec_2_20, b_FIR_dec_int_2_20, N_DELAYS_FIR_dec_int_2_20, y1_ges);
             //Halfband_delay2.shift(y1_ges);
-            y2_phase0 = Halfband_delay20.shift(y1_ges,2);
+            y2_phase0 = H_dec_2_20.shift(y1_ges,2);
             y2 = (y2_phase0/2) + y2_phase1;
             y3 = FIR_filter(H_filter_FIR_kernel, b_FIR_kernel, N_DELAYS_FIR_kernel_MM, y2);
             //y4 = FIR_filter(H_filter_FIR_int_2_20, b_FIR_dec_int_2_20, N_DELAYS_FIR_dec_int_2_20, y3)*2;
-            y4 = Halfband_delay21.shift(y3,2);
+            y4 = H_int_2_20.shift(y3,2);
             mod_value2=1;
         }
         else {
@@ -44,7 +44,7 @@ void FIR_Halfband_v1(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &ou
             mod_value2=0;
         }
         //output.write(FIR_filter(H_filter_FIR_int_1_20, b_FIR_dec_int_1_20, N_DELAYS_FIR_dec_int_1_20, y4)*2);
-        output.write(Halfband_delay11.shift(y4,1));
+        output.write(H_int_1_20.shift(y4,1));
         mod_value1=1;
     }
     else {
