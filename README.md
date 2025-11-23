@@ -518,7 +518,7 @@ The resulting amplitude response of the complete cascaded system is shown in the
 | Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
 |-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
 | 1         | Direct        | Direct        | Direct          |   290  |   4094  |  1970  |  0  |  57 |
-| 2         | Direct        | Transposed    | Direct          |     |     |      |    |   |
+| 2         | Direct        | Transposed    | Direct          |   240  |   1725  |  1564    |  0  |  110 |
 | 3         | Transposed    | Direct        | Transposed      |     |     |      |    |   |
 | 4         | Transposed    | Transposed    | Transposed      |     |     |      |    |   |
 
@@ -560,8 +560,8 @@ The complete system response of the cascaded Halfband architecture is shown in t
 
 | Variant # | Decimator FIR | Kernel FIR    | Interpolator FIR | Latency [ns] | FF  | LUT  | BRAM | DSP |
 |-----------|---------------|---------------|-----------------|--------------|-----|------|-------|-----|
-| 1         | Direct        | Direct        | Direct          |     |     |      |    |   |
-| 2         | Direct        | Transposed    | Direct          |     |     |      |    |   |
+| 1         | Direct        | Direct        | Direct          |   70  |  3398   |  1644    |  0  | 56  |
+| 2         | Direct        | Transposed    | Direct          |   70  |   1023  |    1312  |  0  |  109 |
 | 3         | Transposed    | Direct        | Transposed      |     |     |      |    |   |
 | 4         | Transposed    | Transposed    | Transposed      |     |     |      |    |   |
 
