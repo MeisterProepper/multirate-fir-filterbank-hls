@@ -33,7 +33,7 @@ void FIR_Halfband_v2(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &ou
             //Halfband_delay2.shift(y1_ges);
             y2_phase0 = H_dec_2_20.shift(y1_ges,2);
             y2 = (y2_phase0/2) + y2_phase1;
-            y3 = FIR_filter(H_filter_FIR_kernel, b_FIR_kernel, N_DELAYS_FIR_kernel_MM, y2);
+            y3 = FIR_filter_transposed(H_accu_FIR, b_FIR_kernel, N_DELAYS_FIR_kernel_MM, y2);
             //y4 = FIR_filter(H_filter_FIR_int_2_20, b_FIR_dec_int_2_20, N_DELAYS_FIR_dec_int_2_20, y3)*2;
             y4 = H_int_2_20.shift(y3,2);
             mod_value2=1;
@@ -80,3 +80,14 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 
 
 
+fir_data_t FIR_filter_transposed(accu_data_t FIR_delays[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
+#pragma HLS PIPELINE
+	fir_data_t y;
+
+    y = FIR_delays[0] + x_n * FIR_coe[0];
+
+	for(int i=1; i < N_delays; i++)		// FIR filter routine
+		FIR_delays[i-1] = FIR_delays[i] + FIR_coe[i] * x_n;
+
+	return y;
+}

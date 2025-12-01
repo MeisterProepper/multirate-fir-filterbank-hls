@@ -1,0 +1,23 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../FIR_HLS_TB.cpp in debug mode
+   Compiling ../../../../FIR_HLS.cpp in debug mode
+   Generating csim.exe
+INFO: Reading ../../../../../../Matlab/TS_HLS_halfband.dat
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_halfband.dat
+INFO: Reading ../../../../../../Matlab/TS_HLS_halfband.res
+INFO: Read 460 samples from ../../../../../../Matlab/TS_HLS_halfband.res
+INFO: Input and reference data lengths match.
+Mismatch at sample  287: ref=0.906799, dut=-0.953308
+Mismatch at sample  289: ref=0.99884, dut=-0.140625
+Mismatch at sample  291: ref=-0.984863, dut=-0.124329
+Mismatch at sample  293: ref=0.957367, dut=-0.902771
+---------------------------------------
+Testbench Results
+Samples processed : 460
+Mismatches        : 4
+Status: FAIL [!!] (4 samples out of tolerance)
+---------------------------------------
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 460
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,608 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date              : Mon Nov 24 00:04:42 2025
+| Host              : DESKTOP-92OKADH running 64-bit major release  (build 9200)
+| Command           : report_timing -max_paths 10 -file ./report/FIR_Halfband_v2_timing_paths_routed.rpt
+| Design            : bd_0_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             3.720ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/DSP_A_B_DATA_INST/A[19]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.760ns  (logic 0.977ns (16.961%)  route 4.783ns (83.039%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[7])
+                                                      0.344     2.044 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[7]
+                         net (fo=1486, routed)        3.758     5.802    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/A[19]
+    DSP48E2_X0Y80        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/DSP_A_B_DATA_INST/A[19]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/CLK
+    DSP48E2_X0Y80        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y80        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[19])
+                                                     -0.497     9.523    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_16_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.523    
+                         arrival time                          -5.802    
+  -------------------------------------------------------------------
+                         slack                                  3.720    
+
+Slack (MET) :             3.829ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[8]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.634ns  (logic 0.720ns (12.780%)  route 4.914ns (87.220%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[0])
+                                                      0.087     1.787 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[0]
+                         net (fo=100, routed)         3.889     5.676    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/A[8]
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/CLK
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y29        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[8])
+                                                     -0.515     9.505    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.505    
+                         arrival time                          -5.676    
+  -------------------------------------------------------------------
+                         slack                                  3.829    
+
+Slack (MET) :             3.900ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/A[11]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.571ns  (logic 0.838ns (15.042%)  route 4.733ns (84.958%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[3])
+                                                      0.205     1.905 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[3]
+                         net (fo=100, routed)         3.708     5.613    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/A[11]
+    DSP48E2_X0Y28        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/A[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/CLK
+    DSP48E2_X0Y28        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y28        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[11])
+                                                     -0.507     9.513    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.513    
+                         arrival time                          -5.613    
+  -------------------------------------------------------------------
+                         slack                                  3.900    
+
+Slack (MET) :             3.941ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[11]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.530ns  (logic 0.838ns (15.154%)  route 4.692ns (84.846%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[3])
+                                                      0.205     1.905 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[3]
+                         net (fo=100, routed)         3.667     5.572    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/A[11]
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/CLK
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y29        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[11])
+                                                     -0.507     9.513    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.513    
+                         arrival time                          -5.572    
+  -------------------------------------------------------------------
+                         slack                                  3.941    
+
+Slack (MET) :             3.951ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/A[13]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.501ns  (logic 0.976ns (17.742%)  route 4.525ns (82.258%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[5])
+                                                      0.343     2.043 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[5]
+                         net (fo=100, routed)         3.500     5.543    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/A[13]
+    DSP48E2_X0Y31        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/A[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/CLK
+    DSP48E2_X0Y31        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y31        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[13])
+                                                     -0.526     9.494    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.494    
+                         arrival time                          -5.543    
+  -------------------------------------------------------------------
+                         slack                                  3.951    
+
+Slack (MET) :             3.951ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/DSP_A_B_DATA_INST/A[27]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.493ns  (logic 0.977ns (17.787%)  route 4.516ns (82.213%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[7])
+                                                      0.344     2.044 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[7]
+                         net (fo=1486, routed)        3.491     5.535    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/A[27]
+    DSP48E2_X0Y83        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/DSP_A_B_DATA_INST/A[27]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/CLK
+    DSP48E2_X0Y83        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y83        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[27])
+                                                     -0.534     9.486    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_13_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.486    
+                         arrival time                          -5.535    
+  -------------------------------------------------------------------
+                         slack                                  3.951    
+
+Slack (MET) :             3.956ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/A[13]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.495ns  (logic 0.976ns (17.760%)  route 4.519ns (82.240%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[5])
+                                                      0.343     2.043 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[5]
+                         net (fo=100, routed)         3.495     5.537    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/A[13]
+    DSP48E2_X0Y28        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/A[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/CLK
+    DSP48E2_X0Y28        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y28        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[13])
+                                                     -0.526     9.494    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_94_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.494    
+                         arrival time                          -5.537    
+  -------------------------------------------------------------------
+                         slack                                  3.956    
+
+Slack (MET) :             3.963ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[13]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.488ns  (logic 0.976ns (17.783%)  route 4.512ns (82.217%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[5])
+                                                      0.343     2.043 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[5]
+                         net (fo=100, routed)         3.488     5.530    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/A[13]
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/A[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/CLK
+    DSP48E2_X0Y29        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y29        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[13])
+                                                     -0.526     9.494    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_93_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.494    
+                         arrival time                          -5.530    
+  -------------------------------------------------------------------
+                         slack                                  3.963    
+
+Slack (MET) :             3.976ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/A[8]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.486ns  (logic 0.720ns (13.124%)  route 4.766ns (86.876%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[0])
+                                                      0.087     1.787 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[0]
+                         net (fo=100, routed)         3.741     5.528    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/A[8]
+    DSP48E2_X0Y31        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/A[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/CLK
+    DSP48E2_X0Y31        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y31        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[8])
+                                                     -0.515     9.505    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_91_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.505    
+                         arrival time                          -5.528    
+  -------------------------------------------------------------------
+                         slack                                  3.976    
+
+Slack (MET) :             3.981ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/DSP_A_B_DATA_INST/A[26]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.459ns  (logic 0.977ns (17.898%)  route 4.482ns (82.102%))
+  Logic Levels:           4  (CARRY8=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.042ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.042     0.042    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ap_clk
+    SLICE_X6Y161         FDRE                                         r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X6Y161         FDRE (Prop_FFF2_SLICEL_C_Q)
+                                                      0.117     0.159 f  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]/Q
+                         net (fo=5, routed)           0.362     0.521    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/ShiftRegMem_reg[2][2]
+    SLICE_X6Y161         LUT6 (Prop_G6LUT_SLICEL_I1_O)
+                                                      0.226     0.747 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24/O
+                         net (fo=6, routed)           0.355     1.103    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_24_n_0
+    SLICE_X6Y161         LUT4 (Prop_D5LUT_SLICEL_I1_O)
+                                                      0.152     1.255 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23/O
+                         net (fo=1, routed)           0.290     1.545    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_23_n_0
+    SLICE_X5Y162         LUT4 (Prop_A6LUT_SLICEM_I2_O)
+                                                      0.138     1.683 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10/O
+                         net (fo=1, routed)           0.017     1.700    bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_10_n_0
+    SLICE_X5Y162         CARRY8 (Prop_CARRY8_SLICEM_S[0]_O[7])
+                                                      0.344     2.044 r  bd_0_i/hls_inst/inst/H_dec_2_20_V_U/FIR_Halfband_v2_H_dec_2_20_V_SHIFTREG_AUTO_0R0W_core_U/tmp_product_i_1/O[7]
+                         net (fo=1486, routed)        3.457     5.501    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/A[26]
+    DSP48E2_X0Y81        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/DSP_A_B_DATA_INST/A[26]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=1950, unset)         0.055    10.055    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/CLK
+    DSP48E2_X0Y81        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X0Y81        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[26])
+                                                     -0.538     9.482    bd_0_i/hls_inst/inst/p_2_FIR_filter_transposed_fu_448/p_ZL10H_accu_FIR_15_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.482    
+                         arrival time                          -5.501    
+  -------------------------------------------------------------------
+                         slack                                  3.981    
+
+
+
+

@@ -1,0 +1,193 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "6 18 18 18 18",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 20,
+    "instructions": 181,
+    "loads": {
+      "G": 9,
+      "L": 9
+    },
+    "name": "FIR_Halfband_v2",
+    "stores": {
+      "G": 13,
+      "L": 7
+    },
+    "total_instructions": 4058
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 35,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.12",
+    "total_instructions": 5
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 10,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.5",
+    "total_instructions": 52
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 61,
+    "instructions": 5,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 1549
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 12,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.7",
+    "total_instructions": 52
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.6",
+    "total_instructions": 52
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 33,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.11",
+    "total_instructions": 5
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 34,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.14",
+    "total_instructions": 5
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 15,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.10",
+    "total_instructions": 52
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 8,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 52
+  },
+  "18": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 63,
+    "instructions": 63,
+    "loads": {
+      "L": 3
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 519
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 36,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.13",
+    "total_instructions": 5
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 64,
+    "instructions": 7,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 2323
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 13,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.8",
+    "total_instructions": 52
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_halfband_HLS.h",
+    "fileloc": 38,
+    "instructions": 125,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 47989
+  },
+  "6": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 83,
+    "instructions": 69,
+    "loads": {
+      "L": 2
+    },
+    "name": "FIR_filter_transposed",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 799
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 14,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.9",
+    "total_instructions": 52
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 9,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.4",
+    "total_instructions": 52
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "14 15 1 2 5 11 3 17 8 10 13 12 4 7 16",
+    "file": "FIR_HLS.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 16,
+    "name": "",
+    "total_instructions": 52313
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "0": {
+    "basicblocks": 57,
+    "calls": "1 2 2 2 2",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 20,
+    "instructions": 193,
+    "loads": {
+      "G": 17,
+      "L": 5
+    },
+    "name": "FIR_Halfband_v2",
+    "stores": {
+      "G": 11
+    },
+    "total_instructions": 4787
+  },
+  "1": {
+    "basicblocks": 2239,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 83,
+    "instructions": 4226,
+    "loads": {
+      "G": 372
+    },
+    "name": "FIR_filter_transposed",
+    "stores": {
+      "G": 123,
+      "L": 1
+    },
+    "total_instructions": 4226
+  },
+  "2": {
+    "basicblocks": 38,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 63,
+    "instructions": 92,
+    "loads": {
+      "L": 3
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 92
+  }
+}

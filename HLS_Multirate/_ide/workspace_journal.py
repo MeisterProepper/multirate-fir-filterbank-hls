@@ -15,3 +15,12 @@ comp = client.clone_component(name="FIR_Halfband_v1",new_name="FIR_Halfband_v2")
 
 client.delete_component(name="FIR_Cascade_HLS")
 
+comp = client.get_component(name="FIR_Halfband_v2")
+comp.run(operation="C_SIMULATION")
+
+comp.run(operation="SYNTHESIS")
+
+comp.run(operation="IMPLEMENTATION")
+
+vitis.dispose()
+
