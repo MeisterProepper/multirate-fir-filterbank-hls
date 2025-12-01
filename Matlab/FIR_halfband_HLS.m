@@ -116,7 +116,7 @@ end
 % Testsignal generation
 testLength = 460;
 t = (0:testLength-1)/Fs;
-test_signal = sin(2 * pi * 1000 * t);
+test_signal = sin(2 * pi * 100 * t);
 
 
 
