@@ -14,7 +14,33 @@ The goal is to analyse how optimisation techniques and architectural decisions i
 - [Objective](#Objective)
 - [Technical-parameters](#Technical-parameters)
 - [HLS-Wrapper](#HLS-Wrapper)
-- 
+   - [Purpose](#Purpose)
+   - [Structure](#Structure)
+   - [Example](#Example)
+   - [Benefits](#Benefits)
+- [Implementation Variants of FIR Filters](#Implementation-Variants-of-FIR-Filters)
+   - [MATLAB FIR Reference Design](#MATLAB-FIR-Reference-Design)
+   - [Direct form FIR filter](#Direct-form-FIR-filter)
+      - [DSP code of the direct form FIR filter](#DSP-code-of-the-direct-form-FIR-filter)
+      - [HLS-DSP code of the direct form FIR filter](#HLS-DSP-code-of-the-direct-form-FIR-filter)
+      - [HLS optimized code of the direct form FIR filter](#HLS-optimized-code-of-the-direct-form-FIR-filter)
+      - [HLS optimized alternative code with SRL of the direct form FIR filter](#HLS-optimized-alternative-code-with-SRL-of-the-direct-form-FIR-filter)
+   - [Transposed form FIR filter](#Transposed-form-FIR-filter)
+   - [Folded form FIR filter](#Folded-form-FIR-filter)
+   - [Transposed Folded form FIR filter](#Transposed-Folded-form-FIR-filter)
+   - [Summary of FIR Variants](#Summary-of-FIR-Variants)
+- [Multirate FIR Filter](#Multirate-FIR-Filter)
+   - [Single-Stage Multirate FIR Filter](#Single-Stage-Multirate-FIR-Filter)
+      - [Multirate Filter — Variant Combinations](#Multirate-Filter-—-Variant-Combinations)
+   - [Cascaded Multirate Filter](#Cascaded-Multirate-Filter)
+      - [Cascade Multirate Filter — Variant Combinations](#Cascade-Multirate-Filter-—-Variant-Combinations)
+   - [Halfband Multirate Filter](#Halfband-Multirate-Filter)
+      - [Halfband Multirate Filter — Variant Combinations](#Halfband-Multirate-Filter-—-Variant-Combinations)
+- [Software-Testbench](#Software-Testbench)
+
+
+
+
 ---
 
 ## Objective
@@ -577,7 +603,7 @@ The complete system response of the cascaded Halfband architecture is shown in t
 
 ---
 
-## Testbench
+## Software-Testbench
 
 Each HLS variant includes a dedicated **C++ testbench** that verifies the functional correctness of the filter design against MATLAB-generated reference data.
 
