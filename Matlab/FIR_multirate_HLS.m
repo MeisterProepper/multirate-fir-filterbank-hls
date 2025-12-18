@@ -92,6 +92,19 @@ end
 
 
 
+fprintf('Order of kernel filter, N_FIR_kernel=%d\n\n', N_FIR_kernel_MM);
+fprintf('Order of decimation/interpolation filter, N_FIR_dec_int=%d\n\n', N_FIR_Dec_Int);
+
+
+groupdelay = round((N_FIR_kernel_MM+1)*MM/2)+round(N_FIR_Dec_Int+1);
+
+fprintf('Group delay of filter, group_delay=%d\n\n', groupdelay);
+
+
+comp_eff = (((N_FIR_Dec_Int+1)*Fs)/MM);% + ((N_FIR_kernel_MM+1)*Fs/MM) + ((N_FIR_Dec_Int+1)*Fs/MM);
+
+fprintf('Computational effort of filter, comp_eff=%d MPY/sec\n\n', comp_eff);
+
 
 % Testsignal generation
 testLength = 460;

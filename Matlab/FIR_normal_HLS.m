@@ -34,7 +34,17 @@ b_FIR = firpm(N_FIR,fo,mo,w);
 % compute the amplitude response using frequency vector
 hz = freqz(b_FIR, 1, 2*pi*freq);
 
-fprintf('\n Order of filter, N_FIR=%d\n\n', N_FIR);
+fprintf('Order of filter, N_FIR=%d\n\n', N_FIR);
+
+
+groupdelay = round((N_FIR+1)/2);
+
+fprintf('Group delay of filter, group_delay=%d\n\n', groupdelay);
+
+
+comp_eff = (N_FIR+1)*Fs;
+
+fprintf('Computational effort of filter, comp_eff=%d MPY/sec\n\n', comp_eff);
 
 plot(freq*Fs,db(hz)),grid
 title('Amplitude response of desired FIR filter in dB'),

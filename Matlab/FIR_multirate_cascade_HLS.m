@@ -114,6 +114,20 @@ end
 
 
 
+
+fprintf('Order of kernel filter, N_FIR_kernel=%d\n\n', N_FIR_kernel_MM);
+fprintf('Order of decimation/interpolation filter 1, N_FIR_dec_int1=%d\n\n', N_FIR_Dec_Int1);
+fprintf('Order of decimation/interpolation filter 2, N_FIR_dec_int2=%d\n\n', N_FIR_Dec_Int2);
+
+groupdelay = round(N_FIR_Dec_Int1+1)+ round((N_FIR_Dec_Int2+1)*MM1) +round((N_FIR_kernel_MM+1)*MM1*MM2/2);
+
+fprintf('Group delay of filter, group_delay=%d\n\n', groupdelay);
+
+comp_eff = (((N_FIR_Dec_Int1+1)*Fs)/MM1)+(((N_FIR_Dec_Int2+1)*Fs)/(MM1*MM2))+(((N_FIR_kernel_MM+1)*Fs)/(MM1*MM2))+(((N_FIR_Dec_Int2+1)*Fs)/(MM1*MM2))+(((N_FIR_Dec_Int1+1)*Fs)/MM1);
+
+fprintf('Computational effort of filter, comp_eff=%d MPY/sec\n\n', comp_eff);
+
+
 % Testsignal generation
 testLength = 460;
 t = (0:testLength-1)/Fs;
@@ -159,8 +173,6 @@ for i = 1:testLength
                         y4 = filtersint2{1}(y3)*2;
                         mod_value2=1;
 
-                        my_signal2(i) = y4;
-
                     case 1
                         y2_phase1 = filtersdec2{2}(y1);
                         y4 = filtersint2{2}(y3)*2;
@@ -188,7 +200,7 @@ end
 % Plots
 figure;
 
-subplot(3, 1, 1);
+subplot(2, 1, 1);
 plot(t, test_signal, 'DisplayName', 'Original Signal 1 kHz', 'Marker', 'O');
 title('Original Signal (1 kHz Sine)');
 xlabel('Time [s]');
@@ -196,7 +208,7 @@ ylabel('Amplitude');
 ylim([-1 1]); 
 grid on;
 
-subplot(3, 1, 2);
+subplot(2, 1, 2);
 plot(t, my_signal, 'DisplayName', 'Filtered Signal', 'Marker', 'O');
 title('Filtered Signal');
 xlabel('Time [s]');
@@ -204,13 +216,7 @@ ylabel('Amplitude');
 ylim([-1 1]); 
 grid on;
 
-subplot(3, 1, 3);
-plot(t, my_signal2, 'DisplayName', 'Filtered Signal2', 'Marker', 'O');
-title('Filtered Signal2');
-xlabel('Time [s]');
-ylabel('Amplitude');
-ylim([-1 1]); 
-grid on;
+
 
 %---------------------------------------------------------------------------
 % write to file !
