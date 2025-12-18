@@ -9,6 +9,14 @@ The goal is to analyse how optimisation techniques and architectural decisions i
 
 ---
 
+## Overview
+
+- [Objective](#Objective)
+- [Technical-parameters](#Technical-parameters)
+- [HLS-Wrapper](#HLS-Wrapper)
+- 
+---
+
 ## Objective
 
 The objectives of this project are:
@@ -19,7 +27,7 @@ The objectives of this project are:
 
 ---
 
-## Technical parameters
+## Technical-parameters
 
 | Parameter | Value |
 |-----|-----------|
@@ -32,12 +40,14 @@ The objectives of this project are:
 
 ---
 
-## HLS Wrapper
-
-![Filter](images/Filter.png)
+## HLS-Wrapper
 
 In High-Level Synthesis (HLS), the wrapper serves as the top-level interface between the algorithmic description of the filter and the hardware synthesis environment.
 It defines how data is passed into and out of the design, manages streaming or block-based processing, and specifies synthesis directives for interfaces and control signals.
+
+<p align="center" width="100%">
+   <img src="images/Filter.png" width="30%">
+</p>
 
 ### Purpose
 
