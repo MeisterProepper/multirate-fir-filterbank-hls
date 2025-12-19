@@ -1,30 +1,19 @@
-# Multi-Rate Filters in High-Level Synthesis (HLS)
+# Digital Filters in High-Level Synthesis (HLS)
 
-This project explores different implementation strategies for both classical (single-rate) FIR filters and multi-rate FIR systems using High-Level Synthesis (HLS).
-The goal is to analyse how optimisation techniques and architectural decisions influence synthesis results, in particular latency, resource utilisation, and overall implementation efficiency.
+This project focuses on the design and implementation of digital FIR filters using High-Level Synthesis (HLS) targeting an FPGA platform. Both classical single-rate FIR filters and a complete multi-rate FIR filter chain are implemented entirely in HLS to evaluate different architectural and optimisation approaches.
 
-<p align="center" width="100%">
-   <img src="images/DEC_KERNEL_INT.png" width="80%">
-</p>
+The main objective is to analyse how various implementation strategies—ranging from straightforward DSP-style descriptions to HLS-optimised designs using tool-specific constructs—affect synthesis results. Particular attention is paid to latency, resource utilisation, and overall implementation efficiency. Optimisation techniques such as pipelining, loop transformations, shift-register-based delay lines (SRLs), and filter partitioning are systematically explored and compared.
+
+All designs are developed for a fixed set of signal-processing requirements, including a sampling rate of 50 kHz and a low-pass FIR filter specification with a passband frequency of 3.1 kHz and a stopband frequency of 3.35 kHz. The target platform is the Xilinx Kria KV260, and the implementation and synthesis are carried out using the Xilinx Vivado / Vitis 2024.2 toolchain.
 
 ---
 
 ## Overview
 
-- [Objective](#Objective)
-- [Technical-parameters](#Technical-parameters)
 - [HLS-Wrapper](#HLS-Wrapper)
-   - [Purpose](#Purpose)
-   - [Structure](#Structure)
-   - [Example](#Example)
-   - [Benefits](#Benefits)
-- [Implementation Variants of FIR Filters](#Implementation-Variants-of-FIR-Filters)
+- [FIR Filters](#FIR-Filters)
    - [MATLAB FIR Reference Design](#MATLAB-FIR-Reference-Design)
    - [Direct form FIR filter](#Direct-form-FIR-filter)
-      - [DSP code of the direct form FIR filter](#DSP-code-of-the-direct-form-FIR-filter)
-      - [HLS-DSP code of the direct form FIR filter](#HLS-DSP-code-of-the-direct-form-FIR-filter)
-      - [HLS optimized code of the direct form FIR filter](#HLS-optimized-code-of-the-direct-form-FIR-filter)
-      - [HLS optimized alternative code with SRL of the direct form FIR filter](#HLS-optimized-alternative-code-with-SRL-of-the-direct-form-FIR-filter)
    - [Transposed form FIR filter](#Transposed-form-FIR-filter)
    - [Folded form FIR filter](#Folded-form-FIR-filter)
    - [Transposed Folded form FIR filter](#Transposed-Folded-form-FIR-filter)
@@ -43,55 +32,15 @@ The goal is to analyse how optimisation techniques and architectural decisions i
 
 ---
 
-## Objective
-
-The objectives of this project are:
-
-- To implement classical FIR filters and a complete multi-rate filter chain entirely in HLS.
-- To compare different implementation strategies, including baseline DSP code, HLS-optimised versions, and variants using HLS-specific constructs (e.g., SRLs, pipelining pragmas, loop transformations).
-- To analyse how optimisation techniques and architectural choices (pipelining, loop restructuring, filter partitioning) affect synthesis results, latency, and resource utilisation.
-
----
-
-## Technical-parameters
-
-| Parameter | Value |
-|-----|-----------|
-| Samplerate | 50 kHz |
-| Filtertype | FIR |
-| fpass | 3,1 kHz |
-| fstop | 3,35 kHz |
-| Target platform | Xilinx Kria KV260 |
-| Toolchain | Xilinx Vivado / Vitis 2024.2 |
-
----
-
 ## HLS-Wrapper
 
-In High-Level Synthesis (HLS), the wrapper serves as the top-level interface between the algorithmic description of the filter and the hardware synthesis environment.
-It defines how data is passed into and out of the design, manages streaming or block-based processing, and specifies synthesis directives for interfaces and control signals.
+The HLS wrapper defines the top-level interface between the filter algorithm and the hardware synthesis environment. It specifies how data is transferred into and out of the design, configures control and interface signals, and enables streaming or block-based processing.
 
 <p align="center" width="100%">
    <img src="images/Filter.png" width="30%">
 </p>
 
-### Purpose
-
-The HLS wrapper encapsulates the FIR or multirate filter implementation and exposes a hardware-compatible interface that can be synthesized into RTL.
-It also provides a clear separation between:
-
-- the algorithmic core (pure signal processing logic) and
-- the hardware interface layer (AXI, handshake, clock, reset, etc.).
-
-This modular approach simplifies verification and enables consistent reuse of the same filter core in different hardware contexts (e.g., standalone block, IP core, or system integration).
-
-### Structure
-
-A typical HLS wrapper includes:
-
-- Function prototype: defines all top-level ports and their data types
-- Interface pragmas: specify the communication type (e.g., AXI stream or AXI Lite)
-- Internal call: connects the wrapper to the actual processing function (e.g., fir_core())
+By encapsulating the FIR or multirate filter core, the wrapper separates the pure signal-processing logic from the hardware interface (e.g., AXI, handshake, clock, reset). This separation simplifies verification, improves reusability, and allows the same filter core to be integrated consistently into different hardware contexts.
 
 ### Example
 
@@ -108,16 +57,9 @@ void FIR_HLS(hls::stream<short> &input, hls::stream<short> &output){
 - Since the wrapper function and thus also the main function are required, the interfaces still need to be defined. To do this, _#pragma HLS INTERFACE mode=axis port=input_ is used, which specifies that the input port should be an AXI stream interface.
 - The directive _#pragma HLS INTERFACE mode=ap_ctrl_none port=return_ removes the control ports. These are not necessary, as control is data-driven via the Axi Stream interface.
 
-### Benefits
-
-- Provides a consistent hardware interface across all FIR and multirate variants
-- Simplifies system integration into larger HLS or RTL environments
-- Allows unified testing with the same interface in simulation and synthesis
-- Keeps algorithm and interface design cleanly separated
-
 ---
 
-## Implementation Variants of FIR Filters
+## FIR Filters
 
 To enable an efficient multirate filter design, the project first investigates several FIR filter architectures.
 These single-rate FIR variants form the foundation for the later multirate components (decimator, kernel filter and interpolator).
@@ -126,9 +68,12 @@ By implementing and analysing multiple FIR structures in HLS, the goal is to ide
 ### MATLAB FIR Reference Design
 
 Before implementing the FIR filters in HLS, a reference low-pass FIR filter is designed in MATLAB.
-This reference design defines the required frequency characteristics and provides the coefficient set used across all HLS implementations (direct form, transposed form, folded, SRL-based, and the later multirate stages).
+This reference design defines the required frequency characteristics and provides the coefficient set used across all single-rate FIR HLS implementations.
+The MATLAB script computes the filter order, group delay, and required operations per second directly from the design specifications.
+The corresponding MATLAB design script is available here:
+[FIR_normal_HLS.m](Matlab/FIR_normal_HLS.m)
 
-The filter is created using MATLAB, based on the specified parameters:
+**The filter is created based on the specified parameters:**
 
 - Sample rate: 50 kHz
 - Passband frequency: 3.1 kHz
@@ -137,34 +82,27 @@ The filter is created using MATLAB, based on the specified parameters:
 - Passband ripple: 0.01
 - Stopband ripple: 0.01
 
-**Group delay calculation:**
+**The resulting filter characteristics are:**
 
-```math
-\text{group\_delay\_samples} = \text{round}\left(\frac{N-1}{2}\right)
-```
+- Filter order: 391
+- Number of taps: 392
+- Group delay: 196
+- Operations per second: 19.600.000
 
-```math
-\text{group\_delay\_time} = \frac{\text{group\_delay\_samples}}{f_s}
-```
-
-Where:
-
-- N = 392 (filter length)  
-- f_s = 50 kHz (sample rate)
-
-**Calculated values:**
-
-- Group delay: 196 samples  
-- Group delay time: 3.92 ms
 
 **Frequency response (magnitude):**  
 The resulting magnitude frequency response is shown below and serves as the ground truth for verifying the correctness of all HLS models.
 
-![Filter](images/Amp_res_normal.png)
+<p align="center" width="100%">
+   <img src="images/Amp_res_normal.png" width="70%">
+</p>
+
 
 ### Direct form FIR filter
 
-![Filter](images/Direct_FIR.png)
+<p align="center" width="100%">
+   <img src="images/Direct_FIR.png" width="50%">
+</p>
 
 The direct form FIR filter implements the convolution sum directly:
 
