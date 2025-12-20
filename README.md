@@ -20,10 +20,13 @@ All designs are developed for a fixed set of signal-processing requirements, inc
    - [Summary of FIR Variants](#Summary-of-FIR-Variants)
 - [Multirate FIR Filter](#Multirate-FIR-Filter)
    - [Single-Stage Multirate FIR Filter](#Single-Stage-Multirate-FIR-Filter)
+      - [MATLAB Reference Design](#MATLAB-Single-Stage-Multirate-Filter-Reference-Design)  
       - [Multirate Filter — Variant Combinations](#Multirate-Filter-—-Variant-Combinations)
    - [Cascaded Multirate Filter](#Cascaded-Multirate-Filter)
+      - [MATLAB Reference Design](#MATLAB-Cascaded-Multirate-Filter-Reference-Design)
       - [Cascade Multirate Filter — Variant Combinations](#Cascade-Multirate-Filter-—-Variant-Combinations)
    - [Halfband Multirate Filter](#Halfband-Multirate-Filter)
+      - [MATLAB Reference Design](#MATLAB-Halfband-Multirate-Filter-Reference-Design)
       - [Halfband Multirate Filter — Variant Combinations](#Halfband-Multirate-Filter-—-Variant-Combinations)
 - [Software-Testbench](#Software-Testbench)
 
@@ -67,7 +70,7 @@ By implementing and analysing multiple FIR structures in HLS, the goal is to ide
 
 ### MATLAB FIR Reference Design
 
-Before implementing the FIR filters in HLS, a reference low-pass FIR filter is designed in MATLAB.
+Before implementing the FIR filters in HLS, a reference FIR filter is designed in MATLAB.
 This reference design defines the required frequency characteristics and provides the coefficient set used across all single-rate FIR HLS implementations.
 The MATLAB script computes the filter order, group delay, and required operations per second directly from the design specifications.
 The corresponding MATLAB design script is available here:
@@ -104,13 +107,7 @@ The resulting magnitude frequency response is shown below and serves as the grou
    <img src="images/Direct_FIR.png" width="50%">
 </p>
 
-The direct form FIR filter implements the convolution sum directly:
-
-```math
-y[n]= \sum_{k=0}^{N−1​}b[k] \cdot x[n−k]
-```
-
-Each tap multiplies a delayed version of the input signal by its corresponding coefficient.
+The direct form FIR filter implements the convolution sum directly. Each tap multiplies a delayed version of the input signal by its corresponding coefficient.
 The results are summed to produce the output sample. This is the most straightforward FIR implementation and serves as a baseline for performance and resource comparisons in HLS.
 
 #### DSP code of the direct form FIR filter
@@ -407,43 +404,34 @@ The optimal factor **M_min** is obtained by solving the following equation:
 M^3_{min} \cdot (f^2_{stop}-f^2_{pass}) - M^2_{min} \cdot (f_{stop} + f_{pass})^2 + M_{min} \cdot 2 \cdot F_s \cdot (f_{stop} + f_{pass}) - F_s^2 = 0
 ```
 
-Using the given parameters:
-
-- f_pass = 3.1 kHz
-- f_stop = 3.35 kHz
-- F_s = 50 kHz
-
-Solving this equation yields:  
-$M_{min} \approx5$
-
-Based on the previous analysis and the design constraints for later cascading, the multirate system uses a decimation/interpolation factor of M=4.
-With the optimal multirate factor \(M_{\min}\) determined, the total implementation effort of the multirate filter can be estimated using the following formula:
-
-```math
-\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
-```
-
-Using the project parameters:
-
-- $F_s$ ​= 50 kHz
-- $f_{pass}$ = 3,1 kHz
-- $f_{stop}$ = 3,35 kHz
-- $\delta_{pass}$ = 0,01
-- $\delta_{stop}$ = 0,01
-- M = 4
-
-Substituting these values yields:
-
-$E_{ges} \approx 2,75 \cdot 10^6$
-
-Overall, the multirate architecture reduces the computational effort by a factor of more than 7, corresponding to an effort reduction of roughly 86 % compared to the single-rate implementation.
-Following this effort estimate, the multirate filter was implemented in MATLAB to obtain the prototype coefficients and to verify the amplitude response. The resulting amplitude response is shown below:
-
-![Filter](images/Amp_res_multirate.png)
-
 The overall structure is illustrated below:
 
 ![Filter](images/Filter_multirate.png)
+
+
+#### MATLAB Single-Stage Multirate Filter Reference Design
+
+Before implementing the single-stage multirate filter in HLS, a multirate FIR low-pass filter is designed in MATLAB. The filter performs a sample-rate change by a factor of M = 4 within a single stage.
+The reference design defines the required frequency characteristics and provides the coefficient set used for the single-stage multirate FIR HLS implementation.
+The MATLAB script computes the filter order, group delay, and required operations per second directly from the design specifications.
+The corresponding MATLAB design script is available here:
+[FIR_multirate_HLS.m](Matlab/FIR_multirate_HLS.m)
+
+**The filter is created based on the specified parameters:**
+
+- Sample rate: 50 kHz
+- Passband frequency: 3.1 kHz
+- Stopband frequency: 3.35 kHz
+- Filter type: Multirate FIR low-pass
+- Passband ripple: 0.01
+- Stopband ripple: 0.01
+
+**The resulting filter characteristics are:**
+
+- Filter order: 136
+- Number of taps: 138
+- Group delay: 255
+- Operations per second: 1.987.500
 
 #### Multirate Filter — Variant Combinations
 
@@ -462,30 +450,29 @@ The following illustration shows the cascaded structure (stage-wise decimation/i
 
 <img src="images/Cascade_FIR.png" width="800">
 
-To evaluate the benefit of the cascaded multirate structure, the overall computational effort was estimated using the same metric as in the single-stage analysis.
-By splitting the total conversion factor into two stages (e.g., \( M = 4 \rightarrow M_1 = 2, M_2 = 2 \)), each individual filter operates with a wider normalized transition band and therefore requires significantly fewer coefficients.
 
-```math
-\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
-```
+#### MATLAB Cascaded Multirate Filter Reference Design
+Before implementing the cascaded multirate filter in HLS, a two-stage halfband FIR decimation chain followed by a kernel FIR filter is designed in MATLAB. Each halfband stage performs a decimation by a factor of M = 2, resulting in a total sample-rate reduction of 4.
+The reference design defines the required frequency characteristics and provides the coefficient sets used across all cascaded multirate FIR HLS implementations.
+The MATLAB script computes the filter order, group delay, and required operations per second for each filter stage directly from the design specifications.
+The corresponding MATLAB design script is available here:
+[FIR_cascade_HLS.m](Matlab/FIR_cascade_HLS.m)
 
-Using the project parameters:
+**The filter is created based on the specified parameters:**
 
-- $F_s$ ​= 50 kHz
-- $f_{pass}$ = 3,1 kHz
-- $f_{stop}$ = 3,35 kHz
-- $\delta_{pass}$ = 0,01
-- $\delta_{stop}$ = 0,01
-- M1 = 2
-- M2 = 2
+- Sample rate: 50 kHz
+- Passband frequency: 3.1 kHz
+- Stopband frequency: 3.35 kHz
+- Filter type: Cascaded FIR low-pass
+- Passband ripple: 0.01
+- Stopband ripple: 0.01
 
-As expected, the cascaded design leads to an even lower total effort than the single-stage multirate implementation.
-The main reason is that both stages operate on progressively reduced sampling rates, which drastically reduces the number of operations needed per output sample.
+**The resulting filter characteristics are:**
 
-Each filter stage of the cascade was designed in MATLAB according to the required passband and stopband specifications.
-The resulting amplitude response of the complete cascaded system is shown in the figure below:
-
-![Filter](images/Amp_res_cascade.png)
+- Filter order: 138
+- Number of taps: 141
+- Group delay: 276
+- Operations per second: 2.125.000
 
 #### Cascade Multirate Filter — Variant Combinations
 
@@ -508,27 +495,30 @@ Halfband filters are highly attractive in multirate systems because:
 Because of these properties, a Halfband filter requires only about **50% of the multiplications** of an equivalent full-band FIR filter.  
 When used inside a multistage decimation or interpolation chain, this leads to a substantial further reduction of computational effort.
 
-To evaluate the benefit of the cascaded halfband multirate structure, the overall computational effort was estimated using the same metric as in the single-stage analysis.
-
-```math
-\text{Total effort } E_{ges} \approx \frac{2}{3} \cdot \log_{10} \left (  \frac{3}{10 \cdot \delta_{pass} \cdot \delta_{stop} } \right ) \cdot \left ( \frac{2\cdot F_s}{F_s - M \cdot (f_{stop}+f_{pass})}+\frac{F_s}{M^2 \cdot (f_{stop}-f_{pass})} \right ) \cdot F_s
-```
-
-Using the project parameters:
-
-- $F_s$ ​= 50 kHz
-- $f_{pass}$ = 3,1 kHz
-- $f_{stop}$ = 3,35 kHz
-- $\delta_{pass}$ = 0,01
-- $\delta_{stop}$ = 0,01
-- M1 = 2
-- M2 = 2
-
-Each Halfband stage was designed in MATLAB using the required passband and stopband ripple constraints.
-The complete system response of the cascaded Halfband architecture is shown in the following figure:
-![Filter](images/Amp_res_halfband.png)
-
 <img src="images/Halfband_FIR.png" width="800">
+
+#### MATLAB Halfband Multirate Filter Reference Design
+Before implementing the halfband multirate filters in HLS, a two-stage halfband FIR filter chain is designed in MATLAB. Each stage performs a decimation by a factor of M = 2, resulting in a total sample-rate reduction of 4.
+The reference design defines the required frequency characteristics and provides the coefficient sets used across all multirate FIR HLS implementations.
+The MATLAB script computes the filter order, group delay, and required operations per second for each halfband stage directly from the design specifications.
+The corresponding MATLAB design script is available here:
+[FIR_halfband_HLS.m](Matlab/FIR_halfband_HLS.m)
+
+**The filter is created based on the specified parameters:**
+
+- Sample rate: 50 kHz
+- Passband frequency: 3.1 kHz
+- Stopband frequency: 3.35 kHz
+- Filter type: Halfband FIR low-pass
+- Passband ripple: 0.01
+- Stopband ripple: 0.01
+
+**The resulting filter characteristics are:**
+
+- Filter order: 133
+- Number of taps: 134
+- Group delay: 283
+- Operations per second: 1.900.000
 
 #### Halfband Multirate Filter — Variant Combinations
 
@@ -647,75 +637,6 @@ The ILA capture confirmed:
 The ILA was specifically used to compare latency and internal timing differences between the filter architectures.
 Because every filter shared the same interface, the AXI stream behavior could be evaluated consistently across all implementations.
 
----
-
-### Detailed Hardware Observations for Selected Filter Architectures
-
-During the on-board evaluation, five representative filter architectures were examined in more detail.  
-Although all variants shared the same AXI4-Stream interface and integrated seamlessly into the audio pipeline, their behavior during live operation revealed clear architectural differences.
-
-#### 1. Direct Form FIR
-
-The direct-form FIR displayed the highest overall resource usage for a fully parallel implementation.  
-In real-time playback, it showed:
-
-- stable and predictable latency,
-- very low group delay variation,
-- a frequency response that matched the MATLAB reference almost exactly.
-
-However, the long adder chain in the direct structure resulted in the highest critical path among all single-rate implementations.
-
-#### 2. Transposed Form FIR
-
-The transposed architecture achieved:
-
-- significantly improved pipelining,
-- reduced critical path length,
-- more efficient mapping onto DSP slices.
-
-On hardware, this resulted in noticeably lower latency and better timing margins.  
-Its measured frequency response matched the direct-form implementation, but with a cleaner AXI-stream timing profile captured in the ILA.
-
-#### 3. Multirate FIR (Decimator – Kernel – Interpolator)
-
-The multirate structure reduced the internal processing rate and therefore:
-
-- achieved the largest computational savings,
-- showed the lowest DSP usage relative to its frequency selectivity,
-- produced a very smooth and stable output signal.
-
-Hardware measurements showed a frequency response nearly identical to the single-rate versions, but with significantly reduced filter order and power consumption.  
-The AXI stream exhibited short bursts of activity corresponding to the decimation/interpolation behavior, which were correctly handled by the pipeline.
-
-#### 4. Cascaded Multistage Filter
-
-The cascaded version split the filtering task across multiple smaller stages.  
-This provided:
-
-- a substantial reduction in required filter order per stage,
-- improved numerical stability,
-- shorter combinational paths.
-
-On hardware, the cascaded filter showed excellent timing behavior.  
-The frequency response captured with the network analyzer clearly reflected the combined effect of all stages and closely matched the MATLAB design.  
-The modular structure also made this variant the easiest to debug and analyze using the ILA.
-
-#### 5. Halfband Cascaded Filter
-
-The Halfband-based implementation was the most efficient structure tested.  
-Thanks to its inherent coefficient symmetry and the high number of zero coefficients, it required:
-
-- the fewest multiplications,
-- very low DSP usage,
-- the shortest latency among the multistage variants.
-
-The hardware measurements confirmed the expected wide transition bands and the characteristic ±0.5 dB ripple at midband.  
-AXI streaming remained perfectly continuous even with the aggressive coefficient sparsity, demonstrating the robustness of the HLS-generated IP.
-
-### Summary
-
-The five selected filter variants demonstrated how architectural choices directly impact hardware behavior.  
-While all designs performed correctly, the Halfband and multirate/cascaded structures offered the best trade-off between resource usage, latency, and spectral performance during real-time testing.
 
 ---
 
