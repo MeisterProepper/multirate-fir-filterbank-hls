@@ -28,6 +28,7 @@ All designs are developed for a fixed set of signal-processing requirements, inc
    - [Halfband Multirate Filter](#Halfband-Multirate-Filter)
       - [MATLAB Reference Design](#MATLAB-Halfband-Multirate-Filter-Reference-Design)
       - [Halfband Multirate Filter — Variant Combinations](#Halfband-Multirate-Filter-—-Variant-Combinations)
+   - [Summary of Multirate Variants](#Summary-of-Multirate-Variants)
 - [Software-Testbench](#Software-Testbench)
 
 
@@ -91,15 +92,6 @@ The corresponding MATLAB design script is available here:
 - Number of taps: 392
 - Group delay: 196
 - Operations per second: 19.600.000
-
-
-**Frequency response (magnitude):**  
-The resulting magnitude frequency response is shown below and serves as the ground truth for verifying the correctness of all HLS models.
-
-<p align="center" width="100%">
-   <img src="images/Amp_res_normal.png" width="70%">
-</p>
-
 
 ### Direct form FIR filter
 
@@ -456,7 +448,7 @@ Before implementing the cascaded multirate filter in HLS, a two-stage halfband F
 The reference design defines the required frequency characteristics and provides the coefficient sets used across all cascaded multirate FIR HLS implementations.
 The MATLAB script computes the filter order, group delay, and required operations per second for each filter stage directly from the design specifications.
 The corresponding MATLAB design script is available here:
-[FIR_cascade_HLS.m](Matlab/FIR_cascade_HLS.m)
+[FIR_cascade_HLS.m](Matlab/FIR_multirate_cascade_HLS.m)
 
 **The filter is created based on the specified parameters:**
 
@@ -528,6 +520,9 @@ The corresponding MATLAB design script is available here:
 | 2         | Direct        | Transposed    | Direct          |   70  |   1023  |    1312  |  0  |  109 |
 | 3         | Transposed    | Direct        | Transposed      |     |     |      |    |   |
 | 4         | Transposed    | Transposed    | Transposed      |     |     |      |    |   |
+
+### Summary of Multirate Variants
+
 
 ---
 
