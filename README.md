@@ -17,6 +17,7 @@ All designs are developed for a fixed set of signal-processing requirements, inc
    - [Transposed form FIR filter](#Transposed-form-FIR-filter)
    - [Folded form FIR filter](#Folded-form-FIR-filter)
    - [Transposed Folded form FIR filter](#Transposed-Folded-form-FIR-filter)
+   - [Fast-running FIR filter](#Fast-running-FIR-filter)
    - [Summary of FIR Variants](#Summary-of-FIR-Variants)
 - [Multirate FIR Filter](#Multirate-FIR-Filter)
    - [Single-Stage Multirate FIR Filter](#Single-Stage-Multirate-FIR-Filter)
@@ -338,10 +339,6 @@ fir_data_t FIR_filter(delay_data_t FIR_delays[], const coef_data_t FIR_coe[], in
 }
 ```
 
-```c
-transposed folded code
-```
-
 **Key Points:**  
 
 - Reduces hardware resources by **combining symmetric taps**, thus **fewer multiplications are needed**  
@@ -354,6 +351,39 @@ transposed folded code
 |  HLS code with #pragmas   |   |   |   |   |   |
 
 **Takeaway:** Folding exploits coefficient symmetry to save multiplications, reducing resource usage without affecting functional correctness. HLS pragmas on Transposed Form FIR detect the same opportunities automatically.
+
+
+### Fast-running FIR filter
+
+The fast-running FIR filter actually belongs to the multi-rate filters, but since it is merely an implementation variant, it is discussed here.
+
+
+
+
+<p align="center" width="100%">
+   <img src="images/Fast_running_FIR_2.png" width="70%">
+</p>
+
+For implementation, the original filter is divided into two subsets, H0 and H1. In addition, a third filter is required, consisting of H2=H0+H1. A corresponding Matlab script can be found here: [FIR_fast_running_HLS.m](Matlab/FIR_fast_running_HLS.m)
+
+
+```c
+fast-running fir code
+```
+
+
+**Key Points:**  
+- Approximately 25% fewer operations required
+- An additional filter is introduced, resulting in a 50% increase in coefficients
+- Not all sub-filters can be symmetrical
+
+| variant  |  latency [ns] | FF  |  LUT |  BRAM |  DSP |
+|---|---|---|---|---|---|
+|  normal HLS code          |   |   |   |   |   |
+|  HLS code with #pragmas   |   |   |   |   |   |
+
+**Takeaway:**
+In conclusion, it can be said that although the implementation saves 25% of the arithmetic operations, not all sub-filters can be optimised because either H0 and H1 are symmetrical or H3 cannot be combined with the others. However, as shown in the previous sections, this is essential for the efficiency of the folded filters.
 
 ### Summary of FIR Variants
 
@@ -383,7 +413,10 @@ This system consists of three main components forming a **sample-rate conversion
 - **Kernel Filter** — performs core filtering at the reduced rate for computational savings  
 - **Interpolator** — increases the sampling rate by factor L through zero-insertion and low-pass filtering
 
-![Filter](images/DEC_KERNEL_INT.png)
+<p align="center" width="100%">
+   <img src="images/DEC_KERNEL_INT.png" width="60%">
+</p>
+
 
 ### Single-Stage Multirate FIR Filter
 
@@ -488,6 +521,7 @@ Because of these properties, a Halfband filter requires only about **50% of the 
 When used inside a multistage decimation or interpolation chain, this leads to a substantial further reduction of computational effort.
 
 <img src="images/Halfband_FIR.png" width="800">
+
 
 #### MATLAB Halfband Multirate Filter Reference Design
 Before implementing the halfband multirate filters in HLS, a two-stage halfband FIR filter chain is designed in MATLAB. Each stage performs a decimation by a factor of M = 2, resulting in a total sample-rate reduction of 4.
