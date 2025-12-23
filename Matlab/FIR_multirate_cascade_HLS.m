@@ -53,7 +53,7 @@ hz_kernel_MM_on_Fs = freqz(b_FIR_kernel_MM,1, 2*pi*freq*MM1*MM2);
 %title(['kernel filter on Fs (due to M=2), fpass = ',num2str(fpass),' Hz, fstop = ',num2str(fstop),' Hz']);
 %axis([0,Fs/2,-60,0]);
 
-%------------------------------ decimation/interpolation filter -----------------------
+%------------------------------ decimation/interpolation filter 1 -----------------------
 f_stop_Dec_Int1 = Fs_1-fstop;
 [N_FIR_Dec_Int1,fo,mo,w] = firpmord( [fpass f_stop_Dec_Int1], [1 0], [delta_pass/5 delta_stop], Fs );
 % safety, add to N_fir + 2
@@ -68,7 +68,7 @@ hz_Dec_Int1 = freqz(b_FIR_Dec_Int1,1, 2*pi*freq);
 % ylabel('|H| in dB');
 % grid
 
-%------------------------------ decimation/interpolation filter -----------------------
+%------------------------------ decimation/interpolation filter 2 -----------------------
 f_stop_Dec_Int2 = Fs_2-fstop;
 [N_FIR_Dec_Int2,fo,mo,w] = firpmord( [fpass f_stop_Dec_Int2], [1 0], [delta_pass/5 delta_stop], Fs_1 );
 % safety, add to N_fir + 2
@@ -118,6 +118,7 @@ end
 fprintf('Order of kernel filter, N_FIR_kernel=%d\n\n', N_FIR_kernel_MM);
 fprintf('Order of decimation/interpolation filter 1, N_FIR_dec_int1=%d\n\n', N_FIR_Dec_Int1);
 fprintf('Order of decimation/interpolation filter 2, N_FIR_dec_int2=%d\n\n', N_FIR_Dec_Int2);
+fprintf('Order of filter chain, N_FIR_chain=%d\n\n', N_FIR_kernel_MM+(N_FIR_Dec_Int1)+(N_FIR_Dec_Int2));
 
 groupdelay = round(N_FIR_Dec_Int1+1)+ round((N_FIR_Dec_Int2+1)*MM1) +round((N_FIR_kernel_MM+1)*MM1*MM2/2);
 

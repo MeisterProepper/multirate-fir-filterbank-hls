@@ -117,6 +117,7 @@ end
 fprintf('Order of kernel filter, N_FIR_kernel=%d\n\n', N_FIR_kernel_MM);
 fprintf('Order of decimation/interpolation filter 1, N_FIR_dec_int1=%d\n\n', N_FIR_Dec_Int1);
 fprintf('Order of decimation/interpolation filter 2, N_FIR_dec_int2=%d\n\n', N_FIR_Dec_Int2);
+fprintf('Order of filter chain, N_FIR_chain=%d\n\n', N_FIR_kernel_MM+(N_FIR_Dec_Int1/2)+(N_FIR_Dec_Int2/2));
 
 groupdelay = round(N_FIR_Dec_Int1+1)+ round((N_FIR_Dec_Int2+1)*MM1) +round((N_FIR_kernel_MM+1)*MM1*MM2/2);
 
