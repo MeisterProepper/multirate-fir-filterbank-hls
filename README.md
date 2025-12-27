@@ -19,7 +19,8 @@ All designs are developed for a fixed set of signal-processing requirements, inc
    - [Transposed Folded form FIR filter](#Transposed-Folded-form-FIR-filter)
    - [Fast-running FIR filter](#Fast-running-FIR-filter)
    - [Summary of FIR Variants](#Summary-of-FIR-Variants)
-- [Multirate FIR Filter](#Multirate-FIR-Filter)
+- [IIR Filter](#IIR-Filter)
+- [Multirate Filter](#Multirate-Filter)
    - [Single-Stage Multirate FIR Filter](#Single-Stage-Multirate-FIR-Filter)
       - [MATLAB Reference Design](#MATLAB-Single-Stage-Multirate-Filter-Reference-Design)  
       - [Multirate Filter — Variant Combinations](#Multirate-Filter-—-Variant-Combinations)
@@ -404,7 +405,11 @@ In conclusion, it can be said that although the implementation saves 25% of the 
 
 ---
 
-## Multirate FIR Filter
+## IIR Filter
+
+---
+
+## Multirate Filter
 
 After analyzing and optimizing the single-rate FIR architectures, the next step is to implement a **multirate filter system**.  
 This system consists of three main components forming a **sample-rate conversion chain**:
