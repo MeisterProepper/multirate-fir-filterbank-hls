@@ -58,6 +58,7 @@ for k = 1:MM
     b_FIR_fast{k} = b_FIR(k:MM:end);
 end
 
+b_FIR_mid = b_FIR_fast{1}+b_FIR_fast{2};
 
 
 
@@ -77,7 +78,7 @@ y3=0;
 
 for i = 1:MM
     filterfast{i} = dsp.FIRFilter('Numerator', b_FIR_fast{i});
-    filtermid{i} = dsp.FIRFilter('Numerator', b_FIR_fast{i});
+    filtermid = dsp.FIRFilter('Numerator', b_FIR_mid);
 end
 
 %filtersint{2}(y2)
@@ -88,7 +89,7 @@ for i = 1:testLength
     switch mod_value
         case 0
             input1=test_signal(i);
-            y2=filtermid{1}(test_signal(i))+filtermid{2}(test_signal(i));
+            y2=filtermid(test_signal(i));
             my_signal(i)=y2-y1;
             mod_value=1;
             
@@ -187,7 +188,7 @@ fclose(file_ID);
 % create TS_HLS_fastrunning.dat file
 
 fprintf('test signal is written to file ==> ');
-filename = 'TS_HLS_normal.dat';
+filename = 'TS_HLS_fastrunning.dat';
 fprintf(filename);
 fprintf('\n\n');
 file_ID = fopen(filename, 'w');
@@ -204,7 +205,7 @@ fclose(file_ID);
 % create TS_HLS_fastrunning.res file
 
 fprintf('golden vector is written to file ==> ');
-filename = 'TS_HLS_normal.res';
+filename = 'TS_HLS_fastrunning.res';
 fprintf(filename);
 fprintf('\n\n');
 file_ID = fopen(filename, 'w');		% generate include-file

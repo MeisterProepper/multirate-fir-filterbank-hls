@@ -58,6 +58,12 @@ f_stop_Dec_Int1 = Fs_1-fstop;
 [N_FIR_Dec_Int1,fo,mo,w] = firpmord( [fpass f_stop_Dec_Int1], [1 0], [delta_pass/5 delta_stop], Fs );
 % safety, add to N_fir + 2
 N_FIR_Dec_Int1 = N_FIR_Dec_Int1 + 2;
+
+%make N_FIR_Dec_Int1 even for symmetry of the coefficients
+if mod(N_FIR_Dec_Int1,2) ~= 0
+    N_FIR_Dec_Int1 = N_FIR_Dec_Int1 + 1;
+end
+
 b_FIR_Dec_Int1 = remez(N_FIR_Dec_Int1, fo, mo, w);
 hz_Dec_Int1 = freqz(b_FIR_Dec_Int1,1, 2*pi*freq);
 
@@ -73,6 +79,11 @@ f_stop_Dec_Int2 = Fs_2-fstop;
 [N_FIR_Dec_Int2,fo,mo,w] = firpmord( [fpass f_stop_Dec_Int2], [1 0], [delta_pass/5 delta_stop], Fs_1 );
 % safety, add to N_fir + 2
 N_FIR_Dec_Int2 = N_FIR_Dec_Int2 + 2;
+
+%make N_FIR_Dec_Int even for symmetry of the coefficients
+if mod(N_FIR_Dec_Int2,2) ~= 0
+    N_FIR_Dec_Int2 = N_FIR_Dec_Int2 + 1;
+end
 b_FIR_Dec_Int2 = remez(N_FIR_Dec_Int2, fo, mo, w);
 hz_Dec_Int2 = freqz(b_FIR_Dec_Int2,1, 2*pi*freq*MM1);
 

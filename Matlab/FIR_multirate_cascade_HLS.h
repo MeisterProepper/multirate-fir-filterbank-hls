@@ -8,7 +8,7 @@
 // delta_stop_dB =  40.00
 // MM = 4
 // N_FIR_kernel = 123
-// N_FIR_dec_int_1 = 5
+// N_FIR_dec_int_1 = 6
 // N_FIR_dec_int_2 = 10
 //------------------------------------------- 
  
@@ -18,7 +18,7 @@ typedef ap_fixed<16,1> coef_data_t;
 typedef ap_fixed<16,1> delay_data_t; 
  
 #define N_DELAYS_FIR_kernel_MM 124
-#define N_DELAYS_FIR_dec_int_1_20 3
+#define N_DELAYS_FIR_dec_int_1_20 4
 #define N_DELAYS_FIR_dec_int_1_21 3
 
 #define N_DELAYS_FIR_dec_int_2_20 6
@@ -57,11 +57,11 @@ const coef_data_t b_FIR_kernel[124]={
  -0.001154, -0.001219, 0.001083, 0.000905, -0.001138, -0.000937,
  0.000938, 0.000811, -0.002912, 0.001530,};
 
-const coef_data_t b_FIR_dec_int_1_20[3]={
- -0.049932, 0.464577, 0.085941,};
+const coef_data_t b_FIR_dec_int_1_20[4]={
+ -0.033288, 0.283837, 0.283837, -0.033288,};
 
 const coef_data_t b_FIR_dec_int_1_21[3]={
- 0.085941, 0.464577, -0.049932,};
+ -0.003487, 0.505327, -0.003487,};
 
 const coef_data_t b_FIR_dec_int_2_20[6]={
  0.010899, -0.063144, 0.300869, 0.300869, -0.063144, 0.010899,};

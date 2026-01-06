@@ -57,6 +57,7 @@ f_stop_Dec_Int = Fs_MM-fstop;
 [N_FIR_Dec_Int,fo,mo,w] = firpmord( [fpass f_stop_Dec_Int], [1 0], [delta_pass/3 delta_stop], Fs );
 % safety, add to N_fir + 2
 N_FIR_Dec_Int = N_FIR_Dec_Int + 2;
+
 b_FIR_Dec_Int = remez(N_FIR_Dec_Int, fo, mo, w);
 hz_Dec_Int = freqz(b_FIR_Dec_Int,1, 2*pi*freq);
 
