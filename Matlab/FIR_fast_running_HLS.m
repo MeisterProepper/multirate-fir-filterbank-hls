@@ -166,7 +166,7 @@ fprintf(file_ID, '#define N_DELAYS_FIR_22 %d\n', length(b_FIR_mid));
 fprintf(file_ID, '\n');
 
 fprintf(file_ID, 'typedef ap_fixed<16,1> coef_data_t; \n');
-fprintf(file_ID, 'typedef ap_fixed<16,1> delay_data_t; \n \n');
+fprintf(file_ID, 'typedef ap_fixed<32,1> delay_data_t; \n \n');
 
 fprintf(file_ID, 'static delay_data_t H_filter_FIR_20[N_DELAYS_FIR_20]; \n');
 fprintf(file_ID, 'static delay_data_t H_filter_FIR_21[N_DELAYS_FIR_21]; \n');

@@ -16,7 +16,7 @@
 #define N_DELAYS_FIR_22 196
 
 typedef ap_fixed<16,1> coef_data_t; 
-typedef ap_fixed<16,1> delay_data_t; 
+typedef ap_fixed<32,1> delay_data_t; 
  
 static delay_data_t H_filter_FIR_20[N_DELAYS_FIR_20]; 
 static delay_data_t H_filter_FIR_21[N_DELAYS_FIR_21]; 
