@@ -159,20 +159,27 @@ fprintf(file_ID, '//------------------------------------------- \n \n');
 
 fprintf(file_ID, '#include <ap_fixed.h> \n \n');
 
-fprintf(file_ID, '#define N_DELAYS_FIR %d\n', length(b_FIR));
+fprintf(file_ID, '#define N_DELAYS_FIR_20 %d\n', length(b_FIR_fast{1}));
+fprintf(file_ID, '#define N_DELAYS_FIR_21 %d\n', length(b_FIR_fast{2}));
+fprintf(file_ID, '#define N_DELAYS_FIR_22 %d\n', length(b_FIR_mid));
 
+fprintf(file_ID, '\n');
 
 fprintf(file_ID, 'typedef ap_fixed<16,1> coef_data_t; \n');
 fprintf(file_ID, 'typedef ap_fixed<16,1> delay_data_t; \n \n');
 
-fprintf(file_ID, 'static delay_data_t H_filter_FIR[N_DELAYS_FIR]; \n');
+fprintf(file_ID, 'static delay_data_t H_filter_FIR[N_DELAYS_FIR_20]; \n');
+fprintf(file_ID, 'static delay_data_t H_filter_FIR[N_DELAYS_FIR_21]; \n');
+fprintf(file_ID, 'static delay_data_t H_filter_FIR[N_DELAYS_FIR_22]; \n');
 
-fprintf(file_ID, 'const coef_data_t b_FIR');
-fprintf(file_ID,['[',num2str(length(b_FIR)),']={\n']);
+fprintf(file_ID, '\n');
+
+fprintf(file_ID, 'const coef_data_t b_FIR_20');
+fprintf(file_ID,['[',num2str(length(b_FIR_fast{1})),']={\n']);
 
 j = 0;
-for i= 1:length(b_FIR)
-   fprintf(file_ID,' %1.6f,', b_FIR(i));
+for i= 1:length(b_FIR_fast{1})
+   fprintf(file_ID,' %1.6f,', b_FIR_fast{1}(i));
    j = j + 1;
    if j >5 
      fprintf(file_ID, '\n');
@@ -180,6 +187,37 @@ for i= 1:length(b_FIR)
   end
 end
 fprintf(file_ID,'};\n\n');
+
+fprintf(file_ID, 'const coef_data_t b_FIR_21');
+fprintf(file_ID,['[',num2str(length(b_FIR_fast{2})),']={\n']);
+
+j = 0;
+for i= 1:length(b_FIR_fast{2})
+   fprintf(file_ID,' %1.6f,', b_FIR_fast{2}(i));
+   j = j + 1;
+   if j >5 
+     fprintf(file_ID, '\n');
+     j = 0;
+  end
+end
+fprintf(file_ID,'};\n\n');
+
+
+
+fprintf(file_ID, 'const coef_data_t b_FIR_22');
+fprintf(file_ID,['[',num2str(length(b_FIR_mid)),']={\n']);
+
+j = 0;
+for i= 1:length(b_FIR_mid)
+   fprintf(file_ID,' %1.6f,', b_FIR_mid(i));
+   j = j + 1;
+   if j >5 
+     fprintf(file_ID, '\n');
+     j = 0;
+  end
+end
+fprintf(file_ID,'};\n\n');
+
 
 fclose(file_ID);
 
