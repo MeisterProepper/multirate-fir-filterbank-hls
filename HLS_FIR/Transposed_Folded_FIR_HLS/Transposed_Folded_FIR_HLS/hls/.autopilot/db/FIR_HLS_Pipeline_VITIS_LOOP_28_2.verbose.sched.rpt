@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'FIR_HLS_Pipeline_VITIS_LOOP_28_2'
+================================================================
+* Date:           Sat Jan 17 13:34:10 2026
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        Transposed_Folded_FIR_HLS
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.870 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_28_2  |      392|      392|         2|          1|          1|   391|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%sext_ln28_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %sext_ln28"   --->   Operation 5 'read' 'sext_ln28_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%sext_ln28_cast = sext i16 %sext_ln28_read"   --->   Operation 6 'sext' 'sext_ln28_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln28 = store i64 1, i64 %i" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 7 'store' 'store_ln28' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body14.i.split_ifconv"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.51>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i_1 = load i64 %i" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 9 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln28 = trunc i64 %i_1" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 10 'trunc' 'trunc_ln28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%b_FIR_addr = getelementptr i14 %b_FIR, i64 0, i64 %i_1" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 11 'getelementptr' 'b_FIR_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [2/2] (1.23ns)   --->   "%b_FIR_load = load i9 %b_FIR_addr" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 12 'load' 'b_FIR_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 100 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 392> <ROM>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%H_accu_FIR1_addr = getelementptr i32 %H_accu_FIR1, i64 0, i64 %i_1" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 13 'getelementptr' 'H_accu_FIR1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (1.23ns)   --->   "%H_accu_FIR1_load = load i9 %H_accu_FIR1_addr" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 14 'load' 'H_accu_FIR1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 392> <RAM>
+ST_2 : Operation 15 [1/1] (1.08ns)   --->   "%add_ln28 = add i64 %i_1, i64 1" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 15 'add' 'add_ln28' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln28 = store i64 %add_ln28, i64 %i" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 16 'store' 'store_ln28' <Predicate = true> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 5.87>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln28 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 17 'specpipeline' 'specpipeline_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%speclooptripcount_ln28 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 391, i64 391, i64 391" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 18 'speclooptripcount' 'speclooptripcount_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 19 'specloopname' 'specloopname_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/2] ( I:1.23ns O:1.23ns )   --->   "%b_FIR_load = load i9 %b_FIR_addr" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 20 'load' 'b_FIR_load' <Predicate = true> <Delay = 1.23> <CoreInst = "ROM">   --->   Core 100 'ROM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 392> <ROM>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln29 = sext i14 %b_FIR_load" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 21 'sext' 'sext_ln29' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (2.38ns)   --->   "%mul_ln29 = mul i30 %sext_ln28_cast, i30 %sext_ln29" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 22 'mul' 'mul_ln29' <Predicate = true> <Delay = 2.38> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.38> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i31 @_ssdm_op_BitConcatenate.i31.i30.i1, i30 %mul_ln29, i1 0" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 23 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln29_1 = sext i31 %tmp" [FIR_HLS.cpp:29->FIR_HLS.cpp:12]   --->   Operation 24 'sext' 'sext_ln29_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.77ns)   --->   "%add_ln31 = add i9 %trunc_ln28, i9 511" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 25 'add' 'add_ln31' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i9 %add_ln31" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 26 'zext' 'zext_ln31' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%H_accu_FIR1_addr_1 = getelementptr i32 %H_accu_FIR1, i64 0, i64 %zext_ln31" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 27 'getelementptr' 'H_accu_FIR1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/2] ( I:1.23ns O:1.23ns )   --->   "%H_accu_FIR1_load = load i9 %H_accu_FIR1_addr" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 28 'load' 'H_accu_FIR1_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 392> <RAM>
+ST_3 : Operation 29 [1/1] (1.01ns)   --->   "%add_ln31_1 = add i32 %H_accu_FIR1_load, i32 %sext_ln29_1" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 29 'add' 'add_ln31_1' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln31 = store i32 %add_ln31_1, i9 %H_accu_FIR1_addr_1" [FIR_HLS.cpp:31->FIR_HLS.cpp:12]   --->   Operation 30 'store' 'store_ln31' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 392> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln28 = br void %for.body14.i.split_ifconv" [FIR_HLS.cpp:28->FIR_HLS.cpp:12]   --->   Operation 31 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 64 bit ('i', FIR_HLS.cpp:28->FIR_HLS.cpp:12) [4]  (0.000 ns)
+	'store' operation 0 bit ('store_ln28', FIR_HLS.cpp:28->FIR_HLS.cpp:12) of constant 1 on local variable 'i', FIR_HLS.cpp:28->FIR_HLS.cpp:12 [7]  (0.427 ns)
+
+ <State 2>: 1.512ns
+The critical path consists of the following:
+	'load' operation 64 bit ('i', FIR_HLS.cpp:28->FIR_HLS.cpp:12) on local variable 'i', FIR_HLS.cpp:28->FIR_HLS.cpp:12 [10]  (0.000 ns)
+	'add' operation 64 bit ('add_ln28', FIR_HLS.cpp:28->FIR_HLS.cpp:12) [28]  (1.085 ns)
+	'store' operation 0 bit ('store_ln28', FIR_HLS.cpp:28->FIR_HLS.cpp:12) of variable 'add_ln28', FIR_HLS.cpp:28->FIR_HLS.cpp:12 on local variable 'i', FIR_HLS.cpp:28->FIR_HLS.cpp:12 [29]  (0.427 ns)
+
+ <State 3>: 5.870ns
+The critical path consists of the following:
+	'load' operation 14 bit ('b_FIR_load', FIR_HLS.cpp:29->FIR_HLS.cpp:12) on array 'b_FIR' [16]  (1.237 ns)
+	'mul' operation 30 bit ('mul_ln29', FIR_HLS.cpp:29->FIR_HLS.cpp:12) [18]  (2.380 ns)
+	'add' operation 32 bit ('add_ln31_1', FIR_HLS.cpp:31->FIR_HLS.cpp:12) [26]  (1.016 ns)
+	'store' operation 0 bit ('store_ln31', FIR_HLS.cpp:31->FIR_HLS.cpp:12) of variable 'add_ln31_1', FIR_HLS.cpp:31->FIR_HLS.cpp:12 on array 'H_accu_FIR1' [27]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

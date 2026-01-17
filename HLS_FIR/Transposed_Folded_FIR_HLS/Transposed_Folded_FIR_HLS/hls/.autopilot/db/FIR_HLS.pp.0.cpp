@@ -8478,7 +8478,7 @@ typedef ap_fixed<16,1> fir_data_t;
 typedef ap_fixed<32,1> accu_data_t;
 static accu_data_t H_accu_FIR1[392];
 
-__attribute__((sdx_kernel("Transposed_Folded_FIR_HLS", 0))) void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
+void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output);
 
 fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n);
 # 2 "FIR_HLS.cpp" 2
@@ -31531,9 +31531,9 @@ namespace std
 
 
 
-__attribute__((sdx_kernel("Transposed_Folded_FIR_HLS", 0))) void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+__attribute__((sdx_kernel("FIR_HLS", 0))) void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
 #line 1 "directive"
-#pragma HLSDIRECTIVE TOP name=Transposed_Folded_FIR_HLS
+#pragma HLSDIRECTIVE TOP name=FIR_HLS
 # 6 "FIR_HLS.cpp"
 
 #pragma HLS INTERFACE mode=axis port=input
@@ -31546,7 +31546,7 @@ __attribute__((sdx_kernel("Transposed_Folded_FIR_HLS", 0))) void Transposed_Fold
 
 
 fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
-#pragma HLS PIPELINE
+
  fir_data_t y;
     accu_data_t FIR_delays2[N_delays];
     accu_data_t FIR_delays3[N_delays/2];

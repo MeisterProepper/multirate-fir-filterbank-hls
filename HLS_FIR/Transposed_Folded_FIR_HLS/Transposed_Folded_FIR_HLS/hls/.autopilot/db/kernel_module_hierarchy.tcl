@@ -1,5 +1,7 @@
 set ModuleHierarchy {[{
-"Name" : "Transposed_Folded_FIR_HLS","ID" : "0","Type" : "sequential",
+"Name" : "FIR_HLS","ID" : "0","Type" : "sequential",
 "SubInsts" : [
-	{"Name" : "p_0_FIR_filter_fu_827","ID" : "1","Type" : "pipeline"},]
+	{"Name" : "grp_FIR_HLS_Pipeline_VITIS_LOOP_28_2_fu_40","ID" : "1","Type" : "sequential",
+		"SubLoops" : [
+		{"Name" : "VITIS_LOOP_28_2","ID" : "2","Type" : "pipeline"},]},]
 }]}

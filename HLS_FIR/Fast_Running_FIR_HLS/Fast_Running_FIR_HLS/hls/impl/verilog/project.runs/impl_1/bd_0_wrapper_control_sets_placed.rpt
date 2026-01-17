@@ -1,0 +1,108 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Sat Jan 17 11:14:43 2026
+| Host         : DESKTOP-92OKADH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xck26
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    30 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    24 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              17 |           13 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              37 |           17 |
+| Yes          | No                    | No                     |             320 |           70 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              24 |            8 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                                                Enable Signal                                                                |                                                           Set/Reset Signal                                                           | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      |                                                                                                                                             | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/flow_control_loop_pipe_sequential_init_U/ap_loop_init  |                3 |              5 |         1.67 |
+|  ap_clk      |                                                                                                                                             | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/flow_control_loop_pipe_sequential_init_U/ap_loop_init |                2 |              5 |         2.50 |
+|  ap_clk      |                                                                                                                                             | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/flow_control_loop_pipe_sequential_init_U/ap_loop_init |                3 |              5 |         1.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/flow_control_loop_pipe_sequential_init_U/E[0]                 | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/flow_control_loop_pipe_sequential_init_U/SS[0]         |                2 |              8 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/flow_control_loop_pipe_sequential_init_U/E[0]                | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/flow_control_loop_pipe_sequential_init_U/SS[0]        |                3 |              8 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/flow_control_loop_pipe_sequential_init_U/E[0]                | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/flow_control_loop_pipe_sequential_init_U/SS[0]        |                3 |              8 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[3][0] |                                                                                                                                      |                3 |             16 |         5.33 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/ap_block_state5                                                                                |                                                                                                                                      |                4 |             16 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/load_p2                                                                                        |                                                                                                                                      |                3 |             16 |         5.33 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/ap_CS_fsm_reg[4][0]                                                                            |                                                                                                                                      |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/FSM_sequential_state_reg[1]_0[0]                                                               |                                                                                                                                      |                6 |             16 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/E[0]                                                                                           |                                                                                                                                      |                4 |             16 |         4.00 |
+|  ap_clk      |                                                                                                                                             |                                                                                                                                      |               13 |             17 |         1.31 |
+|  ap_clk      |                                                                                                                                             | ap_rst_n                                                                                                                             |                9 |             22 |         2.44 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/E[0]                                                          |                                                                                                                                      |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/E[0]                                                         |                                                                                                                                      |               10 |             32 |         3.20 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/E[0]                                                         |                                                                                                                                      |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/regslice_both_input_r_U/ap_block_state23_in                                                                            |                                                                                                                                      |                4 |             32 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131_ap_start_reg                                                 |                                                                                                                                      |               12 |             32 |         2.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140_ap_start_reg                                                 |                                                                                                                                      |               14 |             32 |         2.29 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122_ap_start_reg                                                  |                                                                                                                                      |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/ap_enable_reg_pp0_iter1_reg_1                                 |                                                                                                                                      |                5 |             64 |        12.80 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/ap_enable_reg_pp0_iter1_reg_0                                 |                                                                                                                                      |                8 |             64 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/ap_enable_reg_pp0_iter1_reg_1                                |                                                                                                                                      |                4 |             64 |        16.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/ap_enable_reg_pp0_iter1_reg_0                                |                                                                                                                                      |                8 |             64 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/ap_enable_reg_pp0_iter1_reg_1                                |                                                                                                                                      |                5 |             64 |        12.80 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/ap_enable_reg_pp0_iter1_reg_0                                |                                                                                                                                      |                8 |             64 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_1_fu_122/ap_enable_reg_pp0_iter1_reg_2                                 |                                                                                                                                      |               16 |            128 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_11_fu_131/ap_enable_reg_pp0_iter1_reg_2                                |                                                                                                                                      |               16 |            128 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_Fast_Running_FIR_HLS_Pipeline_VITIS_LOOP_37_12_fu_140/ap_enable_reg_pp0_iter1_reg_2                                |                                                                                                                                      |               16 |            128 |         8.00 |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

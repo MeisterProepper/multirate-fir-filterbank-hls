@@ -1,0 +1,115 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "1 1 1",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 5,
+    "instructions": 103,
+    "loads": {
+      "G": 2,
+      "L": 5
+    },
+    "name": "Fast_Running_FIR_HLS",
+    "stores": {
+      "G": 7,
+      "L": 1
+    },
+    "total_instructions": 3372
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "FIR_HLS.cpp",
+    "fileloc": 31,
+    "instructions": 69,
+    "loads": {
+      "L": 2
+    },
+    "name": "FIR_filter",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 799
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.h",
+    "fileloc": 14,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.6",
+    "total_instructions": 52
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_fastrunning_HLS.h",
+    "fileloc": 60,
+    "instructions": 197,
+    "name": "__cxx_global_var_init.1",
+    "total_instructions": 75853
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.h",
+    "fileloc": 12,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.4",
+    "total_instructions": 52
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.h",
+    "fileloc": 15,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.7",
+    "total_instructions": 52
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_fastrunning_HLS.h",
+    "fileloc": 25,
+    "instructions": 197,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 75853
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.h",
+    "fileloc": 11,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.3",
+    "total_instructions": 52
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_HLS.h",
+    "fileloc": 13,
+    "instructions": 2,
+    "name": "__cxx_global_var_init.5",
+    "total_instructions": 52
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FIR_fastrunning_HLS.h",
+    "fileloc": 95,
+    "instructions": 197,
+    "name": "__cxx_global_var_init.2",
+    "total_instructions": 75853
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "5 2 8 6 3 7 10 4",
+    "file": "FIR_HLS.pp.0.cpp",
+    "fileloc": 0,
+    "instructions": 9,
+    "name": "",
+    "total_instructions": 227828
+  }
+}

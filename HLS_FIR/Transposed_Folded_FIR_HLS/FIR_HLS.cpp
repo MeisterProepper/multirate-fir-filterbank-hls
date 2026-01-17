@@ -3,7 +3,7 @@
 
 
 
-void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
+void FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_data_t> &output){
     #pragma HLS INTERFACE mode=axis port=input
     #pragma HLS INTERFACE mode=axis port=output
     #pragma HLS INTERFACE mode=ap_ctrl_none port=return
@@ -14,7 +14,7 @@ void Transposed_Folded_FIR_HLS(hls::stream<fir_data_t> &input, hls::stream<fir_d
 
 
 fir_data_t FIR_filter(accu_data_t FIR_delays1[], const coef_data_t FIR_coe[], int N_delays, fir_data_t x_n){
-    #pragma HLS PIPELINE
+    //#pragma HLS PIPELINE
 	fir_data_t y;
     accu_data_t FIR_delays2[N_delays];
     accu_data_t FIR_delays3[N_delays/2];

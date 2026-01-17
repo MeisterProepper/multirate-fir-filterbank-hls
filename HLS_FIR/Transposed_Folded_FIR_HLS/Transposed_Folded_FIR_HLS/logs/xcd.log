@@ -1523,3 +1523,190 @@
 11/16/25 16:14:45: Socket received request to stop server.
 11/16/25 16:14:45: Dispatch Server: do_await_stop
 11/16/25 16:14:45: SERVER: destructor for server bound to port 58429
+01/17/26 12:11:40: Running xcd server. This server was built by gradle.
+01/17/26 12:11:40: Server was asked to start on port: '51417'
+01/17/26 12:11:40: Server is using token UUID: '8c5280db-b833-420e-8a36-fd7f632e0696'
+01/17/26 12:11:40: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 12:11:40: Attempting to start server on port '51417'
+01/17/26 12:11:40: Running Dispatch Server
+01/17/26 12:11:40: Version 2.2.0
+01/17/26 12:11:41: Dispatch Server: Accepted socket connection from client
+01/17/26 12:11:41: Starting Socket connection
+01/17/26 12:11:41: EXCHANGE_TOKEN received, server token: 8c5280db-b833-420e-8a36-fd7f632e0696, passed token: 8c5280db-b833-420e-8a36-fd7f632e0696
+01/17/26 12:11:42: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 12:11:42: SESSION_MGR: creating session with session uuid: '693690e1-bd14-4d35-bae0-06f76dfd13bd' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:11:42: KERNEL_SVC: creating session with uuid: '693690e1-bd14-4d35-bae0-06f76dfd13bd' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:11:42: GUIDANCE_SMGR: creating guidance session with uuid: '693690e1-bd14-4d35-bae0-06f76dfd13bd' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:11:42: SYSTEM_DIAGRAM: creating session with uuid: '693690e1-bd14-4d35-bae0-06f76dfd13bd' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:11:49: Dispatch Server: Accepted socket connection from client
+01/17/26 12:11:49: Starting Socket connection
+01/17/26 12:12:01: SESSION_MGR: closing session for UUID '693690e1-bd14-4d35-bae0-06f76dfd13bd' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:12:01: KERNEL_SVC: closing session for UUID '693690e1-bd14-4d35-bae0-06f76dfd13bd' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:12:01: GUIDANCE_SMGR: closing session for UUID '693690e1-bd14-4d35-bae0-06f76dfd13bd' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:12:01: SYSTEM_DIAGRAM: closing session for UUID '693690e1-bd14-4d35-bae0-06f76dfd13bd' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:12:01: STOP_SERVER received, server token: 8c5280db-b833-420e-8a36-fd7f632e0696, passed token: 8c5280db-b833-420e-8a36-fd7f632e0696
+01/17/26 12:12:01: Socket received request to stop server.
+01/17/26 12:12:01: Dispatch Server: do_await_stop
+01/17/26 12:12:01: SERVER: destructor for server bound to port 51417
+01/17/26 12:13:26: Running xcd server. This server was built by gradle.
+01/17/26 12:13:26: Server was asked to start on port: '51424'
+01/17/26 12:13:26: Server is using token UUID: '1ad27937-cf75-40e2-be1e-c7e4d8ab38a6'
+01/17/26 12:13:26: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 12:13:26: Attempting to start server on port '51424'
+01/17/26 12:13:26: Running Dispatch Server
+01/17/26 12:13:26: Version 2.2.0
+01/17/26 12:13:27: Dispatch Server: Accepted socket connection from client
+01/17/26 12:13:27: Starting Socket connection
+01/17/26 12:13:27: EXCHANGE_TOKEN received, server token: 1ad27937-cf75-40e2-be1e-c7e4d8ab38a6, passed token: 1ad27937-cf75-40e2-be1e-c7e4d8ab38a6
+01/17/26 12:13:27: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 12:13:27: SESSION_MGR: creating session with session uuid: '4775ef08-6276-41f9-a280-a03688be27e6' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:13:27: KERNEL_SVC: creating session with uuid: '4775ef08-6276-41f9-a280-a03688be27e6' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:13:27: GUIDANCE_SMGR: creating guidance session with uuid: '4775ef08-6276-41f9-a280-a03688be27e6' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:13:27: SYSTEM_DIAGRAM: creating session with uuid: '4775ef08-6276-41f9-a280-a03688be27e6' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:13:36: Dispatch Server: Accepted socket connection from client
+01/17/26 12:13:36: Starting Socket connection
+01/17/26 12:14:30: SESSION_MGR: closing session for UUID '4775ef08-6276-41f9-a280-a03688be27e6' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:14:30: KERNEL_SVC: closing session for UUID '4775ef08-6276-41f9-a280-a03688be27e6' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:14:30: GUIDANCE_SMGR: closing session for UUID '4775ef08-6276-41f9-a280-a03688be27e6' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:14:30: SYSTEM_DIAGRAM: closing session for UUID '4775ef08-6276-41f9-a280-a03688be27e6' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:14:30: STOP_SERVER received, server token: 1ad27937-cf75-40e2-be1e-c7e4d8ab38a6, passed token: 1ad27937-cf75-40e2-be1e-c7e4d8ab38a6
+01/17/26 12:14:30: Socket received request to stop server.
+01/17/26 12:14:30: Dispatch Server: do_await_stop
+01/17/26 12:14:30: SERVER: destructor for server bound to port 51424
+01/17/26 12:15:07: Running xcd server. This server was built by gradle.
+01/17/26 12:15:07: Server was asked to start on port: '51432'
+01/17/26 12:15:07: Server is using token UUID: '2b4cbf6b-bb3e-4af3-8fc4-89ee103ce4a0'
+01/17/26 12:15:07: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 12:15:08: Attempting to start server on port '51432'
+01/17/26 12:15:08: Running Dispatch Server
+01/17/26 12:15:08: Version 2.2.0
+01/17/26 12:15:09: Dispatch Server: Accepted socket connection from client
+01/17/26 12:15:09: Starting Socket connection
+01/17/26 12:15:09: EXCHANGE_TOKEN received, server token: 2b4cbf6b-bb3e-4af3-8fc4-89ee103ce4a0, passed token: 2b4cbf6b-bb3e-4af3-8fc4-89ee103ce4a0
+01/17/26 12:15:09: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 12:15:09: SESSION_MGR: creating session with session uuid: '74efacbb-134a-440f-a340-a83a1abc99b4' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:15:09: KERNEL_SVC: creating session with uuid: '74efacbb-134a-440f-a340-a83a1abc99b4' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:15:09: GUIDANCE_SMGR: creating guidance session with uuid: '74efacbb-134a-440f-a340-a83a1abc99b4' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:15:09: SYSTEM_DIAGRAM: creating session with uuid: '74efacbb-134a-440f-a340-a83a1abc99b4' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:15:16: Dispatch Server: Accepted socket connection from client
+01/17/26 12:15:16: Starting Socket connection
+01/17/26 12:16:03: Dispatch Server: Accepted socket connection from client
+01/17/26 12:16:03: Starting Socket connection
+01/17/26 12:19:44: Dispatch Server: Accepted socket connection from client
+01/17/26 12:19:44: Starting Socket connection
+01/17/26 12:23:03: Dispatch Server: Accepted socket connection from client
+01/17/26 12:23:03: Starting Socket connection
+01/17/26 12:30:15: SESSION_MGR: closing session for UUID '74efacbb-134a-440f-a340-a83a1abc99b4' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:30:15: KERNEL_SVC: closing session for UUID '74efacbb-134a-440f-a340-a83a1abc99b4' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:30:15: GUIDANCE_SMGR: closing session for UUID '74efacbb-134a-440f-a340-a83a1abc99b4' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:30:15: SYSTEM_DIAGRAM: closing session for UUID '74efacbb-134a-440f-a340-a83a1abc99b4' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 12:30:15: STOP_SERVER received, server token: 2b4cbf6b-bb3e-4af3-8fc4-89ee103ce4a0, passed token: 2b4cbf6b-bb3e-4af3-8fc4-89ee103ce4a0
+01/17/26 12:30:15: Socket received request to stop server.
+01/17/26 12:30:15: Dispatch Server: do_await_stop
+01/17/26 12:30:15: SERVER: destructor for server bound to port 51432
+01/17/26 13:26:56: Running xcd server. This server was built by gradle.
+01/17/26 13:26:56: Server was asked to start on port: '51649'
+01/17/26 13:26:56: Server is using token UUID: 'd1b11fc6-4f84-4098-8aa6-fde47e93b08b'
+01/17/26 13:26:56: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 13:26:56: Attempting to start server on port '51649'
+01/17/26 13:26:56: Running Dispatch Server
+01/17/26 13:26:56: Version 2.2.0
+01/17/26 13:26:58: Dispatch Server: Accepted socket connection from client
+01/17/26 13:26:58: Starting Socket connection
+01/17/26 13:26:58: EXCHANGE_TOKEN received, server token: d1b11fc6-4f84-4098-8aa6-fde47e93b08b, passed token: d1b11fc6-4f84-4098-8aa6-fde47e93b08b
+01/17/26 13:26:58: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 13:26:58: SESSION_MGR: creating session with session uuid: 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:26:58: KERNEL_SVC: creating session with uuid: 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:26:58: GUIDANCE_SMGR: creating guidance session with uuid: 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:26:58: SYSTEM_DIAGRAM: creating session with uuid: 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:27:06: Dispatch Server: Accepted socket connection from client
+01/17/26 13:27:06: Starting Socket connection
+01/17/26 13:27:29: SESSION_MGR: closing session for UUID 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:27:29: KERNEL_SVC: closing session for UUID 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:27:29: GUIDANCE_SMGR: closing session for UUID 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:27:29: SYSTEM_DIAGRAM: closing session for UUID 'bc1e51e4-5b38-4ac2-aea3-514a979f1ab1' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:27:29: STOP_SERVER received, server token: d1b11fc6-4f84-4098-8aa6-fde47e93b08b, passed token: d1b11fc6-4f84-4098-8aa6-fde47e93b08b
+01/17/26 13:27:29: Socket received request to stop server.
+01/17/26 13:27:29: Dispatch Server: do_await_stop
+01/17/26 13:27:29: SERVER: destructor for server bound to port 51649
+01/17/26 13:28:57: Running xcd server. This server was built by gradle.
+01/17/26 13:28:57: Server was asked to start on port: '51659'
+01/17/26 13:28:57: Server is using token UUID: 'f47530c2-8256-4c84-8810-787db3043b3f'
+01/17/26 13:28:57: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 13:28:57: Attempting to start server on port '51659'
+01/17/26 13:28:57: Running Dispatch Server
+01/17/26 13:28:57: Version 2.2.0
+01/17/26 13:28:58: Dispatch Server: Accepted socket connection from client
+01/17/26 13:28:58: Starting Socket connection
+01/17/26 13:28:58: EXCHANGE_TOKEN received, server token: f47530c2-8256-4c84-8810-787db3043b3f, passed token: f47530c2-8256-4c84-8810-787db3043b3f
+01/17/26 13:28:58: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 13:28:58: SESSION_MGR: creating session with session uuid: '48c208ab-3e82-446f-8787-3c787345affe' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:28:58: KERNEL_SVC: creating session with uuid: '48c208ab-3e82-446f-8787-3c787345affe' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:28:58: GUIDANCE_SMGR: creating guidance session with uuid: '48c208ab-3e82-446f-8787-3c787345affe' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:28:58: SYSTEM_DIAGRAM: creating session with uuid: '48c208ab-3e82-446f-8787-3c787345affe' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:29:08: Dispatch Server: Accepted socket connection from client
+01/17/26 13:29:08: Starting Socket connection
+01/17/26 13:29:53: SESSION_MGR: closing session for UUID '48c208ab-3e82-446f-8787-3c787345affe' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:29:53: KERNEL_SVC: closing session for UUID '48c208ab-3e82-446f-8787-3c787345affe' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:29:53: GUIDANCE_SMGR: closing session for UUID '48c208ab-3e82-446f-8787-3c787345affe' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:29:53: SYSTEM_DIAGRAM: closing session for UUID '48c208ab-3e82-446f-8787-3c787345affe' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:29:53: STOP_SERVER received, server token: f47530c2-8256-4c84-8810-787db3043b3f, passed token: f47530c2-8256-4c84-8810-787db3043b3f
+01/17/26 13:29:53: Socket received request to stop server.
+01/17/26 13:29:53: Dispatch Server: do_await_stop
+01/17/26 13:29:53: SERVER: destructor for server bound to port 51659
+01/17/26 13:33:46: Running xcd server. This server was built by gradle.
+01/17/26 13:33:46: Server was asked to start on port: '52412'
+01/17/26 13:33:46: Server is using token UUID: '7ce5c322-6b89-49da-ae55-cf9c0543e80a'
+01/17/26 13:33:46: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 13:33:46: Attempting to start server on port '52412'
+01/17/26 13:33:46: Running Dispatch Server
+01/17/26 13:33:46: Version 2.2.0
+01/17/26 13:33:48: Dispatch Server: Accepted socket connection from client
+01/17/26 13:33:48: Starting Socket connection
+01/17/26 13:33:48: EXCHANGE_TOKEN received, server token: 7ce5c322-6b89-49da-ae55-cf9c0543e80a, passed token: 7ce5c322-6b89-49da-ae55-cf9c0543e80a
+01/17/26 13:33:48: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 13:33:48: SESSION_MGR: creating session with session uuid: '89e2fc3d-6eff-4893-ae1a-1359149704e2' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:33:48: KERNEL_SVC: creating session with uuid: '89e2fc3d-6eff-4893-ae1a-1359149704e2' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:33:48: GUIDANCE_SMGR: creating guidance session with uuid: '89e2fc3d-6eff-4893-ae1a-1359149704e2' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:33:48: SYSTEM_DIAGRAM: creating session with uuid: '89e2fc3d-6eff-4893-ae1a-1359149704e2' and name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:33:54: Dispatch Server: Accepted socket connection from client
+01/17/26 13:33:54: Starting Socket connection
+01/17/26 13:34:13: SESSION_MGR: closing session for UUID '89e2fc3d-6eff-4893-ae1a-1359149704e2' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:34:13: KERNEL_SVC: closing session for UUID '89e2fc3d-6eff-4893-ae1a-1359149704e2' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:34:13: GUIDANCE_SMGR: closing session for UUID '89e2fc3d-6eff-4893-ae1a-1359149704e2' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:34:13: SYSTEM_DIAGRAM: closing session for UUID '89e2fc3d-6eff-4893-ae1a-1359149704e2' with name 'v++_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:34:13: STOP_SERVER received, server token: 7ce5c322-6b89-49da-ae55-cf9c0543e80a, passed token: 7ce5c322-6b89-49da-ae55-cf9c0543e80a
+01/17/26 13:34:13: Socket received request to stop server.
+01/17/26 13:34:13: Dispatch Server: do_await_stop
+01/17/26 13:34:13: SERVER: destructor for server bound to port 52412
+01/17/26 13:36:19: Running xcd server. This server was built by gradle.
+01/17/26 13:36:19: Server was asked to start on port: '52420'
+01/17/26 13:36:19: Server is using token UUID: 'f11f3c7c-fafe-44db-bc73-270d93c37e37'
+01/17/26 13:36:19: SESSION_MGR: creating session with session uuid: '6d04a3e9-ade5-4ab9-8d63-1f78fcd2ec76' and name 'default'
+01/17/26 13:36:19: Attempting to start server on port '52420'
+01/17/26 13:36:19: Running Dispatch Server
+01/17/26 13:36:19: Version 2.2.0
+01/17/26 13:36:21: Dispatch Server: Accepted socket connection from client
+01/17/26 13:36:21: Starting Socket connection
+01/17/26 13:36:21: EXCHANGE_TOKEN received, server token: f11f3c7c-fafe-44db-bc73-270d93c37e37, passed token: f11f3c7c-fafe-44db-bc73-270d93c37e37
+01/17/26 13:36:21: DISPATCH_HANDLER: Adding handler from function makeHandler in library xv_system_diagram
+01/17/26 13:36:21: SESSION_MGR: creating session with session uuid: '8bf2c577-6492-42a0-8b99-5b5623091fcf' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:36:21: KERNEL_SVC: creating session with uuid: '8bf2c577-6492-42a0-8b99-5b5623091fcf' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:36:21: GUIDANCE_SMGR: creating guidance session with uuid: '8bf2c577-6492-42a0-8b99-5b5623091fcf' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:36:21: SYSTEM_DIAGRAM: creating session with uuid: '8bf2c577-6492-42a0-8b99-5b5623091fcf' and name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:36:27: Dispatch Server: Accepted socket connection from client
+01/17/26 13:36:27: Starting Socket connection
+01/17/26 13:37:07: Dispatch Server: Accepted socket connection from client
+01/17/26 13:37:07: Starting Socket connection
+01/17/26 13:38:15: Dispatch Server: Accepted socket connection from client
+01/17/26 13:38:15: Starting Socket connection
+01/17/26 13:40:17: Dispatch Server: Accepted socket connection from client
+01/17/26 13:40:17: Starting Socket connection
+01/17/26 13:43:08: SESSION_MGR: closing session for UUID '8bf2c577-6492-42a0-8b99-5b5623091fcf' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:43:08: KERNEL_SVC: closing session for UUID '8bf2c577-6492-42a0-8b99-5b5623091fcf' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:43:08: GUIDANCE_SMGR: closing session for UUID '8bf2c577-6492-42a0-8b99-5b5623091fcf' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:43:08: SYSTEM_DIAGRAM: closing session for UUID '8bf2c577-6492-42a0-8b99-5b5623091fcf' with name 'vitis-run_compile_Transposed_Folded_FIR_HLS'
+01/17/26 13:43:08: STOP_SERVER received, server token: f11f3c7c-fafe-44db-bc73-270d93c37e37, passed token: f11f3c7c-fafe-44db-bc73-270d93c37e37
+01/17/26 13:43:08: Socket received request to stop server.
+01/17/26 13:43:08: Dispatch Server: do_await_stop
+01/17/26 13:43:08: SERVER: destructor for server bound to port 52420

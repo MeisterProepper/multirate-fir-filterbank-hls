@@ -8,23 +8,24 @@
     "loads": {
       "L": 1
     },
-    "name": "Transposed_Folded_FIR_HLS",
-    "total_instructions": 2395
+    "name": "FIR_HLS",
+    "total_instructions": 76
   },
   "1": {
-    "basicblocks": 1,
+    "basicblocks": 8,
     "calls": "",
     "file": "FIR_HLS.cpp",
     "fileloc": 16,
-    "instructions": 2386,
+    "instructions": 67,
     "loads": {
-      "G": 392
+      "G": 5,
+      "L": 2
     },
     "name": "FIR_filter",
     "stores": {
-      "G": 391,
-      "L": 1
+      "G": 2,
+      "L": 3
     },
-    "total_instructions": 2386
+    "total_instructions": 67
   }
 }
