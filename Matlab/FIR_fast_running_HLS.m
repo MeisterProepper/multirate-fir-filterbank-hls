@@ -28,9 +28,9 @@ fstop = 3350;
 % determine N_FIR and the coefficients using REMEZ ("normal" FIR filter)
 [N_FIR,fo,mo,w] = firpmord( [fpass fstop], [1 0], [delta_pass delta_stop], Fs );
 
-if mod(N_FIR,2) ~= 0
-    N_FIR = N_FIR + 1;
-end
+% if mod(N_FIR,2) ~= 0
+%     N_FIR = N_FIR + 1;
+% end
 
 % for safety reasons, add 2 to N_FIR to achieve the stop-band attenuation for sure
 N_FIR = N_FIR + 2;
@@ -62,11 +62,11 @@ ylabel('|H| in dB');
 for k = 1:MM
     b_FIR_fast{k} = b_FIR(k:MM:end);
 end
+% 
+% b_FIR(end+1) = 0;
+% b_FIR_mid = b_FIR(1:2:end) + b_FIR(2:2:end);
 
-b_FIR(end+1) = 0;
-b_FIR_mid = b_FIR(1:2:end) + b_FIR(2:2:end);
-
-% b_FIR_mid = b_FIR_fast{1}+b_FIR_fast{2};
+b_FIR_mid = b_FIR_fast{1}+b_FIR_fast{2};
 
 
 
